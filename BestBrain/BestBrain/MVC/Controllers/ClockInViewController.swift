@@ -32,4 +32,7 @@ class ClockInViewController: UIViewController {
     }
     */
 
+    @IBAction func btnMenuClicked(_ sender: Any) {
+        let _ = navigationController?.popViewController(animated: true)
+    }
 }

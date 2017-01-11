@@ -47,8 +47,11 @@ class LogCustomerVC: UIViewController {
     
     @IBAction func handleSearchBtn(_ sender: Any) {
     }
-    
-    
+
+    @IBAction func btnMenuClicked(_ sender: Any) {
+        let _ = navigationController?.popViewController(animated: true)
+
+    }
     
     
 }

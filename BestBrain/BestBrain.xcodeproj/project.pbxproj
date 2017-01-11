@@ -29,6 +29,11 @@
 		B80B3D811E24BFE800FF0A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80B3D7F1E24BFE800FF0A20 /* LaunchScreen.storyboard */; };
 		B80B3D8C1E24BFE800FF0A20 /* BestBrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B3D8B1E24BFE800FF0A20 /* BestBrainTests.swift */; };
 		B80B3D971E24BFE800FF0A20 /* BestBrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B3D961E24BFE800FF0A20 /* BestBrainUITests.swift */; };
+		B8134D311E262FDA00487406 /* b_clockin.png in Resources */ = {isa = PBXBuildFile; fileRef = B8134D2C1E262FDA00487406 /* b_clockin.png */; };
+		B8134D321E262FDA00487406 /* b_customer.png in Resources */ = {isa = PBXBuildFile; fileRef = B8134D2D1E262FDA00487406 /* b_customer.png */; };
+		B8134D331E262FDA00487406 /* b_desiredvehicle.png in Resources */ = {isa = PBXBuildFile; fileRef = B8134D2E1E262FDA00487406 /* b_desiredvehicle.png */; };
+		B8134D341E262FDA00487406 /* b_inventory.png in Resources */ = {isa = PBXBuildFile; fileRef = B8134D2F1E262FDA00487406 /* b_inventory.png */; };
+		B8134D351E262FDA00487406 /* b_trade.png in Resources */ = {isa = PBXBuildFile; fileRef = B8134D301E262FDA00487406 /* b_trade.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 		B80B3D921E24BFE800FF0A20 /* BestBrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BestBrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80B3D961E24BFE800FF0A20 /* BestBrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestBrainUITests.swift; sourceTree = "<group>"; };
 		B80B3D981E24BFE800FF0A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8134D2C1E262FDA00487406 /* b_clockin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_clockin.png; sourceTree = "<group>"; };
+		B8134D2D1E262FDA00487406 /* b_customer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_customer.png; sourceTree = "<group>"; };
+		B8134D2E1E262FDA00487406 /* b_desiredvehicle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_desiredvehicle.png; sourceTree = "<group>"; };
+		B8134D2F1E262FDA00487406 /* b_inventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_inventory.png; sourceTree = "<group>"; };
+		B8134D301E262FDA00487406 /* b_trade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b_trade.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,11 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B8134D2C1E262FDA00487406 /* b_clockin.png */,
+				B8134D2D1E262FDA00487406 /* b_customer.png */,
+				B8134D2E1E262FDA00487406 /* b_desiredvehicle.png */,
+				B8134D2F1E262FDA00487406 /* b_inventory.png */,
+				B8134D301E262FDA00487406 /* b_trade.png */,
 				7B2949A01E2607B9008566A4 /* down_Arrow.png */,
 				7B2949A11E2607B9008566A4 /* menu.png */,
 			);
@@ -346,13 +361,18 @@
 				7B29499D1E2607A9008566A4 /* ClockInViewController.xib in Resources */,
 				B80B3D811E24BFE800FF0A20 /* LaunchScreen.storyboard in Resources */,
 				7B4F5EC41E24CA8E0086B359 /* DashboardVC.xib in Resources */,
+				B8134D331E262FDA00487406 /* b_desiredvehicle.png in Resources */,
+				B8134D311E262FDA00487406 /* b_clockin.png in Resources */,
 				7B4F5ED71E24F2BD0086B359 /* LogCustomerVC.xib in Resources */,
+				B8134D321E262FDA00487406 /* b_customer.png in Resources */,
+				B8134D341E262FDA00487406 /* b_inventory.png in Resources */,
 				7B29499B1E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib in Resources */,
 				7B29499C1E2607A9008566A4 /* AddInventoryViewController.xib in Resources */,
 				7B4F5EC51E24CA8E0086B359 /* LoginVC.xib in Resources */,
 				7B2949A31E2607B9008566A4 /* menu.png in Resources */,
 				B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */,
 				7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */,
+				B8134D351E262FDA00487406 /* b_trade.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

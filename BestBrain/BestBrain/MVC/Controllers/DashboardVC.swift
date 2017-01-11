@@ -14,7 +14,8 @@ class DashboardVC: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     @IBOutlet var collectionVw: UICollectionView!
     
     var arrItem = ["Quick Add", "Trade In", "Inventory", "Desired Vehicle", "Clock In"]
-    
+    var arrimage = ["b_customer", "b_trade", "b_inventory", "b_desiredvehicle", "b_clockin"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionVw.register(UINib(nibName: "DashboardCell", bundle: nil), forCellWithReuseIdentifier: "dashboardCell")
@@ -39,6 +40,7 @@ class DashboardVC: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboardCell", for: indexPath) as! DashboardCell
         cell.lblItem.text = arrItem[indexPath.row]
+        cell.imgItem.image = UIImage(named:arrimage[indexPath.row])
         return cell
     }
     

@@ -12,7 +12,6 @@ class AddInventoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +30,9 @@ class AddInventoryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    @IBAction func btnMenuClicked(_ sender: Any) {
+        let _ = navigationController?.popViewController(animated: true)
+    }
 
 }
