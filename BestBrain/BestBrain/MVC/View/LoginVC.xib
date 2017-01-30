@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="BestBrain" customModuleProvider="target">
             <connections>
+                <outlet property="btnLogin" destination="En0-Qg-20o" id="pub-iM-v3m"/>
                 <outlet property="txtPassword" destination="UUQ-Fg-4KZ" id="JkQ-Xr-GzS"/>
                 <outlet property="txtUsername" destination="KQF-1L-lEM" id="nWP-hi-5Cz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
