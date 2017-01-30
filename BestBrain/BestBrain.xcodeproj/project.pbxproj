@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C8FB6181E3F47F8007B7E68 /* InventoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */; };
+		0C8FB61A1E3F4817007B7E68 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */; };
+		0C8FB61D1E3F4F8A007B7E68 /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB61B1E3F4F8A007B7E68 /* filter.png */; };
+		0C8FB61E1E3F4F8A007B7E68 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB61C1E3F4F8A007B7E68 /* left-arrow.png */; };
+		0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB6211E3F52D2007B7E68 /* Extensions.swift */; };
+		0C8FB6271E3F55E4007B7E68 /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */; };
+		0C8FB6281E3F55E4007B7E68 /* InventoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */; };
+		0C8FB62A1E3F5E21007B7E68 /* temp_back.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6291E3F5E21007B7E68 /* temp_back.jpeg */; };
+		0C8FB62C1E3F6AAD007B7E68 /* bike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */; };
+		0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */; };
+		0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */; };
 		7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949921E260799008566A4 /* AddInventoryViewController.swift */; };
 		7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949931E260799008566A4 /* ClockInViewController.swift */; };
 		7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */; };
@@ -54,6 +65,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryVC.xib; sourceTree = "<group>"; };
+		0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
+		0C8FB61B1E3F4F8A007B7E68 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
+		0C8FB61C1E3F4F8A007B7E68 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
+		0C8FB6211E3F52D2007B7E68 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
+		0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryCell.xib; sourceTree = "<group>"; };
+		0C8FB6291E3F5E21007B7E68 /* temp_back.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp_back.jpeg; sourceTree = "<group>"; };
+		0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike.jpg; sourceTree = "<group>"; };
+		0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryFilterVC.xib; sourceTree = "<group>"; };
+		0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryFilterVC.swift; sourceTree = "<group>"; };
 		7B2949921E260799008566A4 /* AddInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryViewController.swift; sourceTree = "<group>"; };
 		7B2949931E260799008566A4 /* ClockInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockInViewController.swift; sourceTree = "<group>"; };
 		7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredVehicleSelctionViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +147,10 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */,
+				0C8FB6291E3F5E21007B7E68 /* temp_back.jpeg */,
+				0C8FB61B1E3F4F8A007B7E68 /* filter.png */,
+				0C8FB61C1E3F4F8A007B7E68 /* left-arrow.png */,
 				B8134D2C1E262FDA00487406 /* b_clockin.png */,
 				B8134D2D1E262FDA00487406 /* b_customer.png */,
 				B8134D2E1E262FDA00487406 /* b_desiredvehicle.png */,
@@ -156,6 +182,8 @@
 				7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */,
 				7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */,
 				7B4F5ED21E24F2210086B359 /* LogCustomerVC.swift */,
+				0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */,
+				0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +204,8 @@
 				7B4F5ED61E24F2BD0086B359 /* LogCustomerVC.xib */,
 				7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */,
 				7B4F5EC11E24CA8E0086B359 /* LoginVC.xib */,
+				0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */,
+				0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +215,8 @@
 			children = (
 				7B4F5ECB1E24CFD10086B359 /* DashboardCell.swift */,
 				7B4F5ECC1E24CFD10086B359 /* DashboardCell.xib */,
+				0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */,
+				0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -193,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4F5ED01E24EA1F0086B359 /* Constant.swift */,
+				0C8FB6211E3F52D2007B7E68 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -359,17 +392,24 @@
 			files = (
 				7B4F5ECE1E24CFD10086B359 /* DashboardCell.xib in Resources */,
 				7B29499D1E2607A9008566A4 /* ClockInViewController.xib in Resources */,
+				0C8FB6181E3F47F8007B7E68 /* InventoryVC.xib in Resources */,
 				B80B3D811E24BFE800FF0A20 /* LaunchScreen.storyboard in Resources */,
 				7B4F5EC41E24CA8E0086B359 /* DashboardVC.xib in Resources */,
 				B8134D331E262FDA00487406 /* b_desiredvehicle.png in Resources */,
+				0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */,
+				0C8FB61E1E3F4F8A007B7E68 /* left-arrow.png in Resources */,
 				B8134D311E262FDA00487406 /* b_clockin.png in Resources */,
+				0C8FB6281E3F55E4007B7E68 /* InventoryCell.xib in Resources */,
 				7B4F5ED71E24F2BD0086B359 /* LogCustomerVC.xib in Resources */,
 				B8134D321E262FDA00487406 /* b_customer.png in Resources */,
 				B8134D341E262FDA00487406 /* b_inventory.png in Resources */,
+				0C8FB62A1E3F5E21007B7E68 /* temp_back.jpeg in Resources */,
 				7B29499B1E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib in Resources */,
 				7B29499C1E2607A9008566A4 /* AddInventoryViewController.xib in Resources */,
 				7B4F5EC51E24CA8E0086B359 /* LoginVC.xib in Resources */,
+				0C8FB61D1E3F4F8A007B7E68 /* filter.png in Resources */,
 				7B2949A31E2607B9008566A4 /* menu.png in Resources */,
+				0C8FB62C1E3F6AAD007B7E68 /* bike.jpg in Resources */,
 				B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */,
 				7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */,
 				B8134D351E262FDA00487406 /* b_trade.png in Resources */,
@@ -400,12 +440,16 @@
 				7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */,
 				B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */,
 				7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */,
+				0C8FB61A1E3F4817007B7E68 /* InventoryVC.swift in Sources */,
 				7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */,
 				7B4F5ED11E24EA1F0086B359 /* Constant.swift in Sources */,
 				7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */,
 				7B4F5ECD1E24CFD10086B359 /* DashboardCell.swift in Sources */,
+				0C8FB6271E3F55E4007B7E68 /* InventoryCell.swift in Sources */,
 				7B4F5EC31E24CA8E0086B359 /* LoginVC.swift in Sources */,
+				0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */,
 				7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */,
+				0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
