@@ -7,10 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		0C0C55DD1E4059E30085CFD1 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C55DC1E4059E30085CFD1 /* barcode.png */; };
+		0C0C55EB1E4069290085CFD1 /* ANPopoverSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55E81E4069290085CFD1 /* ANPopoverSlider.m */; };
+		0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55EA1E4069290085CFD1 /* ANPopoverView.m */; };
+		0C0C55EF1E406A9C0085CFD1 /* sliderlabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C55EE1E406A9C0085CFD1 /* sliderlabel.png */; };
+		0C0C56081E4088D80085CFD1 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55F21E4088D80085CFD1 /* IQNSArray+Sort.swift */; };
+		0C0C56091E4088D80085CFD1 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55F31E4088D80085CFD1 /* IQUIScrollView+Additions.swift */; };
+		0C0C560A1E4088D80085CFD1 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55F41E4088D80085CFD1 /* IQUITextFieldView+Additions.swift */; };
+		0C0C560B1E4088D80085CFD1 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55F51E4088D80085CFD1 /* IQUIView+Hierarchy.swift */; };
+		0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55F61E4088D80085CFD1 /* IQUIViewController+Additions.swift */; };
+		0C0C560D1E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55F71E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift */; };
+		0C0C560E1E4088D80085CFD1 /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55F91E4088D80085CFD1 /* IQKeyboardManagerConstants.swift */; };
+		0C0C560F1E4088D80085CFD1 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55FA1E4088D80085CFD1 /* IQKeyboardManagerConstantsInternal.swift */; };
+		0C0C56101E4088D80085CFD1 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55FB1E4088D80085CFD1 /* IQKeyboardManager.swift */; };
+		0C0C56111E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55FD1E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift */; };
+		0C0C56121E4088D80085CFD1 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55FF1E4088D80085CFD1 /* IQTextView.swift */; };
+		0C0C56131E4088D80085CFD1 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C56011E4088D80085CFD1 /* IQBarButtonItem.swift */; };
+		0C0C56141E4088D80085CFD1 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C56021E4088D80085CFD1 /* IQPreviousNextView.swift */; };
+		0C0C56151E4088D80085CFD1 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C56031E4088D80085CFD1 /* IQTitleBarButtonItem.swift */; };
+		0C0C56161E4088D80085CFD1 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C56041E4088D80085CFD1 /* IQToolbar.swift */; };
+		0C0C56171E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C56051E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift */; };
+		0C0C56181E4088D80085CFD1 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C56071E4088D80085CFD1 /* IQKeyboardManager.bundle */; };
+		0C8FB6181E3F47F8007B7E68 /* InventoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */; };
+		0C8FB61A1E3F4817007B7E68 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */; };
+		0C8FB61D1E3F4F8A007B7E68 /* filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB61B1E3F4F8A007B7E68 /* filter.png */; };
+		0C8FB61E1E3F4F8A007B7E68 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB61C1E3F4F8A007B7E68 /* left-arrow.png */; };
+		0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB6211E3F52D2007B7E68 /* Extensions.swift */; };
+		0C8FB6271E3F55E4007B7E68 /* InventoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */; };
+		0C8FB6281E3F55E4007B7E68 /* InventoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */; };
+		0C8FB62A1E3F5E21007B7E68 /* temp_back.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6291E3F5E21007B7E68 /* temp_back.jpeg */; };
+		0C8FB62C1E3F6AAD007B7E68 /* bike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */; };
+		0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */; };
+		0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */; };
+
 		3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896191E3F47ED005A5606 /* NewContactVC.xib */; };
 		3058961C1E3F47FA005A5606 /* NewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961B1E3F47FA005A5606 /* NewContactVC.swift */; };
 		305896211E3F64F7005A5606 /* addItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961F1E3F64F7005A5606 /* addItemCell.swift */; };
 		305896221E3F64F7005A5606 /* addItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896201E3F64F7005A5606 /* addItemCell.xib */; };
+
 		7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949921E260799008566A4 /* AddInventoryViewController.swift */; };
 		7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949931E260799008566A4 /* ClockInViewController.swift */; };
 		7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */; };
@@ -58,10 +93,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
+		0C0C55DC1E4059E30085CFD1 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
+		0C0C55E71E4069290085CFD1 /* ANPopoverSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPopoverSlider.h; sourceTree = "<group>"; };
+		0C0C55E81E4069290085CFD1 /* ANPopoverSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPopoverSlider.m; sourceTree = "<group>"; };
+		0C0C55E91E4069290085CFD1 /* ANPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPopoverView.h; sourceTree = "<group>"; };
+		0C0C55EA1E4069290085CFD1 /* ANPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPopoverView.m; sourceTree = "<group>"; };
+		0C0C55ED1E40694E0085CFD1 /* BestBrain-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BestBrain-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C0C55EE1E406A9C0085CFD1 /* sliderlabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderlabel.png; sourceTree = "<group>"; };
+		0C0C55F21E4088D80085CFD1 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		0C0C55F31E4088D80085CFD1 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
+		0C0C55F41E4088D80085CFD1 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
+		0C0C55F51E4088D80085CFD1 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
+		0C0C55F61E4088D80085CFD1 /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		0C0C55F71E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIWindow+Hierarchy.swift"; sourceTree = "<group>"; };
+		0C0C55F91E4088D80085CFD1 /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
+		0C0C55FA1E4088D80085CFD1 /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
+		0C0C55FB1E4088D80085CFD1 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardManager.swift; sourceTree = "<group>"; };
+		0C0C55FC1E4088D80085CFD1 /* IQKeyboardManagerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerSwift.h; sourceTree = "<group>"; };
+		0C0C55FD1E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
+		0C0C55FF1E4088D80085CFD1 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
+		0C0C56011E4088D80085CFD1 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQBarButtonItem.swift; sourceTree = "<group>"; };
+		0C0C56021E4088D80085CFD1 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
+		0C0C56031E4088D80085CFD1 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		0C0C56041E4088D80085CFD1 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
+		0C0C56051E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
+		0C0C56071E4088D80085CFD1 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryVC.xib; sourceTree = "<group>"; };
+		0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
+		0C8FB61B1E3F4F8A007B7E68 /* filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filter.png; sourceTree = "<group>"; };
+		0C8FB61C1E3F4F8A007B7E68 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
+		0C8FB6211E3F52D2007B7E68 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryCell.swift; sourceTree = "<group>"; };
+		0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryCell.xib; sourceTree = "<group>"; };
+		0C8FB6291E3F5E21007B7E68 /* temp_back.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp_back.jpeg; sourceTree = "<group>"; };
+		0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike.jpg; sourceTree = "<group>"; };
+		0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryFilterVC.xib; sourceTree = "<group>"; };
+		0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryFilterVC.swift; sourceTree = "<group>"; };
+
 		305896191E3F47ED005A5606 /* NewContactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewContactVC.xib; sourceTree = "<group>"; };
 		3058961B1E3F47FA005A5606 /* NewContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactVC.swift; sourceTree = "<group>"; };
 		3058961F1E3F64F7005A5606 /* addItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addItemCell.swift; sourceTree = "<group>"; };
 		305896201E3F64F7005A5606 /* addItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addItemCell.xib; sourceTree = "<group>"; };
+
 		7B2949921E260799008566A4 /* AddInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryViewController.swift; sourceTree = "<group>"; };
 		7B2949931E260799008566A4 /* ClockInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockInViewController.swift; sourceTree = "<group>"; };
 		7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredVehicleSelctionViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +196,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0C55DE1E4068F10085CFD1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C55F01E4088D80085CFD1 /* IQKeyboardManager */,
+				0C0C55DF1E4068F10085CFD1 /* CustomSlider */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		0C0C55DF1E4068F10085CFD1 /* CustomSlider */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C55E71E4069290085CFD1 /* ANPopoverSlider.h */,
+				0C0C55E81E4069290085CFD1 /* ANPopoverSlider.m */,
+				0C0C55E91E4069290085CFD1 /* ANPopoverView.h */,
+				0C0C55EA1E4069290085CFD1 /* ANPopoverView.m */,
+			);
+			path = CustomSlider;
+			sourceTree = "<group>";
+		};
+		0C0C55F01E4088D80085CFD1 /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C55F11E4088D80085CFD1 /* Categories */,
+				0C0C55F81E4088D80085CFD1 /* Constants */,
+				0C0C55FB1E4088D80085CFD1 /* IQKeyboardManager.swift */,
+				0C0C55FC1E4088D80085CFD1 /* IQKeyboardManagerSwift.h */,
+				0C0C55FD1E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift */,
+				0C0C55FE1E4088D80085CFD1 /* IQTextView */,
+				0C0C56001E4088D80085CFD1 /* IQToolbar */,
+				0C0C56061E4088D80085CFD1 /* Resources */,
+			);
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
+		0C0C55F11E4088D80085CFD1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C55F21E4088D80085CFD1 /* IQNSArray+Sort.swift */,
+				0C0C55F31E4088D80085CFD1 /* IQUIScrollView+Additions.swift */,
+				0C0C55F41E4088D80085CFD1 /* IQUITextFieldView+Additions.swift */,
+				0C0C55F51E4088D80085CFD1 /* IQUIView+Hierarchy.swift */,
+				0C0C55F61E4088D80085CFD1 /* IQUIViewController+Additions.swift */,
+				0C0C55F71E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		0C0C55F81E4088D80085CFD1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C55F91E4088D80085CFD1 /* IQKeyboardManagerConstants.swift */,
+				0C0C55FA1E4088D80085CFD1 /* IQKeyboardManagerConstantsInternal.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		0C0C55FE1E4088D80085CFD1 /* IQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C55FF1E4088D80085CFD1 /* IQTextView.swift */,
+			);
+			path = IQTextView;
+			sourceTree = "<group>";
+		};
+		0C0C56001E4088D80085CFD1 /* IQToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C56011E4088D80085CFD1 /* IQBarButtonItem.swift */,
+				0C0C56021E4088D80085CFD1 /* IQPreviousNextView.swift */,
+				0C0C56031E4088D80085CFD1 /* IQTitleBarButtonItem.swift */,
+				0C0C56041E4088D80085CFD1 /* IQToolbar.swift */,
+				0C0C56051E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift */,
+			);
+			path = IQToolbar;
+			sourceTree = "<group>";
+		};
+		0C0C56061E4088D80085CFD1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C0C56071E4088D80085CFD1 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7B29499E1E2607B9008566A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +292,12 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C0C55EE1E406A9C0085CFD1 /* sliderlabel.png */,
+				0C0C55DC1E4059E30085CFD1 /* barcode.png */,
+				0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */,
+				0C8FB6291E3F5E21007B7E68 /* temp_back.jpeg */,
+				0C8FB61B1E3F4F8A007B7E68 /* filter.png */,
+				0C8FB61C1E3F4F8A007B7E68 /* left-arrow.png */,
 				B8134D2C1E262FDA00487406 /* b_clockin.png */,
 				B8134D2D1E262FDA00487406 /* b_customer.png */,
 				B8134D2E1E262FDA00487406 /* b_desiredvehicle.png */,
@@ -165,6 +330,8 @@
 				7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */,
 				7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */,
 				7B4F5ED21E24F2210086B359 /* LogCustomerVC.swift */,
+				0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */,
+				0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +353,8 @@
 				7B4F5ED61E24F2BD0086B359 /* LogCustomerVC.xib */,
 				7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */,
 				7B4F5EC11E24CA8E0086B359 /* LoginVC.xib */,
+				0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */,
+				0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,8 +364,13 @@
 			children = (
 				7B4F5ECB1E24CFD10086B359 /* DashboardCell.swift */,
 				7B4F5ECC1E24CFD10086B359 /* DashboardCell.xib */,
+
+				0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */,
+				0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */,
+
 				3058961F1E3F64F7005A5606 /* addItemCell.swift */,
 				305896201E3F64F7005A5606 /* addItemCell.xib */,
+
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -205,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4F5ED01E24EA1F0086B359 /* Constant.swift */,
+				0C8FB6211E3F52D2007B7E68 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -232,6 +407,8 @@
 		B80B3D751E24BFE800FF0A20 /* BestBrain */ = {
 			isa = PBXGroup;
 			children = (
+				0C0C55ED1E40694E0085CFD1 /* BestBrain-Bridging-Header.h */,
+				0C0C55DE1E4068F10085CFD1 /* Library */,
 				7B29499E1E2607B9008566A4 /* Resources */,
 				7B4F5ECF1E24EA020086B359 /* Utils */,
 				7B4F5EBA1E24CA8E0086B359 /* MVC */,
@@ -330,6 +507,7 @@
 					B80B3D721E24BFE800FF0A20 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = JMPNXUM63A;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B80B3D861E24BFE800FF0A20 = {
@@ -371,19 +549,29 @@
 			files = (
 				7B4F5ECE1E24CFD10086B359 /* DashboardCell.xib in Resources */,
 				7B29499D1E2607A9008566A4 /* ClockInViewController.xib in Resources */,
+				0C8FB6181E3F47F8007B7E68 /* InventoryVC.xib in Resources */,
 				B80B3D811E24BFE800FF0A20 /* LaunchScreen.storyboard in Resources */,
 				7B4F5EC41E24CA8E0086B359 /* DashboardVC.xib in Resources */,
 				305896221E3F64F7005A5606 /* addItemCell.xib in Resources */,
 				B8134D331E262FDA00487406 /* b_desiredvehicle.png in Resources */,
+				0C0C55DD1E4059E30085CFD1 /* barcode.png in Resources */,
+				0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */,
+				0C0C55EF1E406A9C0085CFD1 /* sliderlabel.png in Resources */,
+				0C8FB61E1E3F4F8A007B7E68 /* left-arrow.png in Resources */,
 				B8134D311E262FDA00487406 /* b_clockin.png in Resources */,
+				0C8FB6281E3F55E4007B7E68 /* InventoryCell.xib in Resources */,
 				7B4F5ED71E24F2BD0086B359 /* LogCustomerVC.xib in Resources */,
 				B8134D321E262FDA00487406 /* b_customer.png in Resources */,
 				B8134D341E262FDA00487406 /* b_inventory.png in Resources */,
+				0C8FB62A1E3F5E21007B7E68 /* temp_back.jpeg in Resources */,
 				7B29499B1E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib in Resources */,
 				3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */,
 				7B29499C1E2607A9008566A4 /* AddInventoryViewController.xib in Resources */,
 				7B4F5EC51E24CA8E0086B359 /* LoginVC.xib in Resources */,
+				0C8FB61D1E3F4F8A007B7E68 /* filter.png in Resources */,
 				7B2949A31E2607B9008566A4 /* menu.png in Resources */,
+				0C8FB62C1E3F6AAD007B7E68 /* bike.jpg in Resources */,
+				0C0C56181E4088D80085CFD1 /* IQKeyboardManager.bundle in Resources */,
 				B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */,
 				7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */,
 				B8134D351E262FDA00487406 /* b_trade.png in Resources */,
@@ -411,17 +599,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0C56101E4088D80085CFD1 /* IQKeyboardManager.swift in Sources */,
 				7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */,
 				305896211E3F64F7005A5606 /* addItemCell.swift in Sources */,
 				B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */,
+
+				0C0C56131E4088D80085CFD1 /* IQBarButtonItem.swift in Sources */,
+				0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */,
+				0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */,
+
 				3058961C1E3F47FA005A5606 /* NewContactVC.swift in Sources */,
+
 				7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */,
+				0C0C56111E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				0C8FB61A1E3F4817007B7E68 /* InventoryVC.swift in Sources */,
+				0C0C560F1E4088D80085CFD1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				0C0C560D1E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift in Sources */,
+				0C0C56171E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */,
+				0C0C55EB1E4069290085CFD1 /* ANPopoverSlider.m in Sources */,
 				7B4F5ED11E24EA1F0086B359 /* Constant.swift in Sources */,
+				0C0C56151E4088D80085CFD1 /* IQTitleBarButtonItem.swift in Sources */,
+				0C0C56091E4088D80085CFD1 /* IQUIScrollView+Additions.swift in Sources */,
+				0C0C560B1E4088D80085CFD1 /* IQUIView+Hierarchy.swift in Sources */,
+				0C0C56141E4088D80085CFD1 /* IQPreviousNextView.swift in Sources */,
+				0C0C560E1E4088D80085CFD1 /* IQKeyboardManagerConstants.swift in Sources */,
 				7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */,
 				7B4F5ECD1E24CFD10086B359 /* DashboardCell.swift in Sources */,
+				0C8FB6271E3F55E4007B7E68 /* InventoryCell.swift in Sources */,
 				7B4F5EC31E24CA8E0086B359 /* LoginVC.swift in Sources */,
+				0C0C56161E4088D80085CFD1 /* IQToolbar.swift in Sources */,
+				0C0C56081E4088D80085CFD1 /* IQNSArray+Sort.swift in Sources */,
+				0C0C560A1E4088D80085CFD1 /* IQUITextFieldView+Additions.swift in Sources */,
+				0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */,
+				0C0C56121E4088D80085CFD1 /* IQTextView.swift in Sources */,
 				7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */,
+				0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JMPNXUM63A;
 				INFOPLIST_FILE = BestBrain/Info.plist;
@@ -572,6 +786,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.BestBrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BestBrain/BestBrain-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -581,6 +797,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JMPNXUM63A;
 				INFOPLIST_FILE = BestBrain/Info.plist;
@@ -588,6 +805,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.BestBrain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        //added new
-        
-        let rootVC = NewContactVC(nibName: "NewContactVC", bundle: nil)
+
+        IQKeyboardManager.sharedManager().enable = true
+        let rootVC = LoginVC(nibName: "LoginVC", bundle: nil)
         nav = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nav
         
