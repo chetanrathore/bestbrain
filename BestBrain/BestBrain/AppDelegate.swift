@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
 
         IQKeyboardManager.sharedManager().enable = true
-        let rootVC = LoginVC(nibName: "LoginVC", bundle: nil)
+        let rootVC = InventoryVC(nibName: "InventoryVC", bundle: nil)
         nav = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nav
         

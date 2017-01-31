@@ -50,7 +50,8 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     func btnView(sender: UIButton) {
-        
+        let detailVC = InventoryDetailVC(nibName: "InventoryDetailVC", bundle: nil)
+        self.navigationController!.pushViewController(detailVC, animated: true)
     }
     
     @IBAction func btnFilter(_ sender: UIButton) {
