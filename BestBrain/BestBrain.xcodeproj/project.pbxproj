@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		0C0C55DD1E4059E30085CFD1 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C55DC1E4059E30085CFD1 /* barcode.png */; };
 		0C0C55EB1E4069290085CFD1 /* ANPopoverSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55E81E4069290085CFD1 /* ANPopoverSlider.m */; };
 		0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C55EA1E4069290085CFD1 /* ANPopoverView.m */; };
@@ -39,6 +40,12 @@
 		0C8FB62C1E3F6AAD007B7E68 /* bike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */; };
 		0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */; };
 		0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */; };
+
+		3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896191E3F47ED005A5606 /* NewContactVC.xib */; };
+		3058961C1E3F47FA005A5606 /* NewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961B1E3F47FA005A5606 /* NewContactVC.swift */; };
+		305896211E3F64F7005A5606 /* addItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961F1E3F64F7005A5606 /* addItemCell.swift */; };
+		305896221E3F64F7005A5606 /* addItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896201E3F64F7005A5606 /* addItemCell.xib */; };
+
 		7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949921E260799008566A4 /* AddInventoryViewController.swift */; };
 		7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949931E260799008566A4 /* ClockInViewController.swift */; };
 		7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */; };
@@ -86,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
 		0C0C55DC1E4059E30085CFD1 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 		0C0C55E71E4069290085CFD1 /* ANPopoverSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPopoverSlider.h; sourceTree = "<group>"; };
 		0C0C55E81E4069290085CFD1 /* ANPopoverSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPopoverSlider.m; sourceTree = "<group>"; };
@@ -122,6 +130,12 @@
 		0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike.jpg; sourceTree = "<group>"; };
 		0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryFilterVC.xib; sourceTree = "<group>"; };
 		0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryFilterVC.swift; sourceTree = "<group>"; };
+
+		305896191E3F47ED005A5606 /* NewContactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewContactVC.xib; sourceTree = "<group>"; };
+		3058961B1E3F47FA005A5606 /* NewContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactVC.swift; sourceTree = "<group>"; };
+		3058961F1E3F64F7005A5606 /* addItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addItemCell.swift; sourceTree = "<group>"; };
+		305896201E3F64F7005A5606 /* addItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addItemCell.xib; sourceTree = "<group>"; };
+
 		7B2949921E260799008566A4 /* AddInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryViewController.swift; sourceTree = "<group>"; };
 		7B2949931E260799008566A4 /* ClockInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockInViewController.swift; sourceTree = "<group>"; };
 		7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredVehicleSelctionViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +323,7 @@
 		7B4F5EBB1E24CA8E0086B359 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3058961B1E3F47FA005A5606 /* NewContactVC.swift */,
 				7B2949921E260799008566A4 /* AddInventoryViewController.swift */,
 				7B2949931E260799008566A4 /* ClockInViewController.swift */,
 				7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */,
@@ -331,6 +346,7 @@
 		7B4F5EBF1E24CA8E0086B359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				305896191E3F47ED005A5606 /* NewContactVC.xib */,
 				7B2949981E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib */,
 				7B2949991E2607A9008566A4 /* AddInventoryViewController.xib */,
 				7B29499A1E2607A9008566A4 /* ClockInViewController.xib */,
@@ -348,8 +364,13 @@
 			children = (
 				7B4F5ECB1E24CFD10086B359 /* DashboardCell.swift */,
 				7B4F5ECC1E24CFD10086B359 /* DashboardCell.xib */,
+
 				0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */,
 				0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */,
+
+				3058961F1E3F64F7005A5606 /* addItemCell.swift */,
+				305896201E3F64F7005A5606 /* addItemCell.xib */,
+
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -531,6 +552,7 @@
 				0C8FB6181E3F47F8007B7E68 /* InventoryVC.xib in Resources */,
 				B80B3D811E24BFE800FF0A20 /* LaunchScreen.storyboard in Resources */,
 				7B4F5EC41E24CA8E0086B359 /* DashboardVC.xib in Resources */,
+				305896221E3F64F7005A5606 /* addItemCell.xib in Resources */,
 				B8134D331E262FDA00487406 /* b_desiredvehicle.png in Resources */,
 				0C0C55DD1E4059E30085CFD1 /* barcode.png in Resources */,
 				0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */,
@@ -543,6 +565,7 @@
 				B8134D341E262FDA00487406 /* b_inventory.png in Resources */,
 				0C8FB62A1E3F5E21007B7E68 /* temp_back.jpeg in Resources */,
 				7B29499B1E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib in Resources */,
+				3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */,
 				7B29499C1E2607A9008566A4 /* AddInventoryViewController.xib in Resources */,
 				7B4F5EC51E24CA8E0086B359 /* LoginVC.xib in Resources */,
 				0C8FB61D1E3F4F8A007B7E68 /* filter.png in Resources */,
@@ -578,10 +601,15 @@
 			files = (
 				0C0C56101E4088D80085CFD1 /* IQKeyboardManager.swift in Sources */,
 				7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */,
+				305896211E3F64F7005A5606 /* addItemCell.swift in Sources */,
 				B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */,
+
 				0C0C56131E4088D80085CFD1 /* IQBarButtonItem.swift in Sources */,
 				0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */,
 				0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */,
+
+				3058961C1E3F47FA005A5606 /* NewContactVC.swift in Sources */,
+
 				7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */,
 				0C0C56111E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				0C8FB61A1E3F4817007B7E68 /* InventoryVC.swift in Sources */,
