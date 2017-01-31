@@ -32,12 +32,18 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
     @IBOutlet var btnFilter: UIButton!
     @IBOutlet var btnReset: UIButton!
     
+    @IBOutlet var NLCHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         scrollMain.contentSize = CGSize(width: ScreenWidth, height: 553)
         pickerModel.dataSource = self
         pickerModel.delegate = self
+        
+        if UIScreen.main.bounds.size.height > 667 {
+            NLCHeight.constant = 600
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
