@@ -22,6 +22,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     @IBOutlet var vwTextFields: [UIView]!
     @IBOutlet var imgUser: UIImageView!
 
+    @IBOutlet var scrollNewContact: UIScrollView!
     @IBOutlet var tblAddItems: UITableView!
     
     var allItems = [addItems]()
@@ -36,6 +37,10 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+
         txfFirstName.delegate = self
         txfLastName.delegate = self
         txfAddress.delegate = self
@@ -46,23 +51,28 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         txfDLState.delegate = self
         txfDLNumber.delegate = self
 
-        txfFirstName.tag = -1
-        txfLastName.tag = -1
-        txfAddress.tag = -1
-        txfCity.tag = -1
-        txfState.tag = -1
-        txfZipCode.tag = -1
-        txfDOB.tag = -1
-        txfDLState.tag = -1
-        txfDLNumber.tag = -1
+        txfFirstName.tag = 11
+        txfLastName.tag = 12
+        txfAddress.tag = 13
+        txfCity.tag = 14
+        txfState.tag = 15
+        txfZipCode.tag = 16
+        txfDOB.tag = 17
+        txfDLState.tag = 18
+        txfDLNumber.tag = 19
 
         self.loadData()
         tblAddItems.delegate = self
         tblAddItems.dataSource = self
         tblAddItems.register(UINib(nibName: "addItemCell", bundle: nil), forCellReuseIdentifier: "addItemCell")
-        self.addDoneButtonOnKeyboard(textField: txfZipCode)
-        self.addDoneButtonOnKeyboard(textField: txfDLNumber)
     }
+    func keyboardWillShow(notification: NSNotification){
+        
+    }
+    func keyboardWillHide(notification: NSNotification){
+        tblAddItems.isScrollEnabled = true
+    }
+
     func loadData(){
         allItems = [
             addItems(name: "add phone", items: 1),
@@ -154,34 +164,60 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             txfCity.resignFirstResponder()
             txfState.becomeFirstResponder()
         }else if textField == txfState{
-            txfState.resignFirstResponder()
-            txfZipCode.becomeFirstResponder()
-        }else if textField == txfZipCode{
-            txfZipCode.resignFirstResponder()
-            txfDOB.becomeFirstResponder()
-        }else if textField == txfDOB{
+            if Appcheck_length(txfState.text!, length: 2, is_more: true){
+                txfState.resignFirstResponder()
+                txfZipCode.becomeFirstResponder()
+            }else{
+                print("Enter valid code.")
+            }
+        }
+//            else if textField == txfZipCode{
+//            txfZipCode.resignFirstResponder()
+//            txfDOB.becomeFirstResponder()
+//        }
+        else if textField == txfDOB{
             txfDOB.resignFirstResponder()
             txfDLState.becomeFirstResponder()
         }else if textField == txfDLState{
-            txfDLState.resignFirstResponder()
-            txfDLNumber.becomeFirstResponder()
-        }else if textField == txfDLNumber{
-            txfDLNumber.resignFirstResponder()
+            if Appcheck_length(txfDLState.text!, length: 2, is_more: true){
+                txfDLState.resignFirstResponder()
+                txfDLNumber.becomeFirstResponder()
+            }else{
+                print("Enter valid code.")
+            }
         }
+//        else if textField == txfDLNumber{
+//            txfDLNumber.resignFirstResponder()
+//        }
         if textField.tag == 0{
         }else if textField.tag == 1{
             if self.Appcheck_email_address(textField.text!) == false{
                 print("enter valid email Address.")
+            }else{
+                textField.resignFirstResponder()
             }
         }else if textField.tag == 2{
 //            textField.keyboardType = UIKeyboardType.default
         }else if textField.tag == 3{
 //            textField.keyboardType = UIKeyboardType.default
         }
+        if textField == txfZipCode{
+            self.addDoneButtonOnKeyboard(textField: txfZipCode)
+        }else if textField == txfDLNumber{
+            self.addDoneButtonOnKeyboard(textField: txfDLNumber)
+        }
+
+        tblAddItems.isScrollEnabled = true
 
         return true
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == txfZipCode{
+            self.addDoneButtonOnKeyboard(textField: txfZipCode)
+        }else if textField == txfDLNumber{
+        self.addDoneButtonOnKeyboard(textField: txfDLNumber)
+        }
+        tblAddItems.isScrollEnabled = false
         textField.becomeFirstResponder()
         if textField.tag == 0{
             textField.keyboardType = UIKeyboardType.numberPad
@@ -196,7 +232,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     
     func addDoneButtonOnKeyboard(textField: UITextField)
     {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 50))//CGRectMake(0, 0, 320, 50)
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 50))
         doneToolbar.barStyle = UIBarStyle.blackTranslucent
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -212,16 +248,30 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         textField.inputAccessoryView = doneToolbar
         
     }
-    func doneButtonAction()
+    func doneButtonAction(txt: UITextField)
     {
         if self.textField.tag == 0{
             if Appcheck_number(self.textField.text!, length: 10){
+                tblAddItems.isScrollEnabled = true
                 self.textField.resignFirstResponder()
             }else{
                 print("enter valid phone number.")
             }
         }else{
-            self.textField.resignFirstResponder()
+        
+            if self.textField.tag == 16{
+                if Appcheck_zip_codes(self.textField.text!) == true{
+                    self.textField.resignFirstResponder()
+                }else{
+                    print("enter valid zip code.")
+                }
+            }else if self.textField.tag == 19{
+//                if Appcheck_zip_codes(self.textField.text!) == true{
+                    self.textField.resignFirstResponder()
+//                }else{
+//                    print("enter valid DL NUMBER.")
+//                }
+            }
         }
     }
     func Appcheck_email_address(_ data:String) -> Bool{
@@ -229,6 +279,13 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
         return pr.evaluate(with: data)
     }
+    
+    func Appcheck_zip_codes(_ data:String) -> Bool{
+        let ns:NSString = "^([0-9]{5}|[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9])$"
+        let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
+        return pr.evaluate(with: data)
+    }
+
     func Appcheck_number(_ data:String,length:Int?) -> Bool{
         let ns:NSString
         if let _ = length{
@@ -260,14 +317,11 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         }
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
-
-
 class addItems{
     var name: String!
     var items: Int!
@@ -279,25 +333,12 @@ class addItems{
         self.collapsed = collapsed
     }
 }
-extension UIViewController{
-    func addToolBar(textField: UITextField){
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(UIViewController.donePressed))
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(UIViewController.cancelPressed))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        toolBar.sizeToFit()
-        
-        textField.inputAccessoryView = toolBar
-    }
-    func donePressed(){
-        view.endEditing(true)
-    }
-    func cancelPressed(){
-        view.endEditing(true) // or do something
-    }
-}
+//extension UIViewController {
+//    func hideKeyboardWhenTappedAround() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
+//    }
+//    func dismissKeyboard() {
+//        view.endEditing(true)
+//    }
+//}

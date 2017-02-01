@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewContactVC" customModule="BestBrain" customModuleProvider="target">
             <connections>
                 <outlet property="imgUser" destination="txb-X2-Mvt" id="Yik-PU-XYQ"/>
+                <outlet property="scrollNewContact" destination="NnO-KI-kZj" id="cww-eO-3po"/>
                 <outlet property="tblAddItems" destination="dN7-6v-Lh8" id="4ba-Ho-ZJe"/>
                 <outlet property="txfAddress" destination="gRG-im-lG4" id="F7I-ay-nb5"/>
                 <outlet property="txfCity" destination="F3b-0u-cvq" id="lJr-yJ-Eay"/>
@@ -278,7 +279,7 @@
                                         <constraint firstAttribute="height" constant="40" id="Deb-2M-H5U"/>
                                     </constraints>
                                 </view>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dN7-6v-Lh8">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dN7-6v-Lh8">
                                     <rect key="frame" x="0.0" y="359" width="320" height="250"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>

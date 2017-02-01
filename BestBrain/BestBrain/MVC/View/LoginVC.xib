@@ -11,9 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="BestBrain" customModuleProvider="target">
             <connections>
-
                 <outlet property="btnLogin" destination="En0-Qg-20o" id="m31-58-f1u"/>
-
                 <outlet property="txtPassword" destination="UUQ-Fg-4KZ" id="JkQ-Xr-GzS"/>
                 <outlet property="txtUsername" destination="KQF-1L-lEM" id="nWP-hi-5Cz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -70,7 +68,7 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-35" y="-35"/>
+            <point key="canvasLocation" x="-333" y="-351"/>
         </view>
     </objects>
 </document>

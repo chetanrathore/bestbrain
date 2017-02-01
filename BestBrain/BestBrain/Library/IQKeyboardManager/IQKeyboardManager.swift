@@ -170,51 +170,51 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Automatic add the IQToolbar functionality. Default is YES.
     */
-    open var enableAutoToolbar = true {
-        
-        didSet {
-
-            privateIsEnableAutoToolbar() ?addToolbarIfRequired():removeToolbarIfRequired()
-
-            let enableToolbar = enableAutoToolbar ? "Yes" : "NO"
-
-            showLog("enableAutoToolbar: \(enableToolbar)")
-        }
-    }
-    
-    fileprivate func privateIsEnableAutoToolbar() -> Bool {
-        
-        var enableToolbar = enableAutoToolbar
-        
-        if let textFieldViewController = _textFieldView?.viewController() {
-            
-            if enableToolbar == false {
-                
-                //If found any toolbar enabled classes then return.
-                for enabledClass in enabledToolbarClasses {
-                    
-                    if textFieldViewController.isKind(of: enabledClass) {
-                        enableToolbar = true
-                        break
-                    }
-                }
-            }
-            
-            if enableToolbar == true {
-                
-                //If found any toolbar disabled classes then return.
-                for disabledClass in disabledToolbarClasses {
-                    
-                    if textFieldViewController.isKind(of: disabledClass) {
-                        enableToolbar = false
-                        break
-                    }
-                }
-            }
-        }
-
-        return enableToolbar
-    }
+//    open var enableAutoToolbar = true {
+//        
+//        didSet {
+//
+//            privateIsEnableAutoToolbar() ?addToolbarIfRequired():removeToolbarIfRequired()
+//
+//            let enableToolbar = enableAutoToolbar ? "Yes" : "NO"
+//
+//            showLog("enableAutoToolbar: \(enableToolbar)")
+//        }
+//    }
+//    
+//    fileprivate func privateIsEnableAutoToolbar() -> Bool {
+//        
+//        var enableToolbar = enableAutoToolbar
+//        
+//        if let textFieldViewController = _textFieldView?.viewController() {
+//            
+//            if enableToolbar == false {
+//                
+//                //If found any toolbar enabled classes then return.
+//                for enabledClass in enabledToolbarClasses {
+//                    
+//                    if textFieldViewController.isKind(of: enabledClass) {
+//                        enableToolbar = true
+//                        break
+//                    }
+//                }
+//            }
+//            
+//            if enableToolbar == true {
+//                
+//                //If found any toolbar disabled classes then return.
+//                for disabledClass in disabledToolbarClasses {
+//                    
+//                    if textFieldViewController.isKind(of: disabledClass) {
+//                        enableToolbar = false
+//                        break
+//                    }
+//                }
+//            }
+//        }
+//
+//        return enableToolbar
+//    }
 
     /**
      /**
@@ -1653,28 +1653,28 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         }
         
         //If autoToolbar enable, then add toolbar on all the UITextField/UITextView's if required.
-        if privateIsEnableAutoToolbar() == true {
-
-            //UITextView special case. Keyboard Notification is firing before textView notification so we need to resign it first and then again set it as first responder to add toolbar on it.
-            if _textFieldView is UITextView == true &&
-                _textFieldView?.inputAccessoryView == nil {
-                
-                UIView.animate(withDuration: 0.00001, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
-
-                    self.addToolbarIfRequired()
-                    
-                    }, completion: { (finished) -> Void in
-
-                        //On textView toolbar didn't appear on first time, so forcing textView to reload it's inputViews.
-                        self._textFieldView?.reloadInputViews()
-                })
-            } else {
-                //Adding toolbar
-                addToolbarIfRequired()
-            }
-        } else {
-            removeToolbarIfRequired()
-        }
+//        if privateIsEnableAutoToolbar() == true {
+//
+//            //UITextView special case. Keyboard Notification is firing before textView notification so we need to resign it first and then again set it as first responder to add toolbar on it.
+//            if _textFieldView is UITextView == true &&
+//                _textFieldView?.inputAccessoryView == nil {
+//                
+//                UIView.animate(withDuration: 0.00001, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
+//
+//                    self.addToolbarIfRequired()
+//                    
+//                    }, completion: { (finished) -> Void in
+//
+//                        //On textView toolbar didn't appear on first time, so forcing textView to reload it's inputViews.
+//                        self._textFieldView?.reloadInputViews()
+//                })
+//            } else {
+//                //Adding toolbar
+//                addToolbarIfRequired()
+//            }
+//        } else {
+//            removeToolbarIfRequired()
+//        }
 
         _tapGesture.isEnabled = privateShouldResignOnTouchOutside()
         _textFieldView?.window?.addGestureRecognizer(_tapGesture)    //   (Enhancement ID: #14)
@@ -2225,11 +2225,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     open func reloadInputViews() {
         
         //If enabled then adding toolbar.
-        if privateIsEnableAutoToolbar() == true {
-            self.addToolbarIfRequired()
-        } else {
-            self.removeToolbarIfRequired()
-        }
+//        if privateIsEnableAutoToolbar() == true {
+//            self.addToolbarIfRequired()
+//        } else {
+//            self.removeToolbarIfRequired()
+//        }
     }
     
     open var enableDebugging = false
