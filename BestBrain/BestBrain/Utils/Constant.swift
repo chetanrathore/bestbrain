@@ -12,7 +12,18 @@ import UIKit
 let ScreenWidth = UIScreen.main.bounds.width
 let Screenheight = UIScreen.main.bounds.height
 
-
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let weatherApi = "https://api.darksky.net/forecast/e700e63b23dc86aa7f29a90be4c5fc2e/"
 
 let textBoxColor = UIColor(colorLiteralRed: 0.9294117647, green: 0.9294117647, blue: 0.9294117647, alpha: 1)
-let defaultColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0)
+
+class callingStatus{
+    var Status:Bool
+    var Message:String
+    var Request_Url:String
+    init(Status:Bool,Message:String,Request_Url:String){
+        self.Status = Status
+        self.Message = Message
+        self.Request_Url = Request_Url
+    }
+}
