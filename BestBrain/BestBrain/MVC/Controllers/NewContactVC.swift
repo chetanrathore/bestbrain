@@ -2,7 +2,7 @@
 //  NewContactVC.swift
 //  BestBrain
 //
-//  Created by Developer49 on 1/30/17.
+//  Created by anuradha on 1/30/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 
@@ -139,8 +139,10 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         allItems[tag].items = allItems[tag].items+1
         tblAddItems.reloadData()
     }
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
+        
         if textField == txfFirstName{
             txfFirstName.resignFirstResponder()
             txfLastName.becomeFirstResponder()
@@ -154,33 +156,54 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             txfCity.resignFirstResponder()
             txfState.becomeFirstResponder()
         }else if textField == txfState{
-            txfState.resignFirstResponder()
-            txfZipCode.becomeFirstResponder()
-        }else if textField == txfZipCode{
-            txfZipCode.resignFirstResponder()
-            txfDOB.becomeFirstResponder()
-        }else if textField == txfDOB{
+            if Appcheck_length(txfState.text!, length: 2, is_more: true){
+                txfState.resignFirstResponder()
+                txfZipCode.becomeFirstResponder()
+            }else{
+                print("Enter valid code.")
+            }
+        }
+            //            else if textField == txfZipCode{
+            //            txfZipCode.resignFirstResponder()
+            //            txfDOB.becomeFirstResponder()
+            //        }
+        else if textField == txfDOB{
             txfDOB.resignFirstResponder()
             txfDLState.becomeFirstResponder()
         }else if textField == txfDLState{
-            txfDLState.resignFirstResponder()
-            txfDLNumber.becomeFirstResponder()
-        }else if textField == txfDLNumber{
-            txfDLNumber.resignFirstResponder()
+            if Appcheck_length(txfDLState.text!, length: 2, is_more: true){
+                txfDLState.resignFirstResponder()
+                txfDLNumber.becomeFirstResponder()
+            }else{
+                print("Enter valid code.")
+            }
         }
+        //        else if textField == txfDLNumber{
+        //            txfDLNumber.resignFirstResponder()
+        //        }
         if textField.tag == 0{
         }else if textField.tag == 1{
             if self.Appcheck_email_address(textField.text!) == false{
                 print("enter valid email Address.")
+            }else{
+                textField.resignFirstResponder()
             }
         }else if textField.tag == 2{
-//            textField.keyboardType = UIKeyboardType.default
+            //            textField.keyboardType = UIKeyboardType.default
         }else if textField.tag == 3{
-//            textField.keyboardType = UIKeyboardType.default
+            //            textField.keyboardType = UIKeyboardType.default
         }
-
+        if textField == txfZipCode{
+            self.addDoneButtonOnKeyboard(textField: txfZipCode)
+        }else if textField == txfDLNumber{
+            self.addDoneButtonOnKeyboard(textField: txfDLNumber)
+        }
+        
+        tblAddItems.isScrollEnabled = true
+        
         return true
     }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.becomeFirstResponder()
         if textField.tag == 0{
@@ -224,6 +247,13 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             self.textField.resignFirstResponder()
         }
     }
+    
+    func Appcheck_zip_codes(_ data:String) -> Bool{
+        let ns:NSString = "^([0-9]{5}|[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9])$"
+        let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
+        return pr.evaluate(with: data)
+    }
+    
     func Appcheck_email_address(_ data:String) -> Bool{
         let ns:NSString = "[A-Za-z0-9\\.]+@[A-Za-z0-9]+\\.[A-Za-z.]{2,6}"
         let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)

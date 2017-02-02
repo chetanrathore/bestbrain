@@ -80,39 +80,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         self.vwSettings.frame = CGRect(x: 20, y: 30, width: ScreenWidth - 40, height: Screenheight-60)
     }
 
-    func setIcon(weatherIcon: String) -> String{
-        switch(weatherIcon){
-            case "clear-day":
-                return "haze"
-            case "partly-cloudy-day":
-                return "partly_cloudy_(day)"
-            default :
-                return "hail"
-        }
-    }
-    
-    func setWeather(lat: Double,long: Double){
-        DispatchQueue.main.async(execute: {
-            let fullUrl = "\(weatherApi)\(lat),\(long)"
-            print("Complete: \(fullUrl)")
-            server_API.sharedObject.requestFor_NSMutableDictionary(Str_Request_Url: fullUrl, Request_parameter: nil, Request_parameter_Images: nil, status: { (result) in
-                print("Result : \(result)")
-            }, response_Dictionary: { (resultDict) in
-                print("Weather Result :\(resultDict)")
-                if let tempDict = resultDict.value(forKey: "currently"){
-                    if let temp = (tempDict as AnyObject).value(forKey: "temperature"){
-                        self.lblTemp.text = "\(temp as! Int) ℃"
-                    }
-                    if let tempIcon = (tempDict as AnyObject).value(forKey: "icon"){
-                        self.imgWeather.image = UIImage(named: self.setIcon(weatherIcon: tempIcon as! String))
-                    }
-                }
-            }) { (resultArray) in
-                print(resultArray)
-            }
-        })
-    }
-    
     func setUpDate(){
         let date = NSDate() as Date
         let dateFormatter = DateFormatter()
@@ -224,31 +191,82 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     
     func SettingsDidSelectTableViewCell(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath, item: String, icon: String, type: String) {
         if type == "Checked" {
-            
+            self.arrMenuLbl = self.arrMenuLbl.filter() {$0 != item}
+            self.arrMenuItem = self.arrMenuItem.filter() {$0 != icon}
+            self.menuCollection.reloadData()
         } else if type == "Unchecked" {
-            
+            self.arrMenuLbl.append(item)
+            self.arrMenuItem.append(icon)
+            self.menuCollection.reloadData()
+
         }
     }
     
     // MARK:- Get Location of User
     
+    func setIcon(weatherIcon: String) -> String{
+        switch(weatherIcon){
+        case "clear-day":
+            return "haze"
+        case "partly-cloudy-day":
+            return "partly_cloudy_(day)"
+        case "partly-cloudy-night":
+            return "partly_cloudy_(night)"
+        case "clear-night":
+            return "clear_(night)"
+        case "rain":
+            return "drizzle"
+        default :
+            return "hail"
+        }
+    }
+    
+    func setWeatherData(lat: Double,long:Double){
+        let url = URL(string: "https://api.darksky.net/forecast/e700e63b23dc86aa7f29a90be4c5fc2e/\(lat),\(long)")
+        let req = URLRequest(url: url!)
+        let task = URLSession.shared.dataTask(with: req as URLRequest, completionHandler: {
+            data,res,err in
+            if(err != nil)
+            {
+                return
+            }
+            do {
+                if let json:NSMutableDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSMutableDictionary
+                {
+                    if let tempDict = json.value(forKey: "currently"){
+                        if let temp = (tempDict as AnyObject).value(forKey: "temperature"){
+                            self.lblTemp.text = "\(temp as! Int) ℃"
+                            print("\(temp as! Int) ℃")
+                            
+                        }
+                        if let tempIcon = (tempDict as AnyObject).value(forKey: "icon"){
+                            self.imgWeather.image = UIImage(named: self.setIcon(weatherIcon: tempIcon as! String))
+                        }
+                    }
+                }
+            } catch let error as NSError {
+                print(error)
+                return
+            }
+        })
+        task.resume()
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locationArray = locations as NSArray
         let locationObj = locationArray.lastObject as! CLLocation
         let coord = locationObj.coordinate
-//        self.lat = coord.latitude
-//        self.long = coord.longitude
-        self.setWeather(lat: coord.latitude, long: coord.longitude)
+        self.setWeatherData(lat: coord.latitude, long: coord.longitude)
         print("longitude:\(coord.longitude)")
         print("latitude:\(coord.latitude)")
-        self.locManager.stopUpdatingLocation()
+//        self.locManager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         self.locManager.stopUpdatingLocation()
         print("ERROR:\(error)")
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

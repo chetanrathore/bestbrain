@@ -2,7 +2,7 @@
 //  AddInventoryViewController.swift
 //  BestBrain
 //
-//  Created by Ajeet Singh on 10/01/17.
+//  Created by Suhani on 10/01/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 
