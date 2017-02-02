@@ -52,7 +52,6 @@
 		300267211E43070300682E9E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300267201E43070300682E9E /* AVFoundation.framework */; };
 		300267231E43070C00682E9E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300267221E43070C00682E9E /* Accelerate.framework */; };
 		3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896191E3F47ED005A5606 /* NewContactVC.xib */; };
-		3058961C1E3F47FA005A5606 /* NewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961B1E3F47FA005A5606 /* NewContactVC.swift */; };
 		305896211E3F64F7005A5606 /* addItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961F1E3F64F7005A5606 /* addItemCell.swift */; };
 		305896221E3F64F7005A5606 /* addItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896201E3F64F7005A5606 /* addItemCell.xib */; };
 		30754C851E430C2600C87E9A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30754C831E430C2600C87E9A /* MicroBlink.bundle */; };
@@ -66,6 +65,7 @@
 		7B29499D1E2607A9008566A4 /* ClockInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B29499A1E2607A9008566A4 /* ClockInViewController.xib */; };
 		7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2949A01E2607B9008566A4 /* down_Arrow.png */; };
 		7B2949A31E2607B9008566A4 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2949A11E2607B9008566A4 /* menu.png */; };
+		7B3C941E1E433ED100D6F795 /* NewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C941D1E433ED100D6F795 /* NewContactVC.swift */; };
 		7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */; };
 		7B4F5EC31E24CA8E0086B359 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */; };
 		7B4F5EC41E24CA8E0086B359 /* DashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */; };
@@ -295,7 +295,6 @@
 		300267201E43070300682E9E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		300267221E43070C00682E9E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		305896191E3F47ED005A5606 /* NewContactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewContactVC.xib; sourceTree = "<group>"; };
-		3058961B1E3F47FA005A5606 /* NewContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactVC.swift; sourceTree = "<group>"; };
 		3058961F1E3F64F7005A5606 /* addItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addItemCell.swift; sourceTree = "<group>"; };
 		305896201E3F64F7005A5606 /* addItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addItemCell.xib; sourceTree = "<group>"; };
 		30754C831E430C2600C87E9A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MicroBlink.bundle; sourceTree = "<group>"; };
@@ -309,6 +308,7 @@
 		7B29499A1E2607A9008566A4 /* ClockInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClockInViewController.xib; sourceTree = "<group>"; };
 		7B2949A01E2607B9008566A4 /* down_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_Arrow.png; sourceTree = "<group>"; };
 		7B2949A11E2607B9008566A4 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		7B3C941D1E433ED100D6F795 /* NewContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactVC.swift; sourceTree = "<group>"; };
 		7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardVC.xib; sourceTree = "<group>"; };
@@ -788,9 +788,9 @@
 		7B4F5EBB1E24CA8E0086B359 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C941D1E433ED100D6F795 /* NewContactVC.swift */,
 				7B7547141E41FD8A0025A087 /* API_calling.swift */,
 				7B7547151E41FD8A0025A087 /* CustomerDashboardVC.swift */,
-				3058961B1E3F47FA005A5606 /* NewContactVC.swift */,
 				7B2949921E260799008566A4 /* AddInventoryViewController.swift */,
 				7B2949931E260799008566A4 /* ClockInViewController.swift */,
 				7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */,
@@ -835,11 +835,11 @@
 			isa = PBXGroup;
 			children = (
 				7B7547081E41FD600025A087 /* DashboardCell.swift */,
+				7B75470C1E41FD600025A087 /* DashboardCell.xib */,
 				7B7547091E41FD600025A087 /* SettingsCell.swift */,
+				7B75470D1E41FD600025A087 /* SettingsCell.xib */,
 				7B75470A1E41FD600025A087 /* DashboardBottomCell.swift */,
 				7B75470B1E41FD600025A087 /* DashboardBottomCell.xib */,
-				7B75470C1E41FD600025A087 /* DashboardCell.xib */,
-				7B75470D1E41FD600025A087 /* SettingsCell.xib */,
 				0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */,
 				0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */,
 				3058961F1E3F64F7005A5606 /* addItemCell.swift */,
@@ -1225,7 +1225,6 @@
 				0C0C56131E4088D80085CFD1 /* IQBarButtonItem.swift in Sources */,
 				0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */,
 				0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */,
-				3058961C1E3F47FA005A5606 /* NewContactVC.swift in Sources */,
 				0C0C561E1E4095D40085CFD1 /* InventoryDetailVC.swift in Sources */,
 				7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */,
 				0C0C56111E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift in Sources */,
@@ -1253,6 +1252,7 @@
 				0C0C56161E4088D80085CFD1 /* IQToolbar.swift in Sources */,
 				0C0C56081E4088D80085CFD1 /* IQNSArray+Sort.swift in Sources */,
 				0C0C560A1E4088D80085CFD1 /* IQUITextFieldView+Additions.swift in Sources */,
+				7B3C941E1E433ED100D6F795 /* NewContactVC.swift in Sources */,
 				0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */,
 				0C0C56121E4088D80085CFD1 /* IQTextView.swift in Sources */,
 				7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */,

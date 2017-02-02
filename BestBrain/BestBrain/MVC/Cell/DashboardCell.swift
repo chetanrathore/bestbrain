@@ -10,12 +10,11 @@ import UIKit
 
 class DashboardCell: UICollectionViewCell {
 
-    
     @IBOutlet var imgItem: UIImageView!
     @IBOutlet var lblItem: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
 }
+

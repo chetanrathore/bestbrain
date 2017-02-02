@@ -327,6 +327,11 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func handleBtnLinkToCustomer(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 class addItems{
     var name: String!
