@@ -292,12 +292,6 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         return pr.evaluate(with: data)
     }
     
-    func Appcheck_zip_codes(_ data:String) -> Bool{
-        let ns:NSString = "^([0-9]{5}|[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9])$"
-        let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
-        return pr.evaluate(with: data)
-    }
-
     func Appcheck_number(_ data:String,length:Int?) -> Bool{
         let ns:NSString
         if let _ = length{

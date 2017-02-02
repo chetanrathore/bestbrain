@@ -44,10 +44,20 @@
 		0C8FB62C1E3F6AAD007B7E68 /* bike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */; };
 		0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */; };
 		0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */; };
+		300267161E4305B700682E9E /* DLScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300267151E4305B700682E9E /* DLScanVC.swift */; };
+		300267181E4305FE00682E9E /* DLScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300267171E4305FE00682E9E /* DLScanVC.xib */; };
+		3002671B1E4306D700682E9E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3002671A1E4306D700682E9E /* libc++.tbd */; };
+		3002671D1E4306E400682E9E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3002671C1E4306E400682E9E /* AudioToolbox.framework */; };
+		3002671F1E4306F900682E9E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3002671E1E4306F900682E9E /* CoreMedia.framework */; };
+		300267211E43070300682E9E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300267201E43070300682E9E /* AVFoundation.framework */; };
+		300267231E43070C00682E9E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 300267221E43070C00682E9E /* Accelerate.framework */; };
 		3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896191E3F47ED005A5606 /* NewContactVC.xib */; };
 		3058961C1E3F47FA005A5606 /* NewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961B1E3F47FA005A5606 /* NewContactVC.swift */; };
 		305896211E3F64F7005A5606 /* addItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961F1E3F64F7005A5606 /* addItemCell.swift */; };
 		305896221E3F64F7005A5606 /* addItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896201E3F64F7005A5606 /* addItemCell.xib */; };
+		30754C851E430C2600C87E9A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30754C831E430C2600C87E9A /* MicroBlink.bundle */; };
+		30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C841E430C2600C87E9A /* MicroBlink.framework */; };
+		30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C8A1E430D7B00C87E9A /* libiconv.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949921E260799008566A4 /* AddInventoryViewController.swift */; };
 		7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949931E260799008566A4 /* ClockInViewController.swift */; };
 		7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */; };
@@ -277,10 +287,20 @@
 		0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike.jpg; sourceTree = "<group>"; };
 		0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryFilterVC.xib; sourceTree = "<group>"; };
 		0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryFilterVC.swift; sourceTree = "<group>"; };
+		300267151E4305B700682E9E /* DLScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScanVC.swift; sourceTree = "<group>"; };
+		300267171E4305FE00682E9E /* DLScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanVC.xib; sourceTree = "<group>"; };
+		3002671A1E4306D700682E9E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3002671C1E4306E400682E9E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3002671E1E4306F900682E9E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		300267201E43070300682E9E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		300267221E43070C00682E9E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		305896191E3F47ED005A5606 /* NewContactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewContactVC.xib; sourceTree = "<group>"; };
 		3058961B1E3F47FA005A5606 /* NewContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactVC.swift; sourceTree = "<group>"; };
 		3058961F1E3F64F7005A5606 /* addItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addItemCell.swift; sourceTree = "<group>"; };
 		305896201E3F64F7005A5606 /* addItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addItemCell.xib; sourceTree = "<group>"; };
+		30754C831E430C2600C87E9A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MicroBlink.bundle; sourceTree = "<group>"; };
+		30754C841E430C2600C87E9A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
+		30754C8A1E430D7B00C87E9A /* libiconv.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libiconv.tbd; sourceTree = "<group>"; };
 		7B2949921E260799008566A4 /* AddInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryViewController.swift; sourceTree = "<group>"; };
 		7B2949931E260799008566A4 /* ClockInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockInViewController.swift; sourceTree = "<group>"; };
 		7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredVehicleSelctionViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +482,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */,
+				30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */,
+				300267231E43070C00682E9E /* Accelerate.framework in Frameworks */,
+				300267211E43070300682E9E /* AVFoundation.framework in Frameworks */,
+				3002671F1E4306F900682E9E /* CoreMedia.framework in Frameworks */,
+				3002671D1E4306E400682E9E /* AudioToolbox.framework in Frameworks */,
+				3002671B1E4306D700682E9E /* libc++.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +592,21 @@
 				0C0C56071E4088D80085CFD1 /* IQKeyboardManager.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		300267191E4306D600682E9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30754C8A1E430D7B00C87E9A /* libiconv.tbd */,
+				30754C831E430C2600C87E9A /* MicroBlink.bundle */,
+				30754C841E430C2600C87E9A /* MicroBlink.framework */,
+				300267221E43070C00682E9E /* Accelerate.framework */,
+				300267201E43070300682E9E /* AVFoundation.framework */,
+				3002671E1E4306F900682E9E /* CoreMedia.framework */,
+				3002671C1E4306E400682E9E /* AudioToolbox.framework */,
+				3002671A1E4306D700682E9E /* libc++.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7B29499E1E2607B9008566A4 /* Resources */ = {
@@ -758,6 +800,7 @@
 				0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */,
 				0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */,
 				0C0C561D1E4095D40085CFD1 /* InventoryDetailVC.swift */,
+				300267151E4305B700682E9E /* DLScanVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -783,6 +826,7 @@
 				0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */,
 				0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */,
 				0C0C561B1E4095C10085CFD1 /* InventoryDetailVC.xib */,
+				300267171E4305FE00682E9E /* DLScanVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -820,6 +864,7 @@
 				B80B3D8A1E24BFE800FF0A20 /* BestBrainTests */,
 				B80B3D951E24BFE800FF0A20 /* BestBrainUITests */,
 				B80B3D741E24BFE800FF0A20 /* Products */,
+				300267191E4306D600682E9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -935,17 +980,19 @@
 				TargetAttributes = {
 					B80B3D721E24BFE800FF0A20 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = JMPNXUM63A;
+						DevelopmentTeam = Y55EBSG532;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					B80B3D861E24BFE800FF0A20 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = Y55EBSG532;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B80B3D721E24BFE800FF0A20;
 					};
 					B80B3D911E24BFE800FF0A20 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = Y55EBSG532;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B80B3D721E24BFE800FF0A20;
 					};
@@ -1019,6 +1066,7 @@
 				7B7548081E41FE150025A087 /* severe_thunderstorms@3x.png in Resources */,
 				7B7548131E41FE150025A087 /* snow_showers@2x.png in Resources */,
 				7B7547FB1E41FE150025A087 /* partly_cloudy@2x.png in Resources */,
+				300267181E4305FE00682E9E /* DLScanVC.xib in Resources */,
 				0C8FB6281E3F55E4007B7E68 /* InventoryCell.xib in Resources */,
 				7B7547A41E41FE150025A087 /* Phone.png in Resources */,
 				7B7548141E41FE150025A087 /* snow_showers@3x.png in Resources */,
@@ -1052,6 +1100,7 @@
 				0C8FB62A1E3F5E21007B7E68 /* temp_back.jpeg in Resources */,
 				7B7547B91E41FE150025A087 /* clear_(night).png in Resources */,
 				7B7547DB1E41FE150025A087 /* hurricane@3x.png in Resources */,
+				30754C851E430C2600C87E9A /* MicroBlink.bundle in Resources */,
 				7B7548101E41FE150025A087 /* snow_flurries@2x.png in Resources */,
 				7B29499B1E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib in Resources */,
 				7B7547C01E41FE150025A087 /* cold@2x.png in Resources */,
@@ -1196,6 +1245,7 @@
 				0C0C560B1E4088D80085CFD1 /* IQUIView+Hierarchy.swift in Sources */,
 				7B7547161E41FD8A0025A087 /* API_calling.swift in Sources */,
 				0C0C56141E4088D80085CFD1 /* IQPreviousNextView.swift in Sources */,
+				300267161E4305B700682E9E /* DLScanVC.swift in Sources */,
 				0C0C560E1E4088D80085CFD1 /* IQKeyboardManagerConstants.swift in Sources */,
 				7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */,
 				0C8FB6271E3F55E4007B7E68 /* InventoryCell.swift in Sources */,
@@ -1274,9 +1324,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1296,6 +1348,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1324,9 +1377,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1339,6 +1394,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1351,13 +1407,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JMPNXUM63A;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/MicroBlink.framework\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BestBrain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.developer.BestBrain;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinappdemo.vinapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
+				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1370,13 +1437,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JMPNXUM63A;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SRCROOT)/MicroBlink.framework\"",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BestBrain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.developer.BestBrain;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinappdemo.vinapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
+				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
 				SWIFT_OBJC_BRIDGING_HEADER = "BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
