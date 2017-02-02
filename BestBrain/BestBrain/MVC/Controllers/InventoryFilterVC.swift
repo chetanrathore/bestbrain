@@ -2,7 +2,7 @@
 //  InventoryFilterVC.swift
 //  BestBrain
 //
-//  Created by LaNet on 1/30/17.
+//  Created by sparth on 1/30/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 

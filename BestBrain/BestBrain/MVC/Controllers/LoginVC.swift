@@ -2,7 +2,7 @@
 //  LoginVC.swift
 //  BestBrain
 //
-//  Created by Devloper30 on 10/01/17.
+//  Created by chetanRathore on 10/01/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 
