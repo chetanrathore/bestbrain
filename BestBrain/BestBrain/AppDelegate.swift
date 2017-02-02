@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
 
         IQKeyboardManager.sharedManager().enable = true
-        let rootVC = NewContactVC(nibName: "NewContactVC", bundle: nil)
+        let rootVC = DLScanVC(nibName: "DLScanVC", bundle: nil)
         nav = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nav
         
