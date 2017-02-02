@@ -11,7 +11,6 @@ import UIKit
 class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var InventorySegment: UISegmentedControl!
-    @IBOutlet var imgNavBack: UIImageView!
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var btnFilter: UIButton!
     @IBOutlet var tblInventory: UITableView!
@@ -58,5 +57,10 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let filterVC = InventoryFilterVC(nibName: "InventoryFilterVC", bundle: nil)
         self.navigationController!.pushViewController(filterVC, animated: true)
     }
+    
+    @IBAction func handleBtnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 }

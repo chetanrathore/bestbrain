@@ -61,14 +61,14 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
     
     func setInterface() {
         let sliderLine1 = UIView(frame: swPaymentRange.frame)
-        sliderLine1.layer.backgroundColor = UIColor.red.cgColor
+//        sliderLine1.layer.backgroundColor = UIColor.red.cgColor
         sliderLine1.autoresizingMask = UIViewAutoresizing.flexibleWidth
         vwPayment.addSubview(sliderLine1)
         swPaymentRange.removeFromSuperview()
         vwPayment.addSubview(swPaymentRange)
         
         let sliderLine2 = UIView(frame: swPriceRange.frame)
-        sliderLine2.layer.backgroundColor = UIColor.red.cgColor
+//        sliderLine2.layer.backgroundColor = UIColor.red.cgColor
         sliderLine2.autoresizingMask = UIViewAutoresizing.flexibleWidth
         
         vwPrice.addSubview(sliderLine2)

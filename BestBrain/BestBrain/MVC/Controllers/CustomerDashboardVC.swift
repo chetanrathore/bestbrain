@@ -148,14 +148,32 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             cell.imgBottom.image = UIImage(named: arrBottomItem[indexPath.row])
             return cell
         }
-        
+    }
+    
+    
+    
+    func reDirect(item: String){
+        if  item == "Inventory" {
+            let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "Customer" {
+            let vc  = NewContactVC(nibName: "NewContactVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "" {
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         if collectionView.tag == 1{
-            print("Menu Item selected")
+            
+            let cell = collectionView.cellForItem(at: indexPath) as? DashboardCell
+
+            let item = cell?.lblItem.text
+            self.reDirect(item: item!)
         } else {
-            print("Bottom item Selected")
+            print("Bottom Item selected")
         }
     }
     
@@ -237,7 +255,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
                         if let temp = (tempDict as AnyObject).value(forKey: "temperature"){
                             self.lblTemp.text = "\(temp as! Int) ℃"
                             print("\(temp as! Int) ℃")
-                            
                         }
                         if let tempIcon = (tempDict as AnyObject).value(forKey: "icon"){
                             self.imgWeather.image = UIImage(named: self.setIcon(weatherIcon: tempIcon as! String))
