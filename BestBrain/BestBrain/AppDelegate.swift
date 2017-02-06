@@ -12,18 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var nav = UINavigationController()
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
+        window = UIWindow(frame: UIScreen.main.bounds)
 
         IQKeyboardManager.sharedManager().enable = true
         let rootVC = CustomerDashboardVC(nibName: "CustomerDashboardVC", bundle: nil)
-        nav = UINavigationController(rootViewController: rootVC)
+        let nav = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nav
-        
-        
         window?.makeKeyAndVisible()
         return true
     }

@@ -16,11 +16,52 @@ class InventoryDetailVC: UIViewController {
     
     @IBOutlet var imgInventory: UIImageView!
     
+    @IBOutlet var btnMMSInfo: UIButton!
+    
+    @IBOutlet var btnEmailInfo: UIButton!
+    
+    @IBOutlet var btnQuote: UIButton!
+    
+    @IBOutlet var constVWBtnHeight: NSLayoutConstraint!
+    
+    @IBOutlet var constVWScrollHeight: NSLayoutConstraint!
+    @IBOutlet var constVWBottomHeight: NSLayoutConstraint!
+    @IBOutlet var constImageHeight: NSLayoutConstraint!
+    
+    @IBOutlet var constBtnSpacing1: NSLayoutConstraint!
+    
+    @IBOutlet var constBtnSpacing2: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
-        scrollMain.contentSize = CGSize(width: ScreenWidth, height: 603)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            constVWBtnHeight.constant = 150
+            constVWScrollHeight.constant = 1000
+            constImageHeight.constant = 400
+            constVWBottomHeight.constant = 600
+            let fontName = (self.btnMMSInfo.titleLabel?.font.fontName)!
+            btnMMSInfo.titleLabel?.font = UIFont(name: fontName, size: 20)
+            btnMMSInfo.titleEdgeInsets = UIEdgeInsetsMake(100, -150, 0, 0)
+            
+            btnEmailInfo.titleLabel?.font = UIFont(name: fontName, size: 20)
+            btnEmailInfo.titleEdgeInsets = UIEdgeInsetsMake(100, -130, 0, 0)
+            
+            btnQuote.titleLabel?.font = UIFont(name: fontName, size: 20)
+            btnQuote.titleEdgeInsets = UIEdgeInsetsMake(100, -140, 0, 0)
+           
+            constBtnSpacing1.constant = 50
+            constBtnSpacing2.constant = 50
+         }else{
+            constVWBtnHeight.constant = 85
+            constVWScrollHeight.constant = 650
+            constImageHeight.constant = 250
+            constVWBottomHeight.constant = 400
+            
+            constBtnSpacing1.constant = 20
+            constBtnSpacing2.constant = 20
+        }
+
     }
     
     override func didReceiveMemoryWarning() {
