@@ -28,6 +28,18 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     var allItems = [addItems]()
     var index : Int = -1
     var textField = UITextField()
+   
+    var firstName:String!
+    var lastName:String!
+    var address:String!
+    var city:String!
+    var state:String!
+    var zipcode:String!
+    var birthdate = String()
+    var dlState:String!
+    var dlnum:String!
+
+    var isFromScanning:Bool = false
     
 //    var arrPhones = [String]()
 //    var arrEmails = [String]()
@@ -38,6 +50,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.isNavigationBarHidden = false
+        
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
@@ -50,6 +64,20 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         txfDOB.delegate = self
         txfDLState.delegate = self
         txfDLNumber.delegate = self
+
+        if isFromScanning{
+            txfFirstName.text = firstName
+            txfLastName.text = lastName
+            txfAddress.text = address
+            txfCity.text = city
+            txfState.text = state
+            txfZipCode.text = zipcode
+            var DOB = birthdate.insert(string: "/", ind: 2)
+            DOB = DOB.insert(string: "/", ind: 5)
+            txfDOB.text = DOB
+            txfDLState.text = dlState
+            txfDLNumber.text = dlnum
+        }
 
         txfFirstName.tag = 11
         txfLastName.tag = 12
@@ -83,13 +111,14 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         ]
 
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidLayoutSubviews() {
         for vw in vwTextFields{
             vw.layer.borderWidth = 1
             vw.layer.borderColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1).cgColor
             vw.layer.cornerRadius = 7
         }
         imgUser.layer.cornerRadius = imgUser.frame.size.width/2
+
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return allItems.count
@@ -237,7 +266,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     
     func addDoneButtonOnKeyboard(textField: UITextField)
     {
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 50))
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 50))
         doneToolbar.barStyle = UIBarStyle.blackTranslucent
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
@@ -344,6 +373,12 @@ class addItems{
         self.collapsed = collapsed
     }
 }
+extension String {
+    func insert(string:String,ind:Int) -> String {
+        return  String(self.characters.prefix(ind)) + string + String(self.characters.suffix(self.characters.count-ind))
+    }
+}
+
 //extension UIViewController {
 //    func hideKeyboardWhenTappedAround() {
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

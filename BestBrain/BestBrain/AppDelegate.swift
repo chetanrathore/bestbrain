@@ -19,11 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
 
         IQKeyboardManager.sharedManager().enable = true
-        let rootVC = CustomerDashboardVC(nibName: "CustomerDashboardVC", bundle: nil)
+        
+        let rootVC = DLScanVC(nibName: "DLScanVC", bundle: nil)
         nav = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nav
         
-        
+     //   print(UIDevice.current.systemVersion)
         window?.makeKeyAndVisible()
         return true
     }
