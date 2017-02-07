@@ -25,6 +25,9 @@
                 <outlet property="constVWScrollHeight" destination="w40-tg-fsc" id="FdE-la-dmc"/>
                 <outlet property="scrollViewMain" destination="Pgj-Tk-Eu4" id="UjJ-fJ-dbZ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Oba-B5-8nN"/>
+                <outlet property="vwDetails" destination="VoL-bh-dXx" id="p8g-y1-piD"/>
+                <outlet property="vwInfo" destination="BMi-pG-8AN" id="FJd-Fe-7WG"/>
+                <outlet property="vwMenuItem" destination="W91-x3-JnO" id="o3A-cs-yPK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

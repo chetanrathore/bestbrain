@@ -14,6 +14,9 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var btnFilter: UIButton!
     @IBOutlet var tblInventory: UITableView!
+    @IBOutlet var vwNavigationBar: UIView!
+    @IBOutlet var vwSegment: UIView!
+    @IBOutlet var vwBackground: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +25,18 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         tblInventory.tableFooterView = UIView()
         tblInventory.dataSource = self
         tblInventory.register(UINib(nibName: "InventoryCell", bundle: nil), forCellReuseIdentifier: "InventoryCell")
-        let imgBackground = UIImageView(frame: tblInventory.bounds)
-        imgBackground.image =  UIImage(named: "temp_back.jpeg")
-        tblInventory.backgroundView = imgBackground
+        //        let imgBackground = UIImageView(frame: tblInventory.bounds)
+        //        imgBackground.image =  UIImage(named: "temp_back.jpeg")
+        //        tblInventory.backgroundView = imgBackground
+        tblInventory.backgroundColor = UIColor.clear
+        self.vwBackground.gradientLayer()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +71,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     @IBAction func handleBtnBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController!.popViewController(animated: true)
     }
     
     

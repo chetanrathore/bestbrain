@@ -19,6 +19,12 @@ class InventoryDetailWithMenuVC: UIViewController {
     @IBOutlet var btnSalesHistory: UIButton!
     
     @IBOutlet var btnAddPhoto: UIButton!
+
+    @IBOutlet var vwDetails: UIView!
+    
+    @IBOutlet var vwInfo: UIView!
+    
+    @IBOutlet var vwMenuItem: UIView!
     
     @IBOutlet var constVWBtnHeight: NSLayoutConstraint!
     @IBOutlet var constVWScrollHeight: NSLayoutConstraint!
@@ -43,6 +49,11 @@ class InventoryDetailWithMenuVC: UIViewController {
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
         //    scrollViewMain.contentSize = CGSize(width: ScreenWidth, height: 647)
+        vwDetails.gradientLayer()
+        vwDetails.bringSubview(toFront: vwInfo)
+        vwDetails.bringSubview(toFront: vwMenuItem)
+        btnAddPhoto.superview?.bringSubview(toFront: btnAddPhoto)
+        
         if UIDevice.current.userInterfaceIdiom == .pad {
             constVWBtnHeight.constant = 120
             constVWScrollHeight.constant = 1000
