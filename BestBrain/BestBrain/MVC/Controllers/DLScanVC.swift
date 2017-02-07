@@ -20,7 +20,9 @@ class DLScanVC: UIViewController, PPScanningDelegate {
     }
 
     @IBAction func scanClicked(_ sender: Any) {
-            self.starScanning()
+           // self.starScanning()
+        let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     private func getCoordinatorWithError(error: NSErrorPointer) -> PPCameraCoordinator?
     {
@@ -29,7 +31,7 @@ class DLScanVC: UIViewController, PPScanningDelegate {
         }
         let settings: PPSettings = PPSettings()
         // Visit www.microblink.com to get the license key for your app
-        settings.licenseSettings.licenseKey = "6YWMZA6Z-4WVGMDWQ-TNIES7YR-BCFG2KPC-YGW4WVFY-IFKLQQKU-XBAVJOCB-KS4BBVRT"
+        settings.licenseSettings.licenseKey = "XYF6FHRT-MSNEPRPI-S4E5KI4O-RF33F4BD-R2EXPMXQ-EOHIS55S-6ARY5CLX-WLYHEMHJ"
         
         do {
             // To initialize the PDF417 recognizer settings
@@ -63,6 +65,18 @@ class DLScanVC: UIViewController, PPScanningDelegate {
             return
         }
         let scanningViewController: UIViewController = PPViewControllerFactory.cameraViewController(with: self, coordinator: coordinator, error: nil)
+        let vwBotttom = UIView(frame: CGRect(x: 0, y: Screenheight-50, width: ScreenWidth, height: 50))
+        vwBotttom.backgroundColor = UIColor.black
+        let btnPicture = UIButton(frame: CGRect(x: 25, y: vwBotttom.frame.origin.y+10, width: 30, height: 30))
+        let btnBarCode = UIButton(frame: CGRect(x: ScreenWidth-55, y: vwBotttom.frame.origin.y+10, width: 30, height: 30))
+        
+        btnPicture.setImage(UIImage(named: ""), for: .normal)
+        btnBarCode.setImage(UIImage(named: ""), for: .normal)
+
+        vwBotttom.addSubview(btnPicture)
+        vwBotttom.addSubview(btnBarCode)
+        scanningViewController.navigationController?.isNavigationBarHidden = true
+        scanningViewController.view.addSubview(vwBotttom)
         self.present(scanningViewController, animated: true, completion: nil)
     }
     func getAddressValue(message:String)
@@ -83,20 +97,39 @@ class DLScanVC: UIViewController, PPScanningDelegate {
             return
         }
         scanConroller.pauseScanning()
-        
+
         var message: String = ""
         var title: String = ""
         var usdlFound = false;
         var isRequiredScannar = false //Check,required type for scan?
+        
+        let vc = NewContactVC(nibName: "NewContactVC", bundle: nil)
+
         // Collect US drivers license
         for result in results {
             if(result is PPUsdlRecognizerResult) {
                 /** US drivers license was detected */
                 let usdlResult = result as! PPUsdlRecognizerResult
                 title = "USDL"
-                message = usdlResult.getAllStringElements().description
+                //message = usdlResult.getAllStringElements().description
+                let userDetails = usdlResult.getAllStringElements() as NSDictionary
+             
+
+                vc.firstName = userDetails.value(forKey: "Customer First Name") as! String
+                vc.lastName = userDetails.value(forKey: "Customer Family Name") as! String
+                vc.address = userDetails.value(forKey: "Address - Street 1") as! String
+                vc.city = userDetails.value(forKey: "Address - City") as! String
+                vc.state = userDetails.value(forKey: "Address - Jurisdiction Code") as! String
+                vc.zipcode = userDetails.value(forKey: "Address - Postal Code") as! String
+                vc.birthdate = userDetails.value(forKey: "Date of Birth") as! String
+                vc.dlnum = userDetails.value(forKey: "Customer First Name") as! String
+                vc.dlState = userDetails.value(forKey: "Customer First Name") as! String
+
+                vc.isFromScanning = true
+                
                 usdlFound = true
                 isRequiredScannar = true
+                
                 break
             }
         }
@@ -117,19 +150,16 @@ class DLScanVC: UIViewController, PPScanningDelegate {
                 }
             }
         }
+        
         if(!isRequiredScannar){
             response = ""
             return
         }else{
             response = message
-            let alertController: UIAlertController = UIAlertController.init(title: title, message: response, preferredStyle: UIAlertControllerStyle.alert)
-            
-            let okAction: UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default,
-                                                             handler: { (action) -> Void in
-                                                                self.dismiss(animated: true, completion: nil)
+            DispatchQueue.main.async(execute: {
+                self.dismiss(animated: true, completion: nil)
             })
-            alertController.addAction(okAction)
-            scanningViewController?.present(alertController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

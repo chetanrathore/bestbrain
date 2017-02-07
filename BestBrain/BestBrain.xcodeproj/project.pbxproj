@@ -60,6 +60,12 @@
 		3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896191E3F47ED005A5606 /* NewContactVC.xib */; };
 		305896211E3F64F7005A5606 /* addItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3058961F1E3F64F7005A5606 /* addItemCell.swift */; };
 		305896221E3F64F7005A5606 /* addItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305896201E3F64F7005A5606 /* addItemCell.xib */; };
+		306A8AE31E4857E30050CC58 /* DLScanCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306A8AE21E4857E30050CC58 /* DLScanCameraVC.swift */; };
+		306A8AE51E4858050050CC58 /* DLScanCameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306A8AE41E4858050050CC58 /* DLScanCameraVC.xib */; };
+		306A8AE91E4877A60050CC58 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 306A8AE61E4877A60050CC58 /* error.png */; };
+		306A8AEA1E4877A60050CC58 /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 306A8AE71E4877A60050CC58 /* flash.png */; };
+		306A8AEB1E4877A60050CC58 /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 306A8AE81E4877A60050CC58 /* id-card.png */; };
+		306A8AED1E48879C0050CC58 /* QRImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 306A8AEC1E48879C0050CC58 /* QRImage.png */; };
 		30754C851E430C2600C87E9A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30754C831E430C2600C87E9A /* MicroBlink.bundle */; };
 		30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C841E430C2600C87E9A /* MicroBlink.framework */; };
 		30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C8A1E430D7B00C87E9A /* libiconv.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -309,6 +315,12 @@
 		305896191E3F47ED005A5606 /* NewContactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewContactVC.xib; sourceTree = "<group>"; };
 		3058961F1E3F64F7005A5606 /* addItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addItemCell.swift; sourceTree = "<group>"; };
 		305896201E3F64F7005A5606 /* addItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addItemCell.xib; sourceTree = "<group>"; };
+		306A8AE21E4857E30050CC58 /* DLScanCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScanCameraVC.swift; sourceTree = "<group>"; };
+		306A8AE41E4858050050CC58 /* DLScanCameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanCameraVC.xib; sourceTree = "<group>"; };
+		306A8AE61E4877A60050CC58 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		306A8AE71E4877A60050CC58 /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
+		306A8AE81E4877A60050CC58 /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
+		306A8AEC1E48879C0050CC58 /* QRImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRImage.png; sourceTree = "<group>"; };
 		30754C831E430C2600C87E9A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MicroBlink.bundle; sourceTree = "<group>"; };
 		30754C841E430C2600C87E9A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
 		30754C8A1E430D7B00C87E9A /* libiconv.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libiconv.tbd; sourceTree = "<group>"; };
@@ -632,10 +644,16 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0C6BF5B91E488DB400F92D07 /* dollar.png */,
+
+        0C6BF5B91E488DB400F92D07 /* dollar.png */,
 				0C6BF5BA1E488DB400F92D07 /* photo-camera.png */,
 				0C6BF5BB1E488DB400F92D07 /* Support.png */,
 				0C6BF5BC1E488DB400F92D07 /* thumbs-up-hand.png */,
+				306A8AEC1E48879C0050CC58 /* QRImage.png */,
+				306A8AE61E4877A60050CC58 /* error.png */,
+				306A8AE71E4877A60050CC58 /* flash.png */,
+				306A8AE81E4877A60050CC58 /* id-card.png */,
+
 				7B75471A1E41FE150025A087 /* Chat.png */,
 				7B75471B1E41FE150025A087 /* Checked.png */,
 				7B75471C1E41FE150025A087 /* list.png */,
@@ -818,6 +836,8 @@
 				0C0C561D1E4095D40085CFD1 /* InventoryDetailVC.swift */,
 				300267151E4305B700682E9E /* DLScanVC.swift */,
 				0C6BF5B71E4886F100F92D07 /* InventoryDetailWithMenuVC.swift */,
+				306A8AE21E4857E30050CC58 /* DLScanCameraVC.swift */,
+
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -844,7 +864,9 @@
 				0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */,
 				0C0C561B1E4095C10085CFD1 /* InventoryDetailVC.xib */,
 				300267171E4305FE00682E9E /* DLScanVC.xib */,
-				0C6BF5B51E4886E000F92D07 /* InventoryDetailWithMenuVC.xib */,
+
+        0C6BF5B51E4886E000F92D07 /* InventoryDetailWithMenuVC.xib */,
+				306A8AE41E4858050050CC58 /* DLScanCameraVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1090,6 +1112,7 @@
 				300267181E4305FE00682E9E /* DLScanVC.xib in Resources */,
 				0C8FB6281E3F55E4007B7E68 /* InventoryCell.xib in Resources */,
 				7B7547A41E41FE150025A087 /* Phone.png in Resources */,
+				306A8AEB1E4877A60050CC58 /* id-card.png in Resources */,
 				7B7548141E41FE150025A087 /* snow_showers@3x.png in Resources */,
 				7B7548111E41FE150025A087 /* snow_flurries@3x.png in Resources */,
 				7B7547D91E41FE150025A087 /* hurricane.png in Resources */,
@@ -1130,6 +1153,7 @@
 				7B7547D41E41FE150025A087 /* haze@2x.png in Resources */,
 				7B7547FA1E41FE150025A087 /* partly_cloudy.png in Resources */,
 				3058961A1E3F47ED005A5606 /* NewContactVC.xib in Resources */,
+				306A8AE91E4877A60050CC58 /* error.png in Resources */,
 				7B75480C1E41FE150025A087 /* sleet.png in Resources */,
 				7B7547B41E41FE150025A087 /* blowing_snow@2x.png in Resources */,
 				7B7547AE1E41FE150025A087 /* Quote.png in Resources */,
@@ -1142,6 +1166,7 @@
 				7B7547E31E41FE150025A087 /* light_snow_showers@2x.png in Resources */,
 				7B7547C11E41FE150025A087 /* cold@3x.png in Resources */,
 				7B7547E61E41FE150025A087 /* mixed_rain_and_snow@2x.png in Resources */,
+				306A8AED1E48879C0050CC58 /* QRImage.png in Resources */,
 				7B7547B11E41FE150025A087 /* Tasks.png in Resources */,
 				7B7547B51E41FE150025A087 /* blowing_snow@3x.png in Resources */,
 				7B7547BD1E41FE150025A087 /* cloudy@2x.png in Resources */,
@@ -1187,6 +1212,7 @@
 				7B7547B21E41FE150025A087 /* Trivia.png in Resources */,
 				7B7547F11E41FE150025A087 /* mostly_cloudy_(night).png in Resources */,
 				0C8FB61D1E3F4F8A007B7E68 /* filter.png in Resources */,
+				306A8AE51E4858050050CC58 /* DLScanCameraVC.xib in Resources */,
 				7B7548001E41FE150025A087 /* scattered_snow_showers.png in Resources */,
 				7B2949A31E2607B9008566A4 /* menu.png in Resources */,
 				7B7547D61E41FE150025A087 /* heavy_snow.png in Resources */,
@@ -1200,6 +1226,7 @@
 				0C0C56181E4088D80085CFD1 /* IQKeyboardManager.bundle in Resources */,
 				7B7547D21E41FE150025A087 /* hail@3x.png in Resources */,
 				7B75481E1E41FE150025A087 /* thunderstorms@2x.png in Resources */,
+				306A8AEA1E4877A60050CC58 /* flash.png in Resources */,
 				7B7547D71E41FE150025A087 /* heavy_snow@2x.png in Resources */,
 				7B7547F31E41FE150025A087 /* mostly_cloudy_(night)@3x.png in Resources */,
 				7B7547C71E41FE150025A087 /* dust@3x.png in Resources */,
@@ -1247,6 +1274,7 @@
 				B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */,
 				0C0C56131E4088D80085CFD1 /* IQBarButtonItem.swift in Sources */,
 				0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */,
+				306A8AE31E4857E30050CC58 /* DLScanCameraVC.swift in Sources */,
 				0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */,
 				0C0C561E1E4095D40085CFD1 /* InventoryDetailVC.swift in Sources */,
 				7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */,
@@ -1372,7 +1400,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE = "b52d7dbe-9051-452e-bdf4-0a78035f3ed6";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1418,7 +1446,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+
+        PROVISIONING_PROFILE = "b52d7dbe-9051-452e-bdf4-0a78035f3ed6";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1447,8 +1476,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+
+				PROVISIONING_PROFILE = "b52d7dbe-9051-452e-bdf4-0a78035f3ed6";
+				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1477,8 +1507,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+
+				PROVISIONING_PROFILE = "b52d7dbe-9051-452e-bdf4-0a78035f3ed6";
+				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

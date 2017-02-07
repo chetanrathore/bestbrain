@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-let ScreenWidth = UIScreen.main.bounds.width
-let Screenheight = UIScreen.main.bounds.height
+let ScreenWidth = UIScreen.main.bounds.size.width
+let Screenheight = UIScreen.main.bounds.size.height
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let weatherApi = "https://api.darksky.net/forecast/e700e63b23dc86aa7f29a90be4c5fc2e/"
