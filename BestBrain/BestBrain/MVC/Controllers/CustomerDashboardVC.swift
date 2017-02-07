@@ -33,6 +33,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     var arrBottomItem = ["Phone","Chat","list","Message"]
     var transperentView = UIView()
     let locManager = CLLocationManager()
+    var useNotificationForLocation = false
     var lat: Double!
     var long: Double!
     
@@ -54,7 +55,13 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         self.tblSettings.delegate = self
         self.tblSettings.tableFooterView = UIView()
         
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.locationChanged(_:)), name: NSNotification.Name(rawValue: "LocationFound"), object: nil)
+                self.lblMessage.text = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         if (CLLocationManager.locationServicesEnabled()) {
+            self.useNotificationForLocation = true
             self.locManager.delegate = self
             self.locManager.desiredAccuracy = kCLLocationAccuracyBest
             self.locManager.distanceFilter = kCLDistanceFilterNone
@@ -64,13 +71,9 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             self.locManager.startUpdatingLocation()
         } else {
             print("Location services are not enabled");
+            self.useNotificationForLocation = false
         }
-        
-        self.lblMessage.text = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala"
         self.setUpDate()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         UIView.animate(withDuration: 7.0, delay: 1, options: ([.curveLinear, .repeat]), animations: {() -> Void in
                 self.lblMessage.center = CGPoint(x: 0 - self.lblMessage.bounds.size.width, y: self.lblMessage.center.y)
@@ -78,6 +81,10 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         self.vwSettings.layer.cornerRadius = 7
         self.tblSettings.scrollToRow(at: IndexPath(item: self.arrMenuItem.count-1, section: 0), at: .bottom, animated: false)
         self.vwSettings.frame = CGRect(x: 20, y: 30, width: ScreenWidth - 40, height: Screenheight-60)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.locManager.stopUpdatingLocation()
     }
 
     func setUpDate(){
@@ -150,14 +157,15 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
-    
-    
     func reDirect(item: String){
         if  item == "Inventory" {
             let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Customer" {
             let vc  = NewContactVC(nibName: "NewContactVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "Health" {
+            let vc  = SpeedoMeterVC(nibName: "SpeedoMeterVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "" {
             
@@ -169,7 +177,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         if collectionView.tag == 1{
             
             let cell = collectionView.cellForItem(at: indexPath) as? DashboardCell
-
             let item = cell?.lblItem.text
             self.reDirect(item: item!)
         } else {
@@ -238,7 +245,8 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             return "hail"
         }
     }
-    
+ 
+
     func setWeatherData(lat: Double,long:Double){
         let url = URL(string: "https://api.darksky.net/forecast/e700e63b23dc86aa7f29a90be4c5fc2e/\(lat),\(long)")
         let req = URLRequest(url: url!)
@@ -252,13 +260,16 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
                 if let json:NSMutableDictionary = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSMutableDictionary
                 {
                     if let tempDict = json.value(forKey: "currently"){
-                        if let temp = (tempDict as AnyObject).value(forKey: "temperature"){
-                            self.lblTemp.text = "\(temp as! Int) ℃"
-                            print("\(temp as! Int) ℃")
+                        DispatchQueue.main.async {
+                            if let temp = (tempDict as AnyObject).value(forKey: "temperature"){
+                                self.lblTemp.text = "\(temp as! Int) ℃"
+                                print("\(temp as! Int) ℃")
+                            }
+                            if let tempIcon = (tempDict as AnyObject).value(forKey: "icon"){
+                                self.imgWeather.image = UIImage(named: self.setIcon(weatherIcon: tempIcon as! String))
+                            }
                         }
-                        if let tempIcon = (tempDict as AnyObject).value(forKey: "icon"){
-                            self.imgWeather.image = UIImage(named: self.setIcon(weatherIcon: tempIcon as! String))
-                        }
+                       
                     }
                 }
             } catch let error as NSError {
@@ -276,7 +287,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         self.setWeatherData(lat: coord.latitude, long: coord.longitude)
         print("longitude:\(coord.longitude)")
         print("latitude:\(coord.latitude)")
-//        self.locManager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
