@@ -12,11 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var nav = UINavigationController()
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
+        window = UIWindow(frame: UIScreen.main.bounds)
 
         IQKeyboardManager.sharedManager().enable = true
         
@@ -24,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nav
         
-     //   print(UIDevice.current.systemVersion)
         window?.makeKeyAndVisible()
         return true
     }
