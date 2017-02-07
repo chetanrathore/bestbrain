@@ -31,7 +31,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     var arrTblMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
     var transperentView = UIView()
     let locManager = CLLocationManager()
-    let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,21 +97,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             return cell
 
       
-    }
-    
-    func reDirect(item: String){
-        if  item == "Inventory" {
-            let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if item == "Customer" {
-            let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if item == "Health" {
-            let vc  = SpeedDemoVC(nibName: "SpeedDemoVC", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if item == "" {
-            
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -201,10 +185,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func setGradientBackground(){
-        self.gradientLayer.frame = self.view.bounds
-        self.gradientLayer.colors = [dashboardBackgroundColor.cgColor, dashboardBottomColor.cgColor, whiteColor.cgColor]
-        self.gradientLayer.locations = [0.0,1.0]
-        self.view.layer.addSublayer(self.gradientLayer)
+        self.view.gradientLayer()
         self.view.bringSubview(toFront: self.vwMessageScroll)
         self.view.bringSubview(toFront: self.viewDateTime)
         self.view.bringSubview(toFront: self.menuCollection)
@@ -263,7 +244,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Customer" {
-            let vc  = NewContactVC(nibName: "NewContactVC", bundle: nil)
+            let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Quotes" {
             let vc = SpeedDemoVC(nibName: "SpeedDemoVC", bundle: nil)
