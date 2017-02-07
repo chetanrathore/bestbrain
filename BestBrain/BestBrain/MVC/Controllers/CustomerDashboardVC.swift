@@ -162,7 +162,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Customer" {
-            let vc  = NewContactVC(nibName: "NewContactVC", bundle: nil)
+            let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Health" {
             let vc  = SpeedoMeterVC(nibName: "SpeedoMeterVC", bundle: nil)

@@ -15,7 +15,6 @@
                 <outlet property="btnBack" destination="RqJ-jR-bmy" id="RBX-ZX-aR3"/>
                 <outlet property="btnFilter" destination="Lbb-Wv-8NH" id="Jp4-AJ-gEH"/>
                 <outlet property="btnReset" destination="f7n-1J-4zw" id="6ez-ij-FzD"/>
-                <outlet property="imgNavBack" destination="WEU-eV-J1k" id="nBj-5H-rzV"/>
                 <outlet property="lblMaxPayment" destination="7ae-Pn-oYO" id="tI7-Bm-nwK"/>
                 <outlet property="lblMaxPrice" destination="V1q-XI-1jC" id="Gcy-kM-Dcd"/>
                 <outlet property="lblMinPayment" destination="f3J-k2-ifd" id="h8r-U8-t81"/>
@@ -25,6 +24,7 @@
                 <outlet property="swPaymentRange" destination="Zsl-aZ-oB5" id="HP3-KQ-vHS"/>
                 <outlet property="swPriceRange" destination="Qgo-hc-V5l" id="vIi-fp-JCT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="gGk-Ps-MQD"/>
+                <outlet property="vwBackground" destination="RnN-rg-whH" id="N8h-4x-zBO"/>
                 <outlet property="vwBottom" destination="vhl-eQ-1Wq" id="aiU-L5-Hqz"/>
                 <outlet property="vwPayment" destination="buJ-Lc-FwV" id="iR1-6v-MDA"/>
                 <outlet property="vwPrice" destination="lrg-uz-FsE" id="Cph-wl-Rl7"/>
@@ -36,26 +36,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp_back.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="wkW-aw-VdX">
-                    <rect key="frame" x="0.0" y="20" width="320" height="647"/>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edM-w1-LRu">
                     <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-jR-bmy">
-                            <rect key="frame" x="9" y="9" width="59" height="25"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-jR-bmy">
+                            <rect key="frame" x="5.0000000000001137" y="4.6171548117051771" width="70.000000000000114" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Back">
+                            <inset key="titleEdgeInsets" minX="-6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="2" maxY="0.0"/>
+                            <state key="normal" title="Back" image="left-arrow.png">
                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="btnNavBack:" destination="-1" eventType="touchUpInside" id="gZa-Ih-x94"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="WEU-eV-J1k">
-                            <rect key="frame" x="9" y="10" width="20" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inventor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teI-kB-gz8">
                             <rect key="frame" x="103" y="12" width="114" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -90,14 +85,14 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oi-vO-PjP">
                     <rect key="frame" x="0.0" y="114" width="320" height="553"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9O-OG-eYa">
-                            <rect key="frame" x="0.0" y="198" width="320" height="4"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.87843137250000003" green="0.90980392160000001" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEn-yP-oKx">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="553"/>
                             <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9O-OG-eYa">
+                                    <rect key="frame" x="0.0" y="198" width="320" height="4"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.90980392160000001" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </view>
                                 <pickerView contentMode="scaleToFill" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="WIW-dF-zwP">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="198"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -108,6 +103,11 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhl-eQ-1Wq">
                                     <rect key="frame" x="0.0" y="202" width="320" height="351"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnN-rg-whH">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="351"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buJ-Lc-FwV">
                                             <rect key="frame" x="8" y="12" width="304" height="60"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -231,19 +231,15 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="58n-yw-pAG" secondAttribute="trailing" id="HXU-Kw-Dxx"/>
                 <constraint firstAttribute="trailing" secondItem="8oi-vO-PjP" secondAttribute="trailing" id="I51-ln-eny"/>
-                <constraint firstAttribute="trailing" secondItem="wkW-aw-VdX" secondAttribute="trailing" id="KPO-lr-wIx"/>
                 <constraint firstItem="58n-yw-pAG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LJE-44-9bx"/>
                 <constraint firstItem="8oi-vO-PjP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RvY-Pt-ZlJ"/>
-                <constraint firstAttribute="bottom" secondItem="wkW-aw-VdX" secondAttribute="bottom" id="S5J-D5-mI7"/>
                 <constraint firstAttribute="bottom" secondItem="8oi-vO-PjP" secondAttribute="bottom" id="Se6-qf-b8U"/>
                 <constraint firstAttribute="trailing" secondItem="edM-w1-LRu" secondAttribute="trailing" id="e32-Tp-Y9D"/>
-                <constraint firstItem="wkW-aw-VdX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ifI-MQ-z4x"/>
                 <constraint firstItem="edM-w1-LRu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ily-CP-gei"/>
                 <constraint firstItem="eEn-yP-oKx" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="mpj-Oi-0jy"/>
                 <constraint firstItem="58n-yw-pAG" firstAttribute="top" secondItem="edM-w1-LRu" secondAttribute="bottom" id="oLu-6I-1Iz"/>
                 <constraint firstItem="edM-w1-LRu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="riz-Wb-Bqy"/>
                 <constraint firstItem="8oi-vO-PjP" firstAttribute="top" secondItem="58n-yw-pAG" secondAttribute="bottom" id="sMM-Yi-Zhk"/>
-                <constraint firstItem="wkW-aw-VdX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="z14-II-6hg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-653" y="-433.5"/>
@@ -252,6 +248,5 @@
     <resources>
         <image name="barcode.png" width="128" height="128"/>
         <image name="left-arrow.png" width="32" height="32"/>
-        <image name="temp_back.jpeg" width="225" height="225"/>
     </resources>
 </document>
