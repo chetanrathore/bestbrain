@@ -17,6 +17,10 @@ class SpeedoMeterVC: UIViewController {
     @IBOutlet var imgDownPayDot: UIImageView!
     @IBOutlet var lblDownPay: UILabel!
     
+    @IBOutlet var vwMonthlyPay: UIView!
+    @IBOutlet var vwTerm: UIView!
+    @IBOutlet var vwDownPay: UIView!
+    
     @IBOutlet var imgTermDial: UIImageView!
     @IBOutlet var imgTermPin: UIImageView!
     @IBOutlet var imgTermDot: UIImageView!
@@ -53,7 +57,7 @@ class SpeedoMeterVC: UIViewController {
         self.setUpView()
         // Set Previous Angle
         self.popDisclaimerView()
-        self.prevAngleFactor = -135.4;
+        self.prevAngleFactor = -140
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,19 +92,19 @@ class SpeedoMeterVC: UIViewController {
     
     func setUpView() {
         // Down Payment Dial
-        self.imgDownPayPin.frame = CGRect(x: self.imgDownPayDial.center.x - self.imgDownPayPin.frame.size.width/2, y: self.imgDownPayDial.center.y - self.imgDownPayPin.frame.size.height/2 , width: self.imgDownPayPin.frame.size.width + 3, height: self.imgDownPayDial.frame.size.height/2)
+        self.imgDownPayPin.frame = CGRect(x: self.imgDownPayDial.center.x - self.imgDownPayPin.frame.size.width/2, y: self.imgDownPayDial.center.y - self.imgDownPayPin.frame.size.height/2 , width: self.imgDownPayPin.frame.size.width + 3, height: self.vwDownPay.frame.size.height/2 - 10)
         self.imgDownPayDot.frame = CGRect(x: self.imgDownPayDial.center.x - self.imgDownPayDot.frame.size.width/2, y: self.imgDownPayDial.center.y - self.imgDownPayDot.frame.size.height/2, width: self.imgDownPayDot.frame.size.width, height: self.imgDownPayDot.frame.size.height)
         self.imgDownPayPin.layer.anchorPoint = CGPoint(x: self.imgDownPayPin.layer.anchorPoint.x, y: self.imgDownPayPin.layer.anchorPoint.y*2)
         
         // Monthly Payment Dial
         
-        self.imgMonthlyPayPin.frame = CGRect(x: self.imgMonthlyPayDial.center.x - self.imgMonthlyPayPin.frame.size.width/2, y: self.imgMonthlyPayDial.center.y - self.imgMonthlyPayPin.frame.size.height/2 , width: self.imgMonthlyPayPin.frame.size.width + 3, height: self.imgMonthlyPayDial.frame.size.height/2)
+        self.imgMonthlyPayPin.frame = CGRect(x: self.imgMonthlyPayDial.center.x - self.imgMonthlyPayPin.frame.size.width/2, y: self.imgMonthlyPayDial.center.y - self.imgMonthlyPayPin.frame.size.height/2 , width: self.imgMonthlyPayPin.frame.size.width + 3, height: self.vwMonthlyPay.frame.size.height/2 - 10)
         self.imgMonthlyPayDot.frame = CGRect(x: self.imgMonthlyPayDial.center.x - self.imgMonthlyPayDot.frame.size.width/2, y: self.imgMonthlyPayDial.center.y - self.imgMonthlyPayDot.frame.size.height/2, width: self.imgMonthlyPayDot.frame.size.width, height: self.imgMonthlyPayDot.frame.size.height)
         self.imgMonthlyPayPin.layer.anchorPoint = CGPoint(x: self.imgMonthlyPayPin.layer.anchorPoint.x, y: self.imgMonthlyPayPin.layer.anchorPoint.y*2)
         
         // Terms Dial
         
-        self.imgTermPin.frame = CGRect(x: self.imgTermDial.center.x - self.imgTermPin.frame.size.width/2, y: self.imgTermDial.center.y - self.imgTermPin.frame.size.height/2 , width: self.imgTermPin.frame.size.width + 2, height: self.imgTermDial.frame.size.height/2)
+        self.imgTermPin.frame = CGRect(x: self.imgTermDial.center.x - self.imgTermPin.frame.size.width/2, y: self.imgTermDial.center.y - self.imgTermPin.frame.size.height/2 , width: self.imgTermPin.frame.size.width + 2, height: self.vwTerm.frame.size.height/2 - 10)
         self.imgTermDot.frame = CGRect(x: self.imgTermDial.center.x - self.imgTermDot.frame.size.width/2, y: self.imgTermDial.center.y - self.imgTermDot.frame.size.height/2, width: self.imgTermDot.frame.size.width, height: self.imgTermDot.frame.size.height)
         self.imgTermPin.layer.anchorPoint = CGPoint(x: self.imgTermPin.layer.anchorPoint.x, y: self.imgTermPin.layer.anchorPoint.y*2)
     }
@@ -121,17 +125,17 @@ class SpeedoMeterVC: UIViewController {
         }
         
         if Float(self.maxVal)! > 0 {
-            self.angle = (self.speedometerCurrentValue * 271.4)/(Float(self.maxVal))!-135.4
+            self.angle = (self.speedometerCurrentValue * 271.4)/(Float(self.maxVal))!-140
         } else {
             self.angle = 0
         }
         
-        if self.angle <= -135.4 {
-            self.angle = -135.4
+        if self.angle <= -140 {
+            self.angle = -140
         }
         
-        if self.angle >= 136 {
-            self.angle = 136
+        if self.angle >= 141 {
+            self.angle = 141
         }
         
         // If Calculated angle is greater than 180 deg, to avoid the needle to rotate in reverse direction first rotate the needle 1/3 of the calculated angle and then 2/3. //

@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootVC = CustomerDashboardVC(nibName: "CustomerDashboardVC", bundle: nil)
         let nav = UINavigationController(rootViewController: rootVC)
         window?.rootViewController = nav
-        
         window?.makeKeyAndVisible()
         return true
     }

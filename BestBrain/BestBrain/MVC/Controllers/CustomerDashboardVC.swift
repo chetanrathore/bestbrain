@@ -14,8 +14,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet var imgBackground: UIImageView!
     @IBOutlet var viewDateTime: UIView!
     @IBOutlet var menuCollection: UICollectionView!
-    @IBOutlet var vwBottom: UIView!
-    @IBOutlet var bottomCollectionView: UICollectionView!
     @IBOutlet var lblTemp: UILabel!
     @IBOutlet var imgWeather: UIImageView!
     @IBOutlet var lblDateDay: UILabel!
@@ -25,17 +23,15 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet var lblMessage: UILabel!
     @IBOutlet var vwSettings: UIView!
     @IBOutlet var tblSettings: UITableView!
+    @IBOutlet var imgHarleyLogo: UIImageView!
     
-    var arrMenuItem = ["DLScan","DeskLog","Quote","Inventory","Customers","Tasks","appointments","Report","Routes", "Trivia","Music","health"]
-    var arrMenuLbl = ["DLScan", "Desk Log", "Quotes", "Inventory", "Customer", "Tasks", "Appts", "Report", "Routes", "Trivia", "Music", "Health"]
-    var arrTblMenuItem = ["DLScan","DeskLog","Quote","Inventory","Customers","Tasks","appointments","Report","Routes", "Trivia","Music","health"]
-    var arrTblMenuLbl = ["DLScan", "Desk Log", "Quotes", "Inventory", "Customer", "Tasks", "Appts", "Report", "Routes", "Trivia", "Music", "Health"]
-    var arrBottomItem = ["Phone","Chat","list","Message"]
+    var arrMenuItem = ["DLScan","DeskLog","Inventory","Customers","Chat","Quote"]
+    var arrMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
+    var arrTblMenuItem = ["DLScan","DeskLog","Inventory","Customers","Chat","Quote"]
+    var arrTblMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
     var transperentView = UIView()
     let locManager = CLLocationManager()
-    var useNotificationForLocation = false
-    var lat: Double!
-    var long: Double!
+    let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,25 +39,19 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         self.menuCollection.register(UINib(nibName: "DashboardCell", bundle: nil), forCellWithReuseIdentifier: "dashboardCell")
         self.menuCollection.delegate = self
         self.menuCollection.dataSource = self
-        self.menuCollection.tag = 1
         
-        self.bottomCollectionView.register(UINib(nibName: "DashboardBottomCell", bundle: nil), forCellWithReuseIdentifier: "dashboardBottomCell")
-        self.bottomCollectionView.delegate = self
-        self.bottomCollectionView.dataSource = self
-        self.bottomCollectionView.tag = 2
-
         self.tblSettings.register(UINib(nibName: "SettingsCell", bundle: nil), forCellReuseIdentifier: "settingsCell")
         self.tblSettings.dataSource = self
         self.tblSettings.delegate = self
         self.tblSettings.tableFooterView = UIView()
         
-//        NotificationCenter.default.addObserver(self, selector: #selector(self.locationChanged(_:)), name: NSNotification.Name(rawValue: "LocationFound"), object: nil)
-                self.lblMessage.text = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala"
+        self.lblMessage.text = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala"
     }
-    
+   
     override func viewWillAppear(_ animated: Bool) {
+        self.tblSettings.scrollToRow(at: IndexPath(item: arrTblMenuLbl.count-1, section: 0), at: .bottom, animated: false)
+        self.setGradientBackground()
         if (CLLocationManager.locationServicesEnabled()) {
-            self.useNotificationForLocation = true
             self.locManager.delegate = self
             self.locManager.desiredAccuracy = kCLLocationAccuracyBest
             self.locManager.distanceFilter = kCLDistanceFilterNone
@@ -71,7 +61,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             self.locManager.startUpdatingLocation()
         } else {
             print("Location services are not enabled");
-            self.useNotificationForLocation = false
         }
         self.setUpDate()
         self.navigationController?.navigationBar.isHidden = true
@@ -80,54 +69,15 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         }, completion:  { _ in })
         self.vwSettings.layer.cornerRadius = 7
         self.tblSettings.scrollToRow(at: IndexPath(item: self.arrMenuItem.count-1, section: 0), at: .bottom, animated: false)
-        self.vwSettings.frame = CGRect(x: 20, y: 30, width: ScreenWidth - 40, height: Screenheight-60)
+        self.vwSettings.frame = CGRect(x: 20, y: self.view.center.y - self.tblSettings.frame.size.height/2, width: ScreenWidth - 40, height: self.tblSettings.frame.size.height)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.locManager.stopUpdatingLocation()
     }
-
-    func setUpDate(){
-        let date = NSDate() as Date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let dateString: String = dateFormatter.string(from: date)
-        self.lblDateDay.text = self.getDayOfWeekString(today: dateString)
-        
-        dateFormatter.dateFormat = "hh:mm a"
-        self.lblTime.text = dateFormatter.string(from: date)
-    }
     
-    func getDayOfWeekString(today:String)->String? {
-        let formatter  = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        if let todayDate = formatter.date(from: today) {
-            let myCalendar = Calendar(identifier: .gregorian)
-            let myDayComponents = myCalendar.component(.weekday, from: todayDate)
-            let myMonthComponents = myCalendar.component(.month, from: todayDate)
-            let monthName: String = formatter.monthSymbols[(myMonthComponents - 1)]
-            switch myDayComponents {
-                case 1:
-                    return "Sun,\(monthName) \(myCalendar.component(.day, from: todayDate))"
-                case 2:
-                    return "Mon,\(monthName) \(myCalendar.component(.day, from: todayDate))"
-                case 3:
-                    return "Tue,\(monthName) \(myCalendar.component(.day, from: todayDate))"
-                case 4:
-                    return "Wed,\(monthName) \(myCalendar.component(.day, from: todayDate))"
-                case 5:
-                    return "Thu,\(monthName) \(myCalendar.component(.day, from: todayDate))"
-                case 6:
-                    return "Fri,\(monthName) \(myCalendar.component(.day, from: todayDate))"
-                case 7:
-                    return "Sat,\(monthName) \(myCalendar.component(.day, from: todayDate))"
-                default:
-                    print("Error fetching days")
-                    return "Day"
-            }
-        } else {
-            return nil
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     // MARK:- CollectionView Method(s)
@@ -137,24 +87,17 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView.tag == 1{
             return arrMenuItem.count
-        } else {
-            return arrBottomItem.count
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboardCell", for: indexPath) as! DashboardCell
-            cell.imgItem.image = UIImage(named: self.arrMenuItem[indexPath.row])
+            let iconImg = UIImageView(image: UIImage(named: self.arrMenuItem[indexPath.row]))
+            cell.imgItem.image = iconColor(icon: iconImg)
             cell.lblItem.text = arrMenuLbl[indexPath.row]
             return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboardBottomCell", for: indexPath) as! DashboardBottomCell
-            cell.imgBottom.image = UIImage(named: arrBottomItem[indexPath.row])
-            return cell
-        }
+
+      
     }
     
     func reDirect(item: String){
@@ -165,7 +108,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Health" {
-            let vc  = SpeedoMeterVC(nibName: "SpeedoMeterVC", bundle: nil)
+            let vc  = SpeedDemoVC(nibName: "SpeedDemoVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "" {
             
@@ -173,27 +116,14 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        if collectionView.tag == 1{
-            
             let cell = collectionView.cellForItem(at: indexPath) as? DashboardCell
             let item = cell?.lblItem.text
             self.reDirect(item: item!)
-        } else {
-            print("Bottom Item selected")
-        }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
-        if collectionView.tag == 1{
-            let size: CGFloat = ScreenWidth/4
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let size: CGFloat = ScreenWidth/3
             return CGSize(width: size, height: size)
-        } else {
-            let widthSize: CGFloat = self.vwBottom.frame.width/4
-            let heightSize: CGFloat = self.vwBottom.frame.height - 5
-            return CGSize(width: widthSize, height: heightSize)
-        }
     }
     
     // MARK:- tableView Method(s)
@@ -214,6 +144,8 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         return cell
     }
     
+    // Custom Delegate for tableView
+    
     func SettingsDidSelectTableViewCell(tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath, item: String, icon: String, type: String) {
         if type == "Checked" {
             self.arrMenuLbl = self.arrMenuLbl.filter() {$0 != item}
@@ -223,11 +155,123 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             self.arrMenuLbl.append(item)
             self.arrMenuItem.append(icon)
             self.menuCollection.reloadData()
-
         }
     }
     
-    // MARK:- Get Location of User
+    // MARK:- Location Delegates
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locationArray = locations as NSArray
+        let locationObj = locationArray.lastObject as! CLLocation
+        let coord = locationObj.coordinate
+        self.setWeatherData(lat: coord.latitude, long: coord.longitude)
+        print("longitude:\(coord.longitude)")
+        print("latitude:\(coord.latitude)")
+        self.locManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.locManager.stopUpdatingLocation()
+        print("ERROR:\(error)")
+    }
+    
+    // MARK:- Outlet Actions:
+    
+    @IBAction func handleBtnSettings(_ sender: Any) {
+        transperentView = UIView(frame: UIScreen.main.bounds)
+        transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
+        if !self.view.subviews.contains(transperentView) {
+            self.view.addSubview(transperentView)
+        }
+        view.addSubview(self.vwSettings)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapHandler))
+        tap.cancelsTouchesInView = false
+        self.transperentView.addGestureRecognizer(tap)
+    }
+    
+    // MARK:- Custom Method(s)
+    
+    func tapHandler(){
+        if self.view.subviews.contains(self.vwSettings){
+            self.vwSettings.removeFromSuperview()
+        }
+        if self.view.subviews.contains(transperentView){
+            transperentView.removeFromSuperview()
+        }
+    }
+    
+    func setGradientBackground(){
+        self.gradientLayer.frame = self.view.bounds
+        self.gradientLayer.colors = [dashboardBackgroundColor.cgColor, dashboardBottomColor.cgColor, whiteColor.cgColor]
+        self.gradientLayer.locations = [0.0,1.0]
+        self.view.layer.addSublayer(self.gradientLayer)
+        self.view.bringSubview(toFront: self.vwMessageScroll)
+        self.view.bringSubview(toFront: self.viewDateTime)
+        self.view.bringSubview(toFront: self.menuCollection)
+        self.view.bringSubview(toFront: self.imgBackground)
+        let btnImage = UIImageView(image: UIImage(named: "Settings"))
+        self.btnSettings.setImage(iconColor(icon: btnImage), for: .normal)
+        self.view.bringSubview(toFront: self.btnSettings)
+        self.self.imgBackground.bringSubview(toFront: self.imgHarleyLogo)
+    }
+    
+    func setUpDate(){
+        let date = NSDate() as Date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString: String = dateFormatter.string(from: date)
+        self.lblDateDay.text = self.getDayOfWeekString(today: dateString)
+        
+        dateFormatter.dateFormat = "hh:mm a"
+        self.lblTime.text = dateFormatter.string(from: date)
+    }
+    
+    func getDayOfWeekString(today:String)->String? {
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        if let todayDate = formatter.date(from: today) {
+            let myCalendar = Calendar(identifier: .gregorian)
+            let myDayComponents = myCalendar.component(.weekday, from: todayDate)
+            let myMonthComponents = myCalendar.component(.month, from: todayDate)
+            let monthName: String = formatter.monthSymbols[(myMonthComponents - 1)]
+            switch myDayComponents {
+            case 1:
+                return "Sun,\(monthName) \(myCalendar.component(.day, from: todayDate))"
+            case 2:
+                return "Mon,\(monthName) \(myCalendar.component(.day, from: todayDate))"
+            case 3:
+                return "Tue,\(monthName) \(myCalendar.component(.day, from: todayDate))"
+            case 4:
+                return "Wed,\(monthName) \(myCalendar.component(.day, from: todayDate))"
+            case 5:
+                return "Thu,\(monthName) \(myCalendar.component(.day, from: todayDate))"
+            case 6:
+                return "Fri,\(monthName) \(myCalendar.component(.day, from: todayDate))"
+            case 7:
+                return "Sat,\(monthName) \(myCalendar.component(.day, from: todayDate))"
+            default:
+                print("Error fetching days")
+                return "Day"
+            }
+        } else {
+            return nil
+        }
+    }
+
+    func reDirect(item: String){
+        if  item == "Inventory" {
+            let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "Customer" {
+            let vc  = NewContactVC(nibName: "NewContactVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "Quotes" {
+            let vc = SpeedDemoVC(nibName: "SpeedDemoVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "" {
+            
+        }
+    }
     
     func setIcon(weatherIcon: String) -> String{
         switch(weatherIcon){
@@ -245,8 +289,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             return "hail"
         }
     }
- 
-
+    
     func setWeatherData(lat: Double,long:Double){
         let url = URL(string: "https://api.darksky.net/forecast/e700e63b23dc86aa7f29a90be4c5fc2e/\(lat),\(long)")
         let req = URLRequest(url: url!)
@@ -269,7 +312,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
                                 self.imgWeather.image = UIImage(named: self.setIcon(weatherIcon: tempIcon as! String))
                             }
                         }
-                       
                     }
                 }
             } catch let error as NSError {
@@ -279,44 +321,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         })
         task.resume()
     }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locationArray = locations as NSArray
-        let locationObj = locationArray.lastObject as! CLLocation
-        let coord = locationObj.coordinate
-        self.setWeatherData(lat: coord.latitude, long: coord.longitude)
-        print("longitude:\(coord.longitude)")
-        print("latitude:\(coord.latitude)")
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        self.locManager.stopUpdatingLocation()
-        print("ERROR:\(error)")
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction func handleBtnSettings(_ sender: Any) {
-        transperentView = UIView(frame: UIScreen.main.bounds)
-        transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
-        if !self.view.subviews.contains(transperentView) {
-            self.view.addSubview(transperentView)
-        }
-        view.addSubview(self.vwSettings)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapHandler))
-        tap.cancelsTouchesInView = false
-        self.transperentView.addGestureRecognizer(tap)
-    }
-    
-    func tapHandler(){
-        if self.view.subviews.contains(self.vwSettings){
-            self.vwSettings.removeFromSuperview()
-        }
-        if self.view.subviews.contains(transperentView){
-            transperentView.removeFromSuperview()
-        }
-    }
 }
 
