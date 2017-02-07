@@ -96,6 +96,23 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             cell.imgItem.image = iconColor(icon: iconImg)
             cell.lblItem.text = arrMenuLbl[indexPath.row]
             return cell
+
+      
+    }
+    
+    func reDirect(item: String){
+        if  item == "Inventory" {
+            let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "Customer" {
+            let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "Health" {
+            let vc  = SpeedDemoVC(nibName: "SpeedDemoVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if item == "" {
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

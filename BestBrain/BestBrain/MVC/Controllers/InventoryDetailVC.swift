@@ -22,6 +22,10 @@ class InventoryDetailVC: UIViewController {
     
     @IBOutlet var btnQuote: UIButton!
     
+    @IBOutlet var vwDetails: UIView!
+    @IBOutlet var vwMenu: UIView!
+    @IBOutlet var vwInfo: UIView!
+    
     @IBOutlet var constVWBtnHeight: NSLayoutConstraint!
     
     @IBOutlet var constVWScrollHeight: NSLayoutConstraint!
@@ -41,19 +45,22 @@ class InventoryDetailVC: UIViewController {
             constImageHeight.constant = 400
             constVWBottomHeight.constant = 600
             let fontName = (self.btnMMSInfo.titleLabel?.font.fontName)!
-            btnMMSInfo.titleLabel?.font = UIFont(name: fontName, size: 20)
-            btnMMSInfo.titleEdgeInsets = UIEdgeInsetsMake(100, -150, 0, 0)
+            btnMMSInfo.titleLabel?.font = UIFont(name: fontName, size: 18)
+            btnMMSInfo.titleEdgeInsets = UIEdgeInsetsMake(100, -70, 0, 0)
             
-            btnEmailInfo.titleLabel?.font = UIFont(name: fontName, size: 20)
-            btnEmailInfo.titleEdgeInsets = UIEdgeInsetsMake(100, -130, 0, 0)
+            btnMMSInfo.imageEdgeInsets = UIEdgeInsetsMake(15, 35, 30, 20)
+            //top left bottom right
+            btnEmailInfo.titleLabel?.font = UIFont(name: fontName, size: 18)
+            btnEmailInfo.titleEdgeInsets = UIEdgeInsetsMake(100, -70, 0, 0)
+            btnEmailInfo.imageEdgeInsets = UIEdgeInsetsMake(15, 35, 30, 20)
             
-            btnQuote.titleLabel?.font = UIFont(name: fontName, size: 20)
-            btnQuote.titleEdgeInsets = UIEdgeInsetsMake(100, -140, 0, 0)
-           
+            btnQuote.titleLabel?.font = UIFont(name: fontName, size: 18)
+            btnQuote.titleEdgeInsets = UIEdgeInsetsMake(100, -70, 0, 0)
+            btnQuote.imageEdgeInsets = UIEdgeInsetsMake(15, 35, 30, 20)
             constBtnSpacing1.constant = 50
             constBtnSpacing2.constant = 50
          }else{
-            constVWBtnHeight.constant = 85
+            constVWBtnHeight.constant = 80
             constVWScrollHeight.constant = 650
             constImageHeight.constant = 250
             constVWBottomHeight.constant = 400
@@ -61,6 +68,14 @@ class InventoryDetailVC: UIViewController {
             constBtnSpacing1.constant = 20
             constBtnSpacing2.constant = 20
         }
+        
+        vwDetails.gradientLayer()
+        vwDetails.bringSubview(toFront: vwMenu)
+        vwDetails.bringSubview(toFront: vwInfo)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handelTapGuesture(_:)))
+        imgInventory.isUserInteractionEnabled = true
+        imgInventory.addGestureRecognizer(tapGesture)
 
     }
     
@@ -73,6 +88,10 @@ class InventoryDetailVC: UIViewController {
         self.navigationController!.popViewController(animated: true)
     }
     
+    func handelTapGuesture(_ sender: UITapGestureRecognizer) {
+        let detailVC = InventoryDetailWithMenuVC(nibName: "InventoryDetailWithMenuVC", bundle: nil)
+        self.navigationController!.pushViewController(detailVC, animated: true)
+    }
     
     @IBAction func btnMMSInfo(_ sender: UIButton) {
     }
