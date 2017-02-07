@@ -100,21 +100,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
       
     }
     
-    func reDirect(item: String){
-        if  item == "Inventory" {
-            let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if item == "Customer" {
-            let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if item == "Health" {
-            let vc  = SpeedDemoVC(nibName: "SpeedDemoVC", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if item == "" {
-            
-        }
-    }
-    
+  
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let cell = collectionView.cellForItem(at: indexPath) as? DashboardCell
             let item = cell?.lblItem.text
@@ -263,7 +249,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Customer" {
-            let vc  = NewContactVC(nibName: "NewContactVC", bundle: nil)
+            let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         } else if item == "Quotes" {
             let vc = SpeedDemoVC(nibName: "SpeedDemoVC", bundle: nil)
