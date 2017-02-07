@@ -44,22 +44,22 @@ class InventoryDetailWithMenuVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         //    scrollViewMain.contentSize = CGSize(width: ScreenWidth, height: 647)
         if UIDevice.current.userInterfaceIdiom == .pad {
-            constVWBtnHeight.constant = 150
+            constVWBtnHeight.constant = 120
             constVWScrollHeight.constant = 1000
             constImageHeight.constant = 400
             constVWBottomHeight.constant = 600
             let fontName = (self.btnServiceHistory.titleLabel?.font.fontName)!
-            btnServiceHistory.titleLabel?.font = UIFont(name: fontName, size: 20)
-            btnServiceHistory.titleEdgeInsets = UIEdgeInsetsMake(120, -150, 0, 0)
+            btnServiceHistory.titleLabel?.font = UIFont(name: fontName, size: 18)
+            btnServiceHistory.titleEdgeInsets = UIEdgeInsetsMake(100, -150, 0, 0)
             
-            btnACV.titleLabel?.font = UIFont(name: fontName, size: 20)
-            btnACV.titleEdgeInsets = UIEdgeInsetsMake(120, -130, 0, 0)
+            btnACV.titleLabel?.font = UIFont(name: fontName, size: 18)
+            btnACV.titleEdgeInsets = UIEdgeInsetsMake(100, -130, 0, 0)
             
-            btnSalesHistory.titleLabel?.font = UIFont(name: fontName, size: 20)
-            btnSalesHistory.titleEdgeInsets = UIEdgeInsetsMake(120, -140, 0, 0)
+            btnSalesHistory.titleLabel?.font = UIFont(name: fontName, size: 18)
+            btnSalesHistory.titleEdgeInsets = UIEdgeInsetsMake(100, -140, 0, 0)
             
-            btnAddPhoto.titleLabel?.font = UIFont(name: fontName, size: 20)
-            btnAddPhoto.titleEdgeInsets = UIEdgeInsetsMake(120, -120, 0, 0)
+            btnAddPhoto.titleLabel?.font = UIFont(name: fontName, size: 18)
+            btnAddPhoto.titleEdgeInsets = UIEdgeInsetsMake(100, -120, 0, 0)
             constBtnSpacing1.constant = 50
             constBtnSpacing2.constant = 50
             constBtnVerSpacing.constant = 20
