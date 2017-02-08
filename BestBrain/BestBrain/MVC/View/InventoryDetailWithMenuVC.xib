@@ -107,7 +107,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-Eu-WBc">
                                                     <rect key="frame" x="12" y="0.0" width="85" height="85"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.00070719699560000001" green="1" blue="0.039020341389999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1ob-Eu-WBc" secondAttribute="height" multiplier="1:1" id="j4x-bw-WnX"/>
                                                     </constraints>
@@ -124,7 +124,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBL-pb-Uza">
                                                     <rect key="frame" x="117" y="0.0" width="85" height="85"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="1" green="0.13731491670000001" blue="0.2016264737" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uBL-pb-Uza" secondAttribute="height" multiplier="1:1" id="Oqv-45-qC9"/>
                                                     </constraints>
@@ -141,7 +141,8 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEV-zf-SIz">
                                                     <rect key="frame" x="222" y="0.0" width="85" height="85"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="VEV-zf-SIz" secondAttribute="height" multiplier="1:1" id="jo3-pV-hxR"/>
                                                     </constraints>

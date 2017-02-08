@@ -22,9 +22,19 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     @IBOutlet var vwTextFields: [UIView]!
     @IBOutlet var imgUser: UIImageView!
 
+    @IBOutlet var vwDesiredVehicle: UIView!
     @IBOutlet var scrollNewContact: UIScrollView!
     @IBOutlet var tblAddItems: UITableView!
     
+    @IBOutlet var btnScanInventoryBikes: UIButton!
+    @IBOutlet var lbDesiredVehicle: UILabel!
+    @IBOutlet var searchbarDV: UISearchBar!
+    @IBOutlet var txfYear: UITextField!
+    @IBOutlet var txfMake: UITextField!
+    @IBOutlet var txfModel: UITextField!
+    @IBOutlet var txfModelNo: UITextField!
+    @IBOutlet var btnSearch: UIButton!
+  
     var allItems = [addItems]()
     var index : Int = -1
     var textField = UITextField()
@@ -38,15 +48,11 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     var birthdate = String()
     var dlState:String!
     var dlnum:String!
+    
+    var transperentView = UIView()
 
     var isFromScanning:Bool = false
     
-//    var arrPhones = [String]()
-//    var arrEmails = [String]()
-//    var arrDesiredVehicals = [String]()
-//    var arrTrades = [String]()
-//    var arrShare = [String]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,22 +78,12 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             txfCity.text = city
             txfState.text = state
             txfZipCode.text = zipcode
-            var DOB = birthdate.insert(string: "/", ind: 2)
-            DOB = DOB.insert(string: "/", ind: 5)
-            txfDOB.text = DOB
+            var dob = birthdate.insert(string: "/", ind: 2)
+            dob = dob.insert(string: "/", ind: 5)
+            txfDOB.text = dob
             txfDLState.text = dlState
             txfDLNumber.text = dlnum
         }
-
-        txfFirstName.tag = 11
-        txfLastName.tag = 12
-        txfAddress.tag = 13
-        txfCity.tag = 14
-        txfState.tag = 15
-        txfZipCode.tag = 16
-        txfDOB.tag = 17
-        txfDLState.tag = 18
-        txfDLNumber.tag = 19
 
         self.loadData()
         tblAddItems.delegate = self
@@ -105,9 +101,9 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         allItems = [
             addItems(name: "add phone", items: 1),
             addItems(name: "add email", items: 1),
-            addItems(name: "add desired vehical", items: 1),
-            addItems(name: "add trade", items: 1),
-            addItems(name: "add source", items: 1)
+            addItems(name: "add desired vehical", items: 0),
+            addItems(name: "add trade", items: 0),
+            addItems(name: "add source", items: 0)
         ]
 
     }
@@ -119,6 +115,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         }
         imgUser.layer.cornerRadius = imgUser.frame.size.width/2
 
+        vwDesiredVehicle.frame = CGRect(x: (ScreenWidth/2)-155, y: (Screenheight/2)-225, width: 310, height: 450)
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return allItems.count
@@ -165,13 +162,22 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     }
     func toggleButton(_ sender: UIButton){
         let section = sender.tag
-        let collapsed = allItems[section].collapsed
-        
-        // Toggle collapse
-        allItems[section].collapsed = !collapsed!
-        
-        // Reload section
-        tblAddItems.reloadSections(IndexSet(integer: section), with: .automatic)
+        if section == 2{
+            transperentView = UIView(frame: UIScreen.main.bounds)
+            transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.3)
+            if !self.view.subviews.contains(transperentView) {
+                self.view.addSubview(transperentView)
+            }
+            view.addSubview(vwDesiredVehicle)
+        }else{
+            let collapsed = allItems[section].collapsed
+            
+            // Toggle collapse
+            allItems[section].collapsed = !collapsed!
+            
+            // Reload section
+            tblAddItems.reloadSections(IndexSet(integer: section), with: .automatic)
+        }
     }
     func btnAddItemClicked(_ sender: UIButton){
         let tag = sender.tag
@@ -357,6 +363,10 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func handleBtnScanInventory(_ sender: Any) {
+    }
+    @IBAction func handleBtnSearch(_ sender: Any) {
+    }
     @IBAction func handleBtnLinkToCustomer(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
