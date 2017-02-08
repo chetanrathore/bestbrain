@@ -20,7 +20,21 @@ let weatherApi = "https://api.darksky.net/forecast/e700e63b23dc86aa7f29a90be4c5f
 let textBoxColor = UIColor(colorLiteralRed: 0.9294117647, green: 0.9294117647, blue: 0.9294117647, alpha: 1)
 let dashboardBackgroundColor = UIColor(red: 0.08235294118, green: 0.3607843137, blue: 0.9294117647, alpha: 1.0)
 let dashboardBottomColor = UIColor(red: 0.07843137255, green: 0.7882352941, blue: 0.9843137255, alpha: 1.0)
+let transparentBackgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
 let whiteColor = UIColor.white
+
+class addItems{
+    var name: String!
+    var items: Int!
+    var collapsed: Bool!
+    
+    init(name: String, items: Int, collapsed: Bool = true) {
+        self.name = name
+        self.items = items
+        self.collapsed = collapsed
+    }
+}
+
 
 var TheCurrentDeviceVersion: Float {
     struct Singleton {

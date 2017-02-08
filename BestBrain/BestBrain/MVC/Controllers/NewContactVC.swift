@@ -34,6 +34,16 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     @IBOutlet var txfModel: UITextField!
     @IBOutlet var txfModelNo: UITextField!
     @IBOutlet var btnSearch: UIButton!
+    
+    @IBOutlet var vwAddTrade: UIView!
+    @IBOutlet var btnScanTrade: UIButton!
+    @IBOutlet var txtFieldVIN: UITextField!
+    @IBOutlet var txtFieldYear: UITextField!
+    @IBOutlet var txtFieldMake: UITextField!
+    @IBOutlet var txtFieldModel: UITextField!
+    @IBOutlet var txtFieldMiles: UITextField!
+    @IBOutlet var txtFieldPayoff: UITextField!
+    @IBOutlet var btnAddManually: UIButton!
   
     var allItems = [addItems]()
     var index : Int = -1
@@ -48,9 +58,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     var birthdate = String()
     var dlState:String!
     var dlnum:String!
-    
+    var cView: UIView!
     var transperentView = UIView()
-
     var isFromScanning:Bool = false
     
     override func viewDidLoad() {
@@ -90,6 +99,24 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         tblAddItems.dataSource = self
         tblAddItems.register(UINib(nibName: "addItemCell", bundle: nil), forCellReuseIdentifier: "addItemCell")
     }
+    
+    override func viewDidLayoutSubviews() {
+        for vw in vwTextFields{
+            vw.layer.borderWidth = 1
+            vw.layer.borderColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1).cgColor
+            vw.layer.cornerRadius = 7
+        }
+        imgUser.layer.cornerRadius = imgUser.frame.size.width/2
+        
+        vwDesiredVehicle.frame = CGRect(x: (ScreenWidth/2)-155, y: (Screenheight/2)-225, width: 310, height: 450)
+        self.vwAddTrade.frame = CGRect(x: 20, y: self.view.center.y - self.vwAddTrade.frame.size.height/2, width: ScreenWidth - 40, height: self.vwAddTrade.frame.size.height)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     func keyboardWillShow(notification: NSNotification){
         
     }
@@ -105,24 +132,18 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             addItems(name: "add trade", items: 0),
             addItems(name: "add source", items: 0)
         ]
-
     }
-    override func viewDidLayoutSubviews() {
-        for vw in vwTextFields{
-            vw.layer.borderWidth = 1
-            vw.layer.borderColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1).cgColor
-            vw.layer.cornerRadius = 7
-        }
-        imgUser.layer.cornerRadius = imgUser.frame.size.width/2
-
-        vwDesiredVehicle.frame = CGRect(x: (ScreenWidth/2)-155, y: (Screenheight/2)-225, width: 310, height: 450)
-    }
+    
+    // MARK:- TableView Method(s)
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return allItems.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (allItems[section].collapsed!) ? 0 : allItems[section].items
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "addItemCell", for: indexPath) as! addItemCell
         cell.txfCell.delegate = self
@@ -157,34 +178,12 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         headerView.addSubview(lblHeader)
         return headerView
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
-    func toggleButton(_ sender: UIButton){
-        let section = sender.tag
-        if section == 2{
-            transperentView = UIView(frame: UIScreen.main.bounds)
-            transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.3)
-            if !self.view.subviews.contains(transperentView) {
-                self.view.addSubview(transperentView)
-            }
-            view.addSubview(vwDesiredVehicle)
-        }else{
-            let collapsed = allItems[section].collapsed
-            
-            // Toggle collapse
-            allItems[section].collapsed = !collapsed!
-            
-            // Reload section
-            tblAddItems.reloadSections(IndexSet(integer: section), with: .automatic)
-        }
-    }
-    func btnAddItemClicked(_ sender: UIButton){
-        let tag = sender.tag
-        allItems[tag].items = allItems[tag].items+1
-        tblAddItems.reloadData()
-    }
     
+    // MARK:- TextField Delegate Method(s)
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -270,6 +269,53 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         }
     }
     
+    // MARK:- Custom Method(s)
+    
+    func toggleButton(_ sender: UIButton){
+        let section = sender.tag
+        if section == 2{
+            generateSubView(childView: self.vwDesiredVehicle)
+        }else if section == 3{
+            generateSubView(childView: self.vwAddTrade)
+        } else{
+            let collapsed = allItems[section].collapsed
+            
+            // Toggle collapse
+            allItems[section].collapsed = !collapsed!
+            
+            // Reload section
+            tblAddItems.reloadSections(IndexSet(integer: section), with: .automatic)
+        }
+    }
+    
+    func generateSubView(childView: UIView) {
+        self.transperentView = UIView(frame: UIScreen.main.bounds)
+        self.transperentView.backgroundColor = transparentBackgroundColor
+        if !self.view.subviews.contains(self.transperentView) {
+            self.view.addSubview(self.transperentView)
+        }
+        view.addSubview(childView)
+        self.cView = childView
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapHandler))
+        tap.cancelsTouchesInView = false
+        self.transperentView.addGestureRecognizer(tap)
+    }
+    
+    func tapHandler(){
+        if self.view.subviews.contains(self.cView){
+            self.cView.removeFromSuperview()
+        }
+        if self.view.subviews.contains(transperentView){
+            transperentView.removeFromSuperview()
+        }
+    }
+    
+    func btnAddItemClicked(_ sender: UIButton){
+        let tag = sender.tag
+        allItems[tag].items = allItems[tag].items+1
+        tblAddItems.reloadData()
+    }
+
     func addDoneButtonOnKeyboard(textField: UITextField)
     {
         let doneToolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 50))
@@ -288,6 +334,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         textField.inputAccessoryView = doneToolbar
         
     }
+    
     func doneButtonAction(txt: UITextField)
     {
         if self.textField.tag == 0{
@@ -314,6 +361,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
         }
     }
+    
+    // MARK:- TextField validation Method(s)
     
     func Appcheck_zip_codes(_ data:String) -> Bool{
         let ns:NSString = "^([0-9]{5}|[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9])$"
@@ -358,10 +407,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // MARK:- IBOutlet Method(s)
     
     @IBAction func handleBtnScanInventory(_ sender: Any) {
     }
@@ -371,30 +417,14 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         self.navigationController?.popViewController(animated: true)
     }
     
-}
-class addItems{
-    var name: String!
-    var items: Int!
-    var collapsed: Bool!
+    @IBAction func handleBtnAddManually(_ sender: Any) {
+    }
     
-    init(name: String, items: Int, collapsed: Bool = true) {
-        self.name = name
-        self.items = items
-        self.collapsed = collapsed
+    @IBAction func handleBtnScanTrade(_ sender: Any) {
     }
-}
-extension String {
-    func insert(string:String,ind:Int) -> String {
-        return  String(self.characters.prefix(ind)) + string + String(self.characters.suffix(self.characters.count-ind))
-    }
+
+    
 }
 
-//extension UIViewController {
-//    func hideKeyboardWhenTappedAround() {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
-//    }
-//    func dismissKeyboard() {
-//        view.endEditing(true)
-//    }
-//}
+
+

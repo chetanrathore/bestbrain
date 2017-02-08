@@ -28,8 +28,6 @@
 		0C0C56161E4088D80085CFD1 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C56041E4088D80085CFD1 /* IQToolbar.swift */; };
 		0C0C56171E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C56051E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift */; };
 		0C0C56181E4088D80085CFD1 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C56071E4088D80085CFD1 /* IQKeyboardManager.bundle */; };
-		0C0C561C1E4095C10085CFD1 /* InventoryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C561B1E4095C10085CFD1 /* InventoryDetailVC.xib */; };
-		0C0C561E1E4095D40085CFD1 /* InventoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C561D1E4095D40085CFD1 /* InventoryDetailVC.swift */; };
 		0C0C56221E409F530085CFD1 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C561F1E409F530085CFD1 /* envelope.png */; };
 		0C0C56231E409F530085CFD1 /* led-monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C56201E409F530085CFD1 /* led-monitor.png */; };
 		0C0C56241E409F530085CFD1 /* speech-bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C56211E409F530085CFD1 /* speech-bubble.png */; };
@@ -37,7 +35,6 @@
 		0C6EB0EA1E499F3800224EB1 /* CustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */; };
 		0C6EB0EC1E499F4F00224EB1 /* CustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EB0EB1E499F4F00224EB1 /* CustomerVC.swift */; };
 		0C6EB0EF1E49A13000224EB1 /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EB0ED1E49A13000224EB1 /* CustomerCell.swift */; };
-		0C6EB0F01E49A13000224EB1 /* CustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EB0EE1E49A13000224EB1 /* CustomerCell.xib */; };
 		0C6EB0F41E49A77500224EB1 /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EB0F31E49A77500224EB1 /* profile.jpg */; };
 		0C6EB0F61E49A82500224EB1 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EB0F51E49A82500224EB1 /* user.png */; };
 		0C8FB6181E3F47F8007B7E68 /* InventoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */; };
@@ -71,6 +68,7 @@
 		30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C841E430C2600C87E9A /* MicroBlink.framework */; };
 		30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C8A1E430D7B00C87E9A /* libiconv.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		30913D041E4B0EE6008FA1F3 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 30913D031E4B0EE6008FA1F3 /* bar.png */; };
+		7B2595D01E4B3BD200DEC705 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2595CF1E4B3BD200DEC705 /* Customer.swift */; };
 		7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949921E260799008566A4 /* AddInventoryViewController.swift */; };
 		7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949931E260799008566A4 /* ClockInViewController.swift */; };
 		7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */; };
@@ -80,21 +78,14 @@
 		7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2949A01E2607B9008566A4 /* down_Arrow.png */; };
 		7B2949A31E2607B9008566A4 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2949A11E2607B9008566A4 /* menu.png */; };
 		7B3BB0B41E49F7C900D436F5 /* DLScanCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BB0B21E49F7C900D436F5 /* DLScanCameraVC.swift */; };
-		7B3BB0B61E49F7DA00D436F5 /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BB0B51E49F7DA00D436F5 /* SpeedDemoVC.m */; };
 		7B3BB0BD1E49F8FC00D436F5 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0B71E49F8FC00D436F5 /* error.png */; };
 		7B3BB0BE1E49F8FC00D436F5 /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0B81E49F8FC00D436F5 /* flash.png */; };
 		7B3BB0BF1E49F8FC00D436F5 /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0B91E49F8FC00D436F5 /* id-card.png */; };
 		7B3BB0C01E49F8FC00D436F5 /* QRImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */; };
 		7B3BB0C11E49F8FC00D436F5 /* ThunderMountainHDNoSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0BB1E49F8FC00D436F5 /* ThunderMountainHDNoSky.png */; };
 		7B3BB0C21E49F8FC00D436F5 /* ThunderMountainlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0BC1E49F8FC00D436F5 /* ThunderMountainlogo.png */; };
-		7B3BB0C41E49F94A00D436F5 /* InventoryDetailWithMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BB0C31E49F94A00D436F5 /* InventoryDetailWithMenuVC.swift */; };
 		7B3BB0C71E49F95600D436F5 /* DLScanCameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */; };
-		7B3BB0C81E49F95600D436F5 /* InventoryDetailWithMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0C61E49F95600D436F5 /* InventoryDetailWithMenuVC.xib */; };
-		7B3BB0CB1E49F9AE00D436F5 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BB0C91E49F9AE00D436F5 /* DashboardCell.swift */; };
-		7B3BB0CC1E49F9AE00D436F5 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0CA1E49F9AE00D436F5 /* DashboardCell.xib */; };
-		7B3BB0D11E49FC7C00D436F5 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3BB0D01E49FC7C00D436F5 /* Customer.swift */; };
 		7B3BB0D31E49FD0000D436F5 /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0D21E49FD0000D436F5 /* SpeedDemoVC.xib */; };
-
 		7B3C941E1E433ED100D6F795 /* NewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C941D1E433ED100D6F795 /* NewContactVC.swift */; };
 		7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */; };
 		7B4F5EC31E24CA8E0086B359 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */; };
@@ -103,11 +94,6 @@
 		7B4F5ED11E24EA1F0086B359 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5ED01E24EA1F0086B359 /* Constant.swift */; };
 		7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5ED21E24F2210086B359 /* LogCustomerVC.swift */; };
 		7B4F5ED71E24F2BD0086B359 /* LogCustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4F5ED61E24F2BD0086B359 /* LogCustomerVC.xib */; };
-
-		7B75470F1E41FD600025A087 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7547091E41FD600025A087 /* SettingsCell.swift */; };
-
-		7B6F3DAC1E4A04980009377A /* DLScanCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F3DA91E4A04980009377A /* DLScanCameraVC.swift */; };
-		7B6F3DB01E4A04AA0009377A /* DLScanCameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DAE1E4A04AA0009377A /* DLScanCameraVC.xib */; };
 		7B6F3DB11E4A04AB0009377A /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DAF1E4A04AA0009377A /* SpeedDemoVC.xib */; };
 		7B6F3DB81E4A04CD0009377A /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB21E4A04CD0009377A /* error.png */; };
 		7B6F3DB91E4A04CD0009377A /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB31E4A04CD0009377A /* flash.png */; };
@@ -115,17 +101,12 @@
 		7B6F3DBB1E4A04CD0009377A /* QRImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB51E4A04CD0009377A /* QRImage.png */; };
 		7B6F3DBC1E4A04CD0009377A /* ThunderMountainHDNoSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB61E4A04CD0009377A /* ThunderMountainHDNoSky.png */; };
 		7B6F3DBD1E4A04CD0009377A /* ThunderMountainlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB71E4A04CD0009377A /* ThunderMountainlogo.png */; };
-		7B6F3DC21E4A05550009377A /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F3DC11E4A05550009377A /* Customer.swift */; };
-		7B6F3DC41E4A059C0009377A /* InventoryDetailWithMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DC31E4A059C0009377A /* InventoryDetailWithMenuVC.xib */; };
-		7B6F3DC61E4A05A40009377A /* InventoryDetailWithMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F3DC51E4A05A40009377A /* InventoryDetailWithMenuVC.swift */; };
 		7B6F3DC81E4A0A810009377A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6F3DC71E4A0A810009377A /* CoreGraphics.framework */; };
 		7B6F3DCD1E4A10820009377A /* dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DC91E4A10820009377A /* dollar.png */; };
 		7B6F3DCE1E4A10820009377A /* photo-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DCA1E4A10820009377A /* photo-camera.png */; };
 		7B6F3DCF1E4A10820009377A /* Support.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DCB1E4A10820009377A /* Support.png */; };
 		7B6F3DD01E4A10820009377A /* thumbs-up-hand.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DCC1E4A10820009377A /* thumbs-up-hand.png */; };
-		7B75470E1E41FD600025A087 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7547081E41FD600025A087 /* DashboardCell.swift */; };
 		7B75470F1E41FD600025A087 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7547091E41FD600025A087 /* SettingsCell.swift */; };
-		7B7547121E41FD600025A087 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B75470C1E41FD600025A087 /* DashboardCell.xib */; };
 		7B7547131E41FD600025A087 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B75470D1E41FD600025A087 /* SettingsCell.xib */; };
 		7B7547161E41FD8A0025A087 /* API_calling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7547141E41FD8A0025A087 /* API_calling.swift */; };
 		7B7547171E41FD8A0025A087 /* CustomerDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7547151E41FD8A0025A087 /* CustomerDashboardVC.swift */; };
@@ -265,7 +246,6 @@
 		7B7548241E41FE150025A087 /* windy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479E1E41FE150025A087 /* windy@2x.png */; };
 		7B7548251E41FE150025A087 /* windy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479F1E41FE150025A087 /* windy@3x.png */; };
 		7B920C9E1E487705002BFEF2 /* SpeedoMeterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920C9D1E487705002BFEF2 /* SpeedoMeterVC.swift */; };
-		7B920CA01E487712002BFEF2 /* SpeedoMeterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B920C9F1E487712002BFEF2 /* SpeedoMeterVC.xib */; };
 		7B920CA51E487B74002BFEF2 /* onlyPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B920CA11E487B74002BFEF2 /* onlyPin.png */; };
 		7B920CA61E487B74002BFEF2 /* onlyPinSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B920CA21E487B74002BFEF2 /* onlyPinSmall.png */; };
 		7B920CA71E487B74002BFEF2 /* onlyRound.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B920CA31E487B74002BFEF2 /* onlyRound.png */; };
@@ -276,6 +256,14 @@
 		7B920CB31E48962D002BFEF2 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CB01E48962D002BFEF2 /* EPExtensions.swift */; };
 		7B920CB41E48962D002BFEF2 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CB11E48962D002BFEF2 /* EPSignatureView.swift */; };
 		7B920CC31E48A352002BFEF2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CC21E48A352002BFEF2 /* LocationManager.swift */; };
+		7BA56BB81E4B43A5007F3525 /* CustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BB71E4B43A4007F3525 /* CustomerCell.xib */; };
+		7BA56BBF1E4B4495007F3525 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56BBD1E4B4495007F3525 /* DashboardCell.swift */; };
+		7BA56BC01E4B4495007F3525 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BBE1E4B4495007F3525 /* DashboardCell.xib */; };
+		7BA56BC71E4B4964007F3525 /* InventoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56BC51E4B4964007F3525 /* InventoryDetailVC.swift */; };
+		7BA56BC81E4B4964007F3525 /* InventoryDetailWithMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56BC61E4B4964007F3525 /* InventoryDetailWithMenuVC.swift */; };
+		7BA56BCC1E4B4972007F3525 /* InventoryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */; };
+		7BA56BCD1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */; };
+		7BA56BCE1E4B4972007F3525 /* SpeedoMeterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */; };
 		B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B3D761E24BFE800FF0A20 /* AppDelegate.swift */; };
 		B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80B3D7D1E24BFE800FF0A20 /* Assets.xcassets */; };
 		B80B3D811E24BFE800FF0A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80B3D7F1E24BFE800FF0A20 /* LaunchScreen.storyboard */; };
@@ -330,8 +318,6 @@
 		0C0C56041E4088D80085CFD1 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		0C0C56051E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		0C0C56071E4088D80085CFD1 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
-		0C0C561B1E4095C10085CFD1 /* InventoryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailVC.xib; sourceTree = "<group>"; };
-		0C0C561D1E4095D40085CFD1 /* InventoryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailVC.swift; sourceTree = "<group>"; };
 		0C0C561F1E409F530085CFD1 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		0C0C56201E409F530085CFD1 /* led-monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "led-monitor.png"; sourceTree = "<group>"; };
 		0C0C56211E409F530085CFD1 /* speech-bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech-bubble.png"; sourceTree = "<group>"; };
@@ -345,7 +331,6 @@
 		0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerVC.xib; sourceTree = "<group>"; };
 		0C6EB0EB1E499F4F00224EB1 /* CustomerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerVC.swift; sourceTree = "<group>"; };
 		0C6EB0ED1E49A13000224EB1 /* CustomerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerCell.swift; sourceTree = "<group>"; };
-		0C6EB0EE1E49A13000224EB1 /* CustomerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerCell.xib; sourceTree = "<group>"; };
 		0C6EB0F31E49A77500224EB1 /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
 		0C6EB0F51E49A82500224EB1 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryVC.xib; sourceTree = "<group>"; };
@@ -379,6 +364,7 @@
 		30754C841E430C2600C87E9A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
 		30754C8A1E430D7B00C87E9A /* libiconv.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libiconv.tbd; sourceTree = "<group>"; };
 		30913D031E4B0EE6008FA1F3 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		7B2595CF1E4B3BD200DEC705 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		7B2949921E260799008566A4 /* AddInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryViewController.swift; sourceTree = "<group>"; };
 		7B2949931E260799008566A4 /* ClockInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockInViewController.swift; sourceTree = "<group>"; };
 		7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredVehicleSelctionViewController.swift; sourceTree = "<group>"; };
@@ -388,20 +374,13 @@
 		7B2949A01E2607B9008566A4 /* down_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_Arrow.png; sourceTree = "<group>"; };
 		7B2949A11E2607B9008566A4 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		7B3BB0B21E49F7C900D436F5 /* DLScanCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScanCameraVC.swift; sourceTree = "<group>"; };
-		7B3BB0B31E49F7C900D436F5 /* SpeedDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDemoVC.h; sourceTree = "<group>"; };
-		7B3BB0B51E49F7DA00D436F5 /* SpeedDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDemoVC.m; sourceTree = "<group>"; };
 		7B3BB0B71E49F8FC00D436F5 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		7B3BB0B81E49F8FC00D436F5 /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
 		7B3BB0B91E49F8FC00D436F5 /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
 		7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRImage.png; sourceTree = "<group>"; };
 		7B3BB0BB1E49F8FC00D436F5 /* ThunderMountainHDNoSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainHDNoSky.png; sourceTree = "<group>"; };
 		7B3BB0BC1E49F8FC00D436F5 /* ThunderMountainlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainlogo.png; sourceTree = "<group>"; };
-		7B3BB0C31E49F94A00D436F5 /* InventoryDetailWithMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailWithMenuVC.swift; sourceTree = "<group>"; };
 		7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanCameraVC.xib; sourceTree = "<group>"; };
-		7B3BB0C61E49F95600D436F5 /* InventoryDetailWithMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailWithMenuVC.xib; sourceTree = "<group>"; };
-		7B3BB0C91E49F9AE00D436F5 /* DashboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
-		7B3BB0CA1E49F9AE00D436F5 /* DashboardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
-		7B3BB0D01E49FC7C00D436F5 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		7B3BB0D21E49FD0000D436F5 /* SpeedDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedDemoVC.xib; sourceTree = "<group>"; };
 		7B3C941D1E433ED100D6F795 /* NewContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactVC.swift; sourceTree = "<group>"; };
 		7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
@@ -411,10 +390,6 @@
 		7B4F5ED01E24EA1F0086B359 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7B4F5ED21E24F2210086B359 /* LogCustomerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCustomerVC.swift; sourceTree = "<group>"; };
 		7B4F5ED61E24F2BD0086B359 /* LogCustomerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogCustomerVC.xib; sourceTree = "<group>"; };
-		7B7547091E41FD600025A087 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-
-		7B6F3DA91E4A04980009377A /* DLScanCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScanCameraVC.swift; sourceTree = "<group>"; };
-		7B6F3DAE1E4A04AA0009377A /* DLScanCameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanCameraVC.xib; sourceTree = "<group>"; };
 		7B6F3DAF1E4A04AA0009377A /* SpeedDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedDemoVC.xib; sourceTree = "<group>"; };
 		7B6F3DB21E4A04CD0009377A /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		7B6F3DB31E4A04CD0009377A /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
@@ -422,17 +397,12 @@
 		7B6F3DB51E4A04CD0009377A /* QRImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRImage.png; sourceTree = "<group>"; };
 		7B6F3DB61E4A04CD0009377A /* ThunderMountainHDNoSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainHDNoSky.png; sourceTree = "<group>"; };
 		7B6F3DB71E4A04CD0009377A /* ThunderMountainlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainlogo.png; sourceTree = "<group>"; };
-		7B6F3DC11E4A05550009377A /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
-		7B6F3DC31E4A059C0009377A /* InventoryDetailWithMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailWithMenuVC.xib; sourceTree = "<group>"; };
-		7B6F3DC51E4A05A40009377A /* InventoryDetailWithMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailWithMenuVC.swift; sourceTree = "<group>"; };
 		7B6F3DC71E4A0A810009377A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7B6F3DC91E4A10820009377A /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar.png; sourceTree = "<group>"; };
 		7B6F3DCA1E4A10820009377A /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera.png"; sourceTree = "<group>"; };
 		7B6F3DCB1E4A10820009377A /* Support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Support.png; sourceTree = "<group>"; };
 		7B6F3DCC1E4A10820009377A /* thumbs-up-hand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbs-up-hand.png"; sourceTree = "<group>"; };
-		7B7547081E41FD600025A087 /* DashboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		7B7547091E41FD600025A087 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		7B75470C1E41FD600025A087 /* DashboardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
 		7B75470D1E41FD600025A087 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
 		7B7547141E41FD8A0025A087 /* API_calling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API_calling.swift; sourceTree = "<group>"; };
 		7B7547151E41FD8A0025A087 /* CustomerDashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerDashboardVC.swift; sourceTree = "<group>"; };
@@ -572,7 +542,6 @@
 		7B75479E1E41FE150025A087 /* windy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windy@2x.png"; sourceTree = "<group>"; };
 		7B75479F1E41FE150025A087 /* windy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windy@3x.png"; sourceTree = "<group>"; };
 		7B920C9D1E487705002BFEF2 /* SpeedoMeterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedoMeterVC.swift; sourceTree = "<group>"; };
-		7B920C9F1E487712002BFEF2 /* SpeedoMeterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedoMeterVC.xib; sourceTree = "<group>"; };
 		7B920CA11E487B74002BFEF2 /* onlyPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onlyPin.png; sourceTree = "<group>"; };
 		7B920CA21E487B74002BFEF2 /* onlyPinSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onlyPinSmall.png; sourceTree = "<group>"; };
 		7B920CA31E487B74002BFEF2 /* onlyRound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onlyRound.png; sourceTree = "<group>"; };
@@ -584,6 +553,14 @@
 		7B920CB11E48962D002BFEF2 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSignatureView.swift; sourceTree = "<group>"; };
 		7B920CC01E489782002BFEF2 /* EPSignature.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EPSignature.framework; sourceTree = "<group>"; };
 		7B920CC21E48A352002BFEF2 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7BA56BB71E4B43A4007F3525 /* CustomerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerCell.xib; sourceTree = "<group>"; };
+		7BA56BBD1E4B4495007F3525 /* DashboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		7BA56BBE1E4B4495007F3525 /* DashboardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
+		7BA56BC51E4B4964007F3525 /* InventoryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailVC.swift; sourceTree = "<group>"; };
+		7BA56BC61E4B4964007F3525 /* InventoryDetailWithMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailWithMenuVC.swift; sourceTree = "<group>"; };
+		7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailVC.xib; sourceTree = "<group>"; };
+		7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailWithMenuVC.xib; sourceTree = "<group>"; };
+		7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedoMeterVC.xib; sourceTree = "<group>"; };
 		B80B3D731E24BFE800FF0A20 /* BestBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80B3D761E24BFE800FF0A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B80B3D7D1E24BFE800FF0A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -738,6 +715,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B2595CE1E4B3BD200DEC705 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B2595CF1E4B3BD200DEC705 /* Customer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7B29499E1E2607B9008566A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -757,8 +742,6 @@
 				7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */,
 				7B3BB0BB1E49F8FC00D436F5 /* ThunderMountainHDNoSky.png */,
 				7B3BB0BC1E49F8FC00D436F5 /* ThunderMountainlogo.png */,
-				0C6EB0F51E49A82500224EB1 /* user.png */,
-				0C6EB0F31E49A77500224EB1 /* profile.jpg */,
 				0C6BF5B91E488DB400F92D07 /* dollar.png */,
 				0C6BF5BA1E488DB400F92D07 /* photo-camera.png */,
 				0C6BF5BB1E488DB400F92D07 /* Support.png */,
@@ -937,19 +920,10 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		7B3BB0CD1E49FC3800D436F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7B3BB0D01E49FC7C00D436F5 /* Customer.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		7B4F5EBA1E24CA8E0086B359 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				7B3BB0CD1E49FC3800D436F5 /* Model */,
-				7B6F3DC01E4A05550009377A /* Model */,
+				7B2595CE1E4B3BD200DEC705 /* Model */,
 				7B4F5EC61E24CABB0086B359 /* Cell */,
 				7B4F5EBB1E24CA8E0086B359 /* Controllers */,
 				7B4F5EBF1E24CA8E0086B359 /* View */,
@@ -960,14 +934,11 @@
 		7B4F5EBB1E24CA8E0086B359 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7BA56BC51E4B4964007F3525 /* InventoryDetailVC.swift */,
+				7BA56BC61E4B4964007F3525 /* InventoryDetailWithMenuVC.swift */,
 				0C0E1AD31E4ADC8700E70CB3 /* SpeedDemoVC.h */,
 				0C0E1AD41E4ADC8700E70CB3 /* SpeedDemoVC.m */,
-				7B3BB0C31E49F94A00D436F5 /* InventoryDetailWithMenuVC.swift */,
-				7B3BB0B51E49F7DA00D436F5 /* SpeedDemoVC.m */,
 				7B3BB0B21E49F7C900D436F5 /* DLScanCameraVC.swift */,
-				7B3BB0B31E49F7C900D436F5 /* SpeedDemoVC.h */,
-				7B6F3DC51E4A05A40009377A /* InventoryDetailWithMenuVC.swift */,
-				7B6F3DA91E4A04980009377A /* DLScanCameraVC.swift */,
 				7B920C9D1E487705002BFEF2 /* SpeedoMeterVC.swift */,
 				7B3C941D1E433ED100D6F795 /* NewContactVC.swift */,
 				7B7547141E41FD8A0025A087 /* API_calling.swift */,
@@ -980,7 +951,6 @@
 				7B4F5ED21E24F2210086B359 /* LogCustomerVC.swift */,
 				0C8FB6191E3F4817007B7E68 /* InventoryVC.swift */,
 				0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */,
-				0C0C561D1E4095D40085CFD1 /* InventoryDetailVC.swift */,
 				300267151E4305B700682E9E /* DLScanVC.swift */,
 				0C6EB0EB1E499F4F00224EB1 /* CustomerVC.swift */,
 				0CE735951E4B2078008FE4C7 /* PossibleMatchesVC.swift */,
@@ -991,13 +961,12 @@
 		7B4F5EBF1E24CA8E0086B359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */,
+				7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */,
+				7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */,
 				7B3BB0D21E49FD0000D436F5 /* SpeedDemoVC.xib */,
 				7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */,
-				7B3BB0C61E49F95600D436F5 /* InventoryDetailWithMenuVC.xib */,
-				7B6F3DC31E4A059C0009377A /* InventoryDetailWithMenuVC.xib */,
-				7B6F3DAE1E4A04AA0009377A /* DLScanCameraVC.xib */,
 				7B6F3DAF1E4A04AA0009377A /* SpeedDemoVC.xib */,
-				7B920C9F1E487712002BFEF2 /* SpeedoMeterVC.xib */,
 				7B7547181E41FDB20025A087 /* CustomerDashboardVC.xib */,
 				305896191E3F47ED005A5606 /* NewContactVC.xib */,
 				7B2949981E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib */,
@@ -1008,7 +977,6 @@
 				7B4F5EC11E24CA8E0086B359 /* LoginVC.xib */,
 				0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */,
 				0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */,
-				0C0C561B1E4095C10085CFD1 /* InventoryDetailVC.xib */,
 				300267171E4305FE00682E9E /* DLScanVC.xib */,
 				0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */,
 				0CE735911E4B200A008FE4C7 /* PossibleMatchesVC.xib */,
@@ -1019,16 +987,16 @@
 		7B4F5EC61E24CABB0086B359 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				7B3BB0C91E49F9AE00D436F5 /* DashboardCell.swift */,
-				7B3BB0CA1E49F9AE00D436F5 /* DashboardCell.xib */,
+				7BA56BBD1E4B4495007F3525 /* DashboardCell.swift */,
+				7BA56BBE1E4B4495007F3525 /* DashboardCell.xib */,
+				7BA56BB71E4B43A4007F3525 /* CustomerCell.xib */,
+				0C6EB0ED1E49A13000224EB1 /* CustomerCell.swift */,
 				7B7547091E41FD600025A087 /* SettingsCell.swift */,
 				7B75470D1E41FD600025A087 /* SettingsCell.xib */,
 				0C8FB6251E3F55E4007B7E68 /* InventoryCell.swift */,
 				0C8FB6261E3F55E4007B7E68 /* InventoryCell.xib */,
 				3058961F1E3F64F7005A5606 /* addItemCell.swift */,
 				305896201E3F64F7005A5606 /* addItemCell.xib */,
-				0C6EB0ED1E49A13000224EB1 /* CustomerCell.swift */,
-				0C6EB0EE1E49A13000224EB1 /* CustomerCell.xib */,
 				0CE735971E4B2E4C008FE4C7 /* MatchesDetailCell.swift */,
 				0CE735981E4B2E4C008FE4C7 /* MatchesDetailCell.xib */,
 			);
@@ -1043,14 +1011,6 @@
 				0C8FB6211E3F52D2007B7E68 /* Extensions.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		7B6F3DC01E4A05550009377A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7B6F3DC11E4A05550009377A /* Customer.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		7B920CAF1E489617002BFEF2 /* ESPSignature */ = {
@@ -1228,15 +1188,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B920CA01E487712002BFEF2 /* SpeedoMeterVC.xib in Resources */,
 				7B7547E01E41FE150025A087 /* isolated_thunderstorms@2x.png in Resources */,
-				0C0C561C1E4095C10085CFD1 /* InventoryDetailVC.xib in Resources */,
 				7B7548061E41FE150025A087 /* severe_thunderstorms.png in Resources */,
 				7B7548071E41FE150025A087 /* severe_thunderstorms@2x.png in Resources */,
+				7BA56BCE1E4B4972007F3525 /* SpeedoMeterVC.xib in Resources */,
 				7B7547B61E41FE150025A087 /* blustery.png in Resources */,
 				7B7547F41E41FE150025A087 /* partly_cloudy_(day).png in Resources */,
+				7BA56BC01E4B4495007F3525 /* DashboardCell.xib in Resources */,
 				7B7547A81E41FE150025A087 /* Customers.png in Resources */,
-				0C6EB0F01E49A13000224EB1 /* CustomerCell.xib in Resources */,
 				7B7547C51E41FE150025A087 /* dust.png in Resources */,
 				7B7548021E41FE150025A087 /* scattered_snow_showers@3x.png in Resources */,
 				7B29499D1E2607A9008566A4 /* ClockInViewController.xib in Resources */,
@@ -1267,7 +1226,6 @@
 				7B7548251E41FE150025A087 /* windy@3x.png in Resources */,
 				0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */,
 				7B920CA71E487B74002BFEF2 /* onlyRound.png in Resources */,
-				7B3BB0C81E49F95600D436F5 /* InventoryDetailWithMenuVC.xib in Resources */,
 				7B7547BC1E41FE150025A087 /* cloudy.png in Resources */,
 				7B7547CD1E41FE150025A087 /* freezing_rain.png in Resources */,
 				7B7547C21E41FE150025A087 /* drizzle.png in Resources */,
@@ -1311,7 +1269,6 @@
 				7B7548181E41FE150025A087 /* sunny@2x.png in Resources */,
 				7B7547B71E41FE150025A087 /* blustery@2x.png in Resources */,
 				7B7547E11E41FE150025A087 /* isolated_thunderstorms@3x.png in Resources */,
-				7B7547121E41FD600025A087 /* DashboardCell.xib in Resources */,
 				0CE735901E4B13EA008FE4C7 /* Add.png in Resources */,
 				7B75480B1E41FE150025A087 /* showers@3x.png in Resources */,
 				7B7547D01E41FE150025A087 /* hail.png in Resources */,
@@ -1323,7 +1280,6 @@
 				30754C851E430C2600C87E9A /* MicroBlink.bundle in Resources */,
 				7B7548101E41FE150025A087 /* snow_flurries@2x.png in Resources */,
 				7B29499B1E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib in Resources */,
-				7B6F3DB01E4A04AA0009377A /* DLScanCameraVC.xib in Resources */,
 				7B7547C01E41FE150025A087 /* cold@2x.png in Resources */,
 				7B7547DF1E41FE150025A087 /* isolated_thunderstorms.png in Resources */,
 				7B7547BF1E41FE150025A087 /* cold.png in Resources */,
@@ -1335,7 +1291,6 @@
 				7B7547AE1E41FE150025A087 /* Quote.png in Resources */,
 				7B6F3DCE1E4A10820009377A /* photo-camera.png in Resources */,
 				7B7547A51E41FE150025A087 /* Settings.png in Resources */,
-				7B3BB0CC1E49F9AE00D436F5 /* DashboardCell.xib in Resources */,
 				7B7547CE1E41FE150025A087 /* freezing_rain@2x.png in Resources */,
 				7B75481B1E41FE150025A087 /* thundershowers@2x.png in Resources */,
 				7B7547B31E41FE150025A087 /* blowing_snow.png in Resources */,
@@ -1346,6 +1301,7 @@
 				7B7547E31E41FE150025A087 /* light_snow_showers@2x.png in Resources */,
 				7B7547C11E41FE150025A087 /* cold@3x.png in Resources */,
 				7B7547E61E41FE150025A087 /* mixed_rain_and_snow@2x.png in Resources */,
+				7BA56BCC1E4B4972007F3525 /* InventoryDetailVC.xib in Resources */,
 				7B7547B11E41FE150025A087 /* Tasks.png in Resources */,
 				7B7547B51E41FE150025A087 /* blowing_snow@3x.png in Resources */,
 				7B7547BD1E41FE150025A087 /* cloudy@2x.png in Resources */,
@@ -1364,7 +1320,6 @@
 				7B7548191E41FE150025A087 /* sunny@3x.png in Resources */,
 				7B7547A61E41FE150025A087 /* Unchecked.png in Resources */,
 				7B7547C31E41FE150025A087 /* drizzle@2x.png in Resources */,
-				7B6F3DC41E4A059C0009377A /* InventoryDetailWithMenuVC.xib in Resources */,
 				7B7547DA1E41FE150025A087 /* hurricane@2x.png in Resources */,
 				7B7547FE1E41FE150025A087 /* scattered_showers@2x.png in Resources */,
 				7B7548221E41FE150025A087 /* tornado@3x.png in Resources */,
@@ -1376,6 +1331,7 @@
 				7B7547E71E41FE150025A087 /* mixed_rain_and_snow@3x.png in Resources */,
 				7B920CAC1E487BE0002BFEF2 /* DownPayment.png in Resources */,
 				7B7547F81E41FE150025A087 /* partly_cloudy_(night)@2x.png in Resources */,
+				7BA56BB81E4B43A5007F3525 /* CustomerCell.xib in Resources */,
 				0C0C56241E409F530085CFD1 /* speech-bubble.png in Resources */,
 				7B6F3DBD1E4A04CD0009377A /* ThunderMountainlogo.png in Resources */,
 				0CE7359A1E4B2E4C008FE4C7 /* MatchesDetailCell.xib in Resources */,
@@ -1436,6 +1392,7 @@
 				7B7548171E41FE150025A087 /* sunny.png in Resources */,
 				B8134D351E262FDA00487406 /* b_trade.png in Resources */,
 				7B7547EE1E41FE150025A087 /* mostly_cloudy_(day).png in Resources */,
+				7BA56BCD1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib in Resources */,
 				7B75481D1E41FE150025A087 /* thunderstorms.png in Resources */,
 				7B75481F1E41FE150025A087 /* thunderstorms@3x.png in Resources */,
 			);
@@ -1469,16 +1426,12 @@
 				7B3BB0B41E49F7C900D436F5 /* DLScanCameraVC.swift in Sources */,
 				305896211E3F64F7005A5606 /* addItemCell.swift in Sources */,
 				7B920CC31E48A352002BFEF2 /* LocationManager.swift in Sources */,
-				7B6F3DC61E4A05A40009377A /* InventoryDetailWithMenuVC.swift in Sources */,
 				0CE735961E4B2078008FE4C7 /* PossibleMatchesVC.swift in Sources */,
 				B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */,
 				0C0E1AD51E4ADC8700E70CB3 /* SpeedDemoVC.m in Sources */,
-				7B3BB0C41E49F94A00D436F5 /* InventoryDetailWithMenuVC.swift in Sources */,
-				7B3BB0B61E49F7DA00D436F5 /* SpeedDemoVC.m in Sources */,
 				0C0C56131E4088D80085CFD1 /* IQBarButtonItem.swift in Sources */,
 				0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */,
 				0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */,
-				0C0C561E1E4095D40085CFD1 /* InventoryDetailVC.swift in Sources */,
 				0C6EB0EF1E49A13000224EB1 /* CustomerCell.swift in Sources */,
 				7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */,
 				0C0C56111E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift in Sources */,
@@ -1487,26 +1440,25 @@
 				7B920CB41E48962D002BFEF2 /* EPSignatureView.swift in Sources */,
 				7B920CB31E48962D002BFEF2 /* EPExtensions.swift in Sources */,
 				7B920C9E1E487705002BFEF2 /* SpeedoMeterVC.swift in Sources */,
-				7B3BB0CB1E49F9AE00D436F5 /* DashboardCell.swift in Sources */,
 				0C0C560D1E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift in Sources */,
 				7B75470F1E41FD600025A087 /* SettingsCell.swift in Sources */,
 				0C0C56171E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */,
 				0C0C55EB1E4069290085CFD1 /* ANPopoverSlider.m in Sources */,
-				7B3BB0D11E49FC7C00D436F5 /* Customer.swift in Sources */,
 				7B4F5ED11E24EA1F0086B359 /* Constant.swift in Sources */,
 				0C0C56151E4088D80085CFD1 /* IQTitleBarButtonItem.swift in Sources */,
 				7B7547171E41FD8A0025A087 /* CustomerDashboardVC.swift in Sources */,
+				7BA56BC81E4B4964007F3525 /* InventoryDetailWithMenuVC.swift in Sources */,
 				0C0C56091E4088D80085CFD1 /* IQUIScrollView+Additions.swift in Sources */,
 				0C0C560B1E4088D80085CFD1 /* IQUIView+Hierarchy.swift in Sources */,
 				7B7547161E41FD8A0025A087 /* API_calling.swift in Sources */,
 				0C0C56141E4088D80085CFD1 /* IQPreviousNextView.swift in Sources */,
-				7B6F3DAC1E4A04980009377A /* DLScanCameraVC.swift in Sources */,
 				300267161E4305B700682E9E /* DLScanVC.swift in Sources */,
+				7B2595D01E4B3BD200DEC705 /* Customer.swift in Sources */,
 				0C0C560E1E4088D80085CFD1 /* IQKeyboardManagerConstants.swift in Sources */,
-				7B6F3DC21E4A05550009377A /* Customer.swift in Sources */,
 				7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */,
 				0C8FB6271E3F55E4007B7E68 /* InventoryCell.swift in Sources */,
+				7BA56BBF1E4B4495007F3525 /* DashboardCell.swift in Sources */,
 				7B4F5EC31E24CA8E0086B359 /* LoginVC.swift in Sources */,
 				0C0C56161E4088D80085CFD1 /* IQToolbar.swift in Sources */,
 				0C0C56081E4088D80085CFD1 /* IQNSArray+Sort.swift in Sources */,
@@ -1516,6 +1468,7 @@
 				0C0C56121E4088D80085CFD1 /* IQTextView.swift in Sources */,
 				7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */,
 				0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */,
+				7BA56BC71E4B4964007F3525 /* InventoryDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1691,7 +1644,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
 				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Desktop/BestBrainApp/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1723,7 +1677,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
 				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
-			SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Desktop/BestBrainApp/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

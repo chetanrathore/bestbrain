@@ -44,7 +44,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         self.tblSettings.delegate = self
         self.tblSettings.tableFooterView = UIView()
         
-        self.lblMessage.text = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala"
+        self.lblMessage.text = "Good Evening Bill....You are 92% there"
     }
    
     override func viewWillAppear(_ animated: Bool) {

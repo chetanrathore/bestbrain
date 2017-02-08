@@ -44,7 +44,7 @@ class InventoryDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInterface()
-        if !isFromInventory {
+        if isFromInventory {
             btnAddBike.isHidden = true
             vwOtherInfo.isHidden = false
         }else {
@@ -63,10 +63,12 @@ class InventoryDetailVC: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        if isFromInventory {
-            btnAddBike.frame = CGRect(x: self.btnQuote.frame.origin.x, y: self.btnAddBike.frame.origin.y, width: 150, height: 150)
-            btnAddBike.imageEdgeInsets = UIEdgeInsetsMake(25, 40, 40, 25)
-            btnAddBike.titleEdgeInsets = UIEdgeInsetsMake(100, -90, 0, 0)
+        if !isFromInventory {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                btnAddBike.frame = CGRect(x: self.btnQuote.frame.origin.x, y: self.btnAddBike.frame.origin.y, width: 150, height: 150)
+                btnAddBike.imageEdgeInsets = UIEdgeInsetsMake(25, 40, 40, 25)
+                btnAddBike.titleEdgeInsets = UIEdgeInsetsMake(100, -90, 0, 0)
+            }
         }
     }
     
