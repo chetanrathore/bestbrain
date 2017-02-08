@@ -23,8 +23,7 @@ extension UIView {
     func gradientLayer() {
         let gradiantLayer = CAGradientLayer()
         gradiantLayer.frame.size = CGSize(width: ScreenWidth, height: Screenheight)
-        gradiantLayer.colors = [dashboardBackgroundColor.cgColor, dashboardBottomColor.cgColor, whiteColor.cgColor]
-        gradiantLayer.locations = [0.0,1.0]
+        gradiantLayer.colors = [dashboardBackgroundColor.cgColor, dashboardBottomColor.cgColor, dashboardBottomColor.cgColor]
         self.layer.addSublayer(gradiantLayer)
     }
 

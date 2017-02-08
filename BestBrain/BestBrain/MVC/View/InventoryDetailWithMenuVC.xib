@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryDetailWithMenuVC" customModule="BestBrain" customModuleProvider="target">
             <connections>
                 <outlet property="btnACV" destination="uBL-pb-Uza" id="mJY-O8-7xH"/>
+                <outlet property="btnAddAppraisal" destination="P1V-Z1-2lX" id="M41-37-v18"/>
                 <outlet property="btnAddPhoto" destination="EiI-tQ-BBc" id="P9K-8O-yKu"/>
                 <outlet property="btnSalesHistory" destination="VEV-zf-SIz" id="E3d-Zl-vwF"/>
                 <outlet property="btnServiceHistory" destination="1ob-Eu-WBc" id="o0X-nH-cd3"/>
@@ -32,11 +33,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="638"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-Tk-Eu4">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="638"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kp-zO-99G">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
@@ -189,6 +190,21 @@
                                                 <action selector="btnAddPhoto:" destination="-1" eventType="touchUpInside" id="Zde-0L-b3X"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1V-Z1-2lX">
+                                            <rect key="frame" x="87" y="315" width="145" height="40"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Exj-lW-38A"/>
+                                                <constraint firstAttribute="width" secondItem="P1V-Z1-2lX" secondAttribute="height" multiplier="29:8" id="pNi-vG-bZr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <state key="normal" title="Add Appraisal">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="handleBtnAddAppraisal:" destination="-1" eventType="touchUpInside" id="XgN-kF-zOo"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
@@ -199,9 +215,11 @@
                                         <constraint firstItem="W91-x3-JnO" firstAttribute="top" secondItem="BMi-pG-8AN" secondAttribute="bottom" id="dH2-W4-GsE"/>
                                         <constraint firstItem="BMi-pG-8AN" firstAttribute="top" secondItem="VoL-bh-dXx" secondAttribute="top" id="eRi-VK-lyq"/>
                                         <constraint firstItem="W91-x3-JnO" firstAttribute="leading" secondItem="VoL-bh-dXx" secondAttribute="leading" id="ms1-S4-heK"/>
+                                        <constraint firstItem="P1V-Z1-2lX" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="bottom" constant="50" id="rTw-lQ-v1g"/>
                                         <constraint firstItem="EiI-tQ-BBc" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="bottom" constant="5" id="riI-X9-C96"/>
                                         <constraint firstItem="EiI-tQ-BBc" firstAttribute="height" secondItem="W91-x3-JnO" secondAttribute="height" id="sIG-KA-K4h"/>
                                         <constraint firstAttribute="height" constant="396" id="veB-9P-XBH"/>
+                                        <constraint firstItem="P1V-Z1-2lX" firstAttribute="centerX" secondItem="VoL-bh-dXx" secondAttribute="centerX" id="x2M-Ce-EIS"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -233,7 +251,8 @@
                 <constraint firstAttribute="trailing" secondItem="Pgj-Tk-Eu4" secondAttribute="trailing" id="UTk-4R-Cr8"/>
                 <constraint firstItem="2Kp-zO-99G" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Zd9-WM-SQT"/>
             </constraints>
-            <point key="canvasLocation" x="-888" y="-375"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-719" y="-311"/>
         </view>
     </objects>
     <resources>
