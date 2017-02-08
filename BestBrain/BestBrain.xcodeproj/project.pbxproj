@@ -63,6 +63,7 @@
 		30754C851E430C2600C87E9A /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30754C831E430C2600C87E9A /* MicroBlink.bundle */; };
 		30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C841E430C2600C87E9A /* MicroBlink.framework */; };
 		30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30754C8A1E430D7B00C87E9A /* libiconv.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
+		30913D041E4B0EE6008FA1F3 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 30913D031E4B0EE6008FA1F3 /* bar.png */; };
 		7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949921E260799008566A4 /* AddInventoryViewController.swift */; };
 		7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949931E260799008566A4 /* ClockInViewController.swift */; };
 		7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */; };
@@ -249,7 +250,6 @@
 		7B920CAE1E487BE0002BFEF2 /* TermMeter.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B920CAB1E487BE0002BFEF2 /* TermMeter.png */; };
 		7B920CB31E48962D002BFEF2 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CB01E48962D002BFEF2 /* EPExtensions.swift */; };
 		7B920CB41E48962D002BFEF2 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CB11E48962D002BFEF2 /* EPSignatureView.swift */; };
-		7B920CC11E489782002BFEF2 /* EPSignature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B920CC01E489782002BFEF2 /* EPSignature.framework */; };
 		7B920CC31E48A352002BFEF2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CC21E48A352002BFEF2 /* LocationManager.swift */; };
 		B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B3D761E24BFE800FF0A20 /* AppDelegate.swift */; };
 		B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80B3D7D1E24BFE800FF0A20 /* Assets.xcassets */; };
@@ -341,6 +341,7 @@
 		30754C831E430C2600C87E9A /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MicroBlink.bundle; sourceTree = "<group>"; };
 		30754C841E430C2600C87E9A /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
 		30754C8A1E430D7B00C87E9A /* libiconv.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libiconv.tbd; sourceTree = "<group>"; };
+		30913D031E4B0EE6008FA1F3 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		7B2949921E260799008566A4 /* AddInventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryViewController.swift; sourceTree = "<group>"; };
 		7B2949931E260799008566A4 /* ClockInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockInViewController.swift; sourceTree = "<group>"; };
 		7B2949941E260799008566A4 /* DesiredVehicleSelctionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesiredVehicleSelctionViewController.swift; sourceTree = "<group>"; };
@@ -554,7 +555,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6F3DC81E4A0A810009377A /* CoreGraphics.framework in Frameworks */,
-				7B920CC11E489782002BFEF2 /* EPSignature.framework in Frameworks */,
 				30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */,
 				30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */,
 				300267231E43070C00682E9E /* Accelerate.framework in Frameworks */,
@@ -699,6 +699,7 @@
 				7B6F3DC91E4A10820009377A /* dollar.png */,
 				7B6F3DCA1E4A10820009377A /* photo-camera.png */,
 				7B6F3DCB1E4A10820009377A /* Support.png */,
+				30913D031E4B0EE6008FA1F3 /* bar.png */,
 				7B6F3DCC1E4A10820009377A /* thumbs-up-hand.png */,
 				7B6F3DB21E4A04CD0009377A /* error.png */,
 				7B6F3DB31E4A04CD0009377A /* flash.png */,
@@ -1319,6 +1320,7 @@
 				7B7547F31E41FE150025A087 /* mostly_cloudy_(night)@3x.png in Resources */,
 				7B7547C71E41FE150025A087 /* dust@3x.png in Resources */,
 				7B7547EA1E41FE150025A087 /* mixed_rain_hail@3x.png in Resources */,
+				30913D041E4B0EE6008FA1F3 /* bar.png in Resources */,
 				B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */,
 				0C0C56221E409F530085CFD1 /* envelope.png in Resources */,
 				7B7547AB1E41FE150025A087 /* health.png in Resources */,
@@ -1481,6 +1483,7 @@
 				DEVELOPMENT_TEAM = Y55EBSG532;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/MicroBlink.framework\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1534,6 +1537,7 @@
 				DEVELOPMENT_TEAM = Y55EBSG532;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/MicroBlink.framework\"";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1555,6 +1559,7 @@
 		B80B3D9C1E24BFE800FF0A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
@@ -1563,6 +1568,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/MicroBlink.framework\"",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/EPSignature.framework\"",
 				);
 				INFOPLIST_FILE = BestBrain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -1575,7 +1581,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
 				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Desktop/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1585,6 +1591,7 @@
 		B80B3D9D1E24BFE800FF0A20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
@@ -1593,6 +1600,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/MicroBlink.framework\"",
 					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/EPSignature.framework\"",
 				);
 				INFOPLIST_FILE = BestBrain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -1605,7 +1613,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
 				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Desktop/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
