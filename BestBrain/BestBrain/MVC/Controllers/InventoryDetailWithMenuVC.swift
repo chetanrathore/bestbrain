@@ -54,7 +54,7 @@ class InventoryDetailWithMenuVC: UIViewController {
         vwDetails.bringSubview(toFront: vwMenuItem)
         btnAddPhoto.superview?.bringSubview(toFront: btnAddPhoto)
         
-        if UIDevice.current.userInterfaceIdiom == .pad {
+        /*if UIDevice.current.userInterfaceIdiom == .pad {
             constVWBtnHeight.constant = 120
             constVWScrollHeight.constant = 1000
             constImageHeight.constant = 400
@@ -79,7 +79,7 @@ class InventoryDetailWithMenuVC: UIViewController {
             constVWScrollHeight.constant = 650
             constImageHeight.constant = 250
             constVWBottomHeight.constant = 400
-        }
+        }*/
     }
     
     @IBAction func btnServiceHistory(_ sender: UIButton) {

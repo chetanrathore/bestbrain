@@ -31,7 +31,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     var arrTblMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
     var transperentView = UIView()
     let locManager = CLLocationManager()
-    let gradientLayer = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +99,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
       
     }
     
-  
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let cell = collectionView.cellForItem(at: indexPath) as? DashboardCell
             let item = cell?.lblItem.text
@@ -187,10 +185,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func setGradientBackground(){
-        self.gradientLayer.frame = self.view.bounds
-        self.gradientLayer.colors = [dashboardBackgroundColor.cgColor, dashboardBottomColor.cgColor, whiteColor.cgColor]
-        self.gradientLayer.locations = [0.0,1.0]
-        self.view.layer.addSublayer(self.gradientLayer)
+        self.view.gradientLayer()
         self.view.bringSubview(toFront: self.vwMessageScroll)
         self.view.bringSubview(toFront: self.viewDateTime)
         self.view.bringSubview(toFront: self.menuCollection)

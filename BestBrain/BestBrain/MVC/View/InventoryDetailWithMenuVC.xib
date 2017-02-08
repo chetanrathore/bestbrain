@@ -111,6 +111,7 @@
                                                         <constraint firstAttribute="width" secondItem="1ob-Eu-WBc" secondAttribute="height" multiplier="1:1" id="j4x-bw-WnX"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <inset key="titleEdgeInsets" minX="-100" minY="60" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="18" minY="5" maxX="20" maxY="30"/>
                                                     <state key="normal" title="Service History" image="Support.png">
@@ -127,6 +128,7 @@
                                                         <constraint firstAttribute="width" secondItem="uBL-pb-Uza" secondAttribute="height" multiplier="1:1" id="Oqv-45-qC9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <inset key="titleEdgeInsets" minX="-128" minY="60" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
                                                     <state key="normal" title="ACV" image="dollar.png">
@@ -139,10 +141,12 @@
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEV-zf-SIz">
                                                     <rect key="frame" x="222" y="0.0" width="85" height="85"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="VEV-zf-SIz" secondAttribute="height" multiplier="1:1" id="jo3-pV-hxR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <inset key="titleEdgeInsets" minX="-125" minY="60" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
                                                     <state key="normal" title="Sales History" image="thumbs-up-hand.png">
@@ -168,12 +172,14 @@
                                                 <constraint firstItem="uBL-pb-Uza" firstAttribute="centerY" secondItem="W91-x3-JnO" secondAttribute="centerY" id="pb0-Ts-f70"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiI-tQ-BBc">
-                                            <rect key="frame" x="117" y="270" width="84" height="85"/>
+                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiI-tQ-BBc">
+                                            <rect key="frame" x="115.5" y="270" width="89" height="85"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="EiI-tQ-BBc" secondAttribute="height" multiplier="84:85" id="IjT-hv-R5X"/>
+                                                <constraint firstAttribute="width" secondItem="EiI-tQ-BBc" secondAttribute="height" multiplier="84:80" id="IjT-hv-R5X"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <inset key="titleEdgeInsets" minX="-130" minY="60" maxX="0.0" maxY="0.0"/>
                                             <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
                                             <state key="normal" title="Add Photos" image="photo-camera.png">
@@ -189,7 +195,7 @@
                                         <constraint firstAttribute="trailing" secondItem="BMi-pG-8AN" secondAttribute="trailing" id="5G2-tR-DXr"/>
                                         <constraint firstAttribute="trailing" secondItem="W91-x3-JnO" secondAttribute="trailing" id="BaJ-8G-PQh"/>
                                         <constraint firstItem="BMi-pG-8AN" firstAttribute="leading" secondItem="VoL-bh-dXx" secondAttribute="leading" id="HuQ-nz-hYG"/>
-                                        <constraint firstItem="EiI-tQ-BBc" firstAttribute="centerX" secondItem="VoL-bh-dXx" secondAttribute="centerX" constant="-1" id="NHt-nr-YC9"/>
+                                        <constraint firstItem="EiI-tQ-BBc" firstAttribute="centerX" secondItem="VoL-bh-dXx" secondAttribute="centerX" id="NHt-nr-YC9"/>
                                         <constraint firstItem="W91-x3-JnO" firstAttribute="top" secondItem="BMi-pG-8AN" secondAttribute="bottom" id="dH2-W4-GsE"/>
                                         <constraint firstItem="BMi-pG-8AN" firstAttribute="top" secondItem="VoL-bh-dXx" secondAttribute="top" id="eRi-VK-lyq"/>
                                         <constraint firstItem="W91-x3-JnO" firstAttribute="leading" secondItem="VoL-bh-dXx" secondAttribute="leading" id="ms1-S4-heK"/>

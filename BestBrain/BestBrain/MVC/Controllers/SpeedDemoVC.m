@@ -44,7 +44,7 @@
     [self addDownPayment];
     [self addMonthlyPayment];
     [self addTerm];
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:NO];
     [super viewDidLoad];
 }
 
