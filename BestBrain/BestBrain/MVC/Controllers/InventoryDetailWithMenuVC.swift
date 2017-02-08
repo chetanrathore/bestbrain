@@ -19,7 +19,10 @@ class InventoryDetailWithMenuVC: UIViewController {
     @IBOutlet var btnSalesHistory: UIButton!
     
     @IBOutlet var btnAddPhoto: UIButton!
-
+    
+    
+    @IBOutlet var btnAddAppraisal: UIButton!
+    
     @IBOutlet var vwDetails: UIView!
     
     @IBOutlet var vwInfo: UIView!
@@ -37,13 +40,39 @@ class InventoryDetailWithMenuVC: UIViewController {
     
     @IBOutlet var constBtnVerSpacing: NSLayoutConstraint!
     
+    var isFromInventoryVC: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setInterface()
+        
+        if isFromInventoryVC {
+            self.btnAddPhoto.tag = 1
+            self.btnAddAppraisal.isHidden = true
+        }else{
+            self.btnAddAppraisal.isHidden = false
+            self.btnAddPhoto.isHidden = true
+            self.btnAddPhoto.tag = 2
+            self.btnSalesHistory.setImage(UIImage(named: "photo-camera.png"), for: .normal)
+            self.btnSalesHistory.setTitle("Add Photo", for: .normal)
+        
+            btnAddAppraisal.layer.cornerRadius = 2
+            btnAddAppraisal.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            btnAddAppraisal.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+            btnAddAppraisal.layer.shadowOpacity = 0.8
+            btnAddAppraisal.layer.shadowRadius = 2.0
+            btnAddAppraisal.layer.masksToBounds = false
+            btnAddAppraisal.layer.cornerRadius = 2.0
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     func setInterface() {
@@ -53,8 +82,9 @@ class InventoryDetailWithMenuVC: UIViewController {
         vwDetails.bringSubview(toFront: vwInfo)
         vwDetails.bringSubview(toFront: vwMenuItem)
         btnAddPhoto.superview?.bringSubview(toFront: btnAddPhoto)
+        btnAddAppraisal.superview?.bringSubview(toFront: btnAddAppraisal)
         
-        /*if UIDevice.current.userInterfaceIdiom == .pad {
+        if UIDevice.current.userInterfaceIdiom == .pad {
             constVWBtnHeight.constant = 120
             constVWScrollHeight.constant = 1000
             constImageHeight.constant = 400
@@ -79,7 +109,7 @@ class InventoryDetailWithMenuVC: UIViewController {
             constVWScrollHeight.constant = 650
             constImageHeight.constant = 250
             constVWBottomHeight.constant = 400
-        }*/
+        }
     }
     
     @IBAction func btnServiceHistory(_ sender: UIButton) {
@@ -90,9 +120,22 @@ class InventoryDetailWithMenuVC: UIViewController {
     }
     
     @IBAction func btnSalesHistory(_ sender: UIButton) {
+        if sender.tag == 1 {
+            //handle for sales history
+            
+        }else {
+            //handle for add photo
+            
+        }
     }
     
     @IBAction func btnAddPhoto(_ sender: UIButton) {
+
     }
+    
+    @IBAction func handleBtnAddAppraisal(_ sender: UIButton) {
+        
+    }
+    
     
 }
