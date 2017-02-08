@@ -75,7 +75,7 @@ class InventoryDetailWithMenuVC: UIViewController {
             constBtnSpacing2.constant = 50
             constBtnVerSpacing.constant = 20
         }else{
-            constVWBtnHeight.constant = 85
+            constVWBtnHeight.constant = 80
             constVWScrollHeight.constant = 650
             constImageHeight.constant = 250
             constVWBottomHeight.constant = 400
