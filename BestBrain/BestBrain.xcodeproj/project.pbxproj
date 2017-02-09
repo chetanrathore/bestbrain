@@ -35,6 +35,8 @@
 		0C5021D01E4C33C5000AFF14 /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5021CE1E4C33C5000AFF14 /* expand.png */; };
 		0C5021D51E4C3A34000AFF14 /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5021D41E4C3A34000AFF14 /* SpeedDemoVC.m */; };
 		0C5021D61E4C3AEB000AFF14 /* SpeedDemoVC.h in Sources */ = {isa = PBXBuildFile; fileRef = 0C5021D31E4C3A34000AFF14 /* SpeedDemoVC.h */; };
+		0C5021D81E4C6453000AFF14 /* AppraisalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5021D71E4C6453000AFF14 /* AppraisalVC.swift */; };
+		0C5021DA1E4C64CD000AFF14 /* AppraisalVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5021D91E4C64CD000AFF14 /* AppraisalVC.xib */; };
 		0C6EB0EA1E499F3800224EB1 /* CustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */; };
 		0C6EB0EC1E499F4F00224EB1 /* CustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EB0EB1E499F4F00224EB1 /* CustomerVC.swift */; };
 		0C6EB0EF1E49A13000224EB1 /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EB0ED1E49A13000224EB1 /* CustomerCell.swift */; };
@@ -51,6 +53,8 @@
 		0C8FB62C1E3F6AAD007B7E68 /* bike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */; };
 		0C8FB62E1E3F6E55007B7E68 /* InventoryFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */; };
 		0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */; };
+		0CCF20CA1E4C6F3700A2D9BE /* homdemo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF20C81E4C6F3700A2D9BE /* homdemo2.png */; };
+		0CCF20CB1E4C6F3700A2D9BE /* home screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCF20C91E4C6F3700A2D9BE /* home screen.png */; };
 		0CE735901E4B13EA008FE4C7 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE7358F1E4B13EA008FE4C7 /* Add.png */; };
 		0CE735921E4B200B008FE4C7 /* PossibleMatchesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE735911E4B200A008FE4C7 /* PossibleMatchesVC.xib */; };
 		0CE735961E4B2078008FE4C7 /* PossibleMatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE735951E4B2078008FE4C7 /* PossibleMatchesVC.swift */; };
@@ -85,8 +89,6 @@
 		7B3BB0BE1E49F8FC00D436F5 /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0B81E49F8FC00D436F5 /* flash.png */; };
 		7B3BB0BF1E49F8FC00D436F5 /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0B91E49F8FC00D436F5 /* id-card.png */; };
 		7B3BB0C01E49F8FC00D436F5 /* QRImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */; };
-		7B3BB0C11E49F8FC00D436F5 /* ThunderMountainHDNoSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0BB1E49F8FC00D436F5 /* ThunderMountainHDNoSky.png */; };
-		7B3BB0C21E49F8FC00D436F5 /* ThunderMountainlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0BC1E49F8FC00D436F5 /* ThunderMountainlogo.png */; };
 		7B3BB0C71E49F95600D436F5 /* DLScanCameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */; };
 		7B3BB0D31E49FD0000D436F5 /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0D21E49FD0000D436F5 /* SpeedDemoVC.xib */; };
 		7B3C941E1E433ED100D6F795 /* NewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C941D1E433ED100D6F795 /* NewContactVC.swift */; };
@@ -101,8 +103,6 @@
 		7B6F3DB91E4A04CD0009377A /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB31E4A04CD0009377A /* flash.png */; };
 		7B6F3DBA1E4A04CD0009377A /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB41E4A04CD0009377A /* id-card.png */; };
 		7B6F3DBB1E4A04CD0009377A /* QRImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB51E4A04CD0009377A /* QRImage.png */; };
-		7B6F3DBC1E4A04CD0009377A /* ThunderMountainHDNoSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB61E4A04CD0009377A /* ThunderMountainHDNoSky.png */; };
-		7B6F3DBD1E4A04CD0009377A /* ThunderMountainlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB71E4A04CD0009377A /* ThunderMountainlogo.png */; };
 		7B6F3DC81E4A0A810009377A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6F3DC71E4A0A810009377A /* CoreGraphics.framework */; };
 		7B6F3DCD1E4A10820009377A /* dollar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DC91E4A10820009377A /* dollar.png */; };
 		7B6F3DCE1E4A10820009377A /* photo-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DCA1E4A10820009377A /* photo-camera.png */; };
@@ -328,6 +328,8 @@
 		0C5021CE1E4C33C5000AFF14 /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
 		0C5021D31E4C3A34000AFF14 /* SpeedDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDemoVC.h; sourceTree = "<group>"; };
 		0C5021D41E4C3A34000AFF14 /* SpeedDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDemoVC.m; sourceTree = "<group>"; };
+		0C5021D71E4C6453000AFF14 /* AppraisalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppraisalVC.swift; sourceTree = "<group>"; };
+		0C5021D91E4C64CD000AFF14 /* AppraisalVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppraisalVC.xib; sourceTree = "<group>"; };
 		0C6BF5B91E488DB400F92D07 /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar.png; sourceTree = "<group>"; };
 		0C6BF5BA1E488DB400F92D07 /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera.png"; sourceTree = "<group>"; };
 		0C6BF5BB1E488DB400F92D07 /* Support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Support.png; sourceTree = "<group>"; };
@@ -348,6 +350,8 @@
 		0C8FB62B1E3F6AAD007B7E68 /* bike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike.jpg; sourceTree = "<group>"; };
 		0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryFilterVC.xib; sourceTree = "<group>"; };
 		0C8FB62F1E3F6E6C007B7E68 /* InventoryFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryFilterVC.swift; sourceTree = "<group>"; };
+		0CCF20C81E4C6F3700A2D9BE /* homdemo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homdemo2.png; sourceTree = "<group>"; };
+		0CCF20C91E4C6F3700A2D9BE /* home screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home screen.png"; sourceTree = "<group>"; };
 		0CE7358F1E4B13EA008FE4C7 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
 		0CE735911E4B200A008FE4C7 /* PossibleMatchesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PossibleMatchesVC.xib; sourceTree = "<group>"; };
 		0CE735951E4B2078008FE4C7 /* PossibleMatchesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PossibleMatchesVC.swift; sourceTree = "<group>"; };
@@ -382,8 +386,6 @@
 		7B3BB0B81E49F8FC00D436F5 /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
 		7B3BB0B91E49F8FC00D436F5 /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
 		7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRImage.png; sourceTree = "<group>"; };
-		7B3BB0BB1E49F8FC00D436F5 /* ThunderMountainHDNoSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainHDNoSky.png; sourceTree = "<group>"; };
-		7B3BB0BC1E49F8FC00D436F5 /* ThunderMountainlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainlogo.png; sourceTree = "<group>"; };
 		7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanCameraVC.xib; sourceTree = "<group>"; };
 		7B3BB0D21E49FD0000D436F5 /* SpeedDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedDemoVC.xib; sourceTree = "<group>"; };
 		7B3C941D1E433ED100D6F795 /* NewContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContactVC.swift; sourceTree = "<group>"; };
@@ -737,6 +739,8 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0CCF20C81E4C6F3700A2D9BE /* homdemo2.png */,
+				0CCF20C91E4C6F3700A2D9BE /* home screen.png */,
 				0C5021CD1E4C33C5000AFF14 /* collapse.png */,
 				0C5021CE1E4C33C5000AFF14 /* expand.png */,
 				0CE7359D1E4B372D008FE4C7 /* Plus.png */,
@@ -745,8 +749,6 @@
 				7B3BB0B81E49F8FC00D436F5 /* flash.png */,
 				7B3BB0B91E49F8FC00D436F5 /* id-card.png */,
 				7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */,
-				7B3BB0BB1E49F8FC00D436F5 /* ThunderMountainHDNoSky.png */,
-				7B3BB0BC1E49F8FC00D436F5 /* ThunderMountainlogo.png */,
 				0C6BF5B91E488DB400F92D07 /* dollar.png */,
 				0C6BF5BA1E488DB400F92D07 /* photo-camera.png */,
 				0C6BF5BB1E488DB400F92D07 /* Support.png */,
@@ -939,6 +941,7 @@
 		7B4F5EBB1E24CA8E0086B359 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C5021D71E4C6453000AFF14 /* AppraisalVC.swift */,
 				0C5021D31E4C3A34000AFF14 /* SpeedDemoVC.h */,
 				0C5021D41E4C3A34000AFF14 /* SpeedDemoVC.m */,
 				7BA56BC51E4B4964007F3525 /* InventoryDetailVC.swift */,
@@ -966,6 +969,7 @@
 		7B4F5EBF1E24CA8E0086B359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C5021D91E4C64CD000AFF14 /* AppraisalVC.xib */,
 				7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */,
 				7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */,
 				0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */,
@@ -1287,6 +1291,7 @@
 				7B7548101E41FE150025A087 /* snow_flurries@2x.png in Resources */,
 				7B29499B1E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib in Resources */,
 				7B7547C01E41FE150025A087 /* cold@2x.png in Resources */,
+				0C5021DA1E4C64CD000AFF14 /* AppraisalVC.xib in Resources */,
 				7B7547DF1E41FE150025A087 /* isolated_thunderstorms.png in Resources */,
 				7B7547BF1E41FE150025A087 /* cold.png in Resources */,
 				7B7547D41E41FE150025A087 /* haze@2x.png in Resources */,
@@ -1314,7 +1319,6 @@
 				7B7547DD1E41FE150025A087 /* isolated_thundershowers@2x.png in Resources */,
 				7B75480F1E41FE150025A087 /* snow_flurries.png in Resources */,
 				7B3BB0BF1E49F8FC00D436F5 /* id-card.png in Resources */,
-				7B3BB0C11E49F8FC00D436F5 /* ThunderMountainHDNoSky.png in Resources */,
 				7B7548091E41FE150025A087 /* showers.png in Resources */,
 				7B7547FF1E41FE150025A087 /* scattered_showers@3x.png in Resources */,
 				7B920CAD1E487BE0002BFEF2 /* MonthlyPayment.png in Resources */,
@@ -1328,6 +1332,7 @@
 				7B7547C31E41FE150025A087 /* drizzle@2x.png in Resources */,
 				7B7547DA1E41FE150025A087 /* hurricane@2x.png in Resources */,
 				7B7547FE1E41FE150025A087 /* scattered_showers@2x.png in Resources */,
+				0CCF20CB1E4C6F3700A2D9BE /* home screen.png in Resources */,
 				7B7548221E41FE150025A087 /* tornado@3x.png in Resources */,
 				7B75480A1E41FE150025A087 /* showers@2x.png in Resources */,
 				7B7547D31E41FE150025A087 /* haze.png in Resources */,
@@ -1338,7 +1343,6 @@
 				7B7547F81E41FE150025A087 /* partly_cloudy_(night)@2x.png in Resources */,
 				7BA56BB81E4B43A5007F3525 /* CustomerCell.xib in Resources */,
 				0C0C56241E409F530085CFD1 /* speech-bubble.png in Resources */,
-				7B6F3DBD1E4A04CD0009377A /* ThunderMountainlogo.png in Resources */,
 				0CE7359A1E4B2E4C008FE4C7 /* MatchesDetailCell.xib in Resources */,
 				7B75480E1E41FE150025A087 /* snow 12-25-15-333.png in Resources */,
 				7B7548161E41FE150025A087 /* snow@3x.png in Resources */,
@@ -1379,14 +1383,13 @@
 				7B7547D71E41FE150025A087 /* heavy_snow@2x.png in Resources */,
 				7B7547F31E41FE150025A087 /* mostly_cloudy_(night)@3x.png in Resources */,
 				7B7547C71E41FE150025A087 /* dust@3x.png in Resources */,
+				0CCF20CA1E4C6F3700A2D9BE /* homdemo2.png in Resources */,
 				7B7547EA1E41FE150025A087 /* mixed_rain_hail@3x.png in Resources */,
 				30913D041E4B0EE6008FA1F3 /* bar.png in Resources */,
 				B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */,
 				0C0C56221E409F530085CFD1 /* envelope.png in Resources */,
 				7B7547AB1E41FE150025A087 /* health.png in Resources */,
-				7B3BB0C21E49F8FC00D436F5 /* ThunderMountainlogo.png in Resources */,
 				7B7547BA1E41FE150025A087 /* clear_(night)@2x.png in Resources */,
-				7B6F3DBC1E4A04CD0009377A /* ThunderMountainHDNoSky.png in Resources */,
 				7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */,
 				7B7547E21E41FE150025A087 /* light_snow_showers.png in Resources */,
 				7B6F3DBB1E4A04CD0009377A /* QRImage.png in Resources */,
@@ -1446,6 +1449,7 @@
 				7B920CB31E48962D002BFEF2 /* EPExtensions.swift in Sources */,
 				7B920C9E1E487705002BFEF2 /* SpeedoMeterVC.swift in Sources */,
 				0C0C560D1E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift in Sources */,
+				0C5021D81E4C6453000AFF14 /* AppraisalVC.swift in Sources */,
 				7B75470F1E41FD600025A087 /* SettingsCell.swift in Sources */,
 				0C0C56171E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */,

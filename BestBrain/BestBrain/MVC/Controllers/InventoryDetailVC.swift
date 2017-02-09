@@ -26,13 +26,18 @@ class InventoryDetailVC: UIViewController {
     @IBOutlet var vwMenu: UIView!
     @IBOutlet var vwInfo: UIView!
     
-    @IBOutlet var vwOtherInfo: UIView!
+    @IBOutlet var vwMenu2: UIView!
     @IBOutlet var btnAddBike: UIButton!
+    @IBOutlet var btnAddAnother: UIButton!
+    
+    @IBOutlet var btnRemove: UIButton!
     
     @IBOutlet var constVWBtnHeight: NSLayoutConstraint!
     
     @IBOutlet var constVWScrollHeight: NSLayoutConstraint!
+    
     @IBOutlet var constVWBottomHeight: NSLayoutConstraint!
+    
     @IBOutlet var constImageHeight: NSLayoutConstraint!
     
     @IBOutlet var constBtnSpacing1: NSLayoutConstraint!
@@ -45,11 +50,11 @@ class InventoryDetailVC: UIViewController {
         super.viewDidLoad()
         setInterface()
         if isFromInventory {
-            btnAddBike.isHidden = true
-            vwOtherInfo.isHidden = false
+            btnAddBike.isHidden = false
+            //       vwOtherInfo.isHidden = false
         }else {
             btnAddBike.isHidden = false
-            vwOtherInfo.isHidden = true
+            //       vwOtherInfo.isHidden = true
         }
     }
     
@@ -71,6 +76,8 @@ class InventoryDetailVC: UIViewController {
             }
         }
     }
+    
+    // MARK:- InterfaceDesign
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
@@ -120,11 +127,7 @@ class InventoryDetailVC: UIViewController {
         self.navigationController!.popViewController(animated: true)
     }
     
-    func handelTapGuesture(_ sender: UITapGestureRecognizer) {
-        let detailVC = InventoryDetailWithMenuVC(nibName: "InventoryDetailWithMenuVC", bundle: nil)
-        detailVC.isFromInventoryVC = true
-        self.navigationController!.pushViewController(detailVC, animated: true)
-    }
+    // MARK:- Outlet Actions
     
     @IBAction func btnMMSInfo(_ sender: UIButton) {
     }
@@ -135,7 +138,21 @@ class InventoryDetailVC: UIViewController {
     @IBAction func btnQuote(_ sender: UIButton) {
     }
     
+    @IBAction func handleBtnAddAnother(_ sender: UIButton) {
+    }
+    
+    @IBAction func handleBtnRemove(_ sender: UIButton) {
+    }
+    
     @IBAction func handleBtnAddBike(_ sender: UIButton) {
+    }
+    
+    // MARK:- Custom methods
+    
+    func handelTapGuesture(_ sender: UITapGestureRecognizer) {
+        let detailVC = InventoryDetailWithMenuVC(nibName: "InventoryDetailWithMenuVC", bundle: nil)
+        detailVC.isFromInventoryVC = true
+        self.navigationController!.pushViewController(detailVC, animated: true)
     }
     
     

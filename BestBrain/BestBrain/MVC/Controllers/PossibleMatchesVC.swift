@@ -18,10 +18,7 @@ class PossibleMatchesVC: UIViewController, UITableViewDataSource, UITableViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
-        self.automaticallyAdjustsScrollViewInsets = false
-        tblPossiblematches.dataSource = self
-        tblPossiblematches.delegate = self
+        setInterface()
         
         arrMatches.append("Test1")
         arrMatches.append("Test1")
@@ -41,6 +38,16 @@ class PossibleMatchesVC: UIViewController, UITableViewDataSource, UITableViewDel
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // MARK:- InterfaceDesign
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.automaticallyAdjustsScrollViewInsets = false
+        tblPossiblematches.dataSource = self
+        tblPossiblematches.delegate = self
+    }
+    
+    // MARK:- Table Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return arrMatches.count
     }
@@ -98,6 +105,7 @@ class PossibleMatchesVC: UIViewController, UITableViewDataSource, UITableViewDel
         return 110
     }
     
+    // MARK:- Custom Methods
     func setDisArr(){
         for i in 0..<self.arrMatches.count{
             self.isDisData.insert(false, at: i)
