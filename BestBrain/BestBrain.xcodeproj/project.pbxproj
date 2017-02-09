@@ -31,7 +31,10 @@
 		0C0C56221E409F530085CFD1 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C561F1E409F530085CFD1 /* envelope.png */; };
 		0C0C56231E409F530085CFD1 /* led-monitor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C56201E409F530085CFD1 /* led-monitor.png */; };
 		0C0C56241E409F530085CFD1 /* speech-bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0C56211E409F530085CFD1 /* speech-bubble.png */; };
-		0C0E1AD51E4ADC8700E70CB3 /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E1AD41E4ADC8700E70CB3 /* SpeedDemoVC.m */; };
+		0C5021CF1E4C33C5000AFF14 /* collapse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5021CD1E4C33C5000AFF14 /* collapse.png */; };
+		0C5021D01E4C33C5000AFF14 /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5021CE1E4C33C5000AFF14 /* expand.png */; };
+		0C5021D51E4C3A34000AFF14 /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5021D41E4C3A34000AFF14 /* SpeedDemoVC.m */; };
+		0C5021D61E4C3AEB000AFF14 /* SpeedDemoVC.h in Sources */ = {isa = PBXBuildFile; fileRef = 0C5021D31E4C3A34000AFF14 /* SpeedDemoVC.h */; };
 		0C6EB0EA1E499F3800224EB1 /* CustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */; };
 		0C6EB0EC1E499F4F00224EB1 /* CustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EB0EB1E499F4F00224EB1 /* CustomerVC.swift */; };
 		0C6EB0EF1E49A13000224EB1 /* CustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EB0ED1E49A13000224EB1 /* CustomerCell.swift */; };
@@ -94,7 +97,6 @@
 		7B4F5ED11E24EA1F0086B359 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5ED01E24EA1F0086B359 /* Constant.swift */; };
 		7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5ED21E24F2210086B359 /* LogCustomerVC.swift */; };
 		7B4F5ED71E24F2BD0086B359 /* LogCustomerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4F5ED61E24F2BD0086B359 /* LogCustomerVC.xib */; };
-		7B6F3DB11E4A04AB0009377A /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DAF1E4A04AA0009377A /* SpeedDemoVC.xib */; };
 		7B6F3DB81E4A04CD0009377A /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB21E4A04CD0009377A /* error.png */; };
 		7B6F3DB91E4A04CD0009377A /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB31E4A04CD0009377A /* flash.png */; };
 		7B6F3DBA1E4A04CD0009377A /* id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6F3DB41E4A04CD0009377A /* id-card.png */; };
@@ -321,9 +323,11 @@
 		0C0C561F1E409F530085CFD1 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		0C0C56201E409F530085CFD1 /* led-monitor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "led-monitor.png"; sourceTree = "<group>"; };
 		0C0C56211E409F530085CFD1 /* speech-bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech-bubble.png"; sourceTree = "<group>"; };
-		0C0E1AD31E4ADC8700E70CB3 /* SpeedDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDemoVC.h; sourceTree = "<group>"; };
-		0C0E1AD41E4ADC8700E70CB3 /* SpeedDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDemoVC.m; sourceTree = "<group>"; };
 		0C0E1AD61E4ADCB400E70CB3 /* BestBrain-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BestBrain-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C5021CD1E4C33C5000AFF14 /* collapse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collapse.png; sourceTree = "<group>"; };
+		0C5021CE1E4C33C5000AFF14 /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
+		0C5021D31E4C3A34000AFF14 /* SpeedDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDemoVC.h; sourceTree = "<group>"; };
+		0C5021D41E4C3A34000AFF14 /* SpeedDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDemoVC.m; sourceTree = "<group>"; };
 		0C6BF5B91E488DB400F92D07 /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar.png; sourceTree = "<group>"; };
 		0C6BF5BA1E488DB400F92D07 /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera.png"; sourceTree = "<group>"; };
 		0C6BF5BB1E488DB400F92D07 /* Support.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Support.png; sourceTree = "<group>"; };
@@ -390,7 +394,6 @@
 		7B4F5ED01E24EA1F0086B359 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7B4F5ED21E24F2210086B359 /* LogCustomerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCustomerVC.swift; sourceTree = "<group>"; };
 		7B4F5ED61E24F2BD0086B359 /* LogCustomerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogCustomerVC.xib; sourceTree = "<group>"; };
-		7B6F3DAF1E4A04AA0009377A /* SpeedDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedDemoVC.xib; sourceTree = "<group>"; };
 		7B6F3DB21E4A04CD0009377A /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		7B6F3DB31E4A04CD0009377A /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
 		7B6F3DB41E4A04CD0009377A /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
@@ -734,6 +737,8 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C5021CD1E4C33C5000AFF14 /* collapse.png */,
+				0C5021CE1E4C33C5000AFF14 /* expand.png */,
 				0CE7359D1E4B372D008FE4C7 /* Plus.png */,
 				0CE7358F1E4B13EA008FE4C7 /* Add.png */,
 				7B3BB0B71E49F8FC00D436F5 /* error.png */,
@@ -934,10 +939,10 @@
 		7B4F5EBB1E24CA8E0086B359 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C5021D31E4C3A34000AFF14 /* SpeedDemoVC.h */,
+				0C5021D41E4C3A34000AFF14 /* SpeedDemoVC.m */,
 				7BA56BC51E4B4964007F3525 /* InventoryDetailVC.swift */,
 				7BA56BC61E4B4964007F3525 /* InventoryDetailWithMenuVC.swift */,
-				0C0E1AD31E4ADC8700E70CB3 /* SpeedDemoVC.h */,
-				0C0E1AD41E4ADC8700E70CB3 /* SpeedDemoVC.m */,
 				7B3BB0B21E49F7C900D436F5 /* DLScanCameraVC.swift */,
 				7B920C9D1E487705002BFEF2 /* SpeedoMeterVC.swift */,
 				7B3C941D1E433ED100D6F795 /* NewContactVC.swift */,
@@ -963,10 +968,10 @@
 			children = (
 				7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */,
 				7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */,
+				0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */,
 				7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */,
 				7B3BB0D21E49FD0000D436F5 /* SpeedDemoVC.xib */,
 				7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */,
-				7B6F3DAF1E4A04AA0009377A /* SpeedDemoVC.xib */,
 				7B7547181E41FDB20025A087 /* CustomerDashboardVC.xib */,
 				305896191E3F47ED005A5606 /* NewContactVC.xib */,
 				7B2949981E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib */,
@@ -978,7 +983,6 @@
 				0C8FB6171E3F47F8007B7E68 /* InventoryVC.xib */,
 				0C8FB62D1E3F6E55007B7E68 /* InventoryFilterVC.xib */,
 				300267171E4305FE00682E9E /* DLScanVC.xib */,
-				0C6EB0E91E499F3800224EB1 /* CustomerVC.xib */,
 				0CE735911E4B200A008FE4C7 /* PossibleMatchesVC.xib */,
 			);
 			path = View;
@@ -1254,7 +1258,9 @@
 				7B7547131E41FD600025A087 /* SettingsCell.xib in Resources */,
 				7B4F5ED71E24F2BD0086B359 /* LogCustomerVC.xib in Resources */,
 				7B7547E81E41FE150025A087 /* mixed_rain_hail.png in Resources */,
+				0C5021CF1E4C33C5000AFF14 /* collapse.png in Resources */,
 				B8134D321E262FDA00487406 /* b_customer.png in Resources */,
+				0C5021D01E4C33C5000AFF14 /* expand.png in Resources */,
 				7B7547BE1E41FE150025A087 /* cloudy@3x.png in Resources */,
 				7B7547191E41FDB20025A087 /* CustomerDashboardVC.xib in Resources */,
 				7B3BB0C01E49F8FC00D436F5 /* QRImage.png in Resources */,
@@ -1324,7 +1330,6 @@
 				7B7547FE1E41FE150025A087 /* scattered_showers@2x.png in Resources */,
 				7B7548221E41FE150025A087 /* tornado@3x.png in Resources */,
 				7B75480A1E41FE150025A087 /* showers@2x.png in Resources */,
-				7B6F3DB11E4A04AB0009377A /* SpeedDemoVC.xib in Resources */,
 				7B7547D31E41FE150025A087 /* haze.png in Resources */,
 				7B7547DE1E41FE150025A087 /* isolated_thundershowers@3x.png in Resources */,
 				7B7548241E41FE150025A087 /* windy@2x.png in Resources */,
@@ -1419,6 +1424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5021D61E4C3AEB000AFF14 /* SpeedDemoVC.h in Sources */,
 				0C0C56101E4088D80085CFD1 /* IQKeyboardManager.swift in Sources */,
 				7B2949961E260799008566A4 /* ClockInViewController.swift in Sources */,
 				0CE735991E4B2E4C008FE4C7 /* MatchesDetailCell.swift in Sources */,
@@ -1428,7 +1434,6 @@
 				7B920CC31E48A352002BFEF2 /* LocationManager.swift in Sources */,
 				0CE735961E4B2078008FE4C7 /* PossibleMatchesVC.swift in Sources */,
 				B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */,
-				0C0E1AD51E4ADC8700E70CB3 /* SpeedDemoVC.m in Sources */,
 				0C0C56131E4088D80085CFD1 /* IQBarButtonItem.swift in Sources */,
 				0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */,
 				0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */,
@@ -1467,6 +1472,7 @@
 				0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */,
 				0C0C56121E4088D80085CFD1 /* IQTextView.swift in Sources */,
 				7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */,
+				0C5021D51E4C3A34000AFF14 /* SpeedDemoVC.m in Sources */,
 				0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */,
 				7BA56BC71E4B4964007F3525 /* InventoryDetailVC.swift in Sources */,
 			);
