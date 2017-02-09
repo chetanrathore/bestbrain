@@ -66,9 +66,9 @@ class PossibleMatchesVC: UIViewController, UITableViewDataSource, UITableViewDel
         btn.backgroundColor = UIColor.clear
         btn.setTitleColor(UIColor.gray, for: .normal)
         if(self.isDisData.object(at: section) as! Bool){
-            btn.setTitle("▼", for: .normal)
+            btn.setImage(UIImage(named: "collapse.png"), for: .normal)
         }else{
-            btn.setTitle("▶︎", for: .normal)
+            btn.setImage(UIImage(named: "expand.png"), for: .normal)
             header.addSubview(bottom)
         }
         btn.contentHorizontalAlignment =  UIControlContentHorizontalAlignment.right

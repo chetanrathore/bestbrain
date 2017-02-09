@@ -3,4 +3,4 @@
 //
 
 #import "ANPopoverSlider.h"
-#import "SpeedDemoVC.h"
+#import "SpeedDemo.h"
