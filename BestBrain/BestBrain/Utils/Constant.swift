@@ -20,7 +20,7 @@ let weatherApi = "https://api.darksky.net/forecast/e700e63b23dc86aa7f29a90be4c5f
 let textBoxColor = UIColor(colorLiteralRed: 0.9294117647, green: 0.9294117647, blue: 0.9294117647, alpha: 1)
 let dashboardBackgroundColor = UIColor(red: 0.08235294118, green: 0.3607843137, blue: 0.9294117647, alpha: 1.0)
 let dashboardBottomColor = UIColor(red: 0.07843137255, green: 0.7882352941, blue: 0.9843137255, alpha: 1.0)
-let transparentBackgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
+let transparentBackgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.1)
 let whiteColor = UIColor.white
 
 class addItems{
@@ -45,7 +45,7 @@ var TheCurrentDeviceVersion: Float {
 
 func iconColor(icon: UIImageView) -> UIImage {
     icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
-    icon.tintColor = whiteColor
+    icon.tintColor = UIColor.black
     return icon.image!
 }
 
