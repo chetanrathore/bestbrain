@@ -21,7 +21,6 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         tblCustomer.tableFooterView = UIView()
         tblCustomer.dataSource = self
@@ -55,6 +54,8 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+
         self.segment.removeBorders()
         self.segment.setBackgroundImage(UIImage(named: "wbox"), for: .normal, barMetrics: .default)
         

@@ -15,6 +15,8 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
     var response:String = ""
     var isFromDLScan:Bool = true
     var isFromVINScan:Bool = false
+    var isFromDashBoard:Bool=false
+  
     @IBOutlet var vwCamera: UIView!
     @IBOutlet var btnCancel: UIButton!
     @IBOutlet var btnFlash: UIButton!
@@ -136,7 +138,8 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
         var title: String = ""
         var usdlFound = false;
         var isRequiredScannar = false //Check,required type for scan?
-        
+        var userDetails = NSMutableDictionary()
+
         let vc = NewContactVC(nibName: "NewContactVC", bundle: nil)
         if isFromDLScan{
             for result in results {
@@ -145,21 +148,9 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
                     let usdlResult = result as! PPUsdlRecognizerResult
                     title = "USDL"
                     //message = usdlResult.getAllStringElements().description
-                    let userDetails = usdlResult.getAllStringElements() as NSDictionary
-                    
-                    
-                    vc.firstName = userDetails.value(forKey: "Customer First Name") as! String
-                    vc.lastName = userDetails.value(forKey: "Customer Family Name") as! String
-                    vc.address = userDetails.value(forKey: "Address - Street 1") as! String
-                    vc.city = userDetails.value(forKey: "Address - City") as! String
-                    vc.state = userDetails.value(forKey: "Address - Jurisdiction Code") as! String
-                    vc.zipcode = userDetails.value(forKey: "Address - Postal Code") as! String
-                    vc.birthdate = userDetails.value(forKey: "Date of Birth") as! String
-                    vc.dlnum = userDetails.value(forKey: "Customer First Name") as! String
-                    vc.dlState = userDetails.value(forKey: "Customer First Name") as! String
-                    
-                    vc.isFromScanning = true
-                    
+                    let userData = usdlResult.getAllStringElements() as NSDictionary
+                    userDetails.setValue(userData, forKey: "userData")
+                    userDetails.setValue(true, forKey: "hideBtn")
                     //usdlFound = true
                     isRequiredScannar = true
                     
@@ -200,7 +191,21 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
             DispatchQueue.main.async(execute: {
                 self.dismiss(animated: true, completion: nil)
             })
-            self.navigationController?.pushViewController(vc, animated: true)
+            if isFromDLScan{
+                if isFromDashBoard{
+                    vc.isFromScanning = true
+                    vc.Details = userDetails
+                    
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }else{
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "extractedData"), object: userDetails)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            else if isFromVINScan{
+                UIAlertView(title: "VIN", message: message, delegate: nil, cancelButtonTitle: "Ok").show()
+            }
+
         }
     }
     
@@ -224,7 +229,11 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
     }
 
     @IBAction func handleBtnCancel(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        if isFromDashBoard{
+            self.navigationController?.popViewController(animated: true)
+        }else{
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func handleBtnFlash(_ sender: Any) {
         toggleFlash()

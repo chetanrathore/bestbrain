@@ -115,15 +115,6 @@ class DLScanVC: UIViewController, PPScanningDelegate {
                 let userDetails = usdlResult.getAllStringElements() as NSDictionary
              
 
-                vc.firstName = userDetails.value(forKey: "Customer First Name") as! String
-                vc.lastName = userDetails.value(forKey: "Customer Family Name") as! String
-                vc.address = userDetails.value(forKey: "Address - Street 1") as! String
-                vc.city = userDetails.value(forKey: "Address - City") as! String
-                vc.state = userDetails.value(forKey: "Address - Jurisdiction Code") as! String
-                vc.zipcode = userDetails.value(forKey: "Address - Postal Code") as! String
-                vc.birthdate = userDetails.value(forKey: "Date of Birth") as! String
-                vc.dlnum = userDetails.value(forKey: "Customer First Name") as! String
-                vc.dlState = userDetails.value(forKey: "Customer First Name") as! String
 
                 vc.isFromScanning = true
                 

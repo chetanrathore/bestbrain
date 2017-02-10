@@ -1,4 +1,4 @@
-//
+    //
 //  NewContactVC.swift
 //  BestBrain
 //
@@ -22,6 +22,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     @IBOutlet var vwTextFields: [UIView]!
     @IBOutlet var imgUser: UIImageView!
 
+    @IBOutlet var btnDLScan: UIButton!
     @IBOutlet var vwDesiredVehicle: UIView!
     @IBOutlet var scrollNewContact: UIScrollView!
     @IBOutlet var tblAddItems: UITableView!
@@ -59,15 +60,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     var index : Int = -1
     var textField = UITextField()
    
-    var firstName:String!
-    var lastName:String!
-    var address:String!
-    var city:String!
-    var state:String!
-    var zipcode:String!
-    var birthdate = String()
-    var dlState:String!
-    var dlnum:String!
+    var Details = NSMutableDictionary()
     var cView: UIView!
     var transperentView = UIView()
     var isFromScanning:Bool = false
@@ -75,7 +68,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.isHidden = false
 
         self.title = "New Contact"
         
@@ -97,26 +90,38 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         txfDLNumber.delegate = self
 
         if isFromScanning{
-            txfFirstName.text = firstName
-            txfLastName.text = lastName
-            txfAddress.text = address
-            txfCity.text = city
-            txfState.text = state
-            txfZipCode.text = zipcode
-            var dob = birthdate.insert(string: "/", ind: 2)
+            guard let userDetails  = Details["userData"] as? NSDictionary else {
+            return
+            }
+            txfFirstName.text = userDetails.value(forKey: "Customer First Name") as? String
+            txfLastName.text = userDetails.value(forKey: "Customer Family Name") as? String
+            txfAddress.text = userDetails.value(forKey: "Address - Street 1") as? String
+            txfCity.text = userDetails.value(forKey: "Address - City") as? String
+            txfState.text = userDetails.value(forKey: "Address - Jurisdiction Code") as? String
+            txfZipCode.text = userDetails.value(forKey: "Address - Postal Code") as? String
+            var dob = (userDetails.value(forKey: "Date of Birth") as! String).insert(string: "/", ind: 2)
             dob = dob.insert(string: "/", ind: 5)
             txfDOB.text = dob
-            txfDLState.text = dlState
-            txfDLNumber.text = dlnum
+            txfDLState.text = nil
+            txfDLNumber.text = nil
+        btnDLScan.isHidden = true
+        }else{
+        btnDLScan.isHidden = false
         }
-
         self.loadData()
         tblAddItems.delegate = self
         tblAddItems.dataSource = self
         tblAddItems.register(UINib(nibName: "addItemCell", bundle: nil), forCellReuseIdentifier: "addItemCell")
         tblAddItems.register(UINib(nibName: "PreferredContentCell", bundle: nil), forCellReuseIdentifier: "PreferredContentCell")
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+       
+       
+
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+       // NotificationCenter.default.removeObserver(self)
+    }
     override func viewDidLayoutSubviews() {
         for vw in vwTextFields{
             vw.layer.borderWidth = 1
@@ -125,7 +130,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         }
         for vw in vwTxfCrnditInfo{
             vw.layer.borderWidth = 1
-            vw.layer.borderColor = UIColor.lightGray.cgColor
+            vw.layer.borderColor = UIColor(red: 212/255, green: 212/255, blue: 212/255, alpha: 1).cgColor
+            vw.layer.cornerRadius = 5
         }
         
         imgUser.layer.cornerRadius = imgUser.frame.size.width/2
@@ -483,7 +489,32 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             addItems(name: "add 5 liner", items: 1)
         ]
     }
+    func loadTextFields(notification: NSNotification){
+        
+        
+        guard let userInfo:NSDictionary = notification.object as! NSDictionary? ,
+            let userDetails  = userInfo["userData"] as? NSDictionary
+         //   let hideBtn     = userInfo["hideBtn"]    as? Bool
+        else
+        {
+            return
+        }
 
+            txfFirstName.text = userDetails.value(forKey: "Customer First Name") as? String
+            txfLastName.text = userDetails.value(forKey: "Customer Family Name") as? String
+        txfAddress.text = userDetails.value(forKey: "Address - Street 1") as? String
+            txfCity.text = userDetails.value(forKey: "Address - City") as? String
+            txfState.text = userDetails.value(forKey: "Address - Jurisdiction Code") as? String
+            txfZipCode.text = userDetails.value(forKey: "Address - Postal Code") as? String
+            var dob = (userDetails.value(forKey: "Date of Birth") as! String).insert(string: "/", ind: 2)
+            dob = dob.insert(string: "/", ind: 5)
+            txfDOB.text = dob
+            txfDLState.text = nil
+            txfDLNumber.text = nil
+            btnDLScan.isHidden = true
+
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "extractedData"), object: nil)
+    }
     // MARK:- IBOutlet Method(s)
     
     @IBAction func handleBtnLinkToCustomer(_ sender: Any) {
@@ -494,8 +525,23 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         generateSubView(childView: vwMatch)
     }
     
+    @IBAction func handleBtnDLScan(_ sender: Any) {
+        let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
+        vc.isFromDashBoard = false
+        vc.isFromDLScan = true
+        vc.isFromVINScan = false
+        NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.loadTextFields(notification:)), name: NSNotification.Name(rawValue: "extractedData"), object: nil)
+        self.present(vc, animated: true, completion: nil)
+    }
 
     @IBAction func handleBtnScanInventory(_ sender: Any) {
+        let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
+        vc.isFromDashBoard = false
+        vc.isFromDLScan = false
+        vc.isFromVINScan = true
+       // NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.loadTextFields(notification:)), name: NSNotification.Name(rawValue: "extractedData"), object: nil)
+        self.present(vc, animated: true, completion: nil)
+
     }
     @IBAction func handleBtnSearch(_ sender: Any) {
     }
@@ -503,6 +549,12 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     }
     
     @IBAction func handleBtnScanTrade(_ sender: Any) {
+        let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
+        vc.isFromDashBoard = false
+        vc.isFromDLScan = false
+        vc.isFromVINScan = true
+       // NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.loadTextFields(notification:)), name: NSNotification.Name(rawValue: "extractedData"), object: nil)
+        self.present(vc, animated: true, completion: nil)
     }
 
     

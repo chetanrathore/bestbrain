@@ -233,8 +233,10 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         } else if item == "Quotes" {
             let vc = SpeedoMeterVC(nibName: "SpeedoMeterVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
-        } else if item == "" {
-            
+        } else if item == "DLScan" {
+            let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
+            vc.isFromDashBoard = true
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

@@ -48,7 +48,7 @@ class SpeedoMeterVC: UIViewController {
     var mouseSwiped: Bool = false
     var mouseMoved: Int = 0
     var declarationText = "Monthly payments are based on average model family pricing and are only estimates based on average credit situations. Credit terms are subject to approval from Harley Davidson Financial Service or secondary financing sources. These are strictly estimates and may differ on exact model selected, factory options, additional parts and accessories or any other additional products beyond the vehicle selected."
-    open weak var signatureDelegate: EPSignatureDelegate?
+   // open weak var signatureDelegate: EPSignatureDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -221,12 +221,12 @@ class SpeedoMeterVC: UIViewController {
         self.lblTerm.text = self.speedometerCurrentValue.description
         self.calculateDeviationAngle()
     }
-
+/*
     func epSignature(_: EPSignatureViewController, didSign signatureImage: UIImage, boundingRect: CGRect) {
         print(signatureImage)
         self.imgSignature.image = signatureImage
     }
    
-    // MARK:- calculate Interest
+ */   // MARK:- calculate Interest
     
 }
