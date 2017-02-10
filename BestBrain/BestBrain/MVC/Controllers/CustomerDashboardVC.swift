@@ -23,11 +23,10 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet var lblMessage: UILabel!
     @IBOutlet var vwSettings: UIView!
     @IBOutlet var tblSettings: UITableView!
-    @IBOutlet var imgHarleyLogo: UIImageView!
     
-    var arrMenuItem = ["DLScan","DeskLog","Inventory","Customers","Chat","Quote"]
+    var arrMenuItem = ["DLScan","deskLog","Inventory","customer","chat","quotes"]
     var arrMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
-    var arrTblMenuItem = ["DLScan","DeskLog","Inventory","Customers","Chat","Quote"]
+    var arrTblMenuItem = ["DLScan","deskLog","Inventory","customer","chat","quotes"]
     var arrTblMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
     var transperentView = UIView()
     let locManager = CLLocationManager()
@@ -49,7 +48,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
    
     override func viewWillAppear(_ animated: Bool) {
         self.tblSettings.scrollToRow(at: IndexPath(item: arrTblMenuLbl.count-1, section: 0), at: .bottom, animated: false)
-        self.setGradientBackground()
         if (CLLocationManager.locationServicesEnabled()) {
             self.locManager.delegate = self
             self.locManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -86,17 +84,14 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return arrMenuItem.count
+        return arrMenuItem.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboardCell", for: indexPath) as! DashboardCell
-            let iconImg = UIImageView(image: UIImage(named: self.arrMenuItem[indexPath.row]))
-            cell.imgItem.image = iconColor(icon: iconImg)
-            cell.lblItem.text = arrMenuLbl[indexPath.row]
-            return cell
-
-      
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dashboardCell", for: indexPath) as! DashboardCell
+        cell.imgItem.image = UIImage(named: self.arrMenuItem[indexPath.row])
+        cell.lblItem.text = arrMenuLbl[indexPath.row]
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -123,7 +118,8 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as! SettingsCell
         cell.setUpCustom(tableView: tableView, indexPath: indexPath, itemName: self.arrMenuLbl[indexPath.row], itemIcon: self.arrMenuItem[indexPath.row], CustomDelegate: self)
-        cell.imgItem.image = UIImage(named: self.arrMenuItem[indexPath.row])
+        let iconImg = UIImageView(image: UIImage(named: self.arrMenuItem[indexPath.row]))
+        cell.imgItem.image = iconColor(icon: iconImg)
         cell.lblItem.text = self.arrMenuLbl[indexPath.row]
         return cell
     }
@@ -182,18 +178,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
         if self.view.subviews.contains(transperentView){
             transperentView.removeFromSuperview()
         }
-    }
-    
-    func setGradientBackground(){
-        self.view.gradientLayer()
-        self.view.bringSubview(toFront: self.vwMessageScroll)
-        self.view.bringSubview(toFront: self.viewDateTime)
-        self.view.bringSubview(toFront: self.menuCollection)
-        self.view.bringSubview(toFront: self.imgBackground)
-        let btnImage = UIImageView(image: UIImage(named: "Settings"))
-        self.btnSettings.setImage(iconColor(icon: btnImage), for: .normal)
-        self.view.bringSubview(toFront: self.btnSettings)
-        self.self.imgBackground.bringSubview(toFront: self.imgHarleyLogo)
     }
     
     func setUpDate(){

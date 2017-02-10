@@ -23,7 +23,7 @@ class CustomerCell: UITableViewCell {
     }
     
     func setCellInterface() {
-        imgCustomer.layer.cornerRadius = 10
+        imgCustomer.layer.cornerRadius = imgCustomer.frame.size.width/2
         imgCustomer.clipsToBounds = true
     }
     

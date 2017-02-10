@@ -14,7 +14,6 @@
             <connections>
                 <outlet property="btnSettings" destination="H0f-1O-vRM" id="aeT-1E-48j"/>
                 <outlet property="imgBackground" destination="mbB-M3-7r0" id="U9g-8m-lJ0"/>
-                <outlet property="imgHarleyLogo" destination="G1C-Yb-iol" id="pbX-IT-QMR"/>
                 <outlet property="imgWeather" destination="c1E-9E-bzf" id="r15-Pd-2na"/>
                 <outlet property="lblDateDay" destination="yBs-tJ-lkw" id="Cgz-n6-ptO"/>
                 <outlet property="lblMessage" destination="7zz-Kl-F7k" id="BTl-kR-l0N"/>
@@ -33,11 +32,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThunderMountainHDNoSky.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-M3-7r0">
-                    <rect key="frame" x="0.0" y="355" width="320" height="125"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-M3-7r0">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="mbB-M3-7r0" secondAttribute="height" multiplier="320:87" constant="-139.77011494252872" id="ja8-vC-IaF"/>
+                        <constraint firstAttribute="width" secondItem="mbB-M3-7r0" secondAttribute="height" multiplier="320:87" constant="-1445.5172413793102" id="ja8-vC-IaF"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dly-U6-QDD">
@@ -91,7 +90,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3o8-9f-ZJG">
-                    <rect key="frame" x="0.0" y="168" width="320" height="120"/>
+                    <rect key="frame" x="0.0" y="168" width="320" height="118"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pNU-Bl-B3J">
                         <size key="itemSize" width="100" height="100"/>
@@ -123,35 +122,28 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-1O-vRM">
-                    <rect key="frame" x="254" y="297" width="50" height="50"/>
+                    <rect key="frame" x="237" y="295" width="67" height="52"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="H0f-1O-vRM" secondAttribute="height" multiplier="1:1" id="iyV-5W-IbK"/>
-                    </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" image="Settings.png"/>
+                    <state key="normal" image="setting.png"/>
                     <connections>
                         <action selector="handleBtnSettings:" destination="-1" eventType="touchUpInside" id="Rqu-Eq-Cv8"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ThunderMountainlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1C-Yb-iol">
-                    <rect key="frame" x="8" y="372" width="124" height="45"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="3o8-9f-ZJG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Y5-0W-4Rb"/>
                 <constraint firstItem="yUN-Hm-VaM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3T4-TN-972"/>
                 <constraint firstItem="Dly-U6-QDD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="59G-H0-a1t"/>
-                <constraint firstItem="G1C-Yb-iol" firstAttribute="leading" secondItem="mbB-M3-7r0" secondAttribute="leading" constant="8" id="D5n-7F-ORX"/>
+                <constraint firstItem="mbB-M3-7r0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5Gd-JP-u1o"/>
                 <constraint firstAttribute="trailing" secondItem="mbB-M3-7r0" secondAttribute="trailing" id="DhX-Ht-o4o"/>
                 <constraint firstItem="mbB-M3-7r0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dqk-SJ-v5U"/>
                 <constraint firstAttribute="trailing" secondItem="Dly-U6-QDD" secondAttribute="trailing" id="GVx-J4-SQo"/>
                 <constraint firstItem="3o8-9f-ZJG" firstAttribute="top" secondItem="yUN-Hm-VaM" secondAttribute="bottom" id="MSA-6i-xzy"/>
-                <constraint firstItem="G1C-Yb-iol" firstAttribute="top" secondItem="mbB-M3-7r0" secondAttribute="top" constant="17" id="RGB-q7-165"/>
-                <constraint firstItem="mbB-M3-7r0" firstAttribute="top" secondItem="H0f-1O-vRM" secondAttribute="bottom" constant="8" id="Ryr-Qm-DSy"/>
                 <constraint firstItem="Dly-U6-QDD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dF1-8F-qGa"/>
                 <constraint firstAttribute="trailing" secondItem="3o8-9f-ZJG" secondAttribute="trailing" id="fiY-sf-uJa"/>
+                <constraint firstAttribute="bottom" secondItem="H0f-1O-vRM" secondAttribute="bottom" constant="133" id="ndU-I9-rKT"/>
                 <constraint firstItem="H0f-1O-vRM" firstAttribute="top" secondItem="3o8-9f-ZJG" secondAttribute="bottom" constant="9" id="tZK-6O-84f"/>
                 <constraint firstItem="yUN-Hm-VaM" firstAttribute="top" secondItem="Dly-U6-QDD" secondAttribute="bottom" constant="-1" id="tcT-5U-egb"/>
                 <constraint firstAttribute="trailing" secondItem="H0f-1O-vRM" secondAttribute="trailing" constant="16" id="v6K-Rc-Clu"/>
@@ -194,8 +186,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Settings.png" width="50" height="50"/>
-        <image name="ThunderMountainHDNoSky.png" width="1063" height="481"/>
-        <image name="ThunderMountainlogo.png" width="567" height="290"/>
+        <image name="homeScreen.png" width="1080" height="1920"/>
+        <image name="setting.png" width="67" height="52"/>
     </resources>
 </document>

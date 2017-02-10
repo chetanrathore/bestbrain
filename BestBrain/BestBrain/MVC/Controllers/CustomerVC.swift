@@ -10,17 +10,14 @@ import UIKit
 
 class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
-    @IBOutlet var btnBack: UIButton!
     @IBOutlet var txtSearchBar: UISearchBar!
     @IBOutlet var tblCustomer: UITableView!
-    
-    @IBOutlet var vwBackground: UIView!
+    @IBOutlet var btnNewCustomer: UIButton!
+    @IBOutlet var segment: UISegmentedControl!
     
     var arrCustomer = [Customer]()
     var arrFilteredCustomers = [Customer]()
-    
     var isSearch: Bool = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +28,6 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         txtSearchBar.delegate = self
         tblCustomer.delegate = self
         tblCustomer.register(UINib(nibName: "CustomerCell", bundle: nil), forCellReuseIdentifier: "CustomerCell")
-        //        let imgBackground = UIImageView(frame: tblCustomer.bounds)
-        //        imgBackground.image =  UIImage(named: "temp_back.jpeg")
-        //        tblCustomer.backgroundView = imgBackground
-        
         //Temporary data
         let customer1 = Customer(firstName: "John", lastName: "other details", city: "New York")
         let customer2 = Customer(firstName: "tmp", lastName: "xcvxcv", city: "New York")
@@ -49,15 +42,23 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         arrCustomer.append(customer4)
         arrCustomer.append(customer5)
         arrCustomer.append(customer6)
-        
-        self.vwBackground.gradientLayer()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.segment.removeBorders()
+        self.segment.setBackgroundImage(UIImage(named: "wbox"), for: .normal, barMetrics: .default)
+    
+//        self.segment.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+      self.segment.setBackgroundImage(UIImage(named: "bbox"), for: .selected, barMetrics: .default)
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK:- TableView Method(s)
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -66,18 +67,18 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isSearch {
             if arrFilteredCustomers.count == 0 {
-                vwBackground.isHidden = true
+//                vwBackground.isHidden = true
                 alertView(message: "No Such Customer Found.")
             }else {
-                vwBackground.isHidden = false
+//                vwBackground.isHidden = false
             }
             return arrFilteredCustomers.count
         }else {
             if arrCustomer.count == 0 {
-                vwBackground.isHidden = true
+//                vwBackground.isHidden = true
                 alertView(message: "No Customer Found.")
             }else {
-                vwBackground.isHidden = false
+//                vwBackground.isHidden = false
             }
             return arrCustomer.count
         }
@@ -99,9 +100,27 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let customerDetailVC = NewContactVC(nibName: "NewContactVC", bundle: nil)
-        self.navigationController!.pushViewController(customerDetailVC, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let more = UITableViewRowAction(style: .normal, title: "Add") { (action, indexPath) in
+            let vc = NewContactVC(nibName: "NewContactVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        more.backgroundColor = UIColor(red: 0.9843137255, green: 0.9843137255, blue: 0.9843137255, alpha: 0.0)
+//        more.backgroundColor = UIColor(patternImage: self.imageWithImage(#imageLiteral(resourceName: "add.png"), scaledToSize: CGSize(width: 80, height: 80)))
+        return [more]
+    }
+    
+    // MARK:- Segment Control Method
+    
+    
+    
+    // MARK:- Search Bar Delegate(s)
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         isSearch = true
@@ -120,6 +139,8 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         }
     }
     
+    // MARK:- Custom Method(s)
+    
     func filterCustomers(str: String) {
         let txt = str.lowercased()
         arrFilteredCustomers = arrCustomer.filter{ customer in
@@ -131,8 +152,12 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         tblCustomer.reloadData()
     }
     
-    @IBAction func handleBtnBack(_ sender: UIButton) {
-        self.navigationController!.popViewController(animated: true)
+    func imageWithImage(_ image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
     func alertView(message: String) {
@@ -147,5 +172,13 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         alert.addAction(addAction)
         self.present(alert, animated: true)
     }
+    
+    // MARK:- IBOutlet Method(s)
+    
+    @IBAction func handleBtnNewCustomer(_ sender: Any) {
+        let customerDetailVC = NewContactVC(nibName: "NewContactVC", bundle: nil)
+        self.navigationController!.pushViewController(customerDetailVC, animated: true)
+    }
+    
     
 }
