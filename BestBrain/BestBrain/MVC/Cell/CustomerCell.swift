@@ -2,14 +2,13 @@
 //  CustomerCell.swift
 //  BestBrain
 //
-//  Created by LaNet on 2/7/17.
+//  Created by sparth on 2/7/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 
 import UIKit
 
 class CustomerCell: UITableViewCell {
-
     
     @IBOutlet var imgCustomer: UIImageView!
     @IBOutlet var lblCustomerName: UILabel!

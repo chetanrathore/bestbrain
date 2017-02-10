@@ -10,7 +10,6 @@ import UIKit
 
 class InventoryCell: UITableViewCell {
 
-    
     @IBOutlet var imgInventory: UIImageView!
     
     @IBOutlet var btnView: UIButton!
@@ -28,8 +27,10 @@ class InventoryCell: UITableViewCell {
     
     func setCellInterface() {
         imgInventory.layer.cornerRadius = 10
-        btnView.layer.borderWidth = 1
-        btnView.layer.borderColor = UIColor.white.cgColor
+        imgInventory.layer.borderColor = UIColor.groupTableViewBackground.cgColor
+        imgInventory.layer.borderWidth = 1.5
+        btnView.layer.borderWidth = 1.5
+        btnView.layer.borderColor = UIColor.groupTableViewBackground.cgColor
         btnView.layer.cornerRadius = 4
         btnView.clipsToBounds = true
     }

@@ -2,7 +2,7 @@
 //  CustomerDashboardVC.swift
 //  BestBrain
 //
-//  Created by Devloper30 on 30/01/17.
+//  Created by Suhani on 30/01/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 

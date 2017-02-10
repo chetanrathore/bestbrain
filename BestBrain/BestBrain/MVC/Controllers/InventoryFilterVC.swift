@@ -59,6 +59,8 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK:- Interface 
+
     func setInterface() {
         let sliderLine1 = UIView(frame: swPaymentRange.frame)
         //        sliderLine1.layer.backgroundColor = UIColor.red.cgColor
@@ -77,6 +79,8 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
         vwBackground.gradientLayer()
         
     }
+    
+    // MARK:- Picker view methods
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -104,6 +108,8 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
         let price = (sender as! UISlider).value
         print(price)
     }
+    
+    // MARK:- Outlet Actions
     
     @IBAction func btnNavBack(_ sender: UIButton) {
         self.navigationController!.popViewController(animated: true)

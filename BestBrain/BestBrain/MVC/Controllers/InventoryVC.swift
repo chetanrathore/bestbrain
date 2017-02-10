@@ -16,7 +16,6 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     @IBOutlet var tblInventory: UITableView!
     @IBOutlet var vwNavigationBar: UIView!
     @IBOutlet var vwSegment: UIView!
-    @IBOutlet var vwBackground: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,6 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         //        imgBackground.image =  UIImage(named: "temp_back.jpeg")
         //        tblInventory.backgroundView = imgBackground
         tblInventory.backgroundColor = UIColor.clear
-        self.vwBackground.gradientLayer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +41,8 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK:- tableview methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -64,6 +64,8 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let detailVC = InventoryDetailVC(nibName: "InventoryDetailVC", bundle: nil)
         self.navigationController!.pushViewController(detailVC, animated: true)
     }
+    
+    // MARK:- Navigation handler
     
     @IBAction func btnFilter(_ sender: UIButton) {
         let filterVC = InventoryFilterVC(nibName: "InventoryFilterVC", bundle: nil)

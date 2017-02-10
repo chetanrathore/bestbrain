@@ -2,7 +2,7 @@
 //  InventoryDetailWithMenuVC.swift
 //  BestBrain
 //
-//  Created by LaNet on 2/6/17.
+//  Created by sparth on 2/6/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 
@@ -55,7 +55,7 @@ class InventoryDetailWithMenuVC: UIViewController {
             self.btnAddPhoto.tag = 2
             self.btnSalesHistory.setImage(UIImage(named: "photo-camera.png"), for: .normal)
             self.btnSalesHistory.setTitle("Add Photo", for: .normal)
-        
+            
             btnAddAppraisal.layer.cornerRadius = 2
             btnAddAppraisal.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
             btnAddAppraisal.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
@@ -64,7 +64,6 @@ class InventoryDetailWithMenuVC: UIViewController {
             btnAddAppraisal.layer.masksToBounds = false
             btnAddAppraisal.layer.cornerRadius = 2.0
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,6 +73,8 @@ class InventoryDetailWithMenuVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
     }
+    
+    // MARK:- InterfaceDesign
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
@@ -112,6 +113,8 @@ class InventoryDetailWithMenuVC: UIViewController {
         }
     }
     
+    // MARK:- Outlet Actions
+    
     @IBAction func btnServiceHistory(_ sender: UIButton) {
         self.navigationController!.popViewController(animated: true)
     }
@@ -125,12 +128,11 @@ class InventoryDetailWithMenuVC: UIViewController {
             
         }else {
             //handle for add photo
-            
         }
     }
     
     @IBAction func btnAddPhoto(_ sender: UIButton) {
-
+        
     }
     
     @IBAction func handleBtnAddAppraisal(_ sender: UIButton) {

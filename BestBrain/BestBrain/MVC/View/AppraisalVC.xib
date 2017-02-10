@@ -10,37 +10,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryDetailWithMenuVC" customModule="BestBrain" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppraisalVC" customModule="BestBrain" customModuleProvider="target">
             <connections>
-                <outlet property="btnACV" destination="uBL-pb-Uza" id="mJY-O8-7xH"/>
-                <outlet property="btnAddAppraisal" destination="P1V-Z1-2lX" id="M41-37-v18"/>
-                <outlet property="btnAddPhoto" destination="EiI-tQ-BBc" id="P9K-8O-yKu"/>
-                <outlet property="btnSalesHistory" destination="VEV-zf-SIz" id="E3d-Zl-vwF"/>
-                <outlet property="btnServiceHistory" destination="1ob-Eu-WBc" id="o0X-nH-cd3"/>
-                <outlet property="constBtnSpacing1" destination="MFN-BU-7gy" id="PVJ-X6-TK6"/>
-                <outlet property="constBtnSpacing2" destination="9FM-Vb-S5j" id="2c7-Rl-UhK"/>
-                <outlet property="constBtnVerSpacing" destination="riI-X9-C96" id="nVr-fH-Zcm"/>
-                <outlet property="constImageHeight" destination="6Bb-jN-Cjh" id="aaG-WI-7zy"/>
-                <outlet property="constVWBottomHeight" destination="veB-9P-XBH" id="6or-Bn-l2O"/>
-                <outlet property="constVWBtnHeight" destination="h33-9P-s9V" id="fGW-8F-aZY"/>
-                <outlet property="constVWScrollHeight" destination="w40-tg-fsc" id="FdE-la-dmc"/>
+                <outlet property="btnAddAnother" destination="oa9-ge-KZW" id="aCN-DT-NEy"/>
+                <outlet property="btnAddAppraisal" destination="L2y-FG-XN4" id="fEg-9L-cuu"/>
+                <outlet property="btnAddPhoto" destination="VEV-zf-SIz" id="f0G-d0-Phj"/>
+                <outlet property="btnPayoff" destination="uBL-pb-Uza" id="t2N-Hk-ML6"/>
+                <outlet property="btnRemove" destination="7gu-xg-R1B" id="daE-Ir-oc8"/>
+                <outlet property="btnVINCheck" destination="1ob-Eu-WBc" id="aMo-2N-7gG"/>
                 <outlet property="scrollViewMain" destination="Pgj-Tk-Eu4" id="UjJ-fJ-dbZ"/>
-                <outlet property="view" destination="iN0-l3-epB" id="Oba-B5-8nN"/>
-                <outlet property="vwDetails" destination="VoL-bh-dXx" id="p8g-y1-piD"/>
-                <outlet property="vwInfo" destination="BMi-pG-8AN" id="FJd-Fe-7WG"/>
-                <outlet property="vwMenuItem" destination="W91-x3-JnO" id="o3A-cs-yPK"/>
+                <outlet property="view" destination="iN0-l3-epB" id="3WB-SL-3Me"/>
+                <outlet property="vwDetails" destination="VoL-bh-dXx" id="zgE-d7-qyo"/>
+                <outlet property="vwInfo" destination="BMi-pG-8AN" id="cjK-MH-mlk"/>
+                <outlet property="vwMenuItem1" destination="W91-x3-JnO" id="Ifi-6N-XKd"/>
+                <outlet property="vwMenuItem2" destination="mW8-1v-7qu" id="EmA-2Z-Xdc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="638"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="597"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-Tk-Eu4">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="638"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="597"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kp-zO-99G">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-zU-Kej">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
@@ -49,48 +44,48 @@
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoL-bh-dXx">
-                                    <rect key="frame" x="0.0" y="240" width="320" height="396"/>
+                                    <rect key="frame" x="0.0" y="240" width="320" height="360"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMi-pG-8AN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2003 Harley-Davidson FXDL Dyna Low Rider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sqg-7d-cHf">
-                                                    <rect key="frame" x="18" y="18" width="294" height="29"/>
+                                                    <rect key="frame" x="12" y="18" width="300" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Model Type: Dyna@" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dF-dz-a27">
-                                                    <rect key="frame" x="52" y="57" width="231" height="18"/>
+                                                    <rect key="frame" x="40" y="57" width="245" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VIN: 1HD1GDV143K338873" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNO-6I-lDC">
-                                                    <rect key="frame" x="52" y="78" width="231" height="18"/>
+                                                    <rect key="frame" x="40" y="78" width="245" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Engine Size: 1450cc (88.0 cubic inches)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHi-cU-BRa">
-                                                    <rect key="frame" x="52" y="99" width="231" height="18"/>
+                                                    <rect key="frame" x="40" y="99" width="245" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miles: 17642" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-jB-x0Z">
-                                                    <rect key="frame" x="52" y="120" width="231" height="18"/>
+                                                    <rect key="frame" x="40" y="120" width="245" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color: Gunmetal Pearl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgn-o6-v8N">
-                                                    <rect key="frame" x="52" y="142" width="231" height="18"/>
+                                                    <rect key="frame" x="40" y="142" width="245" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,61 +94,61 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="180" id="7gv-3X-N6c"/>
+                                                <constraint firstAttribute="height" constant="175" id="7gv-3X-N6c"/>
                                             </constraints>
                                         </view>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W91-x3-JnO">
-                                            <rect key="frame" x="0.0" y="180" width="320" height="80"/>
+                                            <rect key="frame" x="0.0" y="175" width="320" height="80"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-Eu-WBc">
-                                                    <rect key="frame" x="14.5" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1ob-Eu-WBc" secondAttribute="height" multiplier="1:1" id="j4x-bw-WnX"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <inset key="titleEdgeInsets" minX="-100" minY="60" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="18" minY="5" maxX="20" maxY="30"/>
-                                                    <state key="normal" title="Service History" image="Support.png">
+                                                    <state key="normal" title="VIN Check" image="Support.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btnServiceHistory:" destination="-1" eventType="touchUpInside" id="ehU-3d-vNs"/>
+                                                        <action selector="handleBtnVINCheck:" destination="-1" eventType="touchUpInside" id="7c4-l5-zVi"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBL-pb-Uza">
-                                                    <rect key="frame" x="119.5" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="120" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uBL-pb-Uza" secondAttribute="height" multiplier="1:1" id="Oqv-45-qC9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <inset key="titleEdgeInsets" minX="-128" minY="60" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
-                                                    <state key="normal" title="ACV" image="dollar.png">
+                                                    <state key="normal" title="Payoff" image="dollar.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btnACV:" destination="-1" eventType="touchUpInside" id="SBR-Rg-Ome"/>
+                                                        <action selector="handleBtnPayoff:" destination="-1" eventType="touchUpInside" id="ahm-Ry-hEJ"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEV-zf-SIz">
-                                                    <rect key="frame" x="224.5" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="225" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="VEV-zf-SIz" secondAttribute="height" multiplier="1:1" id="jo3-pV-hxR"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <inset key="titleEdgeInsets" minX="-125" minY="60" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
-                                                    <state key="normal" title="Sales History" image="thumbs-up-hand.png">
+                                                    <state key="normal" title="Photos" image="thumbs-up-hand.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="btnSalesHistory:" destination="-1" eventType="touchUpInside" id="fey-qv-o54"/>
+                                                        <action selector="handleBtnAddPhotos:" destination="-1" eventType="touchUpInside" id="g9U-v1-rkh"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -172,53 +167,89 @@
                                                 <constraint firstItem="uBL-pb-Uza" firstAttribute="centerY" secondItem="W91-x3-JnO" secondAttribute="centerY" id="pb0-Ts-f70"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiI-tQ-BBc">
-                                            <rect key="frame" x="118" y="265" width="84" height="80"/>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mW8-1v-7qu">
+                                            <rect key="frame" x="1" y="255" width="320" height="80"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oa9-ge-KZW">
+                                                    <rect key="frame" x="14.5" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="oa9-ge-KZW" secondAttribute="height" multiplier="1:1" id="nIQ-BQ-QGL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <inset key="titleEdgeInsets" minX="-99" minY="60" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                                    <state key="normal" title="Add Another" image="Add.png">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="handleBtnAddAnother:" destination="-1" eventType="touchUpInside" id="DYR-18-89C"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gu-xg-R1B">
+                                                    <rect key="frame" x="119.5" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="7gu-xg-R1B" secondAttribute="height" multiplier="1:1" id="7VX-AV-Zml"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <inset key="titleEdgeInsets" minX="-101" minY="60" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                                    <state key="normal" title="ACV" image="Add.png">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="handleBtnRemove:" destination="-1" eventType="touchUpInside" id="0FX-zT-FLA"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2y-FG-XN4">
+                                                    <rect key="frame" x="224.5" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="L2y-FG-XN4" secondAttribute="height" multiplier="1:1" id="kwF-Ts-Jfd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <inset key="titleEdgeInsets" minX="-100" minY="60" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
+                                                    <state key="normal" title="Add Appraisal" image="Add.png">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="handleBtnAddAppraisal:" destination="-1" eventType="touchUpInside" id="ZHS-cU-OMZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="EiI-tQ-BBc" secondAttribute="height" multiplier="84:80" id="IjT-hv-R5X"/>
+                                                <constraint firstItem="oa9-ge-KZW" firstAttribute="height" secondItem="mW8-1v-7qu" secondAttribute="height" id="10u-Vj-8nH"/>
+                                                <constraint firstItem="L2y-FG-XN4" firstAttribute="height" secondItem="mW8-1v-7qu" secondAttribute="height" id="4YO-PS-Vot"/>
+                                                <constraint firstItem="7gu-xg-R1B" firstAttribute="top" secondItem="mW8-1v-7qu" secondAttribute="top" id="7JG-y3-uiJ"/>
+                                                <constraint firstItem="L2y-FG-XN4" firstAttribute="leading" secondItem="7gu-xg-R1B" secondAttribute="trailing" constant="25" id="7R7-oH-HuQ"/>
+                                                <constraint firstAttribute="height" constant="80" id="CKa-09-x0S"/>
+                                                <constraint firstItem="7gu-xg-R1B" firstAttribute="centerX" secondItem="mW8-1v-7qu" secondAttribute="centerX" id="Dg5-5a-bPq"/>
+                                                <constraint firstItem="L2y-FG-XN4" firstAttribute="top" secondItem="mW8-1v-7qu" secondAttribute="top" id="HSm-Tr-d7D"/>
+                                                <constraint firstItem="7gu-xg-R1B" firstAttribute="centerY" secondItem="mW8-1v-7qu" secondAttribute="centerY" id="JHs-ga-uCq"/>
+                                                <constraint firstItem="oa9-ge-KZW" firstAttribute="top" secondItem="mW8-1v-7qu" secondAttribute="top" id="SFV-8B-F9w"/>
+                                                <constraint firstItem="7gu-xg-R1B" firstAttribute="leading" secondItem="oa9-ge-KZW" secondAttribute="trailing" constant="25" id="U1O-7M-URx"/>
+                                                <constraint firstItem="7gu-xg-R1B" firstAttribute="height" secondItem="mW8-1v-7qu" secondAttribute="height" id="vHe-uO-ukr"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <inset key="titleEdgeInsets" minX="-130" minY="60" maxX="0.0" maxY="0.0"/>
-                                            <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
-                                            <state key="normal" title="Add Photos" image="photo-camera.png">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="btnAddPhoto:" destination="-1" eventType="touchUpInside" id="Zde-0L-b3X"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1V-Z1-2lX">
-                                            <rect key="frame" x="87" y="310" width="145" height="40"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="Exj-lW-38A"/>
-                                                <constraint firstAttribute="width" secondItem="P1V-Z1-2lX" secondAttribute="height" multiplier="29:8" id="pNi-vG-bZr"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                            <state key="normal" title="Add Appraisal">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="handleBtnAddAppraisal:" destination="-1" eventType="touchUpInside" id="XgN-kF-zOo"/>
-                                            </connections>
-                                        </button>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="BMi-pG-8AN" secondAttribute="trailing" id="5G2-tR-DXr"/>
                                         <constraint firstAttribute="trailing" secondItem="W91-x3-JnO" secondAttribute="trailing" id="BaJ-8G-PQh"/>
                                         <constraint firstItem="BMi-pG-8AN" firstAttribute="leading" secondItem="VoL-bh-dXx" secondAttribute="leading" id="HuQ-nz-hYG"/>
-                                        <constraint firstItem="EiI-tQ-BBc" firstAttribute="centerX" secondItem="VoL-bh-dXx" secondAttribute="centerX" id="NHt-nr-YC9"/>
                                         <constraint firstItem="W91-x3-JnO" firstAttribute="top" secondItem="BMi-pG-8AN" secondAttribute="bottom" id="dH2-W4-GsE"/>
                                         <constraint firstItem="BMi-pG-8AN" firstAttribute="top" secondItem="VoL-bh-dXx" secondAttribute="top" id="eRi-VK-lyq"/>
+                                        <constraint firstItem="mW8-1v-7qu" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="bottom" id="hqU-dB-u7D"/>
+                                        <constraint firstAttribute="trailing" secondItem="mW8-1v-7qu" secondAttribute="trailing" constant="-1" id="m1d-ks-gDl"/>
                                         <constraint firstItem="W91-x3-JnO" firstAttribute="leading" secondItem="VoL-bh-dXx" secondAttribute="leading" id="ms1-S4-heK"/>
-                                        <constraint firstItem="P1V-Z1-2lX" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="bottom" constant="50" id="rTw-lQ-v1g"/>
-                                        <constraint firstItem="EiI-tQ-BBc" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="bottom" constant="5" id="riI-X9-C96"/>
-                                        <constraint firstItem="EiI-tQ-BBc" firstAttribute="height" secondItem="W91-x3-JnO" secondAttribute="height" id="sIG-KA-K4h"/>
-                                        <constraint firstAttribute="height" constant="396" id="veB-9P-XBH"/>
-                                        <constraint firstItem="P1V-Z1-2lX" firstAttribute="centerX" secondItem="VoL-bh-dXx" secondAttribute="centerX" id="x2M-Ce-EIS"/>
+                                        <constraint firstItem="mW8-1v-7qu" firstAttribute="leading" secondItem="VoL-bh-dXx" secondAttribute="leading" constant="1" id="oT8-bg-dRo"/>
+                                        <constraint firstAttribute="height" constant="360" id="veB-9P-XBH"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -230,7 +261,7 @@
                                 <constraint firstAttribute="trailing" secondItem="Nlx-zU-Kej" secondAttribute="trailing" id="idd-tf-99N"/>
                                 <constraint firstAttribute="trailing" secondItem="VoL-bh-dXx" secondAttribute="trailing" id="nw7-jG-qtA"/>
                                 <constraint firstItem="Nlx-zU-Kej" firstAttribute="top" secondItem="2Kp-zO-99G" secondAttribute="top" id="pti-LD-a5U"/>
-                                <constraint firstAttribute="height" constant="700" id="w40-tg-fsc"/>
+                                <constraint firstAttribute="height" constant="600" id="w40-tg-fsc"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -251,14 +282,14 @@
                 <constraint firstItem="2Kp-zO-99G" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Zd9-WM-SQT"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-857" y="-319"/>
+            <point key="canvasLocation" x="-777" y="-372.5"/>
         </view>
     </objects>
     <resources>
+        <image name="Add.png" width="100" height="100"/>
         <image name="Support.png" width="100" height="100"/>
         <image name="bike.jpg" width="800" height="600"/>
         <image name="dollar.png" width="128" height="128"/>
-        <image name="photo-camera.png" width="128" height="128"/>
         <image name="thumbs-up-hand.png" width="128" height="128"/>
     </resources>
 </document>
