@@ -33,7 +33,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         let customer2 = Customer(firstName: "tmp", lastName: "xcvxcv", city: "New York")
         let customer3 = Customer(firstName: "John Khan", lastName: "Xyvxcvz", city: "New York")
         let customer4 = Customer(firstName: "John", lastName: "Xy45646z", city: "New York")
-        let customer5 = Customer(firstName: "John", lastName: "Xy6565z", city: "New York")
+        let customer5 = Customer(firstName: "Jotmphn", lastName: "Xy6565z", city: "New York")
         let customer6 = Customer(firstName: "Abcd", lastName: "Xytyty56fgz", city: "New York")
         
         arrCustomer.append(customer1)
@@ -47,15 +47,26 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     override func viewWillAppear(_ animated: Bool) {
         self.segment.removeBorders()
         self.segment.setBackgroundImage(UIImage(named: "wbox"), for: .normal, barMetrics: .default)
-    
-//        self.segment.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-      self.segment.setBackgroundImage(UIImage(named: "bbox"), for: .selected, barMetrics: .default)
-
+        
+        //        self.segment.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+        self.segment.setBackgroundImage(UIImage(named: "bbox"), for: .selected, barMetrics: .default)
+        
+        if (txtSearchBar.text?.characters.count)! > 0 {
+            isSearch = true
+            tblCustomer.reloadData()
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if txtSearchBar.isFirstResponder {
+            txtSearchBar.resignFirstResponder()
+        }
     }
     
     // MARK:- TableView Method(s)
@@ -67,18 +78,18 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isSearch {
             if arrFilteredCustomers.count == 0 {
-//                vwBackground.isHidden = true
+                //                vwBackground.isHidden = true
                 alertView(message: "No Such Customer Found.")
             }else {
-//                vwBackground.isHidden = false
+                //                vwBackground.isHidden = false
             }
             return arrFilteredCustomers.count
         }else {
             if arrCustomer.count == 0 {
-//                vwBackground.isHidden = true
+                //                vwBackground.isHidden = true
                 alertView(message: "No Customer Found.")
             }else {
-//                vwBackground.isHidden = false
+                //                vwBackground.isHidden = false
             }
             return arrCustomer.count
         }
@@ -112,7 +123,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
             self.navigationController?.pushViewController(vc, animated: true)
         }
         more.backgroundColor = UIColor(red: 0.9843137255, green: 0.9843137255, blue: 0.9843137255, alpha: 0.0)
-//        more.backgroundColor = UIColor(patternImage: self.imageWithImage(#imageLiteral(resourceName: "add.png"), scaledToSize: CGSize(width: 80, height: 80)))
+        //        more.backgroundColor = UIColor(patternImage: self.imageWithImage(#imageLiteral(resourceName: "add.png"), scaledToSize: CGSize(width: 80, height: 80)))
         return [more]
     }
     
@@ -136,6 +147,13 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
                 self.isSearch = true
                 filterCustomers(str: text)
             }
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        if isSearch == true{
+            isSearch = false
+            tblCustomer.reloadData()
         }
     }
     
