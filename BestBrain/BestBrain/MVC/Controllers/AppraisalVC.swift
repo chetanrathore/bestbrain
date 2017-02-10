@@ -30,6 +30,10 @@ class AppraisalVC: UIViewController {
     @IBOutlet var vwMenuItem1: UIView!
     @IBOutlet var vwMenuItem2: UIView!
     
+    @IBOutlet var constBtnSpacing: [NSLayoutConstraint]!
+    
+    @IBOutlet var constMenuHeight: [NSLayoutConstraint]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setInterface()
@@ -47,6 +51,17 @@ class AppraisalVC: UIViewController {
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
+        if ScreenWidth > 320{
+            for const in constBtnSpacing{
+                const.constant = 40
+            }
+        }else{
+            for const in constMenuHeight{
+                const.constant = 75
+            }
+            btnAddAnother.titleEdgeInsets = UIEdgeInsets(top: 67, left: -55, bottom: 8, right: -5)
+            btnAddAppraisal.titleEdgeInsets = UIEdgeInsets(top: 67, left: -66, bottom: 8, right: -16)
+        }
         vwDetails.gradientLayer()
         vwDetails.bringSubview(toFront: vwInfo)
         vwDetails.bringSubview(toFront: vwMenuItem1)
@@ -60,7 +75,7 @@ class AppraisalVC: UIViewController {
     }
     
     @IBAction func handleBtnVINCheck(_ sender: UIButton) {
-        
+        self.navigationController!.popViewController(animated: true)
     }
     
     @IBAction func handleBtnPayoff(_ sender: UIButton) {
@@ -70,7 +85,7 @@ class AppraisalVC: UIViewController {
     @IBAction func handleBtnAddPhotos(_ sender: UIButton) {
         
     }
-  
+    
     @IBAction func handleBtnAddAnother(_ sender: UIButton) {
         
     }

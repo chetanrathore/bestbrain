@@ -32,7 +32,7 @@ class InventoryDetailVC: UIViewController {
     
     @IBOutlet var btnRemove: UIButton!
     
-    @IBOutlet var constVWBtnHeight: NSLayoutConstraint!
+    @IBOutlet var vwBorder: UIView!
     
     @IBOutlet var constVWScrollHeight: NSLayoutConstraint!
     
@@ -40,9 +40,9 @@ class InventoryDetailVC: UIViewController {
     
     @IBOutlet var constImageHeight: NSLayoutConstraint!
     
-    @IBOutlet var constBtnSpacing1: NSLayoutConstraint!
-    
-    @IBOutlet var constBtnSpacing2: NSLayoutConstraint!
+    @IBOutlet var constBtnSpacing: [NSLayoutConstraint]!
+
+    @IBOutlet var constMenuHeight: [NSLayoutConstraint]!
     
     var isFromInventory: Bool = true
     
@@ -83,7 +83,7 @@ class InventoryDetailVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         if UIDevice.current.userInterfaceIdiom == .pad {
-            constVWBtnHeight.constant = 150
+//            constVWBtnHeight.constant = 150
             constVWScrollHeight.constant = 1000
             constImageHeight.constant = 400
             //  constVWBottomHeight.constant = 600
@@ -100,22 +100,29 @@ class InventoryDetailVC: UIViewController {
             btnQuote.titleLabel?.font = UIFont(name: fontName, size: 18)
             btnQuote.titleEdgeInsets = UIEdgeInsetsMake(100, -70, 0, 0)
             btnQuote.imageEdgeInsets = UIEdgeInsetsMake(15, 35, 30, 20)
-            constBtnSpacing1.constant = 50
-            constBtnSpacing2.constant = 50
             
         }else{
-            constVWBtnHeight.constant = 80
-            constVWScrollHeight.constant = 650
-            constImageHeight.constant = 250
+            //            constVWBtnHeight.constant = 85
+            //            constVWScrollHeight.constant = 650
+            //            constImageHeight.constant = 250
             //      constVWBottomHeight.constant = 400
-            
-            constBtnSpacing1.constant = 20
-            constBtnSpacing2.constant = 20
         }
+        if ScreenWidth > 320{
+            for const in constBtnSpacing{
+                const.constant = 40
+            }
+        }else{
+            for const in constMenuHeight{
+                const.constant = 80
+            }
+            btnAddAnother.titleEdgeInsets = UIEdgeInsets(top: 67, left: -55, bottom: 8, right: -5)
+        }
+        
         
         vwDetails.gradientLayer()
         vwDetails.bringSubview(toFront: vwMenu)
         vwDetails.bringSubview(toFront: vwInfo)
+        vwDetails.bringSubview(toFront: vwBorder)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handelTapGuesture(_:)))
         imgInventory.isUserInteractionEnabled = true
@@ -139,6 +146,8 @@ class InventoryDetailVC: UIViewController {
     }
     
     @IBAction func handleBtnAddAnother(_ sender: UIButton) {
+        let appraisalVC = AppraisalVC(nibName: "AppraisalVC", bundle: nil)
+        self.navigationController?.pushViewController(appraisalVC, animated: true)
     }
     
     @IBAction func handleBtnRemove(_ sender: UIButton) {
