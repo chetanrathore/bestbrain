@@ -42,6 +42,16 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         arrCustomer.append(customer4)
         arrCustomer.append(customer5)
         arrCustomer.append(customer6)
+        
+        
+        var textfield = UITextField()
+        let searchViews = txtSearchBar.subviews
+        for i in 0..<searchViews.count{
+            if searchViews[i] .isKind(of: UITextField.self){
+                searchViews[i].backgroundColor = UIColor.blue
+            }
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +61,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         //        self.segment.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
         self.segment.setBackgroundImage(UIImage(named: "bbox"), for: .selected, barMetrics: .default)
         
-        if (txtSearchBar.text?.characters.count)! > 0 {
+        if !(txtSearchBar.text?.isEmpty)! {
             isSearch = true
             tblCustomer.reloadData()
         }
@@ -98,7 +108,11 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var customer = Customer()
         if isSearch {
-            customer = self.arrFilteredCustomers[indexPath.row]
+            if self.arrFilteredCustomers.count > 0{
+                customer = self.arrFilteredCustomers[indexPath.row]
+            }else{
+                customer = self.arrCustomer[indexPath.row]
+            }
         }else {
             customer = self.arrCustomer[indexPath.row]
         }
@@ -118,17 +132,18 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
         let more = UITableViewRowAction(style: .normal, title: "Add") { (action, indexPath) in
             let vc = NewContactVC(nibName: "NewContactVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        more.backgroundColor = UIColor(red: 0.9843137255, green: 0.9843137255, blue: 0.9843137255, alpha: 0.0)
-        //        more.backgroundColor = UIColor(patternImage: self.imageWithImage(#imageLiteral(resourceName: "add.png"), scaledToSize: CGSize(width: 80, height: 80)))
+//                more.backgroundColor = UIColor(red: 0.9843137255, green: 0.9843137255, blue: 0.9843137255, alpha: 0.0)
+                more.backgroundColor = UIColor(patternImage: self.imageWithImage(#imageLiteral(resourceName: "add.png"), scaledToSize: CGSize(width: 50, height: 50)))
+        
         return [more]
     }
     
     // MARK:- Segment Control Method
-    
     
     
     // MARK:- Search Bar Delegate(s)

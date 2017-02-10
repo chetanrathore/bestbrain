@@ -24,6 +24,12 @@
                 <outlet property="vwInfo" destination="BMi-pG-8AN" id="cjK-MH-mlk"/>
                 <outlet property="vwMenuItem1" destination="W91-x3-JnO" id="Ifi-6N-XKd"/>
                 <outlet property="vwMenuItem2" destination="mW8-1v-7qu" id="EmA-2Z-Xdc"/>
+                <outletCollection property="constBtnSpacing" destination="9FM-Vb-S5j" collectionClass="NSMutableArray" id="kNZ-za-HXw"/>
+                <outletCollection property="constBtnSpacing" destination="MFN-BU-7gy" collectionClass="NSMutableArray" id="zdY-X3-QPw"/>
+                <outletCollection property="constBtnSpacing" destination="7R7-oH-HuQ" collectionClass="NSMutableArray" id="5J0-Yq-BO1"/>
+                <outletCollection property="constBtnSpacing" destination="U1O-7M-URx" collectionClass="NSMutableArray" id="tYo-j2-Be0"/>
+                <outletCollection property="constMenuHeight" destination="h33-9P-s9V" collectionClass="NSMutableArray" id="6ws-R1-B1O"/>
+                <outletCollection property="constMenuHeight" destination="CKa-09-x0S" collectionClass="NSMutableArray" id="jXw-Y5-tqr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -38,13 +44,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bike.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-zU-Kej">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="240" id="6Bb-jN-Cjh"/>
+                                        <constraint firstAttribute="height" constant="260" id="6Bb-jN-Cjh"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoL-bh-dXx">
-                                    <rect key="frame" x="0.0" y="240" width="320" height="360"/>
+                                    <rect key="frame" x="0.0" y="260" width="320" height="360"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMi-pG-8AN">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
@@ -98,19 +104,19 @@
                                             </constraints>
                                         </view>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W91-x3-JnO">
-                                            <rect key="frame" x="0.0" y="175" width="320" height="80"/>
+                                            <rect key="frame" x="0.0" y="175" width="320" height="85"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-Eu-WBc">
-                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="7.5" y="0.0" width="85" height="85"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1ob-Eu-WBc" secondAttribute="height" multiplier="1:1" id="j4x-bw-WnX"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                    <inset key="titleEdgeInsets" minX="-100" minY="60" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="18" minY="5" maxX="20" maxY="30"/>
-                                                    <state key="normal" title="VIN Check" image="Support.png">
+                                                    <inset key="titleEdgeInsets" minX="-76" minY="67" maxX="0.0" maxY="5"/>
+                                                    <inset key="imageEdgeInsets" minX="5" minY="8" maxX="5" maxY="23"/>
+                                                    <state key="normal" title="VIN Check" image="vincheck.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -118,16 +124,16 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBL-pb-Uza">
-                                                    <rect key="frame" x="120" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="117.5" y="0.0" width="85" height="85"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="uBL-pb-Uza" secondAttribute="height" multiplier="1:1" id="Oqv-45-qC9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                    <inset key="titleEdgeInsets" minX="-128" minY="60" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
-                                                    <state key="normal" title="Payoff" image="dollar.png">
+                                                    <inset key="titleEdgeInsets" minX="-40" minY="67" maxX="0.0" maxY="5"/>
+                                                    <inset key="imageEdgeInsets" minX="19" minY="5" maxX="5" maxY="18"/>
+                                                    <state key="normal" title="Payoff" image="payoff.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -135,16 +141,16 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEV-zf-SIz">
-                                                    <rect key="frame" x="225" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="227.5" y="0.0" width="85" height="85"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="VEV-zf-SIz" secondAttribute="height" multiplier="1:1" id="jo3-pV-hxR"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                    <inset key="titleEdgeInsets" minX="-125" minY="60" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="15" minY="5" maxX="15" maxY="30"/>
-                                                    <state key="normal" title="Photos" image="thumbs-up-hand.png">
+                                                    <inset key="titleEdgeInsets" minX="-50" minY="67" maxX="0.0" maxY="5"/>
+                                                    <inset key="imageEdgeInsets" minX="17" minY="14" maxX="10" maxY="23"/>
+                                                    <state key="normal" title="Photos" image="camera.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -161,26 +167,26 @@
                                                 <constraint firstItem="VEV-zf-SIz" firstAttribute="height" secondItem="W91-x3-JnO" secondAttribute="height" id="Q4H-Bj-pp8"/>
                                                 <constraint firstItem="VEV-zf-SIz" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="top" id="YeO-uK-1XJ"/>
                                                 <constraint firstItem="1ob-Eu-WBc" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="top" id="buD-M6-ERZ"/>
-                                                <constraint firstAttribute="height" constant="80" id="h33-9P-s9V"/>
+                                                <constraint firstAttribute="height" constant="85" id="h33-9P-s9V"/>
                                                 <constraint firstItem="1ob-Eu-WBc" firstAttribute="height" secondItem="W91-x3-JnO" secondAttribute="height" id="imZ-MM-NHy"/>
                                                 <constraint firstItem="uBL-pb-Uza" firstAttribute="top" secondItem="W91-x3-JnO" secondAttribute="top" id="l5a-mT-7Yh"/>
                                                 <constraint firstItem="uBL-pb-Uza" firstAttribute="centerY" secondItem="W91-x3-JnO" secondAttribute="centerY" id="pb0-Ts-f70"/>
                                             </constraints>
                                         </view>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mW8-1v-7qu">
-                                            <rect key="frame" x="1" y="255" width="320" height="80"/>
+                                            <rect key="frame" x="1" y="260" width="320" height="85"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oa9-ge-KZW">
-                                                    <rect key="frame" x="14.5" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="7" y="0.0" width="85" height="85"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="oa9-ge-KZW" secondAttribute="height" multiplier="1:1" id="nIQ-BQ-QGL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                    <inset key="titleEdgeInsets" minX="-99" minY="60" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                                    <state key="normal" title="Add Another" image="Add.png">
+                                                    <inset key="titleEdgeInsets" minX="-46" minY="67" maxX="0.0" maxY="8"/>
+                                                    <inset key="imageEdgeInsets" minX="13" minY="5" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" title="Add Another" image="addanother.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -188,16 +194,16 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gu-xg-R1B">
-                                                    <rect key="frame" x="119.5" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="117" y="0.0" width="85" height="85"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="7gu-xg-R1B" secondAttribute="height" multiplier="1:1" id="7VX-AV-Zml"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                    <inset key="titleEdgeInsets" minX="-101" minY="60" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                                    <state key="normal" title="ACV" image="Add.png">
+                                                    <inset key="titleEdgeInsets" minX="-50" minY="67" maxX="0.0" maxY="8"/>
+                                                    <inset key="imageEdgeInsets" minX="13" minY="5" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" title="ACV" image="remove.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -205,16 +211,16 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2y-FG-XN4">
-                                                    <rect key="frame" x="224.5" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="227" y="0.0" width="85" height="85"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="L2y-FG-XN4" secondAttribute="height" multiplier="1:1" id="kwF-Ts-Jfd"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                    <inset key="titleEdgeInsets" minX="-100" minY="60" maxX="0.0" maxY="0.0"/>
-                                                    <inset key="imageEdgeInsets" minX="10" minY="5" maxX="10" maxY="20"/>
-                                                    <state key="normal" title="Add Appraisal" image="Add.png">
+                                                    <inset key="titleEdgeInsets" minX="-54" minY="67" maxX="0.0" maxY="8"/>
+                                                    <inset key="imageEdgeInsets" minX="13" minY="5" maxX="0.0" maxY="20"/>
+                                                    <state key="normal" title="Add Appraisal" image="addbikeblue.png">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -228,7 +234,7 @@
                                                 <constraint firstItem="L2y-FG-XN4" firstAttribute="height" secondItem="mW8-1v-7qu" secondAttribute="height" id="4YO-PS-Vot"/>
                                                 <constraint firstItem="7gu-xg-R1B" firstAttribute="top" secondItem="mW8-1v-7qu" secondAttribute="top" id="7JG-y3-uiJ"/>
                                                 <constraint firstItem="L2y-FG-XN4" firstAttribute="leading" secondItem="7gu-xg-R1B" secondAttribute="trailing" constant="25" id="7R7-oH-HuQ"/>
-                                                <constraint firstAttribute="height" constant="80" id="CKa-09-x0S"/>
+                                                <constraint firstAttribute="height" constant="85" id="CKa-09-x0S"/>
                                                 <constraint firstItem="7gu-xg-R1B" firstAttribute="centerX" secondItem="mW8-1v-7qu" secondAttribute="centerX" id="Dg5-5a-bPq"/>
                                                 <constraint firstItem="L2y-FG-XN4" firstAttribute="top" secondItem="mW8-1v-7qu" secondAttribute="top" id="HSm-Tr-d7D"/>
                                                 <constraint firstItem="7gu-xg-R1B" firstAttribute="centerY" secondItem="mW8-1v-7qu" secondAttribute="centerY" id="JHs-ga-uCq"/>
@@ -286,10 +292,12 @@
         </view>
     </objects>
     <resources>
-        <image name="Add.png" width="100" height="100"/>
-        <image name="Support.png" width="100" height="100"/>
+        <image name="addanother.png" width="50" height="50"/>
+        <image name="addbikeblue.png" width="50" height="50"/>
         <image name="bike.jpg" width="800" height="600"/>
-        <image name="dollar.png" width="128" height="128"/>
-        <image name="thumbs-up-hand.png" width="128" height="128"/>
+        <image name="camera.png" width="57" height="51"/>
+        <image name="payoff.png" width="40" height="51"/>
+        <image name="remove.png" width="50" height="50"/>
+        <image name="vincheck.png" width="83" height="51"/>
     </resources>
 </document>

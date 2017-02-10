@@ -18,13 +18,13 @@
     if (self) {
         self.font = [UIFont boldSystemFontOfSize:15.0f];
         
-        UIImageView *popoverView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sliderlabel.png"]];
+        UIImageView *popoverView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"miniboxslider.png"]];
         [self addSubview:popoverView];
         
         textLabel = [[UILabel alloc] init];
         textLabel.backgroundColor = [UIColor clearColor];
         textLabel.font = self.font;
-        textLabel.textColor = [UIColor colorWithWhite:1.0f alpha:0.7];
+        textLabel.textColor = [UIColor blackColor];
         textLabel.text = self.text;
         textLabel.textAlignment = NSTextAlignmentCenter;
         textLabel.frame = CGRectMake(0, -2.0f, popoverView.frame.size.width, popoverView.frame.size.height);

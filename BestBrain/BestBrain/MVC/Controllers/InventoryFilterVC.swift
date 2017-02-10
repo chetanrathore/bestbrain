@@ -47,7 +47,11 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setInterface()
+       
+    }
+    
+    override func viewDidLayoutSubviews() {
+         setInterface()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,19 +67,27 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
 
     func setInterface() {
         let sliderLine1 = UIView(frame: swPaymentRange.frame)
-        //        sliderLine1.layer.backgroundColor = UIColor.red.cgColor
+                sliderLine1.layer.backgroundColor = UIColor.clear.cgColor
         sliderLine1.autoresizingMask = UIViewAutoresizing.flexibleWidth
         vwPayment.addSubview(sliderLine1)
-        swPaymentRange.removeFromSuperview()
-        vwPayment.addSubview(swPaymentRange)
+        let imgLine = UIImageView()
+        imgLine.frame = CGRect(x: 0, y: sliderLine1.frame.height/2-2, width: sliderLine1.frame.width, height: 5)
+        imgLine.autoresizingMask = UIViewAutoresizing.flexibleWidth
+        imgLine.image = UIImage(named: "line.png")
         
+        sliderLine1.addSubview(imgLine)
+        vwPayment.bringSubview(toFront: swPaymentRange)
         let sliderLine2 = UIView(frame: swPriceRange.frame)
-        //        sliderLine2.layer.backgroundColor = UIColor.red.cgColor
+        sliderLine2.layer.backgroundColor = UIColor.clear.cgColor
         sliderLine2.autoresizingMask = UIViewAutoresizing.flexibleWidth
         
         vwPrice.addSubview(sliderLine2)
-        swPriceRange.removeFromSuperview()
-        vwPrice.addSubview(swPriceRange)
+         let imgLine2 = UIImageView()
+        imgLine2.frame = CGRect(x: 0, y: sliderLine2.frame.height/2-2, width: sliderLine2.frame.width, height: 5)
+        imgLine2.autoresizingMask = UIViewAutoresizing.flexibleWidth
+        imgLine2.image = UIImage(named: "line.png")
+        sliderLine2.addSubview(imgLine2)
+        vwPrice.bringSubview(toFront: swPriceRange)
         vwBackground.gradientLayer()
         
     }
