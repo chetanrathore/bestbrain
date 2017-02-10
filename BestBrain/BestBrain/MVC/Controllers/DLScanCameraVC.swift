@@ -2,7 +2,7 @@
 //  DLScanCameraVC.swift
 //  BestBrain
 //
-//  Created by Developer49 on 2/6/17.
+//  Created by anuradha on 2/6/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 

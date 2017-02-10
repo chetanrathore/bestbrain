@@ -2,7 +2,7 @@
 //  InventoryDetailWithMenuVC.swift
 //  BestBrain
 //
-//  Created by LaNet on 2/6/17.
+//  Created by sparth on 2/6/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 
