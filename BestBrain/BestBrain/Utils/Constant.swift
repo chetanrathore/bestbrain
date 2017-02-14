@@ -69,4 +69,3 @@ class callingStatus{
         self.Request_Url = Request_Url
     }
 }
-

@@ -136,15 +136,23 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         
         imgUser.layer.cornerRadius = imgUser.frame.size.width/2
 
-        vwDesiredVehicle.frame = CGRect(x: 20, y: (Screenheight/2)-225, width: ScreenWidth - 40, height: 450)
+        if ((Screenheight/2)-230) < 64{
+            vwDesiredVehicle.frame = CGRect(x: 20, y: 65, width: ScreenWidth - 40, height: 450)
+            vwCreditInfo.frame = CGRect(x: 20, y: 65, width: ScreenWidth - 40, height: 460)
+            self.vwAddTrade.frame = CGRect(x: 20, y: 65, width: ScreenWidth - 40, height: self.vwAddTrade.frame.size.height)
+
+        }else{
+            vwDesiredVehicle.frame = CGRect(x: 20, y: (Screenheight/2)-225, width: ScreenWidth - 40, height: 450)
+            vwCreditInfo.frame = CGRect(x: 20, y: (Screenheight/2)-230, width: ScreenWidth - 40, height: 460)
+            self.vwAddTrade.frame = CGRect(x: 20, y: self.view.center.y - self.vwAddTrade.frame.size.height/2, width: ScreenWidth - 40, height: self.vwAddTrade.frame.size.height)
+
+        }
         vwMatch.frame = CGRect(x: (ScreenWidth/2)-155, y: (Screenheight/2)-95, width: 310, height: 190)
 
-        self.vwAddTrade.frame = CGRect(x: 20, y: self.view.center.y - self.vwAddTrade.frame.size.height/2, width: ScreenWidth - 40, height: self.vwAddTrade.frame.size.height)
         vwMatch.layer.borderColor = UIColor.lightGray.cgColor
         vwMatch.layer.borderWidth = 1.0
         vwMatch.layer.cornerRadius = 7
         
-        vwCreditInfo.frame = CGRect(x: 20, y: (Screenheight/2)-230, width: ScreenWidth - 40, height: 460)
         vwCreditInfo.layer.borderColor = UIColor.lightGray.cgColor
         vwCreditInfo.layer.borderWidth = 1.0
 
@@ -163,6 +171,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return (allItems[section].collapsed!) ? 0 : allItems[section].items
     }
     
@@ -210,7 +219,9 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         let imgPlus = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
         imgPlus.image = UIImage(named: "plusFilledGreen.png")
         let imgArrow = UIImageView(frame: CGRect(x: headerView.frame.size.width-30, y: 15, width: 20, height: 20))
-        imgArrow.image = UIImage(named: "rightArrow.png")
+        let imgName = (allItems[section].collapsed!) ? "rightArrow" : "downArrow"
+
+        imgArrow.image = UIImage(named: imgName)
         
         lblHeader.text = allItems[section].name
         lblHeader.textColor = UIColor(red: 57/255, green: 149/255, blue: 242/255, alpha: 1.0)
@@ -369,6 +380,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     // MARK:- Custom Method(s)
     func handleViews(_ sender: UIButton){
         if sender.tag == 101{
+            
             generateSubView(childView: vwCreditInfo)
         }else if sender.tag == 102{
             
