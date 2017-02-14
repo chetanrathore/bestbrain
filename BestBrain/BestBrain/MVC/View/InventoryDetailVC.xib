@@ -21,6 +21,7 @@
                 <outlet property="btnRemove" destination="d4j-XF-tnD" id="Vmv-DR-T64"/>
                 <outlet property="constImageHeight" destination="JrD-WR-w0g" id="dja-Oz-Nyd"/>
                 <outlet property="constVWScrollHeight" destination="Vvk-k0-YgR" id="TFZ-xP-qNy"/>
+                <outlet property="cvcImageGallary" destination="VrH-HO-kl9" id="Yx2-5e-bzT"/>
                 <outlet property="imgInventory" destination="nfr-5P-qqQ" id="GaY-4P-erQ"/>
                 <outlet property="scrollMain" destination="pEo-7I-CSf" id="biq-uu-8cB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="jZT-Fa-tFU"/>
@@ -302,16 +303,32 @@
                                         <constraint firstItem="oNR-WJ-g3l" firstAttribute="top" secondItem="0Vl-En-lRE" secondAttribute="top" constant="278" id="z4k-vk-Oqa"/>
                                     </constraints>
                                 </view>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VrH-HO-kl9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="235"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="235" id="nfz-pV-ew5"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="emO-Vk-v5o">
+                                        <size key="itemSize" width="320" height="235"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="0Vl-En-lRE" secondAttribute="bottom" id="HSz-zQ-9s2"/>
+                                <constraint firstItem="VrH-HO-kl9" firstAttribute="top" secondItem="Bk5-ve-GLZ" secondAttribute="top" id="Qzb-7Z-meZ"/>
                                 <constraint firstAttribute="trailing" secondItem="0Vl-En-lRE" secondAttribute="trailing" id="S0b-b1-RIa"/>
                                 <constraint firstAttribute="height" constant="603" id="Vvk-k0-YgR"/>
                                 <constraint firstItem="0Vl-En-lRE" firstAttribute="leading" secondItem="Bk5-ve-GLZ" secondAttribute="leading" id="ZXM-Qt-9NM"/>
+                                <constraint firstAttribute="trailing" secondItem="VrH-HO-kl9" secondAttribute="trailing" id="kQj-5E-pxS"/>
                                 <constraint firstItem="nfr-5P-qqQ" firstAttribute="leading" secondItem="Bk5-ve-GLZ" secondAttribute="leading" id="lcy-S3-Q8l"/>
                                 <constraint firstAttribute="trailing" secondItem="nfr-5P-qqQ" secondAttribute="trailing" id="ltJ-bJ-g0t"/>
                                 <constraint firstItem="nfr-5P-qqQ" firstAttribute="top" secondItem="Bk5-ve-GLZ" secondAttribute="top" id="obx-e9-Veh"/>
+                                <constraint firstItem="VrH-HO-kl9" firstAttribute="leading" secondItem="Bk5-ve-GLZ" secondAttribute="leading" id="uLB-0Z-HwL"/>
                                 <constraint firstItem="0Vl-En-lRE" firstAttribute="top" secondItem="nfr-5P-qqQ" secondAttribute="bottom" id="z4V-66-NbJ"/>
                             </constraints>
                         </view>
@@ -336,7 +353,7 @@
                 <constraint firstItem="pEo-7I-CSf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sbK-Q7-9uJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="32" y="95"/>
+            <point key="canvasLocation" x="-83" y="94"/>
         </view>
     </objects>
     <resources>
