@@ -8,7 +8,9 @@
 
 import UIKit
 
-class InventoryDetailVC: UIViewController {
+class InventoryDetailVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    @IBOutlet var cvcImageGallary: UICollectionView!
     
     @IBOutlet var btnBack: UIButton!
     
@@ -41,7 +43,7 @@ class InventoryDetailVC: UIViewController {
     @IBOutlet var constImageHeight: NSLayoutConstraint!
     
     @IBOutlet var constBtnSpacing: [NSLayoutConstraint]!
-
+    
     @IBOutlet var constMenuHeight: [NSLayoutConstraint]!
     
     var isFromInventory: Bool = true
@@ -49,6 +51,10 @@ class InventoryDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setInterface()
+        self.cvcImageGallary.dataSource = self
+        self.cvcImageGallary.delegate = self
+        
+        self.cvcImageGallary.register(UINib(nibName: "InventoryImageCell", bundle:nil), forCellWithReuseIdentifier: "InventoryImageCell")
         if isFromInventory {
             btnAddBike.isHidden = false
             //       vwOtherInfo.isHidden = false
@@ -83,7 +89,7 @@ class InventoryDetailVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         if UIDevice.current.userInterfaceIdiom == .pad {
-//            constVWBtnHeight.constant = 150
+            //            constVWBtnHeight.constant = 150
             constVWScrollHeight.constant = 1000
             constImageHeight.constant = 400
             //  constVWBottomHeight.constant = 600
@@ -117,8 +123,6 @@ class InventoryDetailVC: UIViewController {
             }
             btnAddAnother.titleEdgeInsets = UIEdgeInsets(top: 67, left: -55, bottom: 8, right: -5)
         }
-        
-        
         vwDetails.gradientLayer()
         vwDetails.bringSubview(toFront: vwMenu)
         vwDetails.bringSubview(toFront: vwInfo)
@@ -154,6 +158,26 @@ class InventoryDetailVC: UIViewController {
     }
     
     @IBAction func handleBtnAddBike(_ sender: UIButton) {
+    }
+    
+    // MARK:- Collectionview method(Image gallary)
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InventoryImageCell", for: indexPath)  as! InventoryImageCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView : UICollectionView,layout collectionViewLayout:UICollectionViewLayout,sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize {
+        let cellSize:CGSize = CGSize(width: ScreenWidth, height: self.cvcImageGallary.frame.height)
+        return cellSize
     }
     
     // MARK:- Custom methods
