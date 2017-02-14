@@ -24,9 +24,9 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet var vwSettings: UIView!
     @IBOutlet var tblSettings: UITableView!
     
-    var arrMenuItem = ["DLScan","deskLog","Inventory","customer","chat","quotes"]
+    var arrMenuItem = ["DLScan","deskLog","inventory","customer","chat","quotes"]
     var arrMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
-    var arrTblMenuItem = ["DLScan","deskLog","Inventory","customer","chat","quotes"]
+    var arrTblMenuItem = ["DLScan","deskLog","inventory","customer","chat","quotes"]
     var arrTblMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes"]
     var transperentView = UIView()
     let locManager = CLLocationManager()

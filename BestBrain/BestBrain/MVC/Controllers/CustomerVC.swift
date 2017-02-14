@@ -13,8 +13,10 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     @IBOutlet var txtSearchBar: UISearchBar!
     @IBOutlet var tblCustomer: UITableView!
     @IBOutlet var btnNewCustomer: UIButton!
-    @IBOutlet var segment: UISegmentedControl!
-    
+    @IBOutlet var btnAll: UIButton!
+    @IBOutlet var btnActive: UIButton!
+    @IBOutlet var btnInactive: UIButton!
+
     var arrCustomer = [Customer]()
     var arrFilteredCustomers = [Customer]()
     var isSearch: Bool = false
@@ -54,13 +56,8 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
 
-        self.segment.removeBorders()
-        self.segment.setBackgroundImage(UIImage(named: "wbox"), for: .normal, barMetrics: .default)
-        
-        //        self.segment.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
-        self.segment.setBackgroundImage(UIImage(named: "bbox"), for: .selected, barMetrics: .default)
         
         if !(txtSearchBar.text?.isEmpty)! {
             isSearch = true
@@ -144,13 +141,13 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         return [more]
     }
     
-    // MARK:- Segment Control Method
     
     
     // MARK:- Search Bar Delegate(s)
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         isSearch = true
+        self.txtSearchBar.showsCancelButton = true
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -171,9 +168,15 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
             isSearch = false
             tblCustomer.reloadData()
         }
+        self.txtSearchBar.showsCancelButton = false
+        self.txtSearchBar.endEditing(true)
     }
     
     // MARK:- Custom Method(s)
+    
+    func cancelBarButtonItemClicked() {
+        self.searchBarCancelButtonClicked(self.txtSearchBar)
+    }
     
     func filterCustomers(str: String) {
         let txt = str.lowercased()
@@ -213,6 +216,36 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         let customerDetailVC = NewContactVC(nibName: "NewContactVC", bundle: nil)
         self.navigationController!.pushViewController(customerDetailVC, animated: true)
     }
+    
+    @IBAction func handleBtnAll(_ sender: Any) {
+        self.btnAll.setBackgroundImage(UIImage(named: "bbox"), for: .normal)
+        self.btnActive.setBackgroundImage(UIImage(named: "wbox"), for: .normal)
+        self.btnInactive.setBackgroundImage(UIImage(named: "wbox"), for: .normal)
+        self.btnAll.setTitleColor(UIColor.white, for: .normal)
+        self.btnActive.setTitleColor(UIColor.lightGray, for: .normal)
+        self.btnInactive.setTitleColor(UIColor.lightGray, for: .normal)
+
+    }
+    
+    @IBAction func handleBtnActive(_ sender: Any) {
+        self.btnAll.setBackgroundImage(UIImage(named: "wbox"), for: .normal)
+        self.btnActive.setBackgroundImage(UIImage(named: "bbox"), for: .normal)
+        self.btnInactive.setBackgroundImage(UIImage(named: "wbox"), for: .normal)
+        self.btnAll.setTitleColor(UIColor.lightGray, for: .normal)
+        self.btnActive.setTitleColor(UIColor.white, for: .normal)
+        self.btnInactive.setTitleColor(UIColor.lightGray, for: .normal)
+
+    }
+    
+    @IBAction func handleBtnInactive(_ sender: Any) {
+        self.btnAll.setBackgroundImage(UIImage(named: "wbox"), for: .normal)
+        self.btnActive.setBackgroundImage(UIImage(named: "wbox"), for: .normal)
+        self.btnInactive.setBackgroundImage(UIImage(named: "bbox"), for: .normal)
+        self.btnAll.setTitleColor(UIColor.lightGray, for: .normal)
+        self.btnActive.setTitleColor(UIColor.lightGray, for: .normal)
+        self.btnInactive.setTitleColor(UIColor.white, for: .normal)
+    }
+    
     
     
 }
