@@ -42,14 +42,24 @@ class SettingsCell: UITableViewCell {
     }
     
     @IBAction func handleBtnBox(_ sender: UIButton) {
-        if self.displayItem {
-            self.displayItem = false
-            self.btnBox.setImage(UIImage(named: "Checked"), for: .normal)
-            Celldelegate.SettingsDidSelectTableViewCell?(tableView: self.tableView, didSelectRowAtIndexPath: self.indexPath, item: self.itemName, icon: self.itemIcon, type : "Checked")
-        } else {
-            self.displayItem = true
-            self.btnBox.setImage(UIImage(named: "Unchecked"), for: .normal)
-            Celldelegate.SettingsDidSelectTableViewCell?(tableView: self.tableView, didSelectRowAtIndexPath: self.indexPath, item: self.itemName, icon: self.itemIcon, type : "Unchecked")
+        if sender.tag == 1 {
+            if self.displayItem {
+                self.displayItem = false
+                self.btnBox.setImage(UIImage(named: "Checked"), for: .normal)
+                Celldelegate.SettingsDidSelectTableViewCell?(tableView: self.tableView, didSelectRowAtIndexPath: self.indexPath, item: self.itemName, icon: self.itemIcon, type : "Checked")
+            } else {
+                self.displayItem = true
+                self.btnBox.setImage(UIImage(named: "Unchecked"), for: .normal)
+                Celldelegate.SettingsDidSelectTableViewCell?(tableView: self.tableView, didSelectRowAtIndexPath: self.indexPath, item: self.itemName, icon: self.itemIcon, type : "Unchecked")
+            }
+        } else if sender.tag == 2 {
+            if self.displayItem {
+                self.displayItem = false
+                self.btnBox.setImage(UIImage(named: "Checked"), for: .normal)
+            } else {
+                self.displayItem = true
+                self.btnBox.setImage(UIImage(named: "Unchecked"), for: .normal)
+            }
         }
     }
  }

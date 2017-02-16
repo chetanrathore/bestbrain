@@ -24,5 +24,5 @@ class Customer {
             self.lastName = lastName
             self.ciry = city
     }
-
 }
+

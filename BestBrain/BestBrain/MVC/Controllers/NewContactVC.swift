@@ -114,14 +114,14 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         tblAddItems.register(UINib(nibName: "addItemCell", bundle: nil), forCellReuseIdentifier: "addItemCell")
         tblAddItems.register(UINib(nibName: "PreferredContentCell", bundle: nil), forCellReuseIdentifier: "PreferredContentCell")
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-       
-       
-
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
        // NotificationCenter.default.removeObserver(self)
     }
+    
     override func viewDidLayoutSubviews() {
         for vw in vwTextFields{
             vw.layer.borderWidth = 1
@@ -530,6 +530,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     // MARK:- IBOutlet Method(s)
     
     @IBAction func handleBtnLinkToCustomer(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "relationLinked"), object: true)
         self.navigationController?.popViewController(animated: true)
     }
     

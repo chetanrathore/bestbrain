@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-S4-LaJ">
@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXG-b2-M1R">
-                        <rect key="frame" x="282" y="9.5" width="30" height="30"/>
+                        <rect key="frame" x="282" y="9" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="NSf-z2-4Ky"/>
                             <constraint firstAttribute="height" constant="30" id="xHa-Xg-Q0A"/>
@@ -63,7 +63,7 @@
                 <outlet property="imgItem" destination="xb7-S4-LaJ" id="aOr-v8-ZKv"/>
                 <outlet property="lblItem" destination="SiC-lt-dge" id="yEP-x8-WOQ"/>
             </connections>
-            <point key="canvasLocation" x="272" y="26"/>
+            <point key="canvasLocation" x="-30" y="-23"/>
         </tableViewCell>
     </objects>
     <resources>

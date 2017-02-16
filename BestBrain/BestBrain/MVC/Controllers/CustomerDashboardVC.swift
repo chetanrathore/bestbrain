@@ -117,6 +117,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as! SettingsCell
+        cell.btnBox.tag = 1
         cell.setUpCustom(tableView: tableView, indexPath: indexPath, itemName: self.arrMenuLbl[indexPath.row], itemIcon: self.arrMenuItem[indexPath.row], CustomDelegate: self)
         let iconImg = UIImageView(image: UIImage(named: self.arrMenuItem[indexPath.row]))
         cell.imgItem.image = iconColor(icon: iconImg)
