@@ -13,15 +13,13 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var txtPassword: UITextField!
-    @IBOutlet weak var vwUserName: UIView!
-    @IBOutlet weak var vwPassword: UIView!
     @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.txtUsername.delegate=self;
-        self.txtPassword.delegate=self;
+        self.txtUsername.delegate=self
+        self.txtPassword.delegate=self
         
         btnLogin.layer.shadowColor = UIColor.darkGray.cgColor
         btnLogin.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
@@ -35,7 +33,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func handleLoginBtn(_ sender: Any) {
-        let vc = DashboardVC(nibName: "DashboardVC", bundle: nil)
+        let vc = CustomerDashboardVC(nibName: "CustomerDashboardVC", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -44,19 +42,28 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
-        if textField.tag==1
-        {
-            vwUserName.layer.masksToBounds = false
-            vwUserName.layer.shadowRadius = 3.0
-            vwUserName.layer.shadowColor = UIColor.darkGray.cgColor
-            vwUserName.layer.shadowOffset =  CGSize(width: 1.0, height: 1.0)
-            vwUserName.layer.shadowOpacity = 1.0
-        }else{
-            vwPassword.layer.masksToBounds = false
-            vwPassword.layer.shadowRadius = 3.0
-            vwPassword.layer.shadowColor = UIColor.darkGray.cgColor
-            vwPassword.layer.shadowOffset =  CGSize(width: 1.0, height: 1.0)
-            vwPassword.layer.shadowOpacity = 1.0
+        if textField == self.txtUsername{
+            txtUsername.layer.masksToBounds = false
+            txtUsername.layer.shadowRadius = 3.0
+            txtUsername.layer.shadowColor = UIColor.darkGray.cgColor
+            txtUsername.layer.shadowOffset =  CGSize(width: 1.0, height: 1.0)
+            txtUsername.layer.shadowOpacity = 1.0
+            
+            txtPassword.layer.shadowRadius = 3.0
+            txtPassword.layer.shadowColor = UIColor.clear.cgColor
+            txtPassword.layer.shadowOffset =  CGSize(width: 1.0, height: 1.0)
+            txtPassword.layer.shadowOpacity = 1.0
+        } else {
+            txtPassword.layer.masksToBounds = false
+            txtPassword.layer.shadowRadius = 3.0
+            txtPassword.layer.shadowColor = UIColor.darkGray.cgColor
+            txtPassword.layer.shadowOffset =  CGSize(width: 1.0, height: 1.0)
+            txtPassword.layer.shadowOpacity = 1.0
+            
+            txtUsername.layer.shadowRadius = 3.0
+            txtUsername.layer.shadowColor = UIColor.clear.cgColor
+            txtUsername.layer.shadowOffset =  CGSize(width: 1.0, height: 1.0)
+            txtUsername.layer.shadowOpacity = 1.0
         }
     }
     

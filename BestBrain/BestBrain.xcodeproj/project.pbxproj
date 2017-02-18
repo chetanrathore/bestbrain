@@ -334,6 +334,7 @@
 		7B7548231E41FE150025A087 /* windy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479D1E41FE150025A087 /* windy.png */; };
 		7B7548241E41FE150025A087 /* windy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479E1E41FE150025A087 /* windy@2x.png */; };
 		7B7548251E41FE150025A087 /* windy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479F1E41FE150025A087 /* windy@3x.png */; };
+		7B79AAC31E572A1700A9A13A /* Logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B79AAC21E572A1700A9A13A /* Logout.png */; };
 		7B7E46161E51897400E41F7B /* addanother@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FC1E51897400E41F7B /* addanother@2x.png */; };
 		7B7E46171E51897400E41F7B /* bag@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FD1E51897400E41F7B /* bag@1x.png */; };
 		7B7E46181E51897400E41F7B /* bag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FE1E51897400E41F7B /* bag@2x.png */; };
@@ -382,6 +383,18 @@
 		7BA56BCC1E4B4972007F3525 /* InventoryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */; };
 		7BA56BCD1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */; };
 		7BA56BCE1E4B4972007F3525 /* SpeedoMeterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */; };
+		7BB008CE1E5714800038A19F /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008CC1E5714800038A19F /* SideMenuVC.swift */; };
+		7BB008D11E57149C0038A19F /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008D01E57149C0038A19F /* SideMenuVC.xib */; };
+		7BB008D41E5719810038A19F /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008D21E5719810038A19F /* SideMenuCell.swift */; };
+		7BB008D51E5719810038A19F /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008D31E5719810038A19F /* SideMenuCell.xib */; };
+		7BB008DE1E5724A50038A19F /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008D71E5724A50038A19F /* AnimatedMenuButton.swift */; };
+		7BB008DF1E5724A50038A19F /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008D81E5724A50038A19F /* DrawerBarButtonItem.swift */; };
+		7BB008E01E5724A50038A19F /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008DA1E5724A50038A19F /* DrawerController.swift */; };
+		7BB008E11E5724A50038A19F /* DrawerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008DB1E5724A50038A19F /* DrawerSegue.swift */; };
+		7BB008E21E5724A50038A19F /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008DC1E5724A50038A19F /* DrawerVisualState.swift */; };
+		7BB008E31E5724A50038A19F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008DD1E5724A50038A19F /* Info.plist */; };
+		7BEBF9451E55C4A70045477B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEBF9431E55C4A70045477B /* ProfileVC.swift */; };
+		7BEBF9481E55C4DF0045477B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEBF9471E55C4DF0045477B /* ProfileVC.xib */; };
 		B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B3D761E24BFE800FF0A20 /* AppDelegate.swift */; };
 		B80B3D7E1E24BFE800FF0A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80B3D7D1E24BFE800FF0A20 /* Assets.xcassets */; };
 		B80B3D811E24BFE800FF0A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80B3D7F1E24BFE800FF0A20 /* LaunchScreen.storyboard */; };
@@ -749,6 +762,7 @@
 		7B75479D1E41FE150025A087 /* windy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windy.png; sourceTree = "<group>"; };
 		7B75479E1E41FE150025A087 /* windy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windy@2x.png"; sourceTree = "<group>"; };
 		7B75479F1E41FE150025A087 /* windy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windy@3x.png"; sourceTree = "<group>"; };
+		7B79AAC21E572A1700A9A13A /* Logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logout.png; sourceTree = "<group>"; };
 		7B7E45FC1E51897400E41F7B /* addanother@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addanother@2x.png"; sourceTree = "<group>"; };
 		7B7E45FD1E51897400E41F7B /* bag@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@1x.png"; sourceTree = "<group>"; };
 		7B7E45FE1E51897400E41F7B /* bag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@2x.png"; sourceTree = "<group>"; };
@@ -799,6 +813,19 @@
 		7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailVC.xib; sourceTree = "<group>"; };
 		7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailWithMenuVC.xib; sourceTree = "<group>"; };
 		7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedoMeterVC.xib; sourceTree = "<group>"; };
+		7BB008CC1E5714800038A19F /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		7BB008D01E57149C0038A19F /* SideMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
+		7BB008D21E5719810038A19F /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		7BB008D31E5719810038A19F /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
+		7BB008D71E5724A50038A19F /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMenuButton.swift; sourceTree = "<group>"; };
+		7BB008D81E5724A50038A19F /* DrawerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerBarButtonItem.swift; sourceTree = "<group>"; };
+		7BB008D91E5724A50038A19F /* DrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerController.h; sourceTree = "<group>"; };
+		7BB008DA1E5724A50038A19F /* DrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerController.swift; sourceTree = "<group>"; };
+		7BB008DB1E5724A50038A19F /* DrawerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerSegue.swift; sourceTree = "<group>"; };
+		7BB008DC1E5724A50038A19F /* DrawerVisualState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerVisualState.swift; sourceTree = "<group>"; };
+		7BB008DD1E5724A50038A19F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BEBF9431E55C4A70045477B /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		7BEBF9471E55C4DF0045477B /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		B80B3D731E24BFE800FF0A20 /* BestBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80B3D761E24BFE800FF0A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B80B3D7D1E24BFE800FF0A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -853,6 +880,7 @@
 		0C0C55DE1E4068F10085CFD1 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7BB008D61E5724A50038A19F /* DrawerController */,
 				7B920CAF1E489617002BFEF2 /* ESPSignature */,
 				0C0C55F01E4088D80085CFD1 /* IQKeyboardManager */,
 				0C0C55DF1E4068F10085CFD1 /* CustomSlider */,
@@ -972,6 +1000,7 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7B79AAC21E572A1700A9A13A /* Logout.png */,
 				7B2DF89A1E55BD4D00184229 /* adduser@1x.png */,
 				7B2DF89B1E55BD4D00184229 /* adduser@2x.png */,
 				7B2DF89C1E55BD4D00184229 /* adduser@3x.png */,
@@ -1306,6 +1335,8 @@
 				300267151E4305B700682E9E /* DLScanVC.swift */,
 				0C6EB0EB1E499F4F00224EB1 /* CustomerVC.swift */,
 				0CE735951E4B2078008FE4C7 /* PossibleMatchesVC.swift */,
+				7BEBF9431E55C4A70045477B /* ProfileVC.swift */,
+				7BB008CC1E5714800038A19F /* SideMenuVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1313,6 +1344,8 @@
 		7B4F5EBF1E24CA8E0086B359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7BB008D01E57149C0038A19F /* SideMenuVC.xib */,
+				7BEBF9471E55C4DF0045477B /* ProfileVC.xib */,
 				7B3365AD1E52DBB3003B1898 /* CustomerVC.xib */,
 				7B7E46331E51A2CD00E41F7B /* SpeedDemoVC.xib */,
 				0C5021D91E4C64CD000AFF14 /* AppraisalVC.xib */,
@@ -1357,6 +1390,8 @@
 				0CE735981E4B2E4C008FE4C7 /* MatchesDetailCell.xib */,
 				7B3365AF1E5329C3003B1898 /* RelationCell.swift */,
 				7B3365B01E5329C3003B1898 /* RelationCell.xib */,
+				7BB008D21E5719810038A19F /* SideMenuCell.swift */,
+				7BB008D31E5719810038A19F /* SideMenuCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1378,6 +1413,20 @@
 				7B920CB11E48962D002BFEF2 /* EPSignatureView.swift */,
 			);
 			path = ESPSignature;
+			sourceTree = "<group>";
+		};
+		7BB008D61E5724A50038A19F /* DrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				7BB008D71E5724A50038A19F /* AnimatedMenuButton.swift */,
+				7BB008D81E5724A50038A19F /* DrawerBarButtonItem.swift */,
+				7BB008D91E5724A50038A19F /* DrawerController.h */,
+				7BB008DA1E5724A50038A19F /* DrawerController.swift */,
+				7BB008DB1E5724A50038A19F /* DrawerSegue.swift */,
+				7BB008DC1E5724A50038A19F /* DrawerVisualState.swift */,
+				7BB008DD1E5724A50038A19F /* Info.plist */,
+			);
+			path = DrawerController;
 			sourceTree = "<group>";
 		};
 		B80B3D6A1E24BFE700FF0A20 = {
@@ -1592,6 +1641,7 @@
 				7B2DF89D1E55BD4D00184229 /* adduser@1x.png in Resources */,
 				B8134D331E262FDA00487406 /* b_desiredvehicle.png in Resources */,
 				7B7548011E41FE150025A087 /* scattered_snow_showers@2x.png in Resources */,
+				7BEBF9481E55C4DF0045477B /* ProfileVC.xib in Resources */,
 				0C0C55DD1E4059E30085CFD1 /* barcode.png in Resources */,
 				7B7548151E41FE150025A087 /* snow@2x.png in Resources */,
 				7B7548251E41FE150025A087 /* windy@3x.png in Resources */,
@@ -1649,6 +1699,7 @@
 				7B7E46241E51897400E41F7B /* id@1x.png in Resources */,
 				0CD3D3DE1E4DADB10028BEE5 /* line@3x.png in Resources */,
 				7B3BB0C01E49F8FC00D436F5 /* QRImage.png in Resources */,
+				7B79AAC31E572A1700A9A13A /* Logout.png in Resources */,
 				7B3BB0BE1E49F8FC00D436F5 /* flash.png in Resources */,
 				7B7547B01E41FE150025A087 /* Routes.png in Resources */,
 				7B7547D51E41FE150025A087 /* haze@3x.png in Resources */,
@@ -1790,6 +1841,7 @@
 				7B3365B21E5329C3003B1898 /* RelationCell.xib in Resources */,
 				7B7547A11E41FE150025A087 /* Checked.png in Resources */,
 				7B7547E91E41FE150025A087 /* mixed_rain_hail@2x.png in Resources */,
+				7BB008D11E57149C0038A19F /* SideMenuVC.xib in Resources */,
 				7B7547F71E41FE150025A087 /* partly_cloudy_(night).png in Resources */,
 				7B3BB0BD1E49F8FC00D436F5 /* error.png in Resources */,
 				7B128A411E4C97CF002AA386 /* addGreen@3x.png in Resources */,
@@ -1842,6 +1894,7 @@
 				0CD3D4051E4DB8860028BEE5 /* addbikeblue@3x.png in Resources */,
 				7B7547D71E41FE150025A087 /* heavy_snow@2x.png in Resources */,
 				0CD3D3F11E4DB6110028BEE5 /* emailinfo@1x.png in Resources */,
+				7BB008E31E5724A50038A19F /* Info.plist in Resources */,
 				7B7547F31E41FE150025A087 /* mostly_cloudy_(night)@3x.png in Resources */,
 				0CD3D4031E4DB8860028BEE5 /* addbikeblue@1x.png in Resources */,
 				0CD3D3EE1E4DB6110028BEE5 /* alert@1x.png in Resources */,
@@ -1856,6 +1909,7 @@
 				7B7547AB1E41FE150025A087 /* health.png in Resources */,
 				7B7547BA1E41FE150025A087 /* clear_(night)@2x.png in Resources */,
 				7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */,
+				7BB008D51E5719810038A19F /* SideMenuCell.xib in Resources */,
 				7B128A3D1E4C97CF002AA386 /* addBlue@2x.png in Resources */,
 				7B7547E21E41FE150025A087 /* light_snow_showers.png in Resources */,
 				7B6F3DBB1E4A04CD0009377A /* QRImage.png in Resources */,
@@ -1905,14 +1959,19 @@
 				0C0C560C1E4088D80085CFD1 /* IQUIViewController+Additions.swift in Sources */,
 				0C0C55EC1E4069290085CFD1 /* ANPopoverView.m in Sources */,
 				0C6EB0EF1E49A13000224EB1 /* CustomerCell.swift in Sources */,
+				7BB008CE1E5714800038A19F /* SideMenuVC.swift in Sources */,
 				7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */,
 				7B3365B11E5329C3003B1898 /* RelationCell.swift in Sources */,
 				0C0C56111E4088D80085CFD1 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				0C8FB61A1E3F4817007B7E68 /* InventoryVC.swift in Sources */,
+				7BB008D41E5719810038A19F /* SideMenuCell.swift in Sources */,
 				0C0C560F1E4088D80085CFD1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				7BB008DE1E5724A50038A19F /* AnimatedMenuButton.swift in Sources */,
 				7B920CB41E48962D002BFEF2 /* EPSignatureView.swift in Sources */,
+				7BEBF9451E55C4A70045477B /* ProfileVC.swift in Sources */,
 				7B920CB31E48962D002BFEF2 /* EPExtensions.swift in Sources */,
 				7B920C9E1E487705002BFEF2 /* SpeedoMeterVC.swift in Sources */,
+				7BB008E01E5724A50038A19F /* DrawerController.swift in Sources */,
 				0C0C560D1E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift in Sources */,
 				0C5021D81E4C6453000AFF14 /* AppraisalVC.swift in Sources */,
 				7B75470F1E41FD600025A087 /* SettingsCell.swift in Sources */,
@@ -1922,6 +1981,7 @@
 				0C0C55EB1E4069290085CFD1 /* ANPopoverSlider.m in Sources */,
 				7B4F5ED11E24EA1F0086B359 /* Constant.swift in Sources */,
 				0C0C56151E4088D80085CFD1 /* IQTitleBarButtonItem.swift in Sources */,
+				7BB008DF1E5724A50038A19F /* DrawerBarButtonItem.swift in Sources */,
 				7B7547171E41FD8A0025A087 /* CustomerDashboardVC.swift in Sources */,
 				7BA56BC81E4B4964007F3525 /* InventoryDetailWithMenuVC.swift in Sources */,
 				0C0C56091E4088D80085CFD1 /* IQUIScrollView+Additions.swift in Sources */,
@@ -1929,6 +1989,7 @@
 				7B7547161E41FD8A0025A087 /* API_calling.swift in Sources */,
 				0C0C56141E4088D80085CFD1 /* IQPreviousNextView.swift in Sources */,
 				300267161E4305B700682E9E /* DLScanVC.swift in Sources */,
+				7BB008E11E5724A50038A19F /* DrawerSegue.swift in Sources */,
 				7B2595D01E4B3BD200DEC705 /* Customer.swift in Sources */,
 				0C0C560E1E4088D80085CFD1 /* IQKeyboardManagerConstants.swift in Sources */,
 				7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */,
@@ -1940,6 +2001,7 @@
 				0C0C560A1E4088D80085CFD1 /* IQUITextFieldView+Additions.swift in Sources */,
 				0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */,
 				0C0C56121E4088D80085CFD1 /* IQTextView.swift in Sources */,
+				7BB008E21E5724A50038A19F /* DrawerVisualState.swift in Sources */,
 				7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */,
 				7B128A251E4C9649002AA386 /* PreferredContentCell.swift in Sources */,
 				0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */,

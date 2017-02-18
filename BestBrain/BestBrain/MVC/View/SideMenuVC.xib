@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenuVC" customModule="BestBrain" customModuleProvider="target">
+            <connections>
+                <outlet property="btnProfile" destination="B1X-e2-LK0" id="bjW-ga-GNr"/>
+                <outlet property="tblDashboardMenu" destination="anV-2t-U6s" id="fRi-5I-j0i"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="anV-2t-U6s">
+                    <rect key="frame" x="0.0" y="246" width="375" height="421"/>
+                    <color key="backgroundColor" red="0.050980392156862744" green="0.38431372549019605" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="anV-2t-U6s" secondAttribute="height" multiplier="375:421" id="Llp-Ru-Oxr"/>
+                    </constraints>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1X-e2-LK0">
+                    <rect key="frame" x="112" y="53" width="150" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ThunderMountainlogo.png"/>
+                    <connections>
+                        <action selector="handleBtnProfile:" destination="-1" eventType="touchUpInside" id="wLa-d0-n8Y"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.050980392159999999" green="0.38431372549999998" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="anV-2t-U6s" secondAttribute="bottom" id="7Fx-KD-lsN"/>
+                <constraint firstItem="anV-2t-U6s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gsp-Su-Ey7"/>
+                <constraint firstAttribute="trailing" secondItem="anV-2t-U6s" secondAttribute="trailing" id="zzJ-Df-zEW"/>
+            </constraints>
+            <point key="canvasLocation" x="-6.5" y="-175.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ThunderMountainlogo.png" width="567" height="290"/>
+    </resources>
+</document>

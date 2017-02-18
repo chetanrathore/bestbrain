@@ -1,18 +1,18 @@
 //
-//  DesiredVehicleSelctionViewController.swift
+//  ProfileVC.swift
 //  BestBrain
 //
-//  Created by Suhani on 10/01/17.
+//  Created by Suhani on 16/02/17.
 //  Copyright © 2017 bestbrainLLC. All rights reserved.
 //
 
 import UIKit
 
-class DesiredVehicleSelctionViewController: UIViewController {
+class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Profile"
         // Do any additional setup after loading the view.
     }
 
@@ -22,7 +22,4 @@ class DesiredVehicleSelctionViewController: UIViewController {
     }
     
 
-    @IBAction func btnMenuClicked(_ sender: Any) {
-        let _ = navigationController?.popViewController(animated: true)
-    }
 }

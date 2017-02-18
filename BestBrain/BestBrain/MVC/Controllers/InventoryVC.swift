@@ -73,7 +73,8 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     @IBAction func handleBtnBack(_ sender: Any) {
-        self.navigationController!.popViewController(animated: true)
+        appDelegate.setupDrawer(centerVC: self)
+//        self.navigationController!.popViewController(animated: true)
     }
     
     
