@@ -186,6 +186,16 @@
 		7B3BB0C01E49F8FC00D436F5 /* QRImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */; };
 		7B3BB0C71E49F95600D436F5 /* DLScanCameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */; };
 		7B4090C81E4C4F9900244A59 /* homeScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B4090C71E4C4F9900244A59 /* homeScreen.png */; };
+		7B42FEB11E5B005400DE5D62 /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEAA1E5B005400DE5D62 /* AnimatedMenuButton.swift */; };
+		7B42FEB21E5B005400DE5D62 /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEAB1E5B005400DE5D62 /* DrawerBarButtonItem.swift */; };
+		7B42FEB31E5B005400DE5D62 /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEAD1E5B005400DE5D62 /* DrawerController.swift */; };
+		7B42FEB51E5B005400DE5D62 /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEAF1E5B005400DE5D62 /* DrawerVisualState.swift */; };
+		7B42FEB61E5B005400DE5D62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B42FEB01E5B005400DE5D62 /* Info.plist */; };
+		7B42FEB81E5B019A00DE5D62 /* DrawerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B42FEB71E5B019A00DE5D62 /* DrawerController.framework */; };
+		7B42FEBC1E5B1A3100DE5D62 /* LeftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEBA1E5B1A3100DE5D62 /* LeftVC.swift */; };
+		7B42FEBD1E5B1A3100DE5D62 /* LeftVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B42FEBB1E5B1A3100DE5D62 /* LeftVC.xib */; };
+		7B42FEC01E5B2A4500DE5D62 /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEBF1E5B2A4500DE5D62 /* SpeedDemoVC.m */; };
+		7B42FEC21E5B2A5D00DE5D62 /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B42FEC11E5B2A5D00DE5D62 /* SpeedDemoVC.xib */; };
 		7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */; };
 		7B4F5EC31E24CA8E0086B359 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */; };
 		7B4F5EC41E24CA8E0086B359 /* DashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */; };
@@ -361,10 +371,7 @@
 		7B7E462D1E51897400E41F7B /* phone1@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E46131E51897400E41F7B /* phone1@1x.png */; };
 		7B7E462E1E51897400E41F7B /* phone1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E46141E51897400E41F7B /* phone1@2x.png */; };
 		7B7E462F1E51897400E41F7B /* phone1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E46151E51897400E41F7B /* phone1@3x.png */; };
-		7B7E46321E51A2C300E41F7B /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7E46311E51A2C300E41F7B /* SpeedDemoVC.m */; };
-		7B7E46341E51A2CD00E41F7B /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E46331E51A2CD00E41F7B /* SpeedDemoVC.xib */; };
 		7B7E46361E51E54C00E41F7B /* inventory.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E46351E51E54B00E41F7B /* inventory.png */; };
-		7B920C9E1E487705002BFEF2 /* SpeedoMeterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920C9D1E487705002BFEF2 /* SpeedoMeterVC.swift */; };
 		7B920CA51E487B74002BFEF2 /* onlyPin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B920CA11E487B74002BFEF2 /* onlyPin.png */; };
 		7B920CA61E487B74002BFEF2 /* onlyPinSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B920CA21E487B74002BFEF2 /* onlyPinSmall.png */; };
 		7B920CA71E487B74002BFEF2 /* onlyRound.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B920CA31E487B74002BFEF2 /* onlyRound.png */; };
@@ -382,17 +389,10 @@
 		7BA56BC81E4B4964007F3525 /* InventoryDetailWithMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56BC61E4B4964007F3525 /* InventoryDetailWithMenuVC.swift */; };
 		7BA56BCC1E4B4972007F3525 /* InventoryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */; };
 		7BA56BCD1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */; };
-		7BA56BCE1E4B4972007F3525 /* SpeedoMeterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */; };
 		7BB008CE1E5714800038A19F /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008CC1E5714800038A19F /* SideMenuVC.swift */; };
 		7BB008D11E57149C0038A19F /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008D01E57149C0038A19F /* SideMenuVC.xib */; };
 		7BB008D41E5719810038A19F /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008D21E5719810038A19F /* SideMenuCell.swift */; };
 		7BB008D51E5719810038A19F /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008D31E5719810038A19F /* SideMenuCell.xib */; };
-		7BB008DE1E5724A50038A19F /* AnimatedMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008D71E5724A50038A19F /* AnimatedMenuButton.swift */; };
-		7BB008DF1E5724A50038A19F /* DrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008D81E5724A50038A19F /* DrawerBarButtonItem.swift */; };
-		7BB008E01E5724A50038A19F /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008DA1E5724A50038A19F /* DrawerController.swift */; };
-		7BB008E11E5724A50038A19F /* DrawerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008DB1E5724A50038A19F /* DrawerSegue.swift */; };
-		7BB008E21E5724A50038A19F /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008DC1E5724A50038A19F /* DrawerVisualState.swift */; };
-		7BB008E31E5724A50038A19F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008DD1E5724A50038A19F /* Info.plist */; };
 		7BEBF9451E55C4A70045477B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEBF9431E55C4A70045477B /* ProfileVC.swift */; };
 		7BEBF9481E55C4DF0045477B /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEBF9471E55C4DF0045477B /* ProfileVC.xib */; };
 		B80B3D771E24BFE800FF0A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80B3D761E24BFE800FF0A20 /* AppDelegate.swift */; };
@@ -612,6 +612,18 @@
 		7B3BB0BA1E49F8FC00D436F5 /* QRImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRImage.png; sourceTree = "<group>"; };
 		7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanCameraVC.xib; sourceTree = "<group>"; };
 		7B4090C71E4C4F9900244A59 /* homeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeScreen.png; sourceTree = "<group>"; };
+		7B42FEAA1E5B005400DE5D62 /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMenuButton.swift; sourceTree = "<group>"; };
+		7B42FEAB1E5B005400DE5D62 /* DrawerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerBarButtonItem.swift; sourceTree = "<group>"; };
+		7B42FEAC1E5B005400DE5D62 /* DrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerController.h; sourceTree = "<group>"; };
+		7B42FEAD1E5B005400DE5D62 /* DrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerController.swift; sourceTree = "<group>"; };
+		7B42FEAF1E5B005400DE5D62 /* DrawerVisualState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerVisualState.swift; sourceTree = "<group>"; };
+		7B42FEB01E5B005400DE5D62 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B42FEB71E5B019A00DE5D62 /* DrawerController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DrawerController.framework; sourceTree = "<group>"; };
+		7B42FEBA1E5B1A3100DE5D62 /* LeftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftVC.swift; sourceTree = "<group>"; };
+		7B42FEBB1E5B1A3100DE5D62 /* LeftVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftVC.xib; sourceTree = "<group>"; };
+		7B42FEBE1E5B2A4500DE5D62 /* SpeedDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDemoVC.h; sourceTree = "<group>"; };
+		7B42FEBF1E5B2A4500DE5D62 /* SpeedDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDemoVC.m; sourceTree = "<group>"; };
+		7B42FEC11E5B2A5D00DE5D62 /* SpeedDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedDemoVC.xib; sourceTree = "<group>"; };
 		7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardVC.xib; sourceTree = "<group>"; };
@@ -623,8 +635,6 @@
 		7B6F3DB31E4A04CD0009377A /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
 		7B6F3DB41E4A04CD0009377A /* id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "id-card.png"; sourceTree = "<group>"; };
 		7B6F3DB51E4A04CD0009377A /* QRImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRImage.png; sourceTree = "<group>"; };
-		7B6F3DB61E4A04CD0009377A /* ThunderMountainHDNoSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainHDNoSky.png; sourceTree = "<group>"; };
-		7B6F3DB71E4A04CD0009377A /* ThunderMountainlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainlogo.png; sourceTree = "<group>"; };
 		7B6F3DC71E4A0A810009377A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7B6F3DC91E4A10820009377A /* dollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar.png; sourceTree = "<group>"; };
 		7B6F3DCA1E4A10820009377A /* photo-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-camera.png"; sourceTree = "<group>"; };
@@ -789,11 +799,7 @@
 		7B7E46131E51897400E41F7B /* phone1@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1@1x.png"; sourceTree = "<group>"; };
 		7B7E46141E51897400E41F7B /* phone1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1@2x.png"; sourceTree = "<group>"; };
 		7B7E46151E51897400E41F7B /* phone1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone1@3x.png"; sourceTree = "<group>"; };
-		7B7E46301E51A2C300E41F7B /* SpeedDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDemoVC.h; sourceTree = "<group>"; };
-		7B7E46311E51A2C300E41F7B /* SpeedDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDemoVC.m; sourceTree = "<group>"; };
-		7B7E46331E51A2CD00E41F7B /* SpeedDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedDemoVC.xib; sourceTree = "<group>"; };
 		7B7E46351E51E54B00E41F7B /* inventory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inventory.png; sourceTree = "<group>"; };
-		7B920C9D1E487705002BFEF2 /* SpeedoMeterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedoMeterVC.swift; sourceTree = "<group>"; };
 		7B920CA11E487B74002BFEF2 /* onlyPin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onlyPin.png; sourceTree = "<group>"; };
 		7B920CA21E487B74002BFEF2 /* onlyPinSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onlyPinSmall.png; sourceTree = "<group>"; };
 		7B920CA31E487B74002BFEF2 /* onlyRound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onlyRound.png; sourceTree = "<group>"; };
@@ -812,18 +818,10 @@
 		7BA56BC61E4B4964007F3525 /* InventoryDetailWithMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailWithMenuVC.swift; sourceTree = "<group>"; };
 		7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailVC.xib; sourceTree = "<group>"; };
 		7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailWithMenuVC.xib; sourceTree = "<group>"; };
-		7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedoMeterVC.xib; sourceTree = "<group>"; };
 		7BB008CC1E5714800038A19F /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		7BB008D01E57149C0038A19F /* SideMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
 		7BB008D21E5719810038A19F /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		7BB008D31E5719810038A19F /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
-		7BB008D71E5724A50038A19F /* AnimatedMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedMenuButton.swift; sourceTree = "<group>"; };
-		7BB008D81E5724A50038A19F /* DrawerBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerBarButtonItem.swift; sourceTree = "<group>"; };
-		7BB008D91E5724A50038A19F /* DrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerController.h; sourceTree = "<group>"; };
-		7BB008DA1E5724A50038A19F /* DrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerController.swift; sourceTree = "<group>"; };
-		7BB008DB1E5724A50038A19F /* DrawerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerSegue.swift; sourceTree = "<group>"; };
-		7BB008DC1E5724A50038A19F /* DrawerVisualState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerVisualState.swift; sourceTree = "<group>"; };
-		7BB008DD1E5724A50038A19F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BEBF9431E55C4A70045477B /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		7BEBF9471E55C4DF0045477B /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		B80B3D731E24BFE800FF0A20 /* BestBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -850,6 +848,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6F3DC81E4A0A810009377A /* CoreGraphics.framework in Frameworks */,
+				7B42FEB81E5B019A00DE5D62 /* DrawerController.framework in Frameworks */,
 				30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */,
 				30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */,
 				300267231E43070C00682E9E /* Accelerate.framework in Frameworks */,
@@ -880,7 +879,7 @@
 		0C0C55DE1E4068F10085CFD1 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				7BB008D61E5724A50038A19F /* DrawerController */,
+				7B42FEA91E5B005400DE5D62 /* DrawerController */,
 				7B920CAF1E489617002BFEF2 /* ESPSignature */,
 				0C0C55F01E4088D80085CFD1 /* IQKeyboardManager */,
 				0C0C55DF1E4068F10085CFD1 /* CustomSlider */,
@@ -967,6 +966,7 @@
 		300267191E4306D600682E9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B42FEB71E5B019A00DE5D62 /* DrawerController.framework */,
 				7B6F3DC71E4A0A810009377A /* CoreGraphics.framework */,
 				7B920CC01E489782002BFEF2 /* EPSignature.framework */,
 				30754C8A1E430D7B00C87E9A /* libiconv.tbd */,
@@ -1145,8 +1145,6 @@
 				7B6F3DB31E4A04CD0009377A /* flash.png */,
 				7B6F3DB41E4A04CD0009377A /* id-card.png */,
 				7B6F3DB51E4A04CD0009377A /* QRImage.png */,
-				7B6F3DB61E4A04CD0009377A /* ThunderMountainHDNoSky.png */,
-				7B6F3DB71E4A04CD0009377A /* ThunderMountainlogo.png */,
 				0C6EB0F51E49A82500224EB1 /* user.png */,
 				0C6EB0F31E49A77500224EB1 /* profile.jpg */,
 				7B920CA91E487BE0002BFEF2 /* DownPayment.png */,
@@ -1300,6 +1298,19 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		7B42FEA91E5B005400DE5D62 /* DrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				7B42FEAA1E5B005400DE5D62 /* AnimatedMenuButton.swift */,
+				7B42FEAB1E5B005400DE5D62 /* DrawerBarButtonItem.swift */,
+				7B42FEAC1E5B005400DE5D62 /* DrawerController.h */,
+				7B42FEAD1E5B005400DE5D62 /* DrawerController.swift */,
+				7B42FEAF1E5B005400DE5D62 /* DrawerVisualState.swift */,
+				7B42FEB01E5B005400DE5D62 /* Info.plist */,
+			);
+			path = DrawerController;
+			sourceTree = "<group>";
+		};
 		7B4F5EBA1E24CA8E0086B359 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1314,14 +1325,13 @@
 		7B4F5EBB1E24CA8E0086B359 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7B7E46301E51A2C300E41F7B /* SpeedDemoVC.h */,
-				7B7E46311E51A2C300E41F7B /* SpeedDemoVC.m */,
+				7B42FEBE1E5B2A4500DE5D62 /* SpeedDemoVC.h */,
+				7B42FEBF1E5B2A4500DE5D62 /* SpeedDemoVC.m */,
 				0C5021D71E4C6453000AFF14 /* AppraisalVC.swift */,
 				7B128A2B1E4C976E002AA386 /* NewContactVC.swift */,
 				7BA56BC51E4B4964007F3525 /* InventoryDetailVC.swift */,
 				7BA56BC61E4B4964007F3525 /* InventoryDetailWithMenuVC.swift */,
 				7B3BB0B21E49F7C900D436F5 /* DLScanCameraVC.swift */,
-				7B920C9D1E487705002BFEF2 /* SpeedoMeterVC.swift */,
 				7B7547141E41FD8A0025A087 /* API_calling.swift */,
 				7B7547151E41FD8A0025A087 /* CustomerDashboardVC.swift */,
 				7B2949921E260799008566A4 /* AddInventoryViewController.swift */,
@@ -1337,6 +1347,8 @@
 				0CE735951E4B2078008FE4C7 /* PossibleMatchesVC.swift */,
 				7BEBF9431E55C4A70045477B /* ProfileVC.swift */,
 				7BB008CC1E5714800038A19F /* SideMenuVC.swift */,
+				7B42FEBA1E5B1A3100DE5D62 /* LeftVC.swift */,
+				7B42FEBB1E5B1A3100DE5D62 /* LeftVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1344,15 +1356,14 @@
 		7B4F5EBF1E24CA8E0086B359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B42FEC11E5B2A5D00DE5D62 /* SpeedDemoVC.xib */,
 				7BB008D01E57149C0038A19F /* SideMenuVC.xib */,
 				7BEBF9471E55C4DF0045477B /* ProfileVC.xib */,
 				7B3365AD1E52DBB3003B1898 /* CustomerVC.xib */,
-				7B7E46331E51A2CD00E41F7B /* SpeedDemoVC.xib */,
 				0C5021D91E4C64CD000AFF14 /* AppraisalVC.xib */,
 				7B128A291E4C968E002AA386 /* NewContactVC.xib */,
 				7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */,
 				7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */,
-				7BA56BCB1E4B4972007F3525 /* SpeedoMeterVC.xib */,
 				7B3BB0C51E49F95600D436F5 /* DLScanCameraVC.xib */,
 				7B7547181E41FDB20025A087 /* CustomerDashboardVC.xib */,
 				7B2949981E2607A9008566A4 /* DesiredVehicleSelctionViewController.xib */,
@@ -1413,20 +1424,6 @@
 				7B920CB11E48962D002BFEF2 /* EPSignatureView.swift */,
 			);
 			path = ESPSignature;
-			sourceTree = "<group>";
-		};
-		7BB008D61E5724A50038A19F /* DrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				7BB008D71E5724A50038A19F /* AnimatedMenuButton.swift */,
-				7BB008D81E5724A50038A19F /* DrawerBarButtonItem.swift */,
-				7BB008D91E5724A50038A19F /* DrawerController.h */,
-				7BB008DA1E5724A50038A19F /* DrawerController.swift */,
-				7BB008DB1E5724A50038A19F /* DrawerSegue.swift */,
-				7BB008DC1E5724A50038A19F /* DrawerVisualState.swift */,
-				7BB008DD1E5724A50038A19F /* Info.plist */,
-			);
-			path = DrawerController;
 			sourceTree = "<group>";
 		};
 		B80B3D6A1E24BFE700FF0A20 = {
@@ -1552,9 +1549,9 @@
 				TargetAttributes = {
 					B80B3D721E24BFE800FF0A20 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = Y55EBSG532;
+						DevelopmentTeam = JMPNXUM63A;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					B80B3D861E24BFE800FF0A20 = {
 						CreatedOnToolsVersion = 8.2;
@@ -1595,10 +1592,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B42FEBD1E5B1A3100DE5D62 /* LeftVC.xib in Resources */,
 				7B7547E01E41FE150025A087 /* isolated_thunderstorms@2x.png in Resources */,
 				7B7548061E41FE150025A087 /* severe_thunderstorms.png in Resources */,
 				7B7548071E41FE150025A087 /* severe_thunderstorms@2x.png in Resources */,
-				7BA56BCE1E4B4972007F3525 /* SpeedoMeterVC.xib in Resources */,
 				7B7E461A1E51897400E41F7B /* calen@1x.png in Resources */,
 				7B7547B61E41FE150025A087 /* blustery.png in Resources */,
 				0CD3D3E31E4DAE340028BEE5 /* miniboxslider.png in Resources */,
@@ -1807,6 +1804,7 @@
 				7B3365AE1E52DBB3003B1898 /* CustomerVC.xib in Resources */,
 				7B3365AC1E52DB35003B1898 /* or@3x.png in Resources */,
 				7B7E46201E51897400E41F7B /* emailinfo22x.png in Resources */,
+				7B42FEC21E5B2A5D00DE5D62 /* SpeedDemoVC.xib in Resources */,
 				7B7547FE1E41FE150025A087 /* scattered_showers@2x.png in Resources */,
 				0CCF20CB1E4C6F3700A2D9BE /* home screen.png in Resources */,
 				7B7548221E41FE150025A087 /* tornado@3x.png in Resources */,
@@ -1823,6 +1821,7 @@
 				7B3365A71E52DB35003B1898 /* mony@1x.png in Resources */,
 				7B920CAC1E487BE0002BFEF2 /* DownPayment.png in Resources */,
 				7B7547F81E41FE150025A087 /* partly_cloudy_(night)@2x.png in Resources */,
+				7B42FEB61E5B005400DE5D62 /* Info.plist in Resources */,
 				7B128A481E4C97CF002AA386 /* searchGreen@1x.png in Resources */,
 				7B128A261E4C9649002AA386 /* PreferredContentCell.xib in Resources */,
 				7BA56BB81E4B43A5007F3525 /* CustomerCell.xib in Resources */,
@@ -1832,7 +1831,6 @@
 				7B7548211E41FE150025A087 /* tornado@2x.png in Resources */,
 				7B1289FE1E4C8969002AA386 /* chat@1x.png in Resources */,
 				7B7547C91E41FE150025A087 /* foggy@3x.png in Resources */,
-				7B7E46341E51A2CD00E41F7B /* SpeedDemoVC.xib in Resources */,
 				7B7547C81E41FE150025A087 /* foggy@2x.png in Resources */,
 				0CD3D41A1E4DBB280028BEE5 /* vincheck@3x.png in Resources */,
 				7B29499C1E2607A9008566A4 /* AddInventoryViewController.xib in Resources */,
@@ -1894,7 +1892,6 @@
 				0CD3D4051E4DB8860028BEE5 /* addbikeblue@3x.png in Resources */,
 				7B7547D71E41FE150025A087 /* heavy_snow@2x.png in Resources */,
 				0CD3D3F11E4DB6110028BEE5 /* emailinfo@1x.png in Resources */,
-				7BB008E31E5724A50038A19F /* Info.plist in Resources */,
 				7B7547F31E41FE150025A087 /* mostly_cloudy_(night)@3x.png in Resources */,
 				0CD3D4031E4DB8860028BEE5 /* addbikeblue@1x.png in Resources */,
 				0CD3D3EE1E4DB6110028BEE5 /* alert@1x.png in Resources */,
@@ -1966,30 +1963,28 @@
 				0C8FB61A1E3F4817007B7E68 /* InventoryVC.swift in Sources */,
 				7BB008D41E5719810038A19F /* SideMenuCell.swift in Sources */,
 				0C0C560F1E4088D80085CFD1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
-				7BB008DE1E5724A50038A19F /* AnimatedMenuButton.swift in Sources */,
+				7B42FEB11E5B005400DE5D62 /* AnimatedMenuButton.swift in Sources */,
 				7B920CB41E48962D002BFEF2 /* EPSignatureView.swift in Sources */,
 				7BEBF9451E55C4A70045477B /* ProfileVC.swift in Sources */,
 				7B920CB31E48962D002BFEF2 /* EPExtensions.swift in Sources */,
-				7B920C9E1E487705002BFEF2 /* SpeedoMeterVC.swift in Sources */,
-				7BB008E01E5724A50038A19F /* DrawerController.swift in Sources */,
+				7B42FEB31E5B005400DE5D62 /* DrawerController.swift in Sources */,
 				0C0C560D1E4088D80085CFD1 /* IQUIWindow+Hierarchy.swift in Sources */,
 				0C5021D81E4C6453000AFF14 /* AppraisalVC.swift in Sources */,
 				7B75470F1E41FD600025A087 /* SettingsCell.swift in Sources */,
-				7B7E46321E51A2C300E41F7B /* SpeedDemoVC.m in Sources */,
 				0C0C56171E4088D80085CFD1 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				7B2949971E260799008566A4 /* DesiredVehicleSelctionViewController.swift in Sources */,
 				0C0C55EB1E4069290085CFD1 /* ANPopoverSlider.m in Sources */,
 				7B4F5ED11E24EA1F0086B359 /* Constant.swift in Sources */,
 				0C0C56151E4088D80085CFD1 /* IQTitleBarButtonItem.swift in Sources */,
-				7BB008DF1E5724A50038A19F /* DrawerBarButtonItem.swift in Sources */,
+				7B42FEB21E5B005400DE5D62 /* DrawerBarButtonItem.swift in Sources */,
 				7B7547171E41FD8A0025A087 /* CustomerDashboardVC.swift in Sources */,
 				7BA56BC81E4B4964007F3525 /* InventoryDetailWithMenuVC.swift in Sources */,
 				0C0C56091E4088D80085CFD1 /* IQUIScrollView+Additions.swift in Sources */,
 				0C0C560B1E4088D80085CFD1 /* IQUIView+Hierarchy.swift in Sources */,
 				7B7547161E41FD8A0025A087 /* API_calling.swift in Sources */,
+				7B42FEC01E5B2A4500DE5D62 /* SpeedDemoVC.m in Sources */,
 				0C0C56141E4088D80085CFD1 /* IQPreviousNextView.swift in Sources */,
 				300267161E4305B700682E9E /* DLScanVC.swift in Sources */,
-				7BB008E11E5724A50038A19F /* DrawerSegue.swift in Sources */,
 				7B2595D01E4B3BD200DEC705 /* Customer.swift in Sources */,
 				0C0C560E1E4088D80085CFD1 /* IQKeyboardManagerConstants.swift in Sources */,
 				7B2949951E260799008566A4 /* AddInventoryViewController.swift in Sources */,
@@ -2001,10 +1996,11 @@
 				0C0C560A1E4088D80085CFD1 /* IQUITextFieldView+Additions.swift in Sources */,
 				0C8FB6221E3F52D2007B7E68 /* Extensions.swift in Sources */,
 				0C0C56121E4088D80085CFD1 /* IQTextView.swift in Sources */,
-				7BB008E21E5724A50038A19F /* DrawerVisualState.swift in Sources */,
+				7B42FEB51E5B005400DE5D62 /* DrawerVisualState.swift in Sources */,
 				7B4F5ED41E24F2210086B359 /* LogCustomerVC.swift in Sources */,
 				7B128A251E4C9649002AA386 /* PreferredContentCell.swift in Sources */,
 				0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */,
+				7B42FEBC1E5B1A3100DE5D62 /* LeftVC.swift in Sources */,
 				7B128A231E4C9649002AA386 /* addItemCell.swift in Sources */,
 				7BA56BC71E4B4964007F3525 /* InventoryDetailVC.swift in Sources */,
 			);
@@ -2164,8 +2160,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				DEVELOPMENT_TEAM = Y55EBSG532;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JMPNXUM63A;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/MicroBlink.framework\"",
 					"$(PROJECT_DIR)",
@@ -2178,10 +2174,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinappdemo.vinapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.museum.vince;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
-				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2197,8 +2193,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				DEVELOPMENT_TEAM = Y55EBSG532;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JMPNXUM63A;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/MicroBlink.framework\"",
 					"$(PROJECT_DIR)",
@@ -2211,10 +2207,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vinappdemo.vinapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.museum.vince;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
-				PROVISIONING_PROFILE_SPECIFIER = pdf417demodevelopment;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

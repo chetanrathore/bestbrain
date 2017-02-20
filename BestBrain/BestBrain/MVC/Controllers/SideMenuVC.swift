@@ -29,6 +29,8 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        self.tblDashboardMenu.scrollToRow(at: IndexPath(item: arrTblMenuItem.count-1, section: 0), at: .bottom, animated: false)
+        self.tblDashboardMenu.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,19 +58,19 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.row) {
             case 0:
-                let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
-                self.navigationController?.pushViewController(vc, animated: true)
+                appDelegate.drawerController.centerViewController = DLScanCameraVC()
+                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 1: break
             case 2:
-                let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
-                self.navigationController?.pushViewController(vc, animated: true)
+                appDelegate.drawerController.centerViewController = InventoryVC()
+                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 3:
-                let vc  = CustomerVC(nibName: "CustomerVC", bundle: nil)
-                self.navigationController?.pushViewController(vc, animated: true)
+                appDelegate.drawerController.centerViewController = CustomerVC()
+                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 4: break
-            case 5:
-                let vc = SpeedoMeterVC(nibName: "SpeedoMeterVC", bundle: nil)
-                self.navigationController?.pushViewController(vc, animated: true)
+            case 5:break
+//                appDelegate.drawerController.centerViewController = SpeedoMeterVC()
+//                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 6:
                 self.navigationController?.popToRootViewController(animated: true)
             default: break
@@ -78,6 +80,9 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK:- IBOutlet Method(s)
     
     @IBAction func handleBtnProfile(_ sender: Any) {
+        let vc = ProfileVC(nibName: "ProfileVC", bundle: nil)
+        vc.navigationController?.isNavigationBarHidden = false
+        appDelegate.drawerController.setCenter(vc, withCloseAnimation: true, completion: nil)
     }
  
 }

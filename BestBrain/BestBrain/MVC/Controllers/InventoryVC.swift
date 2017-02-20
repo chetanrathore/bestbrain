@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import DrawerController
 
-class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var InventorySegment: UISegmentedControl!
     @IBOutlet var btnBack: UIButton!
@@ -31,6 +32,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.none)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,11 +62,6 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         return cell
     }
     
-    func btnView(sender: UIButton) {
-        let detailVC = InventoryDetailVC(nibName: "InventoryDetailVC", bundle: nil)
-        self.navigationController!.pushViewController(detailVC, animated: true)
-    }
-    
     // MARK:- Navigation handler
     
     @IBAction func btnFilter(_ sender: UIButton) {
@@ -73,9 +70,20 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     @IBAction func handleBtnBack(_ sender: Any) {
-        appDelegate.setupDrawer(centerVC: self)
-//        self.navigationController!.popViewController(animated: true)
+        
+        
+//        appDelegate.drawerController.openDrawerSide(.left, animated: true, completion: nil)
+        appDelegate.drawerController.toggleDrawerSide(.left, animated: true, completion: nil)
+//        self.present(appDelegate.drawerController, animated: true, completion: nil)
+        //appDelegate.drawerController.centerViewController = self
+
+        
     }
     
+    // MARK:- Custom method(s)
     
+    func btnView(sender: UIButton) {
+        let detailVC = InventoryDetailVC(nibName: "InventoryDetailVC", bundle: nil)
+        self.navigationController!.pushViewController(detailVC, animated: true)
+    }
 }

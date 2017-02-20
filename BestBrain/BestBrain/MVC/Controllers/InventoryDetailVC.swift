@@ -134,11 +134,11 @@ class InventoryDetailVC: UIViewController, UICollectionViewDataSource, UICollect
         
     }
     
+    // MARK:- Outlet Actions
+    
     @IBAction func btnNavBack(_ sender: UIButton) {
         self.navigationController!.popViewController(animated: true)
     }
-    
-    // MARK:- Outlet Actions
     
     @IBAction func btnMMSInfo(_ sender: UIButton) {
     }
@@ -187,6 +187,7 @@ class InventoryDetailVC: UIViewController, UICollectionViewDataSource, UICollect
         detailVC.isFromInventoryVC = true
         self.navigationController!.pushViewController(detailVC, animated: true)
     }
+    
     
     
 }
