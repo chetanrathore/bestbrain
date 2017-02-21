@@ -565,6 +565,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     // MARK:- IBOutlet Method(s)
     
     @IBAction func handleBtnLinkToCustomer(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "relationLinked"), object: true)
         self.navigationController?.popViewController(animated: true)
     }
     

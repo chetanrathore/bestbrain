@@ -17,6 +17,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     @IBOutlet var tblInventory: UITableView!
     @IBOutlet var vwNavigationBar: UIView!
     @IBOutlet var vwSegment: UIView!
+    @IBOutlet var btnMenu: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,15 +73,12 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         self.navigationController!.pushViewController(filterVC, animated: true)
     }
     
-    @IBAction func handleBtnBack(_ sender: Any) {
-        
-        
-//        appDelegate.drawerController.openDrawerSide(.left, animated: true, completion: nil)
+    @IBAction func handleBtnMenu(_ sender: Any) {
         appDelegate.drawerController.toggleDrawerSide(.left, animated: true, completion: nil)
-//        self.present(appDelegate.drawerController, animated: true, completion: nil)
-        //appDelegate.drawerController.centerViewController = self
-
-        
+    }
+    
+    @IBAction func handleBtnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK:- Custom method(s)

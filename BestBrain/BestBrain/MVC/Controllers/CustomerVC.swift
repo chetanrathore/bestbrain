@@ -18,8 +18,9 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     @IBOutlet var btnInactive: UIButton!
     @IBOutlet var vwRelation: UIView!
     @IBOutlet var tblRelation: UITableView!
+    @IBOutlet var btnBack: UIButton!
+    @IBOutlet var btnMenu: UIButton!
     
-
     var arrCustomer = [Customer]()
     var arrFilteredCustomers = [Customer]()
     var arrRelation = ["Mother", "Father", "Nephew", "Niece", "Husband", "Wife", "Brother", "Sister", "Daughter", "Son", "Grandfather", "Grandmother", "Uncle", "Aunt"]
@@ -31,7 +32,6 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         super.viewDidLoad()
         
         self.automaticallyAdjustsScrollViewInsets = false
-        self.btnNewCustomer.setImage(iconColor(icon: UIImageView(image: UIImage(named: "adduser"))), for: .normal)
         tblCustomer.tableFooterView = UIView()
         tblRelation.tableFooterView = UIView()
         tblRelation.dataSource = self
@@ -289,6 +289,15 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     // MARK:- IBOutlet Method(s)
+    
+    
+    @IBAction func handleBtnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func handleBtnMenu(_ sender: Any) {
+        appDelegate.drawerController.toggleDrawerSide(.left, animated: true, completion: nil)
+    }
     
     @IBAction func handleBtnNewCustomer(_ sender: Any) {
         let customerDetailVC = NewContactVC(nibName: "NewContactVC", bundle: nil)
