@@ -140,6 +140,7 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
         let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
         vc.isFromDLScan = false
         vc.isFromVINScan = true
+        vc.isFromDashBoard = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
