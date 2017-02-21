@@ -33,7 +33,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         self.view.bringSubview(toFront: self.txtPassword)
         self.view.bringSubview(toFront: self.txtUsername)
         self.view.bringSubview(toFront: self.btnLogin)
-//        self.view.bringSubview(toFront: self.btnForgetPassword)
+        self.view.bringSubview(toFront: self.btnForgetPassword)
 
 
     }
@@ -116,6 +116,16 @@ class LoginVC: UIViewController,UITextFieldDelegate {
             txtUsername.layer.shadowOffset =  CGSize(width: 1.0, height: 1.0)
             txtUsername.layer.shadowOpacity = 1.0
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == txtUsername{
+            txtUsername.resignFirstResponder()
+            txtPassword.becomeFirstResponder()
+        }else if textField == txtPassword{
+            txtPassword.resignFirstResponder()
+        }
+        return true
     }
 
     

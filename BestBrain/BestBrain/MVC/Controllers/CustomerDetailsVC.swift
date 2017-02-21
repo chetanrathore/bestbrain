@@ -23,6 +23,7 @@ class CustomerDetailsVC: UIViewController {
     @IBOutlet var lbFirst: UILabel!
     @IBOutlet var imgUser: UIImageView!
     @IBOutlet var tblCustomerDetail: UITableView!
+    @IBOutlet var btnback: UIButton!
     
   
     var details = NSMutableDictionary()
@@ -41,6 +42,9 @@ class CustomerDetailsVC: UIViewController {
         lbDLState.text = details.value(forKey: "DLState") as! String?
         lbDLNum.text = details.value(forKey: "DLNum") as! String?
         self.tblCustomerDetail.tableFooterView = UIView()
+    }
+    @IBAction func handleBtnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     override func viewDidLayoutSubviews() {
         imgUser.layer.cornerRadius = imgUser.frame.size.width/2

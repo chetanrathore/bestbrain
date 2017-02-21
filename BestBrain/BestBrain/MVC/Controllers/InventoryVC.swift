@@ -77,10 +77,6 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         appDelegate.drawerController.toggleDrawerSide(.left, animated: true, completion: nil)
     }
     
-    @IBAction func handleBtnBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     // MARK:- Custom method(s)
     
     func btnView(sender: UIButton) {
