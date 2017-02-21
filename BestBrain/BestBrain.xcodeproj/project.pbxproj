@@ -347,6 +347,12 @@
 		7B7548251E41FE150025A087 /* windy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479F1E41FE150025A087 /* windy@3x.png */; };
 		7B79AAC31E572A1700A9A13A /* Logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B79AAC21E572A1700A9A13A /* Logout.png */; };
 		7B7DF1971E5C3CE000D9BD3B /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DF1961E5C3CE000D9BD3B /* ServerAPI.swift */; };
+		7B7DF1AA1E5C5BC500D9BD3B /* admin@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A41E5C5BC500D9BD3B /* admin@1x.png */; };
+		7B7DF1AB1E5C5BC500D9BD3B /* admin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A51E5C5BC500D9BD3B /* admin@2x.png */; };
+		7B7DF1AC1E5C5BC500D9BD3B /* admin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A61E5C5BC500D9BD3B /* admin@3x.png */; };
+		7B7DF1AD1E5C5BC500D9BD3B /* menu@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A71E5C5BC500D9BD3B /* menu@1x.png */; };
+		7B7DF1AE1E5C5BC500D9BD3B /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A81E5C5BC500D9BD3B /* menu@2x.png */; };
+		7B7DF1AF1E5C5BC500D9BD3B /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A91E5C5BC500D9BD3B /* menu@3x.png */; };
 		7B7E46161E51897400E41F7B /* addanother@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FC1E51897400E41F7B /* addanother@2x.png */; };
 		7B7E46171E51897400E41F7B /* bag@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FD1E51897400E41F7B /* bag@1x.png */; };
 		7B7E46181E51897400E41F7B /* bag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FE1E51897400E41F7B /* bag@2x.png */; };
@@ -777,6 +783,12 @@
 		7B75479F1E41FE150025A087 /* windy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windy@3x.png"; sourceTree = "<group>"; };
 		7B79AAC21E572A1700A9A13A /* Logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logout.png; sourceTree = "<group>"; };
 		7B7DF1961E5C3CE000D9BD3B /* ServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
+		7B7DF1A41E5C5BC500D9BD3B /* admin@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "admin@1x.png"; sourceTree = "<group>"; };
+		7B7DF1A51E5C5BC500D9BD3B /* admin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "admin@2x.png"; sourceTree = "<group>"; };
+		7B7DF1A61E5C5BC500D9BD3B /* admin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "admin@3x.png"; sourceTree = "<group>"; };
+		7B7DF1A71E5C5BC500D9BD3B /* menu@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@1x.png"; sourceTree = "<group>"; };
+		7B7DF1A81E5C5BC500D9BD3B /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		7B7DF1A91E5C5BC500D9BD3B /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
 		7B7E45FC1E51897400E41F7B /* addanother@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addanother@2x.png"; sourceTree = "<group>"; };
 		7B7E45FD1E51897400E41F7B /* bag@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@1x.png"; sourceTree = "<group>"; };
 		7B7E45FE1E51897400E41F7B /* bag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@2x.png"; sourceTree = "<group>"; };
@@ -1004,6 +1016,12 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7B7DF1A41E5C5BC500D9BD3B /* admin@1x.png */,
+				7B7DF1A51E5C5BC500D9BD3B /* admin@2x.png */,
+				7B7DF1A61E5C5BC500D9BD3B /* admin@3x.png */,
+				7B7DF1A71E5C5BC500D9BD3B /* menu@1x.png */,
+				7B7DF1A81E5C5BC500D9BD3B /* menu@2x.png */,
+				7B7DF1A91E5C5BC500D9BD3B /* menu@3x.png */,
 				7B52546E1E5C18FA00ABA65F /* userProfile.png */,
 				7B79AAC21E572A1700A9A13A /* Logout.png */,
 				7B2DF89A1E55BD4D00184229 /* adduser@1x.png */,
@@ -1605,8 +1623,10 @@
 				7B7547B61E41FE150025A087 /* blustery.png in Resources */,
 				0CD3D3E31E4DAE340028BEE5 /* miniboxslider.png in Resources */,
 				7B7547F41E41FE150025A087 /* partly_cloudy_(day).png in Resources */,
+				7B7DF1AF1E5C5BC500D9BD3B /* menu@3x.png in Resources */,
 				7BA56BC01E4B4495007F3525 /* DashboardCell.xib in Resources */,
 				7B7547C51E41FE150025A087 /* dust.png in Resources */,
+				7B7DF1AD1E5C5BC500D9BD3B /* menu@1x.png in Resources */,
 				7B7548021E41FE150025A087 /* scattered_snow_showers@3x.png in Resources */,
 				7B29499D1E2607A9008566A4 /* ClockInViewController.xib in Resources */,
 				7B3365A21E52DB35003B1898 /* btn@3x.png in Resources */,
@@ -1783,6 +1803,7 @@
 				7B128A1C1E4C8AE2002AA386 /* setting@1x.png in Resources */,
 				7B75480F1E41FE150025A087 /* snow_flurries.png in Resources */,
 				7B3BB0BF1E49F8FC00D436F5 /* id-card.png in Resources */,
+				7B7DF1AC1E5C5BC500D9BD3B /* admin@3x.png in Resources */,
 				0CD3D4081E4DB8860028BEE5 /* remove@3x.png in Resources */,
 				7B128A3C1E4C97CF002AA386 /* addBlue@1x.png in Resources */,
 				7B128A2A1E4C968E002AA386 /* NewContactVC.xib in Resources */,
@@ -1865,6 +1886,7 @@
 				7B7E46251E51897400E41F7B /* id@2x.png in Resources */,
 				7B7E461E1E51897400E41F7B /* dola@2x.png in Resources */,
 				7B128A451E4C97CF002AA386 /* remo@1x.png in Resources */,
+				7B7DF1AE1E5C5BC500D9BD3B /* menu@2x.png in Resources */,
 				0C8FB61D1E3F4F8A007B7E68 /* filter.png in Resources */,
 				0CD3D4041E4DB8860028BEE5 /* addbikeblue@2x.png in Resources */,
 				7B7548001E41FE150025A087 /* scattered_snow_showers.png in Resources */,
@@ -1895,6 +1917,7 @@
 				7B6F3DB91E4A04CD0009377A /* flash.png in Resources */,
 				0CD3D3DD1E4DADB10028BEE5 /* line@2x.png in Resources */,
 				7B1289F31E4C890B002AA386 /* bbox@2x.png in Resources */,
+				7B7DF1AA1E5C5BC500D9BD3B /* admin@1x.png in Resources */,
 				7B75481E1E41FE150025A087 /* thunderstorms@2x.png in Resources */,
 				0CD3D4051E4DB8860028BEE5 /* addbikeblue@3x.png in Resources */,
 				7B7547D71E41FE150025A087 /* heavy_snow@2x.png in Resources */,
@@ -1913,6 +1936,7 @@
 				7B7547AB1E41FE150025A087 /* health.png in Resources */,
 				7B7547BA1E41FE150025A087 /* clear_(night)@2x.png in Resources */,
 				7B2949A21E2607B9008566A4 /* down_Arrow.png in Resources */,
+				7B7DF1AB1E5C5BC500D9BD3B /* admin@2x.png in Resources */,
 				7BB008D51E5719810038A19F /* SideMenuCell.xib in Resources */,
 				7B128A3D1E4C97CF002AA386 /* addBlue@2x.png in Resources */,
 				7B7547E21E41FE150025A087 /* light_snow_showers.png in Resources */,
