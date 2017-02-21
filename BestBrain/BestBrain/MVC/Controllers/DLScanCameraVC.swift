@@ -31,7 +31,7 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
+       // self.navigationController?.isNavigationBarHidden = true
         if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo){
             if (device.hasTorch) {
                 do {
@@ -198,12 +198,18 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
                     
                     self.navigationController?.pushViewController(vc, animated: true)
                 }else{
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "extractedData"), object: userDetails)
-                    self.dismiss(animated: true, completion: nil)
+                    //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "extractedData"), object: userDetails)
+                   // self.dismiss(animated: true, completion: nil)
                 }
             }
             else if isFromVINScan{
+                let VINDetails = NSMutableDictionary()
+                VINDetails.setValue(message, forKey: "VIN")
+
                 UIAlertView(title: "VIN", message: message, delegate: nil, cancelButtonTitle: "Ok").show()
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "extractedData"), object: VINDetails)
+                self.dismiss(animated: true, completion: nil)
+
             }
 
         }

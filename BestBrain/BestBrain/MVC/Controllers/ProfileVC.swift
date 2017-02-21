@@ -56,9 +56,23 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
-        let editBtn = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(self.handleEditBtn))
-        self.navigationItem.setRightBarButton(editBtn, animated: true)
+        self.navigationController?.navigationBar.isHidden = false
+        if self.isEditable{
+            self.isEditable = false
+            let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.handleDoneBtn))
+          //  self.navigationItem.setRightBarButton(doneBtn, animated: true)
+            self.navigationItem.rightBarButtonItem = doneBtn
+        } else {
+            self.isEditable = true
+            let editBtn = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(self.handleEditBtn))
+           // self.navigationItem.setRightBarButton(editBtn, animated: true)
+            self.navigationItem.rightBarButtonItem = editBtn
+
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,16 +112,17 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     // MARK:- Custom Method(s)
     
     func handleEditBtn() {
-        if self.isEditable{
-            self.isEditable = false
-        } else {
-            self.isEditable = true
-            self.btnProfile.isEnabled = true
-            self.imagePicker.delegate = self
-            self.imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
-            self.imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
-        }
+        self.btnProfile.isEnabled = true
+        self.imagePicker.delegate = self
+        self.imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+        self.imagePicker.allowsEditing = false
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func handleDoneBtn() {
+        self.btnProfile.isEnabled = false
+        self.imagePicker.delegate = nil
+        
     }
 
     func setTextFieldDelegate() {

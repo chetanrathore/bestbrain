@@ -28,7 +28,9 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+
         self.navigationController?.navigationBar.isHidden = true
+        
         self.tblDashboardMenu.scrollToRow(at: IndexPath(item: arrTblMenuItem.count-1, section: 0), at: .bottom, animated: false)
         self.tblDashboardMenu.reloadData()
     }
@@ -73,6 +75,7 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 6:
                 self.navigationController?.popToRootViewController(animated: true)
+//                self.navigationController?.popToRootViewController(animated: true)
             default: break
         }
         
@@ -81,8 +84,9 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func handleBtnProfile(_ sender: Any) {
         let vc = ProfileVC(nibName: "ProfileVC", bundle: nil)
-        vc.navigationController?.isNavigationBarHidden = false
+        vc.navigationController?.navigationBar.isHidden = false
         appDelegate.drawerController.setCenter(vc, withCloseAnimation: true, completion: nil)
+        appDelegate.drawerController.centerViewController?.navigationController?.navigationBar.isHidden = false
     }
  
 }

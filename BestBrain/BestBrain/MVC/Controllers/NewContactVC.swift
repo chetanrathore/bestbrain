@@ -64,16 +64,18 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     var cView: UIView!
     var transperentView = UIView()
     var isFromScanning:Bool = false
-    
+    var phoneNumbers = [String]()
+    var emails = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.isHidden = false
+        //self.navigationController?.navigationBar.isHidden = false
 
         self.title = "New Contact"
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.handleBtnSearch))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.handleBtnSearch))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.handleBtnDone))
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.gray
         
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -108,20 +110,21 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         }else{
         btnDLScan.isHidden = false
         }
+       
         self.loadData()
+        
         tblAddItems.delegate = self
         tblAddItems.dataSource = self
         tblAddItems.register(UINib(nibName: "addItemCell", bundle: nil), forCellReuseIdentifier: "addItemCell")
         tblAddItems.register(UINib(nibName: "PreferredContentCell", bundle: nil), forCellReuseIdentifier: "PreferredContentCell")
     }
-    
+   
     override func viewWillAppear(_ animated: Bool) {
     }
-    
+   
     override func viewWillDisappear(_ animated: Bool) {
-       // NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
-    
     override func viewDidLayoutSubviews() {
         for vw in vwTextFields{
             vw.layer.borderWidth = 1
@@ -264,7 +267,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             txfCity.resignFirstResponder()
             txfState.becomeFirstResponder()
         }else if textField == txfState{
-            if Appcheck_length(txfState.text!, length: 2, is_more: true){
+            if AppcheckLength(txfState.text!, length: 2, is_more: true){
                 txfState.resignFirstResponder()
                 txfZipCode.becomeFirstResponder()
             }else{
@@ -280,7 +283,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             txfDOB.resignFirstResponder()
             txfDLState.becomeFirstResponder()
         }else if textField == txfDLState{
-            if Appcheck_length(txfDLState.text!, length: 2, is_more: true){
+            if AppcheckLength(txfDLState.text!, length: 2, is_more: true){
                 txfDLState.resignFirstResponder()
                 txfDLNumber.becomeFirstResponder()
             }else{
@@ -293,9 +296,10 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
 
         if textField.tag == 0{
         }else if textField.tag == 1{
-            if self.Appcheck_email_address(textField.text!) == false{
+            if self.AppcheckEmailAddress(textField.text!) == false{
                 print("enter valid email Address.")
             }else{
+                emails.append(textField.text!)
                 textField.resignFirstResponder()
             }
         }else if textField.tag == 2{
@@ -335,19 +339,19 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     
     // MARK:- TextField validation Method(s)
     
-    func Appcheck_zip_codes(_ data:String) -> Bool{
+    func AppcheckZipCodes(_ data:String) -> Bool{
         let ns:NSString = "^([0-9]{5}|[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9])$"
         let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
         return pr.evaluate(with: data)
     }
     
-    func Appcheck_email_address(_ data:String) -> Bool{
+    func AppcheckEmailAddress(_ data:String) -> Bool{
         let ns:NSString = "[A-Za-z0-9\\.]+@[A-Za-z0-9]+\\.[A-Za-z.]{2,6}"
         let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
         return pr.evaluate(with: data)
     }
     
-    func Appcheck_number(_ data:String,length:Int?) -> Bool{
+    func AppcheckNumber(_ data:String,length:Int?) -> Bool{
         let ns:NSString
         if let _ = length{
             ns = "[0-9]{\(length!)}" as NSString
@@ -358,7 +362,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         return pr.evaluate(with: data)
     }
     
-    func Appcheck_length(_ data:String,length:Int,is_more:Bool?) -> Bool{
+    func AppcheckLength(_ data:String,length:Int,is_more:Bool?) -> Bool{
         if data.isEmpty{
             return false
         }
@@ -461,8 +465,9 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     func doneButtonAction(txt: UITextField)
     {
         if self.textField.tag == 0{
-            if Appcheck_number(self.textField.text!, length: 10){
+            if AppcheckNumber(self.textField.text!, length: 10){
                 tblAddItems.isScrollEnabled = true
+                phoneNumbers.append(self.textField.text!)
                 self.textField.resignFirstResponder()
             }else{
                 print("enter valid phone number.")
@@ -470,7 +475,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         }else{
             
             if self.textField.tag == 16{
-                if Appcheck_zip_codes(self.textField.text!) == true{
+                if AppcheckZipCodes(self.textField.text!) == true{
                     self.textField.resignFirstResponder()
                 }else{
                     print("enter valid zip code.")
@@ -479,18 +484,43 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
                 //                if Appcheck_zip_codes(self.textField.text!) == true{
                 self.textField.resignFirstResponder()
                 //                }else{
-                //                    print("enter valid DL NUMBER.")
+                //                    print("enter valid DLNUMBER.")
                 //                }
             }
         }
     }
     func keyboardWillShow(notification: NSNotification){
-        
     }
     func keyboardWillHide(notification: NSNotification){
         tblAddItems.isScrollEnabled = true
     }
-    
+    func handleBtnDone(){
+        let vc = CustomerDetailsVC(nibName: "CustomerDetailsVC", bundle: nil)
+       var details = NSMutableDictionary()
+        details.setValue(txfFirstName.text, forKey: "first")
+        details.setValue(txfLastName.text, forKey: "last")
+        details.setValue(txfAddress.text, forKey: "address")
+        details.setValue(txfCity.text, forKey: "city")
+        details.setValue(txfState.text, forKey: "state")
+        details.setValue(txfZipCode.text, forKey: "zipcode")
+        details.setValue(txfDOB.text, forKey: "dob")
+        details.setValue(txfDLState.text, forKey: "DLState")
+        details.setValue(txfDLNumber.text, forKey: "DLNum")
+
+        vc.details = details
+        //vc.lbFirst.text = txfFirstName.text
+   //     vc.lbLast.text = txfLastName.text
+  //      vc.lbAddress.text = txfAddress.text
+   //     vc.lbCity.text = txfCity.text
+   //     vc.lbState.text = txfState.text
+    //    vc.lbState.text = txfZipCode.text
+    //    vc.lbDOB.text = txfDOB.text
+    //    vc.lbDLState.text = txfDLState.text
+    //    vc.lbDLNum.text = txfDLNumber.text
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
     func loadData(){
         allItems = [
             addItems(name: "add phone", items: 1),
@@ -504,14 +534,15 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     func loadTextFields(notification: NSNotification){
         
         
-        guard let userInfo:NSDictionary = notification.object as! NSDictionary? ,
-            let userDetails  = userInfo["userData"] as? NSDictionary
+        guard let userInfo:NSDictionary = (notification.object as! NSDictionary?) ,
+            let VINNumber:String = userInfo.value(forKey: "VIN") as! String?
+
          //   let hideBtn     = userInfo["hideBtn"]    as? Bool
         else
         {
             return
         }
-
+/*
             txfFirstName.text = userDetails.value(forKey: "Customer First Name") as? String
             txfLastName.text = userDetails.value(forKey: "Customer Family Name") as? String
         txfAddress.text = userDetails.value(forKey: "Address - Street 1") as? String
@@ -524,13 +555,16 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             txfDLState.text = nil
             txfDLNumber.text = nil
             btnDLScan.isHidden = true
+*/
+        print("------------------------------------------------------------")
+        print("VIN: \(VINNumber)")
+        print("------------------------------------------------------------")
 
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "extractedData"), object: nil)
     }
     // MARK:- IBOutlet Method(s)
     
     @IBAction func handleBtnLinkToCustomer(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "relationLinked"), object: true)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -541,8 +575,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     @IBAction func handleBtnDLScan(_ sender: Any) {
         let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
         vc.isFromDashBoard = false
-        vc.isFromDLScan = true
-        vc.isFromVINScan = false
+        vc.isFromDLScan = false
+        vc.isFromVINScan = true
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.loadTextFields(notification:)), name: NSNotification.Name(rawValue: "extractedData"), object: nil)
         self.present(vc, animated: true, completion: nil)
     }

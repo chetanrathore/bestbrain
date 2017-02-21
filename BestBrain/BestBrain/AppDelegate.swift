@@ -16,22 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        
-        
         let leftSideDrawerViewController = SideMenuVC()
         let centerViewController = LoginVC()
-        let rightSideDrawerViewController = SideMenuVC()
         
         let navigationController = UINavigationController(rootViewController: centerViewController)
         navigationController.restorationIdentifier = "ExampleCenterNavigationControllerRestorationKey"
         
-        let rightSideNavController = UINavigationController(rootViewController: rightSideDrawerViewController)
-        rightSideNavController.restorationIdentifier = "ExampleRightNavigationControllerRestorationKey"
-        
         let leftSideNavController = UINavigationController(rootViewController: leftSideDrawerViewController)
         leftSideNavController.restorationIdentifier = "ExampleLeftNavigationControllerRestorationKey"
         
-        self.drawerController = DrawerController(centerViewController: navigationController, leftDrawerViewController: leftSideNavController, rightDrawerViewController: rightSideNavController)
+        self.drawerController = DrawerController(centerViewController: navigationController, leftDrawerViewController: leftSideNavController)
         self.drawerController.showsShadows = false
         
         self.drawerController.restorationIdentifier = "Drawer"
@@ -43,7 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tintColor = UIColor(red: 29 / 255, green: 173 / 255, blue: 234 / 255, alpha: 1.0)
         self.window?.tintColor = tintColor
         
-        self.window?.rootViewController = self.drawerController
+        let nav = UINavigationController(rootViewController: self.drawerController)
+        self.window?.rootViewController = nav
         return true
     }
     

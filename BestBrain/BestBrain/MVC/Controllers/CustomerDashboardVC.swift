@@ -60,7 +60,7 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             print("Location services are not enabled");
         }
         self.setUpDate()
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.isNavigationBarHidden = true
         UIView.animate(withDuration: 7.0, delay: 1, options: ([.curveLinear, .repeat]), animations: {() -> Void in
                 self.lblMessage.center = CGPoint(x: 0 - self.lblMessage.bounds.size.width, y: self.lblMessage.center.y)
         }, completion:  { _ in })

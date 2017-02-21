@@ -136,8 +136,10 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     @IBAction func btnScan(_ sender: UIButton) {
-        let scanVC = DLScanCameraVC(nibName: "", bundle: nil)
-        self.navigationController?.pushViewController(scanVC, animated: true)
+        let vc = DLScanCameraVC(nibName: "DLScanCameraVC", bundle: nil)
+        vc.isFromDLScan = false
+        vc.isFromVINScan = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

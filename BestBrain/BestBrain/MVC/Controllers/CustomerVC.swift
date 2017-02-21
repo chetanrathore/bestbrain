@@ -69,7 +69,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
+       // self.navigationController?.navigationBar.isHidden = true
         if !(txtSearchBar.text?.isEmpty)! {
             isSearch = true
             self.tblCustomer.reloadData()
