@@ -18,6 +18,11 @@ class DLScanVC: UIViewController, PPScanningDelegate {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+    }
 
     @IBAction func scanClicked(_ sender: Any) {
            // self.starScanning()

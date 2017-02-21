@@ -57,10 +57,13 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = false
+
         if self.isEditable{
             self.isEditable = false
             let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.handleDoneBtn))
           //  self.navigationItem.setRightBarButton(doneBtn, animated: true)
+        
             self.navigationItem.rightBarButtonItem = doneBtn
         } else {
             self.isEditable = true

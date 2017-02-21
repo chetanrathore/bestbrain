@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let leftSideDrawerViewController = SideMenuVC()
-        let centerViewController = LoginVC()
+        let leftSideDrawerViewController = SideMenuVC(nibName: "SideMenuVC", bundle: nil)
+        let centerViewController = LoginVC(nibName: "LoginVC", bundle: nil)
         
         let navigationController = UINavigationController(rootViewController: centerViewController)
         navigationController.restorationIdentifier = "ExampleCenterNavigationControllerRestorationKey"
@@ -37,8 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tintColor = UIColor(red: 29 / 255, green: 173 / 255, blue: 234 / 255, alpha: 1.0)
         self.window?.tintColor = tintColor
         
-        let nav = UINavigationController(rootViewController: self.drawerController)
-        self.window?.rootViewController = nav
+        self.window?.rootViewController = self.drawerController
         return true
     }
     

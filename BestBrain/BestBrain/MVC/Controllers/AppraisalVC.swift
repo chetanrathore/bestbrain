@@ -36,7 +36,7 @@ class AppraisalVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInterface()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,13 +44,14 @@ class AppraisalVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        setInterface()
     }
     
     // MARK:- Interface
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
         if ScreenWidth > 320{
             for const in constBtnSpacing{
                 const.constant = 40

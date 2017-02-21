@@ -44,7 +44,6 @@ class InventoryDetailWithMenuVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInterface()
         
         if isFromInventoryVC {
             self.btnAddPhoto.tag = 1
@@ -71,7 +70,10 @@ class InventoryDetailWithMenuVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        setInterface()
+
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
     }
     
     // MARK:- InterfaceDesign

@@ -13,8 +13,8 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tblDashboardMenu: UITableView!
     @IBOutlet var btnProfile: UIButton!
 
-    var arrTblMenuItem = ["DLScan","deskLog","inventory","customer","chat","quotes","Logout"]
-    var arrTblMenuLbl = ["DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes","Log Out"]
+    var arrTblMenuItem = ["setting","DLScan","deskLog","inventory","customer","chat","quotes","Logout"]
+    var arrTblMenuLbl = ["Dashboard","DLScan", "Desk Log", "Inventory", "Customer", "Chat", "Quotes","Log Out"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,11 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
-        self.navigationController?.navigationBar.isHidden = true
         
-        self.tblDashboardMenu.scrollToRow(at: IndexPath(item: arrTblMenuItem.count-1, section: 0), at: .bottom, animated: false)
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+        
+//        self.tblDashboardMenu.scrollToRow(at: IndexPath(item: arrTblMenuItem.count-1, section: 0), at: .top, animated: false)
         self.tblDashboardMenu.reloadData()
     }
 
@@ -60,22 +61,25 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.row) {
             case 0:
+                appDelegate.drawerController.centerViewController = CustomerDashboardVC()
+                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
+            case 1:
                 appDelegate.drawerController.centerViewController = DLScanCameraVC()
                 appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
-            case 1: break
-            case 2:
+            case 2:break
+            case 3:
                 appDelegate.drawerController.centerViewController = InventoryVC()
                 appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
-            case 3:
+            case 4:
                 appDelegate.drawerController.centerViewController = CustomerVC()
                 appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
-            case 4: break
             case 5:break
-//                appDelegate.drawerController.centerViewController = SpeedoMeterVC()
-//                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
-            case 6:
+            case 6:break
+            //                appDelegate.drawerController.centerViewController = SpeedoMeterVC()
+        //                appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
+            case 7:
                 self.navigationController?.popToRootViewController(animated: true)
-//                self.navigationController?.popToRootViewController(animated: true)
+
             default: break
         }
         

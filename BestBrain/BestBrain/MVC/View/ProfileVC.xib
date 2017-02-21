@@ -229,7 +229,7 @@
                         <constraint firstAttribute="trailing" secondItem="3ei-jK-5pM" secondAttribute="trailing" id="Umm-hX-yBB"/>
                     </constraints>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoR-C7-zm3">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoR-C7-zm3">
                     <rect key="frame" x="100" y="80" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="YoR-C7-zm3" secondAttribute="height" multiplier="1:1" id="1y0-qJ-RhT"/>

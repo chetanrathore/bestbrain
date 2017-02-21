@@ -31,6 +31,8 @@ class DLScanCameraVC: UIViewController, PPScanningDelegate {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
        // self.navigationController?.isNavigationBarHidden = true
         if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo){
             if (device.hasTorch) {

@@ -47,6 +47,8 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
     }
    
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
         self.tblSettings.scrollToRow(at: IndexPath(item: arrTblMenuLbl.count-1, section: 0), at: .bottom, animated: false)
         if (CLLocationManager.locationServicesEnabled()) {
             self.locManager.delegate = self
@@ -60,7 +62,6 @@ class CustomerDashboardVC: UIViewController, UICollectionViewDataSource, UIColle
             print("Location services are not enabled");
         }
         self.setUpDate()
-        self.navigationController?.isNavigationBarHidden = true
         UIView.animate(withDuration: 7.0, delay: 1, options: ([.curveLinear, .repeat]), animations: {() -> Void in
                 self.lblMessage.center = CGPoint(x: 0 - self.lblMessage.bounds.size.width, y: self.lblMessage.center.y)
         }, completion:  { _ in })

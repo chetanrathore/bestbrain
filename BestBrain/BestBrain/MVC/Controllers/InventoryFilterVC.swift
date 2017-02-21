@@ -47,7 +47,8 @@ class InventoryFilterVC: UIViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidLayoutSubviews() {

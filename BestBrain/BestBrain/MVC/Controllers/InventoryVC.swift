@@ -20,7 +20,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         tblInventory.tableFooterView = UIView()
         tblInventory.dataSource = self
@@ -32,6 +32,9 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+
         UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.none)
     }
     

@@ -346,6 +346,7 @@
 		7B7548241E41FE150025A087 /* windy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479E1E41FE150025A087 /* windy@2x.png */; };
 		7B7548251E41FE150025A087 /* windy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B75479F1E41FE150025A087 /* windy@3x.png */; };
 		7B79AAC31E572A1700A9A13A /* Logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B79AAC21E572A1700A9A13A /* Logout.png */; };
+		7B7DF1971E5C3CE000D9BD3B /* ServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7DF1961E5C3CE000D9BD3B /* ServerAPI.swift */; };
 		7B7E46161E51897400E41F7B /* addanother@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FC1E51897400E41F7B /* addanother@2x.png */; };
 		7B7E46171E51897400E41F7B /* bag@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FD1E51897400E41F7B /* bag@1x.png */; };
 		7B7E46181E51897400E41F7B /* bag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FE1E51897400E41F7B /* bag@2x.png */; };
@@ -775,6 +776,7 @@
 		7B75479E1E41FE150025A087 /* windy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windy@2x.png"; sourceTree = "<group>"; };
 		7B75479F1E41FE150025A087 /* windy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windy@3x.png"; sourceTree = "<group>"; };
 		7B79AAC21E572A1700A9A13A /* Logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logout.png; sourceTree = "<group>"; };
+		7B7DF1961E5C3CE000D9BD3B /* ServerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerAPI.swift; sourceTree = "<group>"; };
 		7B7E45FC1E51897400E41F7B /* addanother@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addanother@2x.png"; sourceTree = "<group>"; };
 		7B7E45FD1E51897400E41F7B /* bag@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@1x.png"; sourceTree = "<group>"; };
 		7B7E45FE1E51897400E41F7B /* bag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@2x.png"; sourceTree = "<group>"; };
@@ -1413,6 +1415,7 @@
 		7B4F5ECF1E24EA020086B359 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7B7DF1961E5C3CE000D9BD3B /* ServerAPI.swift */,
 				7B920CC21E48A352002BFEF2 /* LocationManager.swift */,
 				7B4F5ED01E24EA1F0086B359 /* Constant.swift */,
 				0C8FB6211E3F52D2007B7E68 /* Extensions.swift */,
@@ -1552,7 +1555,7 @@
 				TargetAttributes = {
 					B80B3D721E24BFE800FF0A20 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = JMPNXUM63A;
+						DevelopmentTeam = Y55EBSG532;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -1981,6 +1984,7 @@
 				0C0C56151E4088D80085CFD1 /* IQTitleBarButtonItem.swift in Sources */,
 				7B42FEB21E5B005400DE5D62 /* DrawerBarButtonItem.swift in Sources */,
 				7B7547171E41FD8A0025A087 /* CustomerDashboardVC.swift in Sources */,
+				7B7DF1971E5C3CE000D9BD3B /* ServerAPI.swift in Sources */,
 				7BA56BC81E4B4964007F3525 /* InventoryDetailWithMenuVC.swift in Sources */,
 				0C0C56091E4088D80085CFD1 /* IQUIScrollView+Additions.swift in Sources */,
 				0C0C560B1E4088D80085CFD1 /* IQUIView+Hierarchy.swift in Sources */,
@@ -2165,7 +2169,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JMPNXUM63A;
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/MicroBlink.framework\"",
 					"$(PROJECT_DIR)",
@@ -2178,9 +2182,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.museum.vince;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
@@ -2198,7 +2202,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = JMPNXUM63A;
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SRCROOT)/MicroBlink.framework\"",
 					"$(PROJECT_DIR)",
@@ -2211,9 +2215,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.museum.vince;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

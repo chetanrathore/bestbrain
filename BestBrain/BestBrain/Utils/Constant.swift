@@ -69,3 +69,19 @@ class callingStatus{
         self.Request_Url = Request_Url
     }
 }
+
+//validation
+
+func isValidEmail(strEmail : String) ->  Bool
+{
+    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+    let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    return emailTest.evaluate(with: strEmail)
+}
+
+func isValidPassword(strPassword : String) -> Bool
+{
+    let totalChar = strPassword.characters.count
+    return totalChar > 4
+}
+
