@@ -94,7 +94,7 @@
                 <outlet property="btnView" destination="3wv-CS-LAQ" id="u9L-X4-6f0"/>
                 <outlet property="imgInventory" destination="wBb-1X-5GI" id="ayN-mg-iSk"/>
             </connections>
-            <point key="canvasLocation" x="-336" y="-72"/>
+            <point key="canvasLocation" x="-439" y="-79"/>
         </tableViewCell>
     </objects>
     <resources>

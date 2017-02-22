@@ -15,6 +15,8 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet var btnForgetPassword: UIButton!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    var vwBack: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,12 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         btnLogin.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
         btnLogin.layer.shadowRadius = 5
         btnLogin.layer.shadowOpacity = 1.0
+        
+        self.activityIndicator.isHidden = false
+        self.vwBack = UIView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: Screenheight))
+        self.vwBack.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        
+        self.view.addSubview(vwBack)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,8 +42,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         self.view.bringSubview(toFront: self.txtUsername)
         self.view.bringSubview(toFront: self.btnLogin)
         self.view.bringSubview(toFront: self.btnForgetPassword)
-
-
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,12 +64,20 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         }else if(!isValidPassword(strPassword: strPassword)) {
             displayAlertMessage(alertMessage: "Password must contain at least 8 characters")
         }else {
+            self.activityIndicator.isHidden = false
+            self.btnLogin.isEnabled = false
+            self.view.bringSubview(toFront: self.vwBack)
+            self.view.bringSubview(toFront: self.activityIndicator)
             var loginData = [String:String]()
             loginData["email"] = self.txtUsername.text
             loginData["password"] = self.txtPassword.text
             ServerAPI.sharedObject.requestFor_NSMutableDictionary(Str_Request_Url: "auth/local", Str_Request_Method: "POST", Request_parameter: loginData, Request_parameter_Images: nil, isTokenEmbeded: false, status: { (status) in
             }, response_Dictionary: { (result) in
                 DispatchQueue.main.async {
+                    self.btnLogin.isEnabled = true
+                    self.activityIndicator.isHidden = true
+                    self.view.sendSubview(toBack: self.vwBack)
+                    self.view.sendSubview(toBack: self.activityIndicator)
                     if result.object(forKey: "message") != nil {
                         let message = (result.object(forKey: "message") as? String)!
                         self.displayAlertMessage(alertMessage: message)

@@ -72,11 +72,10 @@ class AppraisalVC: UIViewController {
     // MARK:- Outlet Actions
     
     @IBAction func handleBtnNavBack(_ sender: UIButton) {
-        
+        self.navigationController!.popViewController(animated: true)
     }
     
     @IBAction func handleBtnVINCheck(_ sender: UIButton) {
-        self.navigationController!.popViewController(animated: true)
     }
     
     @IBAction func handleBtnPayoff(_ sender: UIButton) {
