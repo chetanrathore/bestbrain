@@ -15,6 +15,8 @@
                 <outlet property="activityIndicator" destination="0RW-Wn-fcQ" id="CIn-Il-Hke"/>
                 <outlet property="btnForgetPassword" destination="0Ba-AF-BTh" id="pEA-xD-WhH"/>
                 <outlet property="btnLogin" destination="En0-Qg-20o" id="m31-58-f1u"/>
+                <outlet property="imgAppLogo" destination="kfu-SD-yaS" id="7B5-Bi-PJh"/>
+                <outlet property="imgBottom" destination="Nri-Fl-ux2" id="Pz2-ox-VZD"/>
                 <outlet property="txtPassword" destination="UUQ-Fg-4KZ" id="JkQ-Xr-GzS"/>
                 <outlet property="txtUsername" destination="KQF-1L-lEM" id="nWP-hi-5Cz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -25,6 +27,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThunderMountainHDNoSky 17-54-34-262.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nri-Fl-ux2">
+                    <rect key="frame" x="0.0" y="353" width="320" height="127"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Nri-Fl-ux2" secondAttribute="height" multiplier="2:3" constant="235.33333333333334" id="vmy-Cm-L6K"/>
+                    </constraints>
+                </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin@example.com" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KQF-1L-lEM">
                     <rect key="frame" x="21" y="202" width="277" height="39"/>
                     <constraints>
@@ -52,21 +60,27 @@
                     <state key="normal" title="Login">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="handleLoginBtn:" destination="-1" eventType="touchUpInside" id="4kd-ul-gZt"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-AF-BTh">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-AF-BTh">
                     <rect key="frame" x="175" y="353" width="123" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Forgot Password?">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kfu-SD-yaS">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ThunderMountainlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="kfu-SD-yaS">
                     <rect key="frame" x="30" y="41" width="258" height="128"/>
                     <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="0.0" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="kfu-SD-yaS" secondAttribute="height" multiplier="129:64" id="eg0-Du-Nhh"/>
+                        <constraint firstAttribute="width" secondItem="kfu-SD-yaS" secondAttribute="height" multiplier="129:64" id="pIZ-75-UWd"/>
                     </constraints>
                 </imageView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0RW-Wn-fcQ">
@@ -77,23 +91,27 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kfu-SD-yaS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="1K5-Fm-fA1"/>
                 <constraint firstItem="KQF-1L-lEM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="8Oe-X0-L9y"/>
-                <constraint firstAttribute="trailing" secondItem="kfu-SD-yaS" secondAttribute="trailing" constant="32" id="D8J-61-PIo"/>
                 <constraint firstAttribute="trailing" secondItem="UUQ-Fg-4KZ" secondAttribute="trailing" constant="22" id="EAa-55-hVm"/>
+                <constraint firstAttribute="trailing" secondItem="Nri-Fl-ux2" secondAttribute="trailing" id="EdM-iE-ehc"/>
+                <constraint firstAttribute="bottom" secondItem="Nri-Fl-ux2" secondAttribute="bottom" id="OfT-k5-iUu"/>
+                <constraint firstItem="KQF-1L-lEM" firstAttribute="top" secondItem="kfu-SD-yaS" secondAttribute="bottom" constant="33" id="S4u-Qy-I9i"/>
                 <constraint firstItem="En0-Qg-20o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="S8s-nM-RYg"/>
                 <constraint firstItem="En0-Qg-20o" firstAttribute="top" secondItem="UUQ-Fg-4KZ" secondAttribute="bottom" constant="15" id="SWl-hI-Lzn"/>
                 <constraint firstItem="UUQ-Fg-4KZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="UJn-wY-OZQ"/>
-                <constraint firstItem="0Ba-AF-BTh" firstAttribute="trailing" secondItem="En0-Qg-20o" secondAttribute="trailing" id="X3y-uV-uxn"/>
+                <constraint firstAttribute="trailing" secondItem="kfu-SD-yaS" secondAttribute="trailing" constant="32" id="UtB-iW-zBO"/>
                 <constraint firstAttribute="trailing" secondItem="KQF-1L-lEM" secondAttribute="trailing" constant="22" id="Y8f-S9-hWu"/>
-                <constraint firstItem="kfu-SD-yaS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="41" id="bIN-tO-rXq"/>
-                <constraint firstAttribute="trailing" secondItem="0Ba-AF-BTh" secondAttribute="trailing" constant="22" id="pM5-hN-ues"/>
-                <constraint firstItem="0Ba-AF-BTh" firstAttribute="top" secondItem="En0-Qg-20o" secondAttribute="bottom" constant="5" id="qOt-8s-Q8y"/>
-                <constraint firstItem="KQF-1L-lEM" firstAttribute="top" secondItem="kfu-SD-yaS" secondAttribute="bottom" constant="33" id="rYY-dd-iDz"/>
+                <constraint firstItem="kfu-SD-yaS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="41" id="lHy-Bn-LjA"/>
+                <constraint firstItem="kfu-SD-yaS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="lpH-1E-ndT"/>
                 <constraint firstAttribute="trailing" secondItem="En0-Qg-20o" secondAttribute="trailing" constant="22" id="xKc-hi-ubN"/>
                 <constraint firstItem="UUQ-Fg-4KZ" firstAttribute="top" secondItem="KQF-1L-lEM" secondAttribute="bottom" constant="15" id="yTC-52-PrH"/>
+                <constraint firstItem="Nri-Fl-ux2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yvx-X7-cwi"/>
             </constraints>
-            <point key="canvasLocation" x="-668" y="-421"/>
+            <point key="canvasLocation" x="-927" y="-510"/>
         </view>
     </objects>
+    <resources>
+        <image name="ThunderMountainHDNoSky 17-54-34-262.png" width="1063" height="481"/>
+        <image name="ThunderMountainlogo.png" width="567" height="290"/>
+    </resources>
 </document>

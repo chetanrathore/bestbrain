@@ -191,6 +191,7 @@
 		7B42FEB61E5B005400DE5D62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B42FEB01E5B005400DE5D62 /* Info.plist */; };
 		7B42FEC01E5B2A4500DE5D62 /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEBF1E5B2A4500DE5D62 /* SpeedDemoVC.m */; };
 		7B42FEC21E5B2A5D00DE5D62 /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B42FEC11E5B2A5D00DE5D62 /* SpeedDemoVC.xib */; };
+		7B4753A61E5D9E4C00F7A236 /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4753A51E5D9E4C00F7A236 /* SideMenuVC.xib */; };
 		7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */; };
 		7B4F5EC31E24CA8E0086B359 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */; };
 		7B4F5EC41E24CA8E0086B359 /* DashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */; };
@@ -352,7 +353,7 @@
 		7B7DF1AD1E5C5BC500D9BD3B /* menu@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A71E5C5BC500D9BD3B /* menu@1x.png */; };
 		7B7DF1AE1E5C5BC500D9BD3B /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A81E5C5BC500D9BD3B /* menu@2x.png */; };
 		7B7DF1AF1E5C5BC500D9BD3B /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A91E5C5BC500D9BD3B /* menu@3x.png */; };
-		7B7DF1B41E5C712500D9BD3B /* Thunder Mountain logo (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1B21E5C712500D9BD3B /* Thunder Mountain logo (1).png */; };
+		7B7DF1B41E5C712500D9BD3B /* ThunderMountainlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1B21E5C712500D9BD3B /* ThunderMountainlogo.png */; };
 		7B7DF1B51E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1B31E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png */; };
 		7B7E46161E51897400E41F7B /* addanother@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FC1E51897400E41F7B /* addanother@2x.png */; };
 		7B7E46171E51897400E41F7B /* bag@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FD1E51897400E41F7B /* bag@1x.png */; };
@@ -391,6 +392,8 @@
 		7B920CB31E48962D002BFEF2 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CB01E48962D002BFEF2 /* EPExtensions.swift */; };
 		7B920CB41E48962D002BFEF2 /* EPSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CB11E48962D002BFEF2 /* EPSignatureView.swift */; };
 		7B920CC31E48A352002BFEF2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B920CC21E48A352002BFEF2 /* LocationManager.swift */; };
+		7B9DB8EF1E5D81040082025A /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DB8ED1E5D81040082025A /* SettingsVC.swift */; };
+		7B9DB8F21E5D812E0082025A /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9DB8F11E5D812E0082025A /* SettingsVC.xib */; };
 		7BA56BB81E4B43A5007F3525 /* CustomerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BB71E4B43A4007F3525 /* CustomerCell.xib */; };
 		7BA56BBF1E4B4495007F3525 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56BBD1E4B4495007F3525 /* DashboardCell.swift */; };
 		7BA56BC01E4B4495007F3525 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BBE1E4B4495007F3525 /* DashboardCell.xib */; };
@@ -399,7 +402,6 @@
 		7BA56BCC1E4B4972007F3525 /* InventoryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */; };
 		7BA56BCD1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */; };
 		7BB008CE1E5714800038A19F /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008CC1E5714800038A19F /* SideMenuVC.swift */; };
-		7BB008D11E57149C0038A19F /* SideMenuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008D01E57149C0038A19F /* SideMenuVC.xib */; };
 		7BB008D41E5719810038A19F /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB008D21E5719810038A19F /* SideMenuCell.swift */; };
 		7BB008D51E5719810038A19F /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB008D31E5719810038A19F /* SideMenuCell.xib */; };
 		7BEBF9451E55C4A70045477B /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEBF9431E55C4A70045477B /* ProfileVC.swift */; };
@@ -629,6 +631,7 @@
 		7B42FEBE1E5B2A4500DE5D62 /* SpeedDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedDemoVC.h; sourceTree = "<group>"; };
 		7B42FEBF1E5B2A4500DE5D62 /* SpeedDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedDemoVC.m; sourceTree = "<group>"; };
 		7B42FEC11E5B2A5D00DE5D62 /* SpeedDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeedDemoVC.xib; sourceTree = "<group>"; };
+		7B4753A51E5D9E4C00F7A236 /* SideMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
 		7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
 		7B4F5EBD1E24CA8E0086B359 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7B4F5EC01E24CA8E0086B359 /* DashboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardVC.xib; sourceTree = "<group>"; };
@@ -790,7 +793,7 @@
 		7B7DF1A71E5C5BC500D9BD3B /* menu@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@1x.png"; sourceTree = "<group>"; };
 		7B7DF1A81E5C5BC500D9BD3B /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		7B7DF1A91E5C5BC500D9BD3B /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
-		7B7DF1B21E5C712500D9BD3B /* Thunder Mountain logo (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunder Mountain logo (1).png"; sourceTree = "<group>"; };
+		7B7DF1B21E5C712500D9BD3B /* ThunderMountainlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThunderMountainlogo.png; sourceTree = "<group>"; };
 		7B7DF1B31E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderMountainHDNoSky 17-54-34-262.png"; sourceTree = "<group>"; };
 		7B7E45FC1E51897400E41F7B /* addanother@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addanother@2x.png"; sourceTree = "<group>"; };
 		7B7E45FD1E51897400E41F7B /* bag@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@1x.png"; sourceTree = "<group>"; };
@@ -830,6 +833,8 @@
 		7B920CB11E48962D002BFEF2 /* EPSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPSignatureView.swift; sourceTree = "<group>"; };
 		7B920CC01E489782002BFEF2 /* EPSignature.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EPSignature.framework; sourceTree = "<group>"; };
 		7B920CC21E48A352002BFEF2 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7B9DB8ED1E5D81040082025A /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		7B9DB8F11E5D812E0082025A /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		7BA56BB71E4B43A4007F3525 /* CustomerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerCell.xib; sourceTree = "<group>"; };
 		7BA56BBD1E4B4495007F3525 /* DashboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		7BA56BBE1E4B4495007F3525 /* DashboardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
@@ -838,7 +843,6 @@
 		7BA56BC91E4B4972007F3525 /* InventoryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailVC.xib; sourceTree = "<group>"; };
 		7BA56BCA1E4B4972007F3525 /* InventoryDetailWithMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailWithMenuVC.xib; sourceTree = "<group>"; };
 		7BB008CC1E5714800038A19F /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
-		7BB008D01E57149C0038A19F /* SideMenuVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuVC.xib; sourceTree = "<group>"; };
 		7BB008D21E5719810038A19F /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		7BB008D31E5719810038A19F /* SideMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		7BEBF9431E55C4A70045477B /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -1018,7 +1022,7 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				7B7DF1B21E5C712500D9BD3B /* Thunder Mountain logo (1).png */,
+				7B7DF1B21E5C712500D9BD3B /* ThunderMountainlogo.png */,
 				7B7DF1B31E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png */,
 				7B7DF1A41E5C5BC500D9BD3B /* admin@1x.png */,
 				7B7DF1A51E5C5BC500D9BD3B /* admin@2x.png */,
@@ -1375,6 +1379,7 @@
 				0CE735951E4B2078008FE4C7 /* PossibleMatchesVC.swift */,
 				7BEBF9431E55C4A70045477B /* ProfileVC.swift */,
 				7BB008CC1E5714800038A19F /* SideMenuVC.swift */,
+				7B9DB8ED1E5D81040082025A /* SettingsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1382,9 +1387,10 @@
 		7B4F5EBF1E24CA8E0086B359 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B4753A51E5D9E4C00F7A236 /* SideMenuVC.xib */,
+				7B9DB8F11E5D812E0082025A /* SettingsVC.xib */,
 				7B5254761E5C1BB000ABA65F /* CustomerDetailsVC.xib */,
 				7B42FEC11E5B2A5D00DE5D62 /* SpeedDemoVC.xib */,
-				7BB008D01E57149C0038A19F /* SideMenuVC.xib */,
 				7BEBF9471E55C4DF0045477B /* ProfileVC.xib */,
 				7B3365AD1E52DBB3003B1898 /* CustomerVC.xib */,
 				0C5021D91E4C64CD000AFF14 /* AppraisalVC.xib */,
@@ -1686,6 +1692,7 @@
 				7B128A4A1E4C97CF002AA386 /* searchGreen@3x.png in Resources */,
 				7B7E462B1E51897400E41F7B /* minibox@2x.png in Resources */,
 				7B920CAE1E487BE0002BFEF2 /* TermMeter.png in Resources */,
+				7B4753A61E5D9E4C00F7A236 /* SideMenuVC.xib in Resources */,
 				0C0C55EF1E406A9C0085CFD1 /* sliderlabel.png in Resources */,
 				7B6F3DBA1E4A04CD0009377A /* id-card.png in Resources */,
 				7B3365A91E52DB35003B1898 /* mony@3x.png in Resources */,
@@ -1821,7 +1828,7 @@
 				7B7548041E41FE150025A087 /* scattered_thunderstorms@2x.png in Resources */,
 				7B7547ED1E41FE150025A087 /* mixed_rain_sleet@3x.png in Resources */,
 				7B7547E41E41FE150025A087 /* light_snow_showers@3x.png in Resources */,
-				7B7DF1B41E5C712500D9BD3B /* Thunder Mountain logo (1).png in Resources */,
+				7B7DF1B41E5C712500D9BD3B /* ThunderMountainlogo.png in Resources */,
 				0CD3D3DC1E4DADB10028BEE5 /* line@1x.png in Resources */,
 				7B128A101E4C8A69002AA386 /* quotes@1x.png in Resources */,
 				7B7547F01E41FE150025A087 /* mostly_cloudy_(day)@3x.png in Resources */,
@@ -1869,11 +1876,11 @@
 				0CD3D41A1E4DBB280028BEE5 /* vincheck@3x.png in Resources */,
 				7B29499C1E2607A9008566A4 /* AddInventoryViewController.xib in Resources */,
 				7B7547F61E41FE150025A087 /* partly_cloudy_(day)@3x.png in Resources */,
+				7B9DB8F21E5D812E0082025A /* SettingsVC.xib in Resources */,
 				7B7547EF1E41FE150025A087 /* mostly_cloudy_(day)@2x.png in Resources */,
 				7B3365B21E5329C3003B1898 /* RelationCell.xib in Resources */,
 				7B7547A11E41FE150025A087 /* Checked.png in Resources */,
 				7B7547E91E41FE150025A087 /* mixed_rain_hail@2x.png in Resources */,
-				7BB008D11E57149C0038A19F /* SideMenuVC.xib in Resources */,
 				7B7547F71E41FE150025A087 /* partly_cloudy_(night).png in Resources */,
 				7B3BB0BD1E49F8FC00D436F5 /* error.png in Resources */,
 				7B128A411E4C97CF002AA386 /* addGreen@3x.png in Resources */,
@@ -2041,6 +2048,7 @@
 				0C8FB6301E3F6E6C007B7E68 /* InventoryFilterVC.swift in Sources */,
 				7B128A231E4C9649002AA386 /* addItemCell.swift in Sources */,
 				7BA56BC71E4B4964007F3525 /* InventoryDetailVC.swift in Sources */,
+				7B9DB8EF1E5D81040082025A /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

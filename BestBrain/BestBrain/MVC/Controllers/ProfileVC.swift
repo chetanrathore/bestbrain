@@ -45,8 +45,10 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet var lblDirect: UILabel!
     @IBOutlet var txtDirect: UITextField!
     
+    @IBOutlet var vwScroll: UIScrollView!
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var btnDone: UIButton!
+    @IBOutlet var vwNavigation: UIView!
   
     var imagePicker = UIImagePickerController()
     var isEditable = false
@@ -59,6 +61,11 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.view.gradientLayer()
+        UIApplication.shared.statusBarView?.backgroundColor = .white
+        self.view.bringSubview(toFront: self.btnProfile)
+        self.view.bringSubview(toFront: self.vwScroll)
+        self.view.bringSubview(toFront: self.vwNavigation)
         self.navigationController?.navigationBar.isHidden = true
         self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
 
@@ -74,7 +81,9 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.btnProfile.layer.cornerRadius = self.btnProfile.frame.width/2
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
