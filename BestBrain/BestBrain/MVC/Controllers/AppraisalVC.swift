@@ -52,6 +52,7 @@ class AppraisalVC: UIViewController {
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
         self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+        self.automaticallyAdjustsScrollViewInsets = false
         if ScreenWidth > 320{
             for const in constBtnSpacing{
                 const.constant = 40

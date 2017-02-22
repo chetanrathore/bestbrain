@@ -9,7 +9,6 @@
 import UIKit
 
 class LoginVC: UIViewController,UITextFieldDelegate {
-
     
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var txtPassword: UITextField!
@@ -17,6 +16,8 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     @IBOutlet var btnForgetPassword: UIButton!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     var vwBack: UIView!
+    @IBOutlet var imgBottom: UIImageView!
+    @IBOutlet var imgAppLogo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,8 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         self.view.bringSubview(toFront: self.txtUsername)
         self.view.bringSubview(toFront: self.btnLogin)
         self.view.bringSubview(toFront: self.btnForgetPassword)
-        
+        self.view.bringSubview(toFront: self.imgBottom)
+        self.view.bringSubview(toFront: self.imgAppLogo)
     }
 
     override func didReceiveMemoryWarning() {

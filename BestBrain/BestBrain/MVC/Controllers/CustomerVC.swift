@@ -38,38 +38,26 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         tblCustomer.dataSource = self
         txtSearchBar.delegate = self
         tblCustomer.delegate = self
+        
         tblCustomer.register(UINib(nibName: "CustomerCell", bundle: nil), forCellReuseIdentifier: "CustomerCell")
         tblRelation.register(UINib(nibName: "RelationCell", bundle: nil), forCellReuseIdentifier: "relationCell")
-        
+
         let searchViews = txtSearchBar.subviews
         for i in 0..<searchViews.count{
             if searchViews[i] .isKind(of: UITextField.self){
                 searchViews[i].backgroundColor = UIColor.blue
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateLink), name: NSNotification.Name(rawValue: "relationLinked"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.popRelationView), name: NSNotification.Name(rawValue: "LinkRelationship"), object: nil)
-        //Temporary data
-        let customer1 = Customer(firstName: "John", lastName: "other details", city: "New York")
-        let customer2 = Customer(firstName: "tmp", lastName: "xcvxcv", city: "New York")
-        let customer3 = Customer(firstName: "John Khan", lastName: "Xyvxcvz", city: "New York")
-        let customer4 = Customer(firstName: "John", lastName: "Xy45646z", city: "New York")
-        let customer5 = Customer(firstName: "Jotmphn", lastName: "Xy6565z", city: "New York")
-        let customer6 = Customer(firstName: "Abcd", lastName: "Xytyty56fgz", city: "New York")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+        self.loadCustomerData()
         
-        arrCustomer.append(customer1)
-        arrCustomer.append(customer2)
-        arrCustomer.append(customer3)
-        arrCustomer.append(customer4)
-        arrCustomer.append(customer5)
-        arrCustomer.append(customer6)
-        //        self.navigationController?.navigationBar.isHidden = true
-        //        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
-        // self.navigationController?.navigationBar.isHidden = true
         self.txtSearchBar.text = ""
         self.txtSearchBar.resignFirstResponder()
         self.isSearch = false
@@ -85,7 +73,6 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         self.txtSearchBar.text = ""
         self.isSearch = false
         txtSearchBar.resignFirstResponder()
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -221,6 +208,23 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     // MARK:- Custom Method(s)
+    
+    func loadCustomerData() {
+        //Temporary data
+        let customer1 = Customer(firstName: "John", lastName: "other details", city: "New York")
+        let customer2 = Customer(firstName: "tmp", lastName: "xcvxcv", city: "New York")
+        let customer3 = Customer(firstName: "John Khan", lastName: "Xyvxcvz", city: "New York")
+        let customer4 = Customer(firstName: "John", lastName: "Xy45646z", city: "New York")
+        let customer5 = Customer(firstName: "Jotmphn", lastName: "Xy6565z", city: "New York")
+        let customer6 = Customer(firstName: "Abcd", lastName: "Xytyty56fgz", city: "New York")
+        
+        arrCustomer.append(customer1)
+        arrCustomer.append(customer2)
+        arrCustomer.append(customer3)
+        arrCustomer.append(customer4)
+        arrCustomer.append(customer5)
+        arrCustomer.append(customer6)
+    }
     
     func updateLink(notification: NSNotification) {
         self.isLink = (notification.object != nil)
