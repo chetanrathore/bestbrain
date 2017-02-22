@@ -46,6 +46,19 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     @IBOutlet var txtFieldPayoff: UITextField!
     @IBOutlet var btnAddManually: UIButton!
   
+    
+    @IBOutlet var txtCI1: UITextField!
+    @IBOutlet var txtCI2: UITextField!
+    @IBOutlet var txtCI3: UITextField!
+    @IBOutlet var txtCI4: UITextField!
+    @IBOutlet var txtCI5: UITextField!
+    @IBOutlet var txtCI6: UITextField!
+    @IBOutlet var txtCI7: UITextField!
+    
+    @IBOutlet var btnOwns: UIButton!
+    @IBOutlet var btnBuyings: UIButton!
+    @IBOutlet var btnRenting: UIButton!
+    
     @IBOutlet var btnLink: UIButton!
     @IBOutlet var btnAddCustomer: UIButton!
     
@@ -74,16 +87,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-
-        txfFirstName.delegate = self
-        txfLastName.delegate = self
-        txfAddress.delegate = self
-        txfCity.delegate = self
-        txfState.delegate = self
-        txfZipCode.delegate = self
-        txfDOB.delegate = self
-        txfDLState.delegate = self
-        txfDLNumber.delegate = self
+     
+        self.setTextFieldDelegate()
 
         if isFromScanning{
             guard let userDetails  = Details["userData"] as? NSDictionary else {
@@ -309,7 +314,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         //vwDesiredvehicle textFields:
 
         if textField == txfYear{
-            if txfYear.text != nil{
+            if txfYear.text != ""{
                 txfYear.resignFirstResponder()
                 txfMake.becomeFirstResponder()
             }else{
@@ -317,7 +322,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
                 txfYear.resignFirstResponder()
             }
         }else if textField == txfMake{
-            if txfMake.text != nil{
+            if txfMake.text != ""{
                 txfMake.resignFirstResponder()
                 txfModel.becomeFirstResponder()
             }else{
@@ -326,7 +331,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
 
         }else if textField == txfModel{
-            if txfModel.text != nil{
+            if txfModel.text != ""{
                 txfModel.resignFirstResponder()
                 txfModelNo.becomeFirstResponder()
             }else{
@@ -335,7 +340,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
 
         }else if textField == txfModelNo{
-            if txfModelNo.text != nil{
+            if txfModelNo.text != ""{
                 txfModelNo.resignFirstResponder()
             }else{
                 Customs.showAlert(msg: "PLEASE ENTER DATA")
@@ -347,7 +352,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         //vwAddTrade textFields:
 
         if textField == txtFieldVIN{
-            if txtFieldVIN.text != nil{
+            if txtFieldVIN.text != ""{
                 txtFieldVIN.resignFirstResponder()
                 txtFieldYear.becomeFirstResponder()
             }else{
@@ -356,7 +361,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
 
         }else if textField == txtFieldYear{
-            if txtFieldYear.text != nil{
+            if txtFieldYear.text != ""{
                 txtFieldYear.resignFirstResponder()
                 txtFieldMake.becomeFirstResponder()
             }else{
@@ -365,7 +370,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
 
         }else if textField == txtFieldMake{
-            if txtFieldMake.text != nil{
+            if txtFieldMake.text != ""{
                 txtFieldMake.resignFirstResponder()
                 txtFieldModel.becomeFirstResponder()
             }else{
@@ -374,7 +379,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
 
         }else if textField == txtFieldModel{
-            if txtFieldModel.text != nil{
+            if txtFieldModel.text != ""{
                 txtFieldModel.resignFirstResponder()
                 txtFieldMiles.becomeFirstResponder()
             }else{
@@ -383,7 +388,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
 
         }else if textField == txtFieldMiles{
-            if txtFieldMiles.text != nil{
+            if txtFieldMiles.text != ""{
                 txtFieldMiles.resignFirstResponder()
                 txtFieldPayoff.becomeFirstResponder()
             }else{
@@ -392,13 +397,78 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             }
 
         }else if textField == txtFieldPayoff{
-            if txtFieldPayoff.text != nil{
+            if txtFieldPayoff.text != ""{
                 txtFieldPayoff.resignFirstResponder()
             }else{
                 Customs.showAlert(msg: "PLEASE ENTER DATA")
                 txtFieldPayoff.resignFirstResponder()
             }
 
+        }
+
+        //vwcreditInfo textFields:
+        
+        if textField == txtCI1{
+            if txtCI1.text != ""{
+                txtCI1.resignFirstResponder()
+                txtCI2.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtCI1.resignFirstResponder()
+            }
+            
+        }else if textField == txtCI2{
+            if txtCI2.text != ""{
+                txtCI2.resignFirstResponder()
+                txtCI3.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtCI2.resignFirstResponder()
+            }
+            
+        }else if textField == txtCI3{
+            if txtCI3.text != ""{
+                txtCI3.resignFirstResponder()
+                txtCI4.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtCI3.resignFirstResponder()
+            }
+            
+        }else if textField == txtCI4{
+            if txtCI4.text != ""{
+                txtCI4.resignFirstResponder()
+                txtCI5.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtCI4.resignFirstResponder()
+            }
+            
+        }else if textField == txtCI5{
+            if txtCI5.text != ""{
+                txtCI5.resignFirstResponder()
+                txtCI6.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtCI5.resignFirstResponder()
+            }
+            
+        }else if textField == txtCI6{
+            if txtCI6.text != ""{
+                txtCI6.resignFirstResponder()
+                txtCI7.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtCI6.resignFirstResponder()
+            }
+            
+        }else if textField == txtCI7{
+            if txtCI7.text != ""{
+                txtCI7.resignFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtCI7.resignFirstResponder()
+            }
         }
 
         tblAddItems.isScrollEnabled = true
@@ -415,19 +485,50 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         tblAddItems.isScrollEnabled = false
         textField.becomeFirstResponder()
         if textField.tag == 0{
-            textField.keyboardType = UIKeyboardType.numberPad
+           // textField.keyboardType = UIKeyboardType.numberPad
         }else if textField.tag == 1{
-            textField.keyboardType = UIKeyboardType.emailAddress
+          //  textField.keyboardType = UIKeyboardType.emailAddress
         }else if textField.tag == 2{
-            textField.keyboardType = UIKeyboardType.default
+            //textField.keyboardType = UIKeyboardType.default
         }else if textField.tag == 3{
-            textField.keyboardType = UIKeyboardType.default
+          //  textField.keyboardType = UIKeyboardType.default
         }
     }
     
     // MARK:- TextField validation Method(s)
     
     // MARK:- Custom Method(s)
+    func setTextFieldDelegate(){
+        txfFirstName.delegate = self
+        txfLastName.delegate = self
+        txfAddress.delegate = self
+        txfCity.delegate = self
+        txfState.delegate = self
+        txfZipCode.delegate = self
+        txfDOB.delegate = self
+        txfDLState.delegate = self
+        txfDLNumber.delegate = self
+        
+        txfYear.delegate = self
+        txfMake.delegate = self
+        txfModel.delegate = self
+        txfModelNo.delegate = self
+        
+        txtFieldVIN.delegate = self
+        txtFieldYear.delegate = self
+        txtFieldMake.delegate = self
+        txtFieldModel.delegate = self
+        txtFieldMiles.delegate = self
+        txtFieldPayoff.delegate = self
+        
+        txtCI1.delegate = self
+        txtCI2.delegate = self
+        txtCI3.delegate = self
+        txtCI4.delegate = self
+        txtCI5.delegate = self
+        txtCI6.delegate = self
+        txtCI7.delegate = self
+    }
     func handleViews(_ sender: UIButton){
         if sender.tag == 101{
             
@@ -628,7 +729,22 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
-    
+    @IBAction func handleBtnCredits(_ sender: Any) {
+        if (sender as AnyObject).tag == 10{
+            btnOwns.setImage(UIImage(named: "btnselect"), for: .normal)
+            btnBuyings.setImage(UIImage(named: "btn"), for: .normal)
+            btnRenting.setImage(UIImage(named: "btn"), for: .normal)
+
+        }else if (sender as AnyObject).tag == 20{
+            btnOwns.setImage(UIImage(named: "btn"), for: .normal)
+            btnBuyings.setImage(UIImage(named: "btnselect"), for: .normal)
+            btnRenting.setImage(UIImage(named: "btn"), for: .normal)
+        }else if (sender as AnyObject).tag == 30{
+            btnOwns.setImage(UIImage(named: "btn"), for: .normal)
+            btnBuyings.setImage(UIImage(named: "btn"), for: .normal)
+            btnRenting.setImage(UIImage(named: "btnselect"), for: .normal)
+        }
+    }
 }
 
 

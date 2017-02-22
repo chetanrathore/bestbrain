@@ -111,37 +111,101 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == txtFname{
+            if txtFname.text != ""{
             txtFname.resignFirstResponder()
             txtMname.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtFname.resignFirstResponder()
+            }
         }else if textField == txtMname{
-            txtMname.resignFirstResponder()
-            txtLname.becomeFirstResponder()
+            if txtMname.text != ""{
+                txtMname.resignFirstResponder()
+                txtLname.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtMname.resignFirstResponder()
+            }
+
         }else if textField == txtLname{
-            txtLname.resignFirstResponder()
-            txtNickName.becomeFirstResponder()
+            if txtLname.text != ""{
+                txtLname.resignFirstResponder()
+                txtNickName.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtLname.resignFirstResponder()
+            }
+
         }else if textField == txtNickName{
-            txtNickName.resignFirstResponder()
-            txtPosition.becomeFirstResponder()
+            if txtNickName.text != ""{
+                txtNickName.resignFirstResponder()
+                txtPosition.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtNickName.resignFirstResponder()
+            }
+
         }else if textField == txtPosition{
-            txtPosition.resignFirstResponder()
-            txtUserId.becomeFirstResponder()
+            if txtPosition.text != ""{
+                txtPosition.resignFirstResponder()
+                txtUserId.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtPosition.resignFirstResponder()
+            }
+
         }else if textField == txtUserId{
-            txtUserId.resignFirstResponder()
-            txtPwd.becomeFirstResponder()
+            if txtUserId.text != ""{
+                txtUserId.resignFirstResponder()
+                txtPwd.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtUserId.resignFirstResponder()
+            }
+
         }else if textField == txtPwd{
-            txtPwd.resignFirstResponder()
-            txtDMSid.becomeFirstResponder()
+            if txtPwd.text != ""{
+                txtPwd.resignFirstResponder()
+                txtDMSid.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtPwd.resignFirstResponder()
+            }
+
         }else if textField == txtDMSid{
-            txtDMSid.resignFirstResponder()
-            txtEmail.becomeFirstResponder()
+            if txtDMSid.text != ""{
+                txtDMSid.resignFirstResponder()
+                txtEmail.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtDMSid.resignFirstResponder()
+            }
+
         }else if textField == txtEmail{
-            txtEmail.resignFirstResponder()
-            txtCell.becomeFirstResponder()
+            if txtEmail.text != ""{
+                txtEmail.resignFirstResponder()
+                txtCell.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtEmail.resignFirstResponder()
+            }
+
         }else if textField == txtCell{
-            txtCell.resignFirstResponder()
-            txtDirect.becomeFirstResponder()
+            if txtCell.text != ""{
+                txtCell.resignFirstResponder()
+                txtDirect.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtCell.resignFirstResponder()
+            }
+
         }else if textField == txtDirect{
-            txtDirect.resignFirstResponder()
+            if txtDirect.text != ""{
+                txtDirect.resignFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA.")
+                txtDirect.resignFirstResponder()
+            }
         }
         return true
     }
