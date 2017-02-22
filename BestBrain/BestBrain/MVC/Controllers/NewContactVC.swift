@@ -54,6 +54,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
    
     @IBOutlet var lbOR: UILabel!
     
+    @IBOutlet var btnDone: UIButton!
+    @IBOutlet var btnBack: UIButton!
     @IBOutlet var vwTxfCrnditInfo: [UIView]!
     @IBOutlet var vwCreditInfo: UIView!
     var allItems = [addItems]()
@@ -69,14 +71,6 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //self.navigationController?.navigationBar.isHidden = false
-
-        self.title = "New Contact"
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.handleBtnSearch))
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.handleBtnDone))
-        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.gray
         
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -120,6 +114,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     }
    
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
     }
    
     override func viewWillDisappear(_ animated: Bool) {
@@ -494,32 +490,6 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     func keyboardWillHide(notification: NSNotification){
         tblAddItems.isScrollEnabled = true
     }
-    func handleBtnDone(){
-        let vc = CustomerDetailsVC(nibName: "CustomerDetailsVC", bundle: nil)
-       var details = NSMutableDictionary()
-        details.setValue(txfFirstName.text, forKey: "first")
-        details.setValue(txfLastName.text, forKey: "last")
-        details.setValue(txfAddress.text, forKey: "address")
-        details.setValue(txfCity.text, forKey: "city")
-        details.setValue(txfState.text, forKey: "state")
-        details.setValue(txfZipCode.text, forKey: "zipcode")
-        details.setValue(txfDOB.text, forKey: "dob")
-        details.setValue(txfDLState.text, forKey: "DLState")
-        details.setValue(txfDLNumber.text, forKey: "DLNum")
-
-        vc.details = details
-        //vc.lbFirst.text = txfFirstName.text
-   //     vc.lbLast.text = txfLastName.text
-  //      vc.lbAddress.text = txfAddress.text
-   //     vc.lbCity.text = txfCity.text
-   //     vc.lbState.text = txfState.text
-    //    vc.lbState.text = txfZipCode.text
-    //    vc.lbDOB.text = txfDOB.text
-    //    vc.lbDLState.text = txfDLState.text
-    //    vc.lbDLNum.text = txfDLNumber.text
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
 
     func loadData(){
         allItems = [
@@ -603,6 +573,26 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         vc.isFromVINScan = true
        // NotificationCenter.default.addObserver(self, selector: #selector(NewContactVC.loadTextFields(notification:)), name: NSNotification.Name(rawValue: "extractedData"), object: nil)
         self.present(vc, animated: true, completion: nil)
+    }
+    @IBAction func handleBtnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func handleBtnDone(_ sender: Any) {
+        let vc = CustomerDetailsVC(nibName: "CustomerDetailsVC", bundle: nil)
+        var details = NSMutableDictionary()
+        details.setValue(txfFirstName.text, forKey: "first")
+        details.setValue(txfLastName.text, forKey: "last")
+        details.setValue(txfAddress.text, forKey: "address")
+        details.setValue(txfCity.text, forKey: "city")
+        details.setValue(txfState.text, forKey: "state")
+        details.setValue(txfZipCode.text, forKey: "zipcode")
+        details.setValue(txfDOB.text, forKey: "dob")
+        details.setValue(txfDLState.text, forKey: "DLState")
+        details.setValue(txfDLNumber.text, forKey: "DLNum")
+        
+        vc.details = details
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     

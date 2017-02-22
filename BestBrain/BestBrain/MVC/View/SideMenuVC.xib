@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="anV-2t-U6s">
-                    <rect key="frame" x="0.0" y="246" width="375" height="421"/>
+                    <rect key="frame" x="0.0" y="256.5" width="375" height="421"/>
                     <color key="backgroundColor" red="0.050980392156862744" green="0.38431372549019605" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="anV-2t-U6s" secondAttribute="height" multiplier="375:421" id="Llp-Ru-Oxr"/>
@@ -32,9 +32,9 @@
                     <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1X-e2-LK0">
-                    <rect key="frame" x="129" y="78" width="117" height="134"/>
+                    <rect key="frame" x="124.5" y="78" width="128" height="128"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="B1X-e2-LK0" secondAttribute="height" multiplier="1:1" constant="-17" id="JzV-RB-ePr"/>
+                        <constraint firstAttribute="width" secondItem="B1X-e2-LK0" secondAttribute="height" multiplier="117:134" constant="16.492537313432834" id="qXl-Fx-OSc"/>
                     </constraints>
                     <state key="normal" image="userProfile.png"/>
                     <connections>
@@ -45,10 +45,9 @@
             <color key="backgroundColor" red="0.050980392159999999" green="0.38431372549999998" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="anV-2t-U6s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gsp-Su-Ey7"/>
-                <constraint firstItem="anV-2t-U6s" firstAttribute="top" secondItem="B1X-e2-LK0" secondAttribute="bottom" constant="34" id="YG4-Ig-vwn"/>
-                <constraint firstItem="B1X-e2-LK0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="blu-R4-fwR"/>
-                <constraint firstItem="B1X-e2-LK0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="129" id="dBI-A9-67V"/>
-                <constraint firstAttribute="trailing" secondItem="B1X-e2-LK0" secondAttribute="trailing" constant="129" id="thc-Wg-bJi"/>
+                <constraint firstItem="B1X-e2-LK0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="g9l-Qn-BrW"/>
+                <constraint firstItem="anV-2t-U6s" firstAttribute="top" secondItem="B1X-e2-LK0" secondAttribute="bottom" constant="50.5" id="kEC-Le-qrF"/>
+                <constraint firstItem="B1X-e2-LK0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="uYr-I4-ebz"/>
                 <constraint firstAttribute="trailing" secondItem="anV-2t-U6s" secondAttribute="trailing" id="zzJ-Df-zEW"/>
             </constraints>
             <point key="canvasLocation" x="-6.5" y="-175.5"/>

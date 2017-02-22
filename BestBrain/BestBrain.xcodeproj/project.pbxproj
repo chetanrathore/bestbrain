@@ -353,6 +353,8 @@
 		7B7DF1AD1E5C5BC500D9BD3B /* menu@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A71E5C5BC500D9BD3B /* menu@1x.png */; };
 		7B7DF1AE1E5C5BC500D9BD3B /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A81E5C5BC500D9BD3B /* menu@2x.png */; };
 		7B7DF1AF1E5C5BC500D9BD3B /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1A91E5C5BC500D9BD3B /* menu@3x.png */; };
+		7B7DF1B41E5C712500D9BD3B /* Thunder Mountain logo (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1B21E5C712500D9BD3B /* Thunder Mountain logo (1).png */; };
+		7B7DF1B51E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7DF1B31E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png */; };
 		7B7E46161E51897400E41F7B /* addanother@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FC1E51897400E41F7B /* addanother@2x.png */; };
 		7B7E46171E51897400E41F7B /* bag@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FD1E51897400E41F7B /* bag@1x.png */; };
 		7B7E46181E51897400E41F7B /* bag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7E45FE1E51897400E41F7B /* bag@2x.png */; };
@@ -789,6 +791,8 @@
 		7B7DF1A71E5C5BC500D9BD3B /* menu@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@1x.png"; sourceTree = "<group>"; };
 		7B7DF1A81E5C5BC500D9BD3B /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		7B7DF1A91E5C5BC500D9BD3B /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
+		7B7DF1B21E5C712500D9BD3B /* Thunder Mountain logo (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Thunder Mountain logo (1).png"; sourceTree = "<group>"; };
+		7B7DF1B31E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThunderMountainHDNoSky 17-54-34-262.png"; sourceTree = "<group>"; };
 		7B7E45FC1E51897400E41F7B /* addanother@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addanother@2x.png"; sourceTree = "<group>"; };
 		7B7E45FD1E51897400E41F7B /* bag@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@1x.png"; sourceTree = "<group>"; };
 		7B7E45FE1E51897400E41F7B /* bag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag@2x.png"; sourceTree = "<group>"; };
@@ -1016,6 +1020,8 @@
 		7B29499F1E2607B9008566A4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7B7DF1B21E5C712500D9BD3B /* Thunder Mountain logo (1).png */,
+				7B7DF1B31E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png */,
 				7B7DF1A41E5C5BC500D9BD3B /* admin@1x.png */,
 				7B7DF1A51E5C5BC500D9BD3B /* admin@2x.png */,
 				7B7DF1A61E5C5BC500D9BD3B /* admin@3x.png */,
@@ -1793,6 +1799,7 @@
 				7B128A111E4C8A69002AA386 /* quotes@2x.png in Resources */,
 				7B128A1E1E4C8AE2002AA386 /* setting@3x.png in Resources */,
 				7B7547B11E41FE150025A087 /* Tasks.png in Resources */,
+				7B7DF1B51E5C712500D9BD3B /* ThunderMountainHDNoSky 17-54-34-262.png in Resources */,
 				7B7547B51E41FE150025A087 /* blowing_snow@3x.png in Resources */,
 				7B3365A31E52DB35003B1898 /* btnselect@3x.png in Resources */,
 				7B7547BD1E41FE150025A087 /* cloudy@2x.png in Resources */,
@@ -1816,6 +1823,7 @@
 				7B7548041E41FE150025A087 /* scattered_thunderstorms@2x.png in Resources */,
 				7B7547ED1E41FE150025A087 /* mixed_rain_sleet@3x.png in Resources */,
 				7B7547E41E41FE150025A087 /* light_snow_showers@3x.png in Resources */,
+				7B7DF1B41E5C712500D9BD3B /* Thunder Mountain logo (1).png in Resources */,
 				0CD3D3DC1E4DADB10028BEE5 /* line@1x.png in Resources */,
 				7B128A101E4C8A69002AA386 /* quotes@1x.png in Resources */,
 				7B7547F01E41FE150025A087 /* mostly_cloudy_(day)@3x.png in Resources */,
@@ -2127,7 +2135,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -2176,7 +2184,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "bf446da4-ad88-4a3a-a51a-7580571c9f2c";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -2200,7 +2208,7 @@
 					"\"$(SRCROOT)/EPSignature.framework\"",
 				);
 				INFOPLIST_FILE = BestBrain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2208,7 +2216,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
@@ -2233,7 +2241,7 @@
 					"\"$(SRCROOT)/EPSignature.framework\"",
 				);
 				INFOPLIST_FILE = BestBrain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2241,7 +2249,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/itilak/Documents/BestBrain/BestBrain/BestBrain/BestBrain-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

@@ -56,7 +56,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-AF-BTh">
-                    <rect key="frame" x="175" y="356" width="123" height="30"/>
+                    <rect key="frame" x="175" y="353" width="123" height="30"/>
                     <state key="normal" title="Forgot Password?">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -80,10 +80,9 @@
                 <constraint firstItem="UUQ-Fg-4KZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="UJn-wY-OZQ"/>
                 <constraint firstItem="0Ba-AF-BTh" firstAttribute="trailing" secondItem="En0-Qg-20o" secondAttribute="trailing" id="X3y-uV-uxn"/>
                 <constraint firstAttribute="trailing" secondItem="KQF-1L-lEM" secondAttribute="trailing" constant="22" id="Y8f-S9-hWu"/>
-                <constraint firstAttribute="bottom" secondItem="0Ba-AF-BTh" secondAttribute="bottom" constant="94" id="a2U-gR-VrT"/>
                 <constraint firstItem="kfu-SD-yaS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="41" id="bIN-tO-rXq"/>
                 <constraint firstAttribute="trailing" secondItem="0Ba-AF-BTh" secondAttribute="trailing" constant="22" id="pM5-hN-ues"/>
-                <constraint firstItem="0Ba-AF-BTh" firstAttribute="top" secondItem="En0-Qg-20o" secondAttribute="bottom" constant="8" id="qOt-8s-Q8y"/>
+                <constraint firstItem="0Ba-AF-BTh" firstAttribute="top" secondItem="En0-Qg-20o" secondAttribute="bottom" constant="5" id="qOt-8s-Q8y"/>
                 <constraint firstItem="KQF-1L-lEM" firstAttribute="top" secondItem="kfu-SD-yaS" secondAttribute="bottom" constant="33" id="rYY-dd-iDz"/>
                 <constraint firstAttribute="trailing" secondItem="En0-Qg-20o" secondAttribute="trailing" constant="22" id="xKc-hi-ubN"/>
                 <constraint firstItem="UUQ-Fg-4KZ" firstAttribute="top" secondItem="KQF-1L-lEM" secondAttribute="bottom" constant="15" id="yTC-52-PrH"/>

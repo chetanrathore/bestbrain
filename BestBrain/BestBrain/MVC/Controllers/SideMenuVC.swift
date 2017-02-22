@@ -61,17 +61,21 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch(indexPath.row) {
             case 0:
-                appDelegate.drawerController.centerViewController = CustomerDashboardVC()
+                let nav = UINavigationController(rootViewController: CustomerDashboardVC())
+                appDelegate.drawerController.centerViewController = nav
                 appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 1:
-                appDelegate.drawerController.centerViewController = DLScanCameraVC()
+                let nav = UINavigationController(rootViewController: DLScanCameraVC())
+                appDelegate.drawerController.centerViewController = nav
                 appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 2:break
             case 3:
-                appDelegate.drawerController.centerViewController = InventoryVC()
+                let nav = UINavigationController(rootViewController: InventoryVC())
+                appDelegate.drawerController.centerViewController = nav
                 appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 4:
-                appDelegate.drawerController.centerViewController = CustomerVC()
+                let nav = UINavigationController(rootViewController: CustomerVC())
+                appDelegate.drawerController.centerViewController = nav
                 appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
             case 5:break
             case 6:break
@@ -88,9 +92,9 @@ class SideMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func handleBtnProfile(_ sender: Any) {
         let vc = ProfileVC(nibName: "ProfileVC", bundle: nil)
-        vc.navigationController?.navigationBar.isHidden = false
-        appDelegate.drawerController.setCenter(vc, withCloseAnimation: true, completion: nil)
-        appDelegate.drawerController.centerViewController?.navigationController?.navigationBar.isHidden = false
+        let nav = UINavigationController(rootViewController: vc)
+        appDelegate.drawerController.centerViewController = nav
+        appDelegate.drawerController.closeDrawer(animated: true, completion: nil)
     }
  
 }

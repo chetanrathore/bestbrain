@@ -45,6 +45,9 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet var lblDirect: UILabel!
     @IBOutlet var txtDirect: UITextField!
     
+    @IBOutlet var btnBack: UIButton!
+    @IBOutlet var btnDone: UIButton!
+  
     var imagePicker = UIImagePickerController()
     var isEditable = false
 
@@ -56,26 +59,21 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-        self.evo_drawerController?.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
 
         if self.isEditable{
             self.isEditable = false
             let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.handleDoneBtn))
-          //  self.navigationItem.setRightBarButton(doneBtn, animated: true)
-        
             self.navigationItem.rightBarButtonItem = doneBtn
         } else {
             self.isEditable = true
             let editBtn = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(self.handleEditBtn))
-           // self.navigationItem.setRightBarButton(editBtn, animated: true)
             self.navigationItem.rightBarButtonItem = editBtn
-
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,33 +97,81 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     // MARK:- TextField Method(s)
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if isEditable {
-            self.setEnableTextField()
-        } else {
-            self.disableTextField()
+
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == txtFname{
+            txtFname.resignFirstResponder()
+            txtMname.becomeFirstResponder()
+        }else if textField == txtMname{
+            txtMname.resignFirstResponder()
+            txtLname.becomeFirstResponder()
+        }else if textField == txtLname{
+            txtLname.resignFirstResponder()
+            txtNickName.becomeFirstResponder()
+        }else if textField == txtNickName{
+            txtNickName.resignFirstResponder()
+            txtPosition.becomeFirstResponder()
+        }else if textField == txtPosition{
+            txtPosition.resignFirstResponder()
+            txtUserId.becomeFirstResponder()
+        }else if textField == txtUserId{
+            txtUserId.resignFirstResponder()
+            txtPwd.becomeFirstResponder()
+        }else if textField == txtPwd{
+            txtPwd.resignFirstResponder()
+            txtDMSid.becomeFirstResponder()
+        }else if textField == txtDMSid{
+            txtDMSid.resignFirstResponder()
+            txtEmail.becomeFirstResponder()
+        }else if textField == txtEmail{
+            txtEmail.resignFirstResponder()
+            txtCell.becomeFirstResponder()
+        }else if textField == txtCell{
+            txtCell.resignFirstResponder()
+            txtDirect.becomeFirstResponder()
+        }else if textField == txtDirect{
+            txtDirect.resignFirstResponder()
+        }
+        return true
+    }
+
+    // MARK:- IBOutlet Method(s)
+
+    @IBAction func handleBtnBack(_ sender: Any) {
+        let nav = UINavigationController(rootViewController: CustomerDashboardVC())
+        appDelegate.drawerController.centerViewController = nav
+    }
+    
+    @IBAction func handleBtnDone(_ sender: Any) {
+        if btnDone.titleLabel?.text == "Edit"{
+            btnDone.setTitle("Done", for: .normal)
+            self.handleEditBtn()
+        }else{
+            btnDone.setTitle("Edit", for: .normal)
+            self.handleDoneBtn()
         }
     }
     
-    // MARK:- IBOutlet Method(s)
-    
     @IBAction func handleBtnProfile(_ sender: Any) {
-        self.handleEditBtn()
-    }
-    
-    // MARK:- Custom Method(s)
-    
-    func handleEditBtn() {
-        self.btnProfile.isEnabled = true
         self.imagePicker.delegate = self
         self.imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
         self.imagePicker.allowsEditing = false
         self.present(imagePicker, animated: true, completion: nil)
     }
     
+    // MARK:- Custom Method(s)
+    
+    func handleEditBtn() {
+        self.btnProfile.isEnabled = true
+        self.setEnableTextField()
+    }
+    
     func handleDoneBtn() {
         self.btnProfile.isEnabled = false
         self.imagePicker.delegate = nil
-        
+        self.disableTextField()
     }
 
     func setTextFieldDelegate() {

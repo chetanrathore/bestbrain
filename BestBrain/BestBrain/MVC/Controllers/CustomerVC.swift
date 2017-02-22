@@ -18,7 +18,6 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     @IBOutlet var btnInactive: UIButton!
     @IBOutlet var vwRelation: UIView!
     @IBOutlet var tblRelation: UITableView!
-    @IBOutlet var btnBack: UIButton!
     @IBOutlet var btnMenu: UIButton!
     
     var arrCustomer = [Customer]()
@@ -290,10 +289,6 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     
     // MARK:- IBOutlet Method(s)
     
-    
-    @IBAction func handleBtnBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     @IBAction func handleBtnMenu(_ sender: Any) {
         appDelegate.drawerController.toggleDrawerSide(.left, animated: true, completion: nil)

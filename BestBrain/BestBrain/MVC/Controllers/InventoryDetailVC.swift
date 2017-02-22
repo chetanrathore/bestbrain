@@ -12,6 +12,7 @@ class InventoryDetailVC: UIViewController, UICollectionViewDataSource, UICollect
     
     @IBOutlet var cvcImageGallary: UICollectionView!
     
+    @IBOutlet var pageView: UIPageControl!
     @IBOutlet var btnBack: UIButton!
     
     @IBOutlet var scrollMain: UIScrollView!
@@ -168,6 +169,7 @@ class InventoryDetailVC: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.pageView.numberOfPages = 5
         return 5
     }
     
@@ -181,6 +183,9 @@ class InventoryDetailVC: UIViewController, UICollectionViewDataSource, UICollect
         return cellSize
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        self.pageView.currentPage = indexPath.row
+    }
     // MARK:- Custom methods
     
     func handelTapGuesture(_ sender: UITapGestureRecognizer) {
@@ -189,6 +194,7 @@ class InventoryDetailVC: UIViewController, UICollectionViewDataSource, UICollect
         self.navigationController!.pushViewController(detailVC, animated: true)
     }
     
+
     
     
 }
