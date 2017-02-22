@@ -43,6 +43,10 @@ class CustomerDetailsVC: UIViewController {
         lbDLNum.text = details.value(forKey: "DLNum") as! String?
         self.tblCustomerDetail.tableFooterView = UIView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+    }
     @IBAction func handleBtnBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

@@ -250,6 +250,8 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
+      //vwMain textFields:
+        
         if textField == txfFirstName{
             txfFirstName.resignFirstResponder()
             txfLastName.becomeFirstResponder()
@@ -263,50 +265,140 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
             txfCity.resignFirstResponder()
             txfState.becomeFirstResponder()
         }else if textField == txfState{
-            if AppcheckLength(txfState.text!, length: 2, is_more: true){
+            if isValidLength(txfState.text!, length: 2, is_more: false){
                 txfState.resignFirstResponder()
                 txfZipCode.becomeFirstResponder()
             }else{
-                print("Enter valid code.")
+                Customs.showAlert(msg: "ENTER VALID CODE")
+                txfState.resignFirstResponder()
             }
         }
-
-//            else if textField == txfZipCode{
-//            txfZipCode.resignFirstResponder()
-//            txfDOB.becomeFirstResponder()
-//        }
         else if textField == txfDOB{
             txfDOB.resignFirstResponder()
             txfDLState.becomeFirstResponder()
         }else if textField == txfDLState{
-            if AppcheckLength(txfDLState.text!, length: 2, is_more: true){
+            if isValidLength(txfDLState.text!, length: 2, is_more: false){
                 txfDLState.resignFirstResponder()
                 txfDLNumber.becomeFirstResponder()
             }else{
-                print("Enter valid code.")
+                Customs.showAlert(msg: "ENTER VALID CODE")
+                txfDLState.resignFirstResponder()
             }
         }
-        //        else if textField == txfDLNumber{
-        //            txfDLNumber.resignFirstResponder()
-        //        }
+       
+        //tableview textFields:
 
         if textField.tag == 0{
         }else if textField.tag == 1{
-            if self.AppcheckEmailAddress(textField.text!) == false{
-                print("enter valid email Address.")
+            if isValidEmail(strEmail: textField.text!) == false{
+                Customs.showAlert(msg: "ENTER VALID EMAIL ADDRESS")
+                print("ENTER VALID EMAIL ADDRESS")
             }else{
                 emails.append(textField.text!)
                 textField.resignFirstResponder()
             }
         }else if textField.tag == 2{
-            //            textField.keyboardType = UIKeyboardType.default
         }else if textField.tag == 3{
-            //            textField.keyboardType = UIKeyboardType.default
         }
         if textField == txfZipCode{
             self.addDoneButtonOnKeyboard(textField: txfZipCode)
         }else if textField == txfDLNumber{
             self.addDoneButtonOnKeyboard(textField: txfDLNumber)
+        }
+        
+        //vwDesiredvehicle textFields:
+
+        if textField == txfYear{
+            if txfYear.text != nil{
+                txfYear.resignFirstResponder()
+                txfMake.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txfYear.resignFirstResponder()
+            }
+        }else if textField == txfMake{
+            if txfMake.text != nil{
+                txfMake.resignFirstResponder()
+                txfModel.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txfMake.resignFirstResponder()
+            }
+
+        }else if textField == txfModel{
+            if txfModel.text != nil{
+                txfModel.resignFirstResponder()
+                txfModelNo.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txfModel.resignFirstResponder()
+            }
+
+        }else if textField == txfModelNo{
+            if txfModelNo.text != nil{
+                txfModelNo.resignFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txfModelNo.resignFirstResponder()
+            }
+
+        }
+        
+        //vwAddTrade textFields:
+
+        if textField == txtFieldVIN{
+            if txtFieldVIN.text != nil{
+                txtFieldVIN.resignFirstResponder()
+                txtFieldYear.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtFieldVIN.resignFirstResponder()
+            }
+
+        }else if textField == txtFieldYear{
+            if txtFieldYear.text != nil{
+                txtFieldYear.resignFirstResponder()
+                txtFieldMake.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtFieldYear.resignFirstResponder()
+            }
+
+        }else if textField == txtFieldMake{
+            if txtFieldMake.text != nil{
+                txtFieldMake.resignFirstResponder()
+                txtFieldModel.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtFieldMake.resignFirstResponder()
+            }
+
+        }else if textField == txtFieldModel{
+            if txtFieldModel.text != nil{
+                txtFieldModel.resignFirstResponder()
+                txtFieldMiles.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtFieldModel.resignFirstResponder()
+            }
+
+        }else if textField == txtFieldMiles{
+            if txtFieldMiles.text != nil{
+                txtFieldMiles.resignFirstResponder()
+                txtFieldPayoff.becomeFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtFieldMiles.resignFirstResponder()
+            }
+
+        }else if textField == txtFieldPayoff{
+            if txtFieldPayoff.text != nil{
+                txtFieldPayoff.resignFirstResponder()
+            }else{
+                Customs.showAlert(msg: "PLEASE ENTER DATA")
+                txtFieldPayoff.resignFirstResponder()
+            }
+
         }
 
         tblAddItems.isScrollEnabled = true
@@ -335,48 +427,6 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     
     // MARK:- TextField validation Method(s)
     
-    func AppcheckZipCodes(_ data:String) -> Bool{
-        let ns:NSString = "^([0-9]{5}|[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9])$"
-        let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
-        return pr.evaluate(with: data)
-    }
-    
-    func AppcheckEmailAddress(_ data:String) -> Bool{
-        let ns:NSString = "[A-Za-z0-9\\.]+@[A-Za-z0-9]+\\.[A-Za-z.]{2,6}"
-        let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
-        return pr.evaluate(with: data)
-    }
-    
-    func AppcheckNumber(_ data:String,length:Int?) -> Bool{
-        let ns:NSString
-        if let _ = length{
-            ns = "[0-9]{\(length!)}" as NSString
-        }else{
-            ns = "[0-9]+"
-        }
-        let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
-        return pr.evaluate(with: data)
-    }
-    
-    func AppcheckLength(_ data:String,length:Int,is_more:Bool?) -> Bool{
-        if data.isEmpty{
-            return false
-        }
-        if let _ = is_more{
-            if is_more == true{
-                if data.characters.count >= length{
-                    return true
-                }else{
-                    return false
-                }
-            }
-        }
-        if data.characters.count == length{
-            return true
-        }else{
-            return false
-        }
-    }
     // MARK:- Custom Method(s)
     func handleViews(_ sender: UIButton){
         if sender.tag == 101{
@@ -407,7 +457,6 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
                     tblAddItems.scrollToRow(at: IndexPath(row: 0, section: 5), at: .bottom, animated: true)
                 }
             }
-
         }
     }
 
@@ -461,27 +510,26 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     func doneButtonAction(txt: UITextField)
     {
         if self.textField.tag == 0{
-            if AppcheckNumber(self.textField.text!, length: 10){
+            
+            if isValidNumber(self.textField.text!, length: 10){
                 tblAddItems.isScrollEnabled = true
                 phoneNumbers.append(self.textField.text!)
                 self.textField.resignFirstResponder()
             }else{
-                print("enter valid phone number.")
+                Customs.showAlert(msg: "ENTER VALID PHONE NUMBER")
+                self.textField.resignFirstResponder()
             }
         }else{
             
             if self.textField.tag == 16{
-                if AppcheckZipCodes(self.textField.text!) == true{
+                if isvalidZipCodes(self.textField.text!) == true{
                     self.textField.resignFirstResponder()
                 }else{
-                    print("enter valid zip code.")
+                    Customs.showAlert(msg: "ENTER VALID ZIPCODE")
+                    self.textField.resignFirstResponder()
                 }
             }else if self.textField.tag == 19{
-                //                if Appcheck_zip_codes(self.textField.text!) == true{
                 self.textField.resignFirstResponder()
-                //                }else{
-                //                    print("enter valid DLNUMBER.")
-                //                }
             }
         }
     }
@@ -507,25 +555,10 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
         guard let userInfo:NSDictionary = (notification.object as! NSDictionary?) ,
             let VINNumber:String = userInfo.value(forKey: "VIN") as! String?
 
-         //   let hideBtn     = userInfo["hideBtn"]    as? Bool
         else
         {
             return
         }
-/*
-            txfFirstName.text = userDetails.value(forKey: "Customer First Name") as? String
-            txfLastName.text = userDetails.value(forKey: "Customer Family Name") as? String
-        txfAddress.text = userDetails.value(forKey: "Address - Street 1") as? String
-            txfCity.text = userDetails.value(forKey: "Address - City") as? String
-            txfState.text = userDetails.value(forKey: "Address - Jurisdiction Code") as? String
-            txfZipCode.text = userDetails.value(forKey: "Address - Postal Code") as? String
-            var dob = (userDetails.value(forKey: "Date of Birth") as! String).insert(string: "/", ind: 2)
-            dob = dob.insert(string: "/", ind: 5)
-            txfDOB.text = dob
-            txfDLState.text = nil
-            txfDLNumber.text = nil
-            btnDLScan.isHidden = true
-*/
         print("------------------------------------------------------------")
         print("VIN: \(VINNumber)")
         print("------------------------------------------------------------")
@@ -579,7 +612,7 @@ class NewContactVC: UIViewController,UITableViewDelegate,UITableViewDataSource,U
     }
     @IBAction func handleBtnDone(_ sender: Any) {
         let vc = CustomerDetailsVC(nibName: "CustomerDetailsVC", bundle: nil)
-        var details = NSMutableDictionary()
+        let details = NSMutableDictionary()
         details.setValue(txfFirstName.text, forKey: "first")
         details.setValue(txfLastName.text, forKey: "last")
         details.setValue(txfAddress.text, forKey: "address")

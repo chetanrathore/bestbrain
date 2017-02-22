@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,38 +19,37 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="anV-2t-U6s">
-                    <rect key="frame" x="0.0" y="256.5" width="375" height="421"/>
-                    <color key="backgroundColor" red="0.050980392156862744" green="0.38431372549019605" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="anV-2t-U6s" secondAttribute="height" multiplier="375:421" id="Llp-Ru-Oxr"/>
-                    </constraints>
-                    <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1X-e2-LK0">
-                    <rect key="frame" x="124.5" y="78" width="128" height="128"/>
+                    <rect key="frame" x="97" y="78" width="128" height="128"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="B1X-e2-LK0" secondAttribute="height" multiplier="117:134" constant="16.492537313432834" id="qXl-Fx-OSc"/>
+                        <constraint firstAttribute="width" secondItem="B1X-e2-LK0" secondAttribute="height" multiplier="1:1" id="dmP-Ef-ZsG"/>
                     </constraints>
                     <state key="normal" image="userProfile.png"/>
                     <connections>
                         <action selector="handleBtnProfile:" destination="-1" eventType="touchUpInside" id="wLa-d0-n8Y"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="anV-2t-U6s">
+                    <rect key="frame" x="0.0" y="241" width="320" height="239"/>
+                    <color key="backgroundColor" red="0.050980392156862744" green="0.38431372549019605" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="0.050980392159999999" green="0.38431372549999998" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="anV-2t-U6s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gsp-Su-Ey7"/>
-                <constraint firstItem="B1X-e2-LK0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="g9l-Qn-BrW"/>
-                <constraint firstItem="anV-2t-U6s" firstAttribute="top" secondItem="B1X-e2-LK0" secondAttribute="bottom" constant="50.5" id="kEC-Le-qrF"/>
-                <constraint firstItem="B1X-e2-LK0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="uYr-I4-ebz"/>
-                <constraint firstAttribute="trailing" secondItem="anV-2t-U6s" secondAttribute="trailing" id="zzJ-Df-zEW"/>
+                <constraint firstItem="B1X-e2-LK0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="97" id="DKu-jx-jGi"/>
+                <constraint firstItem="anV-2t-U6s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ef3-ud-vhc"/>
+                <constraint firstItem="anV-2t-U6s" firstAttribute="top" secondItem="B1X-e2-LK0" secondAttribute="bottom" constant="35" id="KIg-cu-ZPq"/>
+                <constraint firstAttribute="trailing" secondItem="B1X-e2-LK0" secondAttribute="trailing" constant="95" id="MTx-GE-UKw"/>
+                <constraint firstAttribute="trailing" secondItem="anV-2t-U6s" secondAttribute="trailing" id="Tez-Dv-FjX"/>
+                <constraint firstItem="B1X-e2-LK0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="78" id="mgd-Co-OEh"/>
+                <constraint firstAttribute="bottom" secondItem="anV-2t-U6s" secondAttribute="bottom" id="ufI-d6-vXc"/>
             </constraints>
-            <point key="canvasLocation" x="-6.5" y="-175.5"/>
+            <point key="canvasLocation" x="-7" y="-176"/>
         </view>
     </objects>
     <resources>

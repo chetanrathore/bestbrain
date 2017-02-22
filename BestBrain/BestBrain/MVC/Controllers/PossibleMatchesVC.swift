@@ -32,7 +32,10 @@ class PossibleMatchesVC: UIViewController, UITableViewDataSource, UITableViewDel
         tblPossiblematches.register(UINib(nibName: "MatchesDetailCell", bundle: nil), forCellReuseIdentifier: "MatchesDetailCell")
         setDisArr()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

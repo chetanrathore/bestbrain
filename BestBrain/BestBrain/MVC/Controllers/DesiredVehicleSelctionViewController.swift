@@ -21,7 +21,10 @@ class DesiredVehicleSelctionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+    }
     @IBAction func btnMenuClicked(_ sender: Any) {
         let _ = navigationController?.popViewController(animated: true)
     }
