@@ -189,7 +189,6 @@
 		7B42FEB31E5B005400DE5D62 /* DrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEAD1E5B005400DE5D62 /* DrawerController.swift */; };
 		7B42FEB51E5B005400DE5D62 /* DrawerVisualState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEAF1E5B005400DE5D62 /* DrawerVisualState.swift */; };
 		7B42FEB61E5B005400DE5D62 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B42FEB01E5B005400DE5D62 /* Info.plist */; };
-		7B42FEB81E5B019A00DE5D62 /* DrawerController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B42FEB71E5B019A00DE5D62 /* DrawerController.framework */; };
 		7B42FEC01E5B2A4500DE5D62 /* SpeedDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B42FEBF1E5B2A4500DE5D62 /* SpeedDemoVC.m */; };
 		7B42FEC21E5B2A5D00DE5D62 /* SpeedDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B42FEC11E5B2A5D00DE5D62 /* SpeedDemoVC.xib */; };
 		7B4F5EC21E24CA8E0086B359 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5EBC1E24CA8E0086B359 /* DashboardVC.swift */; };
@@ -868,7 +867,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6F3DC81E4A0A810009377A /* CoreGraphics.framework in Frameworks */,
-				7B42FEB81E5B019A00DE5D62 /* DrawerController.framework in Frameworks */,
 				30754C861E430C2600C87E9A /* MicroBlink.framework in Frameworks */,
 				30754C8B1E430D7B00C87E9A /* libiconv.tbd in Frameworks */,
 				300267231E43070C00682E9E /* Accelerate.framework in Frameworks */,

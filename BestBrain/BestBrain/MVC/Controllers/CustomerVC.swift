@@ -40,6 +40,19 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         tblCustomer.delegate = self
         tblCustomer.register(UINib(nibName: "CustomerCell", bundle: nil), forCellReuseIdentifier: "CustomerCell")
         tblRelation.register(UINib(nibName: "RelationCell", bundle: nil), forCellReuseIdentifier: "relationCell")
+        
+        let searchViews = txtSearchBar.subviews
+        for i in 0..<searchViews.count{
+            if searchViews[i] .isKind(of: UITextField.self){
+                searchViews[i].backgroundColor = UIColor.blue
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateLink), name: NSNotification.Name(rawValue: "relationLinked"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.popRelationView), name: NSNotification.Name(rawValue: "LinkRelationship"), object: nil)
         //Temporary data
         let customer1 = Customer(firstName: "John", lastName: "other details", city: "New York")
         let customer2 = Customer(firstName: "tmp", lastName: "xcvxcv", city: "New York")
@@ -54,29 +67,13 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         arrCustomer.append(customer4)
         arrCustomer.append(customer5)
         arrCustomer.append(customer6)
-        
-        var textfield = UITextField()
-        let searchViews = txtSearchBar.subviews
-        for i in 0..<searchViews.count{
-            if searchViews[i] .isKind(of: UITextField.self){
-                searchViews[i].backgroundColor = UIColor.blue
-            }
-        }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.updateLink), name: NSNotification.Name(rawValue: "relationLinked"), object: nil)
-         NotificationCenter.default.addObserver(self, selector: #selector(self.popRelationView), name: NSNotification.Name(rawValue: "LinkRelationship"), object: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-//        self.navigationController?.navigationBar.isHidden = true
-//        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
-       // self.navigationController?.navigationBar.isHidden = true
-        if !(txtSearchBar.text?.isEmpty)! {
-            isSearch = true
-            self.tblCustomer.reloadData()
-        } else {
-            self.tblCustomer.reloadData()
-        }
+        //        self.navigationController?.navigationBar.isHidden = true
+        //        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+        // self.navigationController?.navigationBar.isHidden = true
+        self.txtSearchBar.text = ""
+        self.txtSearchBar.resignFirstResponder()
+        self.isSearch = false
+        self.tblCustomer.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -85,9 +82,10 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if txtSearchBar.isFirstResponder {
-            txtSearchBar.resignFirstResponder()
-        }
+        self.txtSearchBar.text = ""
+        self.isSearch = false
+        txtSearchBar.resignFirstResponder()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -132,7 +130,6 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == self.tblCustomer {
             var customer = Customer()
-            
             if isSearch {
                 if self.arrFilteredCustomers.count > 0{
                     customer = self.arrFilteredCustomers[indexPath.row]
@@ -186,8 +183,8 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
             let vc = NewContactVC(nibName: "NewContactVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         }
-//                more.backgroundColor = UIColor(red: 0.9843137255, green: 0.9843137255, blue: 0.9843137255, alpha: 0.0)
-                more.backgroundColor = UIColor(patternImage: self.imageWithImage(#imageLiteral(resourceName: "add.png"), scaledToSize: CGSize(width: 50, height: 50)))
+        //                more.backgroundColor = UIColor(red: 0.9843137255, green: 0.9843137255, blue: 0.9843137255, alpha: 0.0)
+        more.backgroundColor = UIColor(patternImage: self.imageWithImage(#imageLiteral(resourceName: "add.png"), scaledToSize: CGSize(width: 50, height: 50)))
         
         return [more]
     }
@@ -262,6 +259,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
             self.vwRelation.removeFromSuperview()
         }
         if self.view.subviews.contains(transperentView){
+            self.view.willRemoveSubview(self.transperentView)
             transperentView.removeFromSuperview()
         }
     }
@@ -277,6 +275,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     func alertView(message: String) {
         let alert = UIAlertController(title: nil, message: "No Customer Found.", preferredStyle: .alert)
         let addAction = UIAlertAction(title: "Add Customer", style: .default) { (action) in
+            self.txtSearchBar.resignFirstResponder()
             let customerDetailVC = NewContactVC(nibName: "NewContactVC", bundle: nil)
             self.navigationController!.pushViewController(customerDetailVC, animated: true)
         }
@@ -306,7 +305,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         self.btnAll.setTitleColor(UIColor.white, for: .normal)
         self.btnActive.setTitleColor(UIColor.lightGray, for: .normal)
         self.btnInactive.setTitleColor(UIColor.lightGray, for: .normal)
-
+        
     }
     
     @IBAction func handleBtnActive(_ sender: Any) {
@@ -316,7 +315,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         self.btnAll.setTitleColor(UIColor.lightGray, for: .normal)
         self.btnActive.setTitleColor(UIColor.white, for: .normal)
         self.btnInactive.setTitleColor(UIColor.lightGray, for: .normal)
-
+        
     }
     
     @IBAction func handleBtnInactive(_ sender: Any) {
