@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="btnActive" destination="Bhm-GY-wZH" id="Jb8-vC-s7d"/>
                 <outlet property="btnAll" destination="1tv-Vs-sbi" id="pzS-vm-bmS"/>
+                <outlet property="btnDone" destination="2WG-L9-ojU" id="4LZ-CK-A1F"/>
                 <outlet property="btnInactive" destination="WUm-c2-7Ti" id="G4x-gQ-BbF"/>
                 <outlet property="btnMenu" destination="vMy-Uk-jL1" id="uya-ay-Jyw"/>
                 <outlet property="btnNewCustomer" destination="ad3-dw-3Os" id="4gX-9W-H2p"/>
@@ -64,7 +65,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMy-Uk-jL1">
-                            <rect key="frame" x="8" y="7.5" width="30" height="30"/>
+                            <rect key="frame" x="8" y="7" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="4Ud-dd-XTJ"/>
                                 <constraint firstAttribute="width" constant="30" id="iwo-2W-nli"/>
@@ -156,18 +157,33 @@
                     </connections>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link Relation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-ja-VNK">
-                    <rect key="frame" x="16" y="29" width="288" height="24"/>
+                    <rect key="frame" x="92" y="29" width="136" height="24"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WG-L9-ojU">
+                    <rect key="frame" x="251" y="10" width="59" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="kCY-ZO-Jcc"/>
+                        <constraint firstAttribute="width" constant="59" id="x1v-Xf-gQn"/>
+                    </constraints>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="handleBtnDone:" destination="-1" eventType="touchUpInside" id="FwK-Qb-kel"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.41176470590000003" green="0.73333333329999995" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="hbf-ja-VNK" firstAttribute="top" secondItem="xxc-5t-MUO" secondAttribute="top" constant="29" id="4bU-k9-xfy"/>
                 <constraint firstItem="KCd-h2-Au4" firstAttribute="top" secondItem="hbf-ja-VNK" secondAttribute="bottom" constant="22" id="K09-Is-A5K"/>
-                <constraint firstItem="hbf-ja-VNK" firstAttribute="leading" secondItem="xxc-5t-MUO" secondAttribute="leading" constant="16" id="VCa-93-iEq"/>
-                <constraint firstAttribute="trailing" secondItem="hbf-ja-VNK" secondAttribute="trailing" constant="16" id="jmp-e1-N3i"/>
+                <constraint firstAttribute="trailing" secondItem="2WG-L9-ojU" secondAttribute="trailing" constant="10" id="TBu-G2-seb"/>
+                <constraint firstItem="hbf-ja-VNK" firstAttribute="leading" secondItem="xxc-5t-MUO" secondAttribute="leading" constant="92" id="VCa-93-iEq"/>
+                <constraint firstItem="2WG-L9-ojU" firstAttribute="top" secondItem="xxc-5t-MUO" secondAttribute="top" constant="10" id="aNN-CT-k55"/>
+                <constraint firstAttribute="trailing" secondItem="hbf-ja-VNK" secondAttribute="trailing" constant="92" id="jmp-e1-N3i"/>
                 <constraint firstAttribute="trailing" secondItem="KCd-h2-Au4" secondAttribute="trailing" id="kUa-xV-rjh"/>
                 <constraint firstItem="KCd-h2-Au4" firstAttribute="leading" secondItem="xxc-5t-MUO" secondAttribute="leading" id="lWT-lW-ve8"/>
                 <constraint firstAttribute="bottom" secondItem="KCd-h2-Au4" secondAttribute="bottom" id="tqo-ks-pFc"/>

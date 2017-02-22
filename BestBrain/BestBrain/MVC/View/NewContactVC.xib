@@ -15,9 +15,12 @@
                 <outlet property="btnAddCustomer" destination="YKA-zr-BaJ" id="h5h-jm-4xd"/>
                 <outlet property="btnAddManually" destination="Bjh-F4-fjQ" id="yGU-rf-eSb"/>
                 <outlet property="btnBack" destination="jgF-jS-fqm" id="0bw-X0-uzs"/>
+                <outlet property="btnBuyings" destination="IIa-4x-SqJ" id="atH-ma-51I"/>
                 <outlet property="btnDLScan" destination="8bJ-qA-KJM" id="YZo-AA-JIp"/>
                 <outlet property="btnDone" destination="doQ-1z-q9K" id="07l-IV-g8H"/>
                 <outlet property="btnLink" destination="y17-LY-uuS" id="Xfx-HU-Jko"/>
+                <outlet property="btnOwns" destination="bg4-jS-to0" id="uKp-Tj-ajy"/>
+                <outlet property="btnRenting" destination="9lK-ZD-whj" id="uBY-Ke-xdJ"/>
                 <outlet property="btnScanInventoryBikes" destination="N7y-Kk-dJc" id="TQX-Ch-hIc"/>
                 <outlet property="btnScanTrade" destination="ycf-Ka-iEb" id="UPt-Li-rnD"/>
                 <outlet property="btnSearch" destination="WSc-Ag-7HF" id="kWS-OT-qa9"/>
@@ -41,6 +44,13 @@
                 <outlet property="txfState" destination="QsQ-oA-CB1" id="ypM-2t-YWI"/>
                 <outlet property="txfYear" destination="HfL-xe-UZc" id="3SI-7i-tag"/>
                 <outlet property="txfZipCode" destination="GJN-rE-ya3" id="hB9-19-sV1"/>
+                <outlet property="txtCI1" destination="cly-Mv-dkb" id="glb-T0-5ae"/>
+                <outlet property="txtCI2" destination="xW7-nR-fuQ" id="Gfo-sz-lQD"/>
+                <outlet property="txtCI3" destination="FWe-SA-ZVd" id="fcn-ov-PSx"/>
+                <outlet property="txtCI4" destination="UfF-AP-yCd" id="saY-pm-Yyo"/>
+                <outlet property="txtCI5" destination="XZD-R4-zx9" id="Qqb-9l-REs"/>
+                <outlet property="txtCI6" destination="Xe8-OD-fwg" id="8JP-2e-UZx"/>
+                <outlet property="txtCI7" destination="UIC-87-xy8" id="cbv-mF-aeh"/>
                 <outlet property="txtFieldMake" destination="Y48-TL-wjk" id="Sbu-Eh-cj3"/>
                 <outlet property="txtFieldMiles" destination="wYv-d1-0Se" id="i9V-wM-sAQ"/>
                 <outlet property="txtFieldModel" destination="gLd-6y-oDT" id="Ocj-IY-1nq"/>
@@ -1164,13 +1174,16 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-jS-to0">
+                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-jS-to0">
                     <rect key="frame" x="25" y="260" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="1Dw-Zc-GST"/>
                         <constraint firstAttribute="width" constant="25" id="f1p-az-tJk"/>
                     </constraints>
                     <state key="normal" image="btn.png"/>
+                    <connections>
+                        <action selector="handleBtnCredits:" destination="-1" eventType="touchUpInside" id="oEL-xQ-kfp"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OWNS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StI-Mi-n1S">
                     <rect key="frame" x="58" y="260" width="143" height="25"/>
@@ -1182,13 +1195,16 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIa-4x-SqJ">
+                <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIa-4x-SqJ">
                     <rect key="frame" x="25" y="290" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="1KA-ho-FKe"/>
                         <constraint firstAttribute="width" constant="25" id="U65-zS-JMt"/>
                     </constraints>
                     <state key="normal" image="btn.png"/>
+                    <connections>
+                        <action selector="handleBtnCredits:" destination="-2" eventType="touchUpInside" id="TfB-Ft-qwJ"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUYING" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-ph-PaE">
                     <rect key="frame" x="58" y="290" width="143" height="25"/>
@@ -1200,13 +1216,16 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-ZD-whj">
+                <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-ZD-whj">
                     <rect key="frame" x="25" y="320" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="pr5-dG-qID"/>
                         <constraint firstAttribute="width" constant="25" id="qhg-Nf-tH5"/>
                     </constraints>
                     <state key="normal" image="btn.png"/>
+                    <connections>
+                        <action selector="handleBtnCredits:" destination="-2" eventType="touchUpInside" id="rpD-c1-cl3"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RENTING" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEU-f8-tqA">
                     <rect key="frame" x="58" y="320" width="143" height="25"/>

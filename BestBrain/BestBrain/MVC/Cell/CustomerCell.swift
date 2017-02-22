@@ -31,11 +31,11 @@ class CustomerCell: UITableViewCell {
     @IBAction func handlebtnCheckbox(_ sender: Any) {
         if self.displayLink {
             self.displayLink = false
-            self.btnCheckbox.setImage(UIImage(named: "Checked"), for: .normal)
+          //  self.btnCheckbox.setImage(UIImage(named: "Checked"), for: .normal)
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LinkRelationship"), object: nil)
         } else {
             self.displayLink = true
-            self.btnCheckbox.setImage(UIImage(named: "Unchecked"), for: .normal)
+           // self.btnCheckbox.setImage(UIImage(named: "Unchecked"), for: .normal)
         }
     }
     

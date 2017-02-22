@@ -19,6 +19,7 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     @IBOutlet var vwRelation: UIView!
     @IBOutlet var tblRelation: UITableView!
     @IBOutlet var btnMenu: UIButton!
+    @IBOutlet var btnDone: UIButton!
     
     var arrCustomer = [Customer]()
     var arrFilteredCustomers = [Customer]()
@@ -26,7 +27,9 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     var isSearch: Bool = false
     var isLink = Bool()
     var transperentView = UIView()
-    
+    var indexRelation:Int = -1
+    var indexCustomer:Int = -1
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,6 +86,8 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
             vwRelation.frame = CGRect(x: 20, y: (Screenheight/2)-225, width: ScreenWidth - 40, height: 450)
             self.vwRelation.frame = CGRect(x: 20, y: self.view.center.y - self.vwRelation.frame.size.height/2, width: ScreenWidth - 40, height: self.vwRelation.frame.size.height)
         }
+        self.txtSearchBar.layer.borderColor = UIColor.white.cgColor
+        self.txtSearchBar.layer.borderWidth = 2
     }
     
     // MARK:- TableView Method(s)
@@ -129,6 +134,12 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomerCell", for: indexPath) as! CustomerCell
             if self.isLink {
                 cell.btnCheckbox.isHidden = false
+                
+                if indexPath.row == indexCustomer{
+                    cell.btnCheckbox.setImage(UIImage(named: "Checked"), for: .normal)
+                }else{
+                    cell.btnCheckbox.setImage(UIImage(named: "Unchecked"), for: .normal)
+                }
             } else {
                 cell.btnCheckbox.isHidden = true
             }
@@ -140,6 +151,11 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "relationCell", for: indexPath) as! RelationCell
+            if indexPath.row == indexRelation{
+                cell.accessoryType = .checkmark
+            }else{
+                cell.accessoryType = .none
+            }
             cell.lblRelation.text = self.arrRelation[indexPath.row]
             return cell
         }
@@ -147,9 +163,11 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.tblCustomer {
+            indexCustomer = indexPath.row
         } else {
             let cell = tableView.cellForRow(at: indexPath) as! RelationCell
             cell.accessoryType = .checkmark
+            indexRelation = indexPath.row
         }
     }
     
@@ -261,6 +279,8 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
     func tapHandler(){
         if self.view.subviews.contains(self.vwRelation){
             self.vwRelation.removeFromSuperview()
+            indexRelation = -1
+            tblRelation.reloadData()
         }
         if self.view.subviews.contains(transperentView){
             self.view.willRemoveSubview(self.transperentView)
@@ -329,5 +349,16 @@ class CustomerVC: UIViewController,  UITableViewDataSource, UITableViewDelegate,
         self.btnAll.setTitleColor(UIColor.lightGray, for: .normal)
         self.btnActive.setTitleColor(UIColor.lightGray, for: .normal)
         self.btnInactive.setTitleColor(UIColor.white, for: .normal)
+    }
+    
+    @IBAction func handleBtnDone(_ sender: Any) {
+        if indexRelation != -1 || indexCustomer != -1{
+            let cell = tblRelation.cellForRow(at: IndexPath(row: indexRelation, section: 0)) as! RelationCell
+            print(cell.lblRelation.text!)
+            indexRelation = -1
+            let customerCell = tblCustomer.cellForRow(at: IndexPath(row: indexCustomer, section: 0)) as! CustomerCell
+            tblRelation.reloadData()
+            self.tapHandler()
+        }
     }
 }
