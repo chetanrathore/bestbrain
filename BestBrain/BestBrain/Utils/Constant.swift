@@ -71,6 +71,43 @@ class callingStatus{
 }
 
 //validation
+func isvalidZipCodes(_ data:String) -> Bool{
+    let ns:NSString = "^([0-9]{5}|[A-Z][0-9][A-Z] ?[0-9][A-Z][0-9])$"
+    let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
+    return pr.evaluate(with: data)
+}
+
+
+func isValidNumber(_ data:String,length:Int?) -> Bool{
+    let ns:NSString
+    if let _ = length{
+        ns = "[0-9]{\(length!)}" as NSString
+    }else{
+        ns = "[0-9]+"
+    }
+    let pr:NSPredicate = NSPredicate(format: "SELF MATCHES %@",ns)
+    return pr.evaluate(with: data)
+}
+
+func isValidLength(_ data:String,length:Int,is_more:Bool?) -> Bool{
+    if data.isEmpty{
+        return false
+    }
+    if let _ = is_more{
+        if is_more == true{
+            if data.characters.count >= length{
+                return true
+            }else{
+                return false
+            }
+        }
+    }
+    if data.characters.count == length{
+        return true
+    }else{
+        return false
+    }
+}
 
 func isValidEmail(strEmail : String) ->  Bool
 {
@@ -84,4 +121,9 @@ func isValidPassword(strPassword : String) -> Bool
     let totalChar = strPassword.characters.count
     return totalChar > 4
 }
-
+class Customs{
+    static func showAlert(msg:String){
+        let alert = UIAlertView(title: "WARNING", message: msg, delegate: self, cancelButtonTitle: "ok")
+        alert.show()
+    }
+}

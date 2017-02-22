@@ -27,7 +27,10 @@ class LogCustomerVC: UIViewController {
         super.viewDidLoad()
         self.setView()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
+    }
     func setView(){
         txtFirstName.layer.borderColor = textBoxColor.cgColor
         txtLastName.layer.borderColor = textBoxColor.cgColor

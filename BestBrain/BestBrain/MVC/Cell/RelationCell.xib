@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,24 +19,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r39-C9-koc">
-                        <rect key="frame" x="8" y="11" width="304" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="r39-C9-koc" secondAttribute="height" multiplier="304:21" id="3FH-rt-8C0"/>
-                        </constraints>
+                        <rect key="frame" x="8" y="5" width="273" height="33.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="r39-C9-koc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KH1-T3-HDD"/>
+                    <constraint firstItem="r39-C9-koc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="3z9-DE-4nI"/>
+                    <constraint firstItem="r39-C9-koc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="8zE-c4-pbb"/>
+                    <constraint firstAttribute="trailing" secondItem="r39-C9-koc" secondAttribute="trailing" constant="39" id="Iy9-3G-k8P"/>
+                    <constraint firstAttribute="bottom" secondItem="r39-C9-koc" secondAttribute="bottom" constant="5" id="dlR-v0-dxU"/>
                 </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="r39-C9-koc" secondAttribute="trailing" constant="8" id="EuR-Fx-V0r"/>
-                <constraint firstItem="r39-C9-koc" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="11" id="h6h-O5-yA9"/>
-                <constraint firstAttribute="bottom" secondItem="r39-C9-koc" secondAttribute="bottom" constant="12" id="hBo-gC-n9D"/>
-            </constraints>
             <connections>
                 <outlet property="lblRelation" destination="r39-C9-koc" id="GJx-vV-23X"/>
             </connections>

@@ -37,6 +37,8 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.evo_drawerController?.navigationController?.navigationBar.isHidden = true
         self.view.gradientLayer()
         self.view.bringSubview(toFront: self.txtPassword)
         self.view.bringSubview(toFront: self.txtUsername)
@@ -58,11 +60,11 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         let strPassword = txtPassword.text!
         
         if (strUserName.isEmpty || strPassword.isEmpty) {
-            displayAlertMessage(alertMessage: "Email id and password must be required.")
+            Customs.showAlert(msg: "Email id and password must be required.")
         }else if(!isValidEmail(strEmail: strUserName)) {
-            displayAlertMessage(alertMessage: "Invalid email address.")
+            Customs.showAlert(msg: "Invalid email address.")
         }else if(!isValidPassword(strPassword: strPassword)) {
-            displayAlertMessage(alertMessage: "Password must contain at least 8 characters")
+            Customs.showAlert(msg: "Password must contain at least 8 characters.")
         }else {
             self.activityIndicator.isHidden = false
             self.btnLogin.isEnabled = false
@@ -80,7 +82,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
                     self.view.sendSubview(toBack: self.activityIndicator)
                     if result.object(forKey: "message") != nil {
                         let message = (result.object(forKey: "message") as? String)!
-                        self.displayAlertMessage(alertMessage: message)
+                        Customs.showAlert(msg: message)
                     }
                     if result.object(forKey: "token") != nil {
                         let token = result.object(forKey: "token") as? String
@@ -143,13 +145,4 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         return true
     }
 
-    
-    // MARK:- Custom method(s)
-    
-    func displayAlertMessage(title: String = "Oops!",alertMessage:String) {
-        let alert = UIAlertController(title: title, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
-        let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
-        alert.addAction(ok)
-        self.present(alert, animated: true, completion: nil)
-    }
 }
